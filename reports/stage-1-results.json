@@ -1,0 +1,137 @@
+{
+  "experiment": "SpatialSceneLab stage 1",
+  "date": "2026-10-02",
+  "status": "pass_with_limits",
+  "authorization": "User-authorized first local spatial experiment, 2026-10-02.",
+  "acceptance": [
+    "three authored object IDs preserved",
+    "translate and resize block-b with centimeter input",
+    "GLB physical geometry and source frame round trip",
+    "unit and axis corruption detected",
+    "original reconstruction hashes and camera/world relationship verified"
+  ],
+  "tests": {
+    "returncode": 0,
+    "count": 7,
+    "negative_controls": [
+      "100x wrong unit relabel rejected",
+      "missing Z-up to Y-up conversion rejected",
+      "source package hash corruption rejected",
+      "non-finite binary vertex corruption rejected"
+    ],
+    "test_runner_reported_seconds": 0.175
+  },
+  "controlled_fixture": {
+    "objects": 3,
+    "origin": "authored controlled cuboids",
+    "before": {
+      "status": "pass",
+      "objects": 3,
+      "max_vertex_error_m": 0.0,
+      "sha256": "da1e5e6adce987537d5d1a4258aec1701114ef934323e3c474023f2be1cfe072"
+    },
+    "after": {
+      "status": "pass",
+      "objects": 3,
+      "max_vertex_error_m": 0.0,
+      "sha256": "fbee30cf3d7858cb525d09ec872e3e1ececdf9aa65bb5073e33788c2fb5ba9d6"
+    },
+    "edit": {
+      "object_id": "block-b",
+      "translation_delta_m": [
+        0.25,
+        0,
+        0
+      ],
+      "before_dimensions_m": [
+        0.6,
+        0.9,
+        0.6
+      ],
+      "after_dimensions_m": [
+        0.75,
+        0.9,
+        0.6
+      ]
+    }
+  },
+  "actual_reconstruction": {
+    "status": "pass",
+    "sources": [
+      {
+        "path": "run-518/raw-view-00.npz",
+        "bytes": 9962401,
+        "sha256": "d0e903b912c905de6893b5942853567337d21cfed274952ecbfeb26d15c3c371"
+      },
+      {
+        "path": "run-518/raw-view-01.npz",
+        "bytes": 9932500,
+        "sha256": "46aa3e5e93f754927085e4b4b57ae8e6ed98af8d26ea4cc22f25dc2495d18135"
+      },
+      {
+        "path": "run-518/raw-view-02.npz",
+        "bytes": 9918687,
+        "sha256": "324d17ba25cbc0e75be93284d346d1b50edc33aba290ce3aafe08c90ef0b5393"
+      },
+      {
+        "path": "run-518/raw-view-03.npz",
+        "bytes": 9952143,
+        "sha256": "ee67f92fac47c3e4f9ad95a1819cfca073f5140a950fb50225eb2fdfd53904e3"
+      },
+      {
+        "path": "run-518/scene.glb",
+        "bytes": 12133012,
+        "sha256": "71a1ea69ba1e4d7e561eb23926d82734035517e87aeddde318cece5cf3f685bb"
+      },
+      {
+        "path": "selection.json",
+        "bytes": 6317,
+        "sha256": "336c33ce87f300f07b3ac70e3f17f1f1b7fb832fcfd7d958160047a6f5a84ac3"
+      }
+    ],
+    "point_count": 6020,
+    "camera_count": 4,
+    "original_glb_mesh_count": 1,
+    "original_glb_read": true,
+    "camera_world_max_abs_error_model_m": 5.061982495391248e-07,
+    "point_export_roundtrip_max_abs_error_model_m": 0.0,
+    "wall_seconds": 0.18506869999691844,
+    "new_gpu_inference": false,
+    "limit": "coordinate integration only; no metric validation, semantic segmentation or recovered-object edit"
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "numpy": "2.1.3",
+    "gpu_inventory_only": {
+      "returncode": 0,
+      "inventory": "NVIDIA GeForce RTX 4060 Laptop GPU, 8188 MiB, 596.49"
+    },
+    "blender_executable": null,
+    "scarf": {
+      "execution": "not_run",
+      "reason": "offline stack unavailable",
+      "missing_imports": [
+        "torch",
+        "depth_anything_3",
+        "open3d",
+        "gtsam",
+        "rosbags",
+        "vismatch"
+      ],
+      "weights_downloaded": false,
+      "six_frame_cuda_inference": "not_run"
+    }
+  },
+  "inference_this_stage": false,
+  "new_api_service_cost_cny": 0,
+  "weight_downloads": 0,
+  "visual_evidence": {
+    "controlled_figure": "reports/controlled-edit.png",
+    "actual_reconstruction_figure": "local audit/reconstruction-coordinates.png",
+    "rendering": "Pillow 2D coordinate projection; no Blender render"
+  },
+  "environment_limit": "NumPy matrix @ and Matplotlib polygon rendering trigger native Windows DLL error 0xc06d007e in the existing Anaconda runtime, also reproduced under conda run. Current small coordinate algebra uses einsum; figures use existing Pillow. Shared runtime untouched.",
+  "next_gate": "three real scenes with independent metric references, calibrated cameras, verified object labels and before/after geometry comparisons; ScaRF six-frame CUDA memory gate separately required",
+  "independent_review": "Before publication, a NaN false-green path in GLB verification was corrected and a binary corruption regression added; seven final tests passed."
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "spatial-scene-lab/1",
+  "kind": "controlled_fixture",
+  "units": "m",
+  "frame": "lab-right-handed-z-up",
+  "scale_status": "authored_known_dimensions",
+  "source": "AlvenX authored three rigid cuboids for edit/export verification, 2026-10-02",
+  "objects": [
+    {
+      "id": "block-a",
+      "origin": "authored_controlled_geometry",
+      "geometry": "box",
+      "translation": [
+        -1,
+        0,
+        0.4
+      ],
+      "dimensions": [
+        0.8,
+        0.6,
+        0.8
+      ],
+      "rotation_xyzw": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "color_rgba": [
+        0.145,
+        0.388,
+        0.922,
+        1
+      ]
+    },
+    {
+      "id": "block-b",
+      "origin": "authored_controlled_geometry",
+      "geometry": "box",
+      "translation": [
+        0.25,
+        0.0,
+        0.3
+      ],
+      "dimensions": [
+        0.75,
+        0.9,
+        0.6
+      ],
+      "rotation_xyzw": [
+        0,
+        0,
+        0.25881904510252074,
+        0.9659258262890683
+      ],
+      "color_rgba": [
+        0.31,
+        0.275,
+        0.898,
+        1
+      ]
+    },
+    {
+      "id": "block-c",
+      "origin": "authored_controlled_geometry",
+      "geometry": "box",
+      "translation": [
+        1,
+        0,
+        0.25
+      ],
+      "dimensions": [
+        0.5,
+        0.7,
+        0.5
+      ],
+      "rotation_xyzw": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "color_rgba": [
+        0.486,
+        0.227,
+        0.929,
+        1
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "object_id": "block-b",
+      "operation": "translate-and-set-dimensions",
+      "input_units": "cm",
+      "displacement": [
+        25.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        75.0,
+        90.0,
+        60.0
+      ]
+    }
+  ],
+  "source_scene_sha256": "ae529c4e850f99cd9d3dd08af56626527fec216102dbed9e7f8a4502d05f7cc7"
+}
