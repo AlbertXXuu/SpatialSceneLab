@@ -34,7 +34,7 @@
       "status": "pass",
       "objects": 3,
       "max_vertex_error_m": 0.0,
-      "sha256": "fbee30cf3d7858cb525d09ec872e3e1ececdf9aa65bb5073e33788c2fb5ba9d6"
+      "sha256": "8e0df0f5c26fca366863397b89f7e51b9e7e14b218b9de0a96a924791e6ad1a5"
     },
     "edit": {
       "object_id": "block-b",
@@ -133,5 +133,6 @@
   },
   "environment_limit": "NumPy matrix @ and Matplotlib polygon rendering trigger native Windows DLL error 0xc06d007e in the existing Anaconda runtime, also reproduced under conda run. Current small coordinate algebra uses einsum; figures use existing Pillow. Shared runtime untouched.",
   "next_gate": "three real scenes with independent metric references, calibrated cameras, verified object labels and before/after geometry comparisons; ScaRF six-frame CUDA memory gate separately required",
-  "independent_review": "Before publication, a NaN false-green path in GLB verification was corrected and a binary corruption regression added; seven final tests passed."
+  "independent_review": "Before publication, a NaN false-green path in GLB verification was corrected and a binary corruption regression added; seven final tests passed.",
+  "publication_fix": "GitHub Linux export checks exposed Windows CRLF in generated edited JSON. CLI JSON output now writes LF; edited JSON and its source-bound GLB were regenerated, preserving geometry and units. Both published exports pass verification."
 }
