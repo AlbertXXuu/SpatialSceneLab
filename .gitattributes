@@ -1,3 +1,9 @@
 * text=auto eol=lf
 *.glb -text
 *.png -text
+
+# Recorded machine evidence is hashed as bytes; preserve the measured encoding.
+reports/development-s0*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+reports/development-s0*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+reports/development-s0/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+reports/development-s0/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
