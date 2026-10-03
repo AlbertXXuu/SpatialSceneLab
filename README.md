@@ -28,6 +28,13 @@ recorded checks; whole-machine network isolation remains pending.
 [Machine results](reports/local-scan-results.json) ·
 [Input hashes](docs/tea-room-source-manifest.json)
 
+**Next stage, planned:** object-level surface partition, assisted boundary
+correction and a complete local Blender editing workflow. The
+[English evaluation protocol](docs/NEXT-STAGE-PROTOCOL.md) and
+[中文评测协议](docs/NEXT-STAGE-PROTOCOL.zh-CN.md) specify independent scenes,
+direct baselines, area-based metrics, ablations and claim gates. This protocol
+has not been executed; its scene counts and acceptance targets are not results.
+
 ## Run the original public fixture
 
 The MIT fixture independently ray casts two physical boxes, a floor and a back
