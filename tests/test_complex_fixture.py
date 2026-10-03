@@ -17,9 +17,11 @@ import scan_pipeline as scan
 
 
 PROJECT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location("complex_fixture", PROJECT / "fixtures/make_complex_fixture.py")
-fixture = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(fixture)
+AVAILABLE = importlib.util.find_spec('open3d') is not None
+if AVAILABLE:
+    spec = importlib.util.spec_from_file_location("complex_fixture", PROJECT / "fixtures/make_complex_fixture.py")
+    fixture = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(fixture)
 
 
 def read_npz(path):
@@ -27,6 +29,7 @@ def read_npz(path):
         return {key: archive[key] for key in archive.files}
 
 
+@unittest.skipUnless(AVAILABLE, 'physical RGB-D generation requires the CPU Open3D environment')
 class ComplexFixtureTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
