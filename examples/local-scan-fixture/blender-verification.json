@@ -1,0 +1,195 @@
+{
+  "status": "pass",
+  "blender": "5.1.2",
+  "input_scene_sha256": "73a750e9c9f90072c95623ea93b227adcab2a87de58a970043e757344330b37f",
+  "target_id": "synthetic-target",
+  "translation_source_y_up_m": [
+    0.3,
+    0.0,
+    0.0
+  ],
+  "translation_blender_z_up_m": [
+    0.30000001192092896,
+    0.0,
+    0.0
+  ],
+  "render_device": "CPU",
+  "object_count": 3,
+  "edit": {
+    "status": "pass",
+    "tolerance_m": 5e-05,
+    "objects": [
+      {
+        "id": "environment",
+        "maximum_world_vertex_distance_m": 0.0,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "synthetic-other",
+        "maximum_world_vertex_distance_m": 0.0,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "synthetic-target",
+        "maximum_world_vertex_distance_m": 1.7881393432617188e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      }
+    ],
+    "maximum_world_vertex_distance_m": 1.7881393432617188e-07
+  },
+  "before_glb": {
+    "status": "pass",
+    "tolerance_m": 5e-05,
+    "objects": [
+      {
+        "id": "environment",
+        "maximum_world_vertex_distance_m": 9.098254167838604e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "synthetic-other",
+        "maximum_world_vertex_distance_m": 6.14390614828153e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "synthetic-target",
+        "maximum_world_vertex_distance_m": 4.14027084616464e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      }
+    ],
+    "maximum_world_vertex_distance_m": 9.098254167838604e-07
+  },
+  "after_glb": {
+    "status": "pass",
+    "tolerance_m": 5e-05,
+    "objects": [
+      {
+        "id": "environment",
+        "maximum_world_vertex_distance_m": 9.098254167838604e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "synthetic-other",
+        "maximum_world_vertex_distance_m": 6.14390614828153e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "synthetic-target",
+        "maximum_world_vertex_distance_m": 5.464887635753257e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      }
+    ],
+    "maximum_world_vertex_distance_m": 9.098254167838604e-07
+  },
+  "after_blend": {
+    "status": "pass",
+    "tolerance_m": 5e-05,
+    "objects": [
+      {
+        "id": "environment",
+        "maximum_world_vertex_distance_m": 0.0,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "synthetic-other",
+        "maximum_world_vertex_distance_m": 0.0,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "synthetic-target",
+        "maximum_world_vertex_distance_m": 0.0,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      }
+    ],
+    "maximum_world_vertex_distance_m": 0.0
+  },
+  "negative_controls": {
+    "status": "pass",
+    "injected_faults_detected": {
+      "missing_object": true,
+      "unexpected_other_vertex_change": true,
+      "changed_source_hash": true,
+      "missing_vertex_colors": true,
+      "changed_triangle_connectivity": true
+    }
+  },
+  "scope": "selected observed surface region; candidate boundary faces remain in environment",
+  "outputs": {
+    "before.blend": {
+      "sha256": "21ec7bd54fc1faff58013fe1b8360ef11d4bff0b2fcfc50d015e4b70b3ac8adf",
+      "bytes": 437353
+    },
+    "after.blend": {
+      "sha256": "c898a3579a8f9dc91e7aaaecd1c7a3071addd98bb1f1fb5881cd817ac81a9b63",
+      "bytes": 437700
+    },
+    "before.glb": {
+      "sha256": "c80bb9fbb0ccc2245966c3943bd69ed83fd7ae05a2f589431a550b8eecf527f9",
+      "bytes": 435884
+    },
+    "after.glb": {
+      "sha256": "00e3203589ede5facc2b427957f11dbb9b97532c720c03ce56d83901608083bf",
+      "bytes": 435924
+    }
+  }
+}

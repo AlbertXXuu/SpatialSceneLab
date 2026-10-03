@@ -1,0 +1,45 @@
+{
+  "license": "MIT; original AlvenX analytic fixture and derived outputs",
+  "generator": "fixtures/make_rgbd_fixture.py --resolution-scale 4",
+  "target": "synthetic-target",
+  "translation_y_up_m": [
+    0.3,
+    0,
+    0
+  ],
+  "limitations": "Two-view observed surface regions; unobserved backs are not completed.",
+  "files": {
+    "after.blend": {
+      "sha256": "c898a3579a8f9dc91e7aaaecd1c7a3071addd98bb1f1fb5881cd817ac81a9b63",
+      "bytes": 437700
+    },
+    "after.glb": {
+      "sha256": "00e3203589ede5facc2b427957f11dbb9b97532c720c03ce56d83901608083bf",
+      "bytes": 435924
+    },
+    "after.png": {
+      "sha256": "46d5d1248bc8022c5d6ef19ebafe1bf236e755e884c0fae5e0bd3649b7d39f0d",
+      "bytes": 779869
+    },
+    "before.blend": {
+      "sha256": "21ec7bd54fc1faff58013fe1b8360ef11d4bff0b2fcfc50d015e4b70b3ac8adf",
+      "bytes": 437353
+    },
+    "before.glb": {
+      "sha256": "c80bb9fbb0ccc2245966c3943bd69ed83fd7ae05a2f589431a550b8eecf527f9",
+      "bytes": 435884
+    },
+    "before.png": {
+      "sha256": "8956f834b49567fcb3d67396351d80a9a82a896843f46b0b01c5dc1e8c9d957b",
+      "bytes": 778678
+    },
+    "blender-verification.json": {
+      "sha256": "15584877582e463fe4e67af15d3f494dea64e604ada17f89dc8d80a8430c58ed",
+      "bytes": 5569
+    },
+    "edit-comparison.png": {
+      "sha256": "09af34663ec846839a7e9750ba64f33537e7700e38fd1a73321f5d3f5ca18ba4",
+      "bytes": 564783
+    }
+  }
+}

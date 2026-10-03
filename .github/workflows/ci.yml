@@ -30,3 +30,23 @@ jobs:
         run: |
           python -B scene_lab.py verify fixtures/three-objects.json examples/three-objects-before.glb
           python -B scene_lab.py verify examples/three-objects-edited.json examples/three-objects-after.glb
+
+  cpu-rgbd-surface:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Install CPU RGB-D dependencies
+        run: python -m pip install -r requirements-local.txt
+      - name: Verify raw-input drift, mesh write failures and surface boundaries
+        run: python -B -m unittest discover -s tests -v
+      - name: Reconstruct original fixture under Python outbound network guard
+        run: |
+          python fixtures/make_rgbd_fixture.py --output .local/input --resolution-scale 4
+          python offline_run.py --script scan_pipeline.py --report .local/points-guard.json -- reconstruct --input .local/input --output .local/points
+          python offline_run.py --script reconstruct_mesh.py --report .local/surface-guard.json -- --scene .local/points/scene.json --output .local/surface

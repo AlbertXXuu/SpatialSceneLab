@@ -1,0 +1,952 @@
+{
+  "schema": "spatial-scene-lab.local-run-evidence.v1",
+  "date": "2026-10-04",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "direct_packages": {
+      "numpy": "2.3.5",
+      "Pillow": "12.3.0",
+      "open3d": "0.19.0"
+    },
+    "blender": "5.1.2",
+    "blender_build": "ec6e62d40fa9",
+    "blender_zip_sha256": "345bedea7b0acf7cc9666423d8553f9129622aea34ded65c23e8cb70f83f14ff",
+    "reconstruction_device": "CPU",
+    "render_device": "CPU",
+    "paid_service_calls": 0,
+    "gpu_peak_memory_measured": false
+  },
+  "source": {
+    "repo": "LiteReality/example-scans",
+    "commit": "3f2ca5d618fe86b264716200baea19ae0aea0d49",
+    "tree": "3f2ca5d618fe86b264716200baea19ae0aea0d49"
+  },
+  "tests": {
+    "status": "pass",
+    "count": 24,
+    "elapsed_seconds": 1.092,
+    "command": "python -B -m unittest discover -s tests -v",
+    "log": "reports/local-scan-tests.txt",
+    "scope": "Windows Python 3.12 with optional Open3D surface tests enabled"
+  },
+  "real_scan": {
+    "points": {
+      "status": "pass",
+      "frames": 62,
+      "observation_count": 639790,
+      "object_count": 12,
+      "structure_count": 14,
+      "ambiguous_observations": 11944,
+      "inverse_projection_check": {
+        "max_pixel_error": 1.7053025658242404e-13,
+        "max_depth_error_m": 1.7763568394002505e-15,
+        "scope": "numerical consistency, not physical accuracy"
+      },
+      "elapsed_seconds": 3.82861560001038
+    },
+    "point_edit": {
+      "status": "pass",
+      "checks": {
+        "selected_observations": 37655,
+        "other_positions_identical": true,
+        "other_object_metadata_identical": true,
+        "colors_labels_provenance_identical": true,
+        "target_parametric_transform_matches": true,
+        "target_identity_dimensions_metadata_preserved": true,
+        "scene_metadata_preserved": true,
+        "max_translation_error_m": 0.0,
+        "selected_sample_ids_remaining_in_environment": 0,
+        "unresolved_target_candidate_observations": 0,
+        "all_target_candidates_accounted_for": true
+      },
+      "scope": "selected observations only; semantic completeness unverified",
+      "complete_geometric_selection": true,
+      "object_uuid": "4DF84D78-0A18-4140-86A7-2DF1360A4AE2"
+    },
+    "surface": {
+      "status": "pass",
+      "method": "Open3D CPU ScalableTSDFVolume",
+      "units": "m",
+      "up_axis": "Y",
+      "frames": 62,
+      "parameters": {
+        "voxel_size_m": 0.035,
+        "sdf_truncation_m": 0.105,
+        "depth_scale": 1000,
+        "max_depth_m": 6,
+        "min_confidence": 1
+      },
+      "vertices": 83425,
+      "triangles": 155768,
+      "reference_pcd": {
+        "points": 73651,
+        "independent_ground_truth": false,
+        "mesh_vertex_distance_median_m": 0.02800760519847716,
+        "mesh_vertex_distance_p95_m": 0.04497257413611268
+      },
+      "partition": {
+        "all_triangles_accounted_for": true,
+        "environment_triangles": 135156,
+        "ambiguous_vertices": 1562
+      },
+      "elapsed_seconds": 2.870004099997459
+    },
+    "selected_surface_region": {
+      "id": "4DF84D78-0A18-4140-86A7-2DF1360A4AE2",
+      "name": "Sofa0",
+      "category": "Sofa",
+      "path": "4DF84D78-0A18-4140-86A7-2DF1360A4AE2.ply",
+      "role": "observed_object_region",
+      "vertices": 2480,
+      "triangles": 4409,
+      "unmoved_candidate_boundary_triangles": 275,
+      "sha256": "b174d9fd5a847d8a97752f22224220b1fd745adb5e7fb38a00a762685e1df4d2"
+    },
+    "blender": {
+      "status": "pass",
+      "blender": "5.1.2",
+      "input_scene_sha256": "6272bfa05da4c44c3aaa7bf1755bb400b62feacd5578c9478ddc91b5ba3c557c",
+      "target_id": "4DF84D78-0A18-4140-86A7-2DF1360A4AE2",
+      "translation_source_y_up_m": [
+        0.3,
+        0.0,
+        0.0
+      ],
+      "translation_blender_z_up_m": [
+        0.30000001192092896,
+        0.0,
+        0.0
+      ],
+      "render_device": "CPU",
+      "object_count": 12,
+      "edit": {
+        "status": "pass",
+        "tolerance_m": 5e-05,
+        "objects": [
+          {
+            "id": "environment",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "D9625F3E-339A-42D1-86A0-F432C6C805A9",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "F870B5E3-8BB6-4440-81BC-7657A7ACCDCC",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "B874FC97-E1BB-4BA0-A4E0-DC9281B3E764",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "85F8D4AE-1933-46E0-AB8E-F94CE95AFAD0",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "640E280D-D759-4C05-B031-B4B5C419BF2B",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "4DF84D78-0A18-4140-86A7-2DF1360A4AE2",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "FB73B36F-5623-47E8-A2D1-56AE414AA5AD",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "90FB3245-8455-472E-941D-E69C18FCFF74",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "CBD12AD5-ED17-4A3F-94B1-573DBED07B07",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "C4B5A008-B461-4064-969B-68C83401060E",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "46C25048-47D3-45BE-BEDF-D3DF0DF758F6",
+            "maximum_world_vertex_distance_m": 1.1920928955078125e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          }
+        ],
+        "maximum_world_vertex_distance_m": 1.1920928955078125e-07
+      },
+      "before_glb": {
+        "status": "pass",
+        "tolerance_m": 5e-05,
+        "objects": [
+          {
+            "id": "environment",
+            "maximum_world_vertex_distance_m": 8.940696716308594e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "D9625F3E-339A-42D1-86A0-F432C6C805A9",
+            "maximum_world_vertex_distance_m": 4.339283634635649e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "F870B5E3-8BB6-4440-81BC-7657A7ACCDCC",
+            "maximum_world_vertex_distance_m": 2.980232238769531e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "B874FC97-E1BB-4BA0-A4E0-DC9281B3E764",
+            "maximum_world_vertex_distance_m": 6.419616624953051e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "85F8D4AE-1933-46E0-AB8E-F94CE95AFAD0",
+            "maximum_world_vertex_distance_m": 3.769728778024728e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "640E280D-D759-4C05-B031-B4B5C419BF2B",
+            "maximum_world_vertex_distance_m": 5.331201577973843e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "4DF84D78-0A18-4140-86A7-2DF1360A4AE2",
+            "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "FB73B36F-5623-47E8-A2D1-56AE414AA5AD",
+            "maximum_world_vertex_distance_m": 5.623090828521526e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "90FB3245-8455-472E-941D-E69C18FCFF74",
+            "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "CBD12AD5-ED17-4A3F-94B1-573DBED07B07",
+            "maximum_world_vertex_distance_m": 6.419616624953051e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "C4B5A008-B461-4064-969B-68C83401060E",
+            "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "46C25048-47D3-45BE-BEDF-D3DF0DF758F6",
+            "maximum_world_vertex_distance_m": 2.6656007889869215e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          }
+        ],
+        "maximum_world_vertex_distance_m": 8.940696716308594e-07
+      },
+      "after_glb": {
+        "status": "pass",
+        "tolerance_m": 5e-05,
+        "objects": [
+          {
+            "id": "environment",
+            "maximum_world_vertex_distance_m": 8.940696716308594e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "D9625F3E-339A-42D1-86A0-F432C6C805A9",
+            "maximum_world_vertex_distance_m": 4.339283634635649e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "F870B5E3-8BB6-4440-81BC-7657A7ACCDCC",
+            "maximum_world_vertex_distance_m": 2.980232238769531e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "B874FC97-E1BB-4BA0-A4E0-DC9281B3E764",
+            "maximum_world_vertex_distance_m": 6.419616624953051e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "85F8D4AE-1933-46E0-AB8E-F94CE95AFAD0",
+            "maximum_world_vertex_distance_m": 3.769728778024728e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "640E280D-D759-4C05-B031-B4B5C419BF2B",
+            "maximum_world_vertex_distance_m": 5.331201577973843e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "4DF84D78-0A18-4140-86A7-2DF1360A4AE2",
+            "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "FB73B36F-5623-47E8-A2D1-56AE414AA5AD",
+            "maximum_world_vertex_distance_m": 5.623090828521526e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "90FB3245-8455-472E-941D-E69C18FCFF74",
+            "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "CBD12AD5-ED17-4A3F-94B1-573DBED07B07",
+            "maximum_world_vertex_distance_m": 6.419616624953051e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "C4B5A008-B461-4064-969B-68C83401060E",
+            "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "46C25048-47D3-45BE-BEDF-D3DF0DF758F6",
+            "maximum_world_vertex_distance_m": 3.769728778024728e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          }
+        ],
+        "maximum_world_vertex_distance_m": 8.940696716308594e-07
+      },
+      "after_blend": {
+        "status": "pass",
+        "tolerance_m": 5e-05,
+        "objects": [
+          {
+            "id": "environment",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "D9625F3E-339A-42D1-86A0-F432C6C805A9",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "F870B5E3-8BB6-4440-81BC-7657A7ACCDCC",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "B874FC97-E1BB-4BA0-A4E0-DC9281B3E764",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "85F8D4AE-1933-46E0-AB8E-F94CE95AFAD0",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "640E280D-D759-4C05-B031-B4B5C419BF2B",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "4DF84D78-0A18-4140-86A7-2DF1360A4AE2",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "FB73B36F-5623-47E8-A2D1-56AE414AA5AD",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "90FB3245-8455-472E-941D-E69C18FCFF74",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "CBD12AD5-ED17-4A3F-94B1-573DBED07B07",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "C4B5A008-B461-4064-969B-68C83401060E",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "46C25048-47D3-45BE-BEDF-D3DF0DF758F6",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          }
+        ],
+        "maximum_world_vertex_distance_m": 0.0
+      },
+      "negative_controls": {
+        "status": "pass",
+        "injected_faults_detected": {
+          "missing_object": true,
+          "unexpected_other_vertex_change": true,
+          "changed_source_hash": true,
+          "missing_vertex_colors": true,
+          "changed_triangle_connectivity": true
+        }
+      },
+      "scope": "selected observed surface region; candidate boundary faces remain in environment",
+      "outputs": {
+        "before.blend": {
+          "sha256": "03df95f297448586b4c477486963909a5db02ee21b95d578d162cfffa1532ad0",
+          "bytes": 5185838
+        },
+        "after.blend": {
+          "sha256": "832240cd840ff3243b28ac7778369562f03e4ae96d7cb45f86e538de0eaad1d3",
+          "bytes": 5186180
+        },
+        "before.glb": {
+          "sha256": "7a531c52afdcb9d63a449879b7dd7b40ac3530537667bfb47a61739bce9236b1",
+          "bytes": 4871536
+        },
+        "after.glb": {
+          "sha256": "fc5c306b965d32576dcd4b9071ce047de3e513751fbf52ee86b053e93fc3f641",
+          "bytes": 4871576
+        }
+      }
+    }
+  },
+  "original_fixture": {
+    "resolution_scale": 4,
+    "surface": {
+      "status": "pass",
+      "frames": 2,
+      "vertices": 9081,
+      "triangles": 16820,
+      "partition": {
+        "all_triangles_accounted_for": true,
+        "environment_triangles": 14039,
+        "ambiguous_vertices": 0
+      }
+    },
+    "blender": {
+      "status": "pass",
+      "blender": "5.1.2",
+      "input_scene_sha256": "73a750e9c9f90072c95623ea93b227adcab2a87de58a970043e757344330b37f",
+      "target_id": "synthetic-target",
+      "translation_source_y_up_m": [
+        0.3,
+        0.0,
+        0.0
+      ],
+      "translation_blender_z_up_m": [
+        0.30000001192092896,
+        0.0,
+        0.0
+      ],
+      "render_device": "CPU",
+      "object_count": 3,
+      "edit": {
+        "status": "pass",
+        "tolerance_m": 5e-05,
+        "objects": [
+          {
+            "id": "environment",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "synthetic-other",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "synthetic-target",
+            "maximum_world_vertex_distance_m": 1.7881393432617188e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          }
+        ],
+        "maximum_world_vertex_distance_m": 1.7881393432617188e-07
+      },
+      "before_glb": {
+        "status": "pass",
+        "tolerance_m": 5e-05,
+        "objects": [
+          {
+            "id": "environment",
+            "maximum_world_vertex_distance_m": 9.098254167838604e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "synthetic-other",
+            "maximum_world_vertex_distance_m": 6.14390614828153e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "synthetic-target",
+            "maximum_world_vertex_distance_m": 4.14027084616464e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          }
+        ],
+        "maximum_world_vertex_distance_m": 9.098254167838604e-07
+      },
+      "after_glb": {
+        "status": "pass",
+        "tolerance_m": 5e-05,
+        "objects": [
+          {
+            "id": "environment",
+            "maximum_world_vertex_distance_m": 9.098254167838604e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "synthetic-other",
+            "maximum_world_vertex_distance_m": 6.14390614828153e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "synthetic-target",
+            "maximum_world_vertex_distance_m": 5.464887635753257e-07,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          }
+        ],
+        "maximum_world_vertex_distance_m": 9.098254167838604e-07
+      },
+      "after_blend": {
+        "status": "pass",
+        "tolerance_m": 5e-05,
+        "objects": [
+          {
+            "id": "environment",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "synthetic-other",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          },
+          {
+            "id": "synthetic-target",
+            "maximum_world_vertex_distance_m": 0.0,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "status": "pass"
+          }
+        ],
+        "maximum_world_vertex_distance_m": 0.0
+      },
+      "negative_controls": {
+        "status": "pass",
+        "injected_faults_detected": {
+          "missing_object": true,
+          "unexpected_other_vertex_change": true,
+          "changed_source_hash": true,
+          "missing_vertex_colors": true,
+          "changed_triangle_connectivity": true
+        }
+      },
+      "scope": "selected observed surface region; candidate boundary faces remain in environment",
+      "outputs": {
+        "before.blend": {
+          "sha256": "21ec7bd54fc1faff58013fe1b8360ef11d4bff0b2fcfc50d015e4b70b3ac8adf",
+          "bytes": 437353
+        },
+        "after.blend": {
+          "sha256": "c898a3579a8f9dc91e7aaaecd1c7a3071addd98bb1f1fb5881cd817ac81a9b63",
+          "bytes": 437700
+        },
+        "before.glb": {
+          "sha256": "c80bb9fbb0ccc2245966c3943bd69ed83fd7ae05a2f589431a550b8eecf527f9",
+          "bytes": 435884
+        },
+        "after.glb": {
+          "sha256": "00e3203589ede5facc2b427957f11dbb9b97532c720c03ce56d83901608083bf",
+          "bytes": 435924
+        }
+      }
+    },
+    "public_resources": "examples/local-scan-fixture"
+  },
+  "offline_process_guard": {
+    "offline-blender": {
+      "status": "pass",
+      "guard": "CPython audit-hook outbound socket and DNS denial",
+      "dns_block_probe_passed": true,
+      "runtime_denied_network_events": [],
+      "script": "blender_scene.py",
+      "elapsed_seconds": 18.97590940000373,
+      "failure": null,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    "offline-fixture-blender": {
+      "status": "pass",
+      "guard": "CPython audit-hook outbound socket and DNS denial",
+      "dns_block_probe_passed": true,
+      "runtime_denied_network_events": [],
+      "script": "blender_scene.py",
+      "elapsed_seconds": 6.078341200001887,
+      "failure": null,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    "offline-fixture-points": {
+      "status": "pass",
+      "guard": "CPython audit-hook outbound socket and DNS denial",
+      "dns_block_probe_passed": true,
+      "runtime_denied_network_events": [],
+      "script": "scan_pipeline.py",
+      "elapsed_seconds": 0.24196590000065044,
+      "failure": null,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    "offline-fixture-surface": {
+      "status": "pass",
+      "guard": "CPython audit-hook outbound socket and DNS denial",
+      "dns_block_probe_passed": true,
+      "runtime_denied_network_events": [],
+      "script": "reconstruct_mesh.py",
+      "elapsed_seconds": 1.2337618000019575,
+      "failure": null,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    "offline-point-edit": {
+      "status": "pass",
+      "guard": "CPython audit-hook outbound socket and DNS denial",
+      "dns_block_probe_passed": true,
+      "runtime_denied_network_events": [],
+      "script": "scan_pipeline.py",
+      "elapsed_seconds": 2.2589435999980196,
+      "failure": null,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    "offline-points": {
+      "status": "pass",
+      "guard": "CPython audit-hook outbound socket and DNS denial",
+      "dns_block_probe_passed": true,
+      "runtime_denied_network_events": [],
+      "script": "scan_pipeline.py",
+      "elapsed_seconds": 3.9993560000002617,
+      "failure": null,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    "offline-surface": {
+      "status": "pass",
+      "guard": "CPython audit-hook outbound socket and DNS denial",
+      "dns_block_probe_passed": true,
+      "runtime_denied_network_events": [],
+      "script": "reconstruct_mesh.py",
+      "elapsed_seconds": 3.990594799994142,
+      "failure": null,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    }
+  },
+  "limits": [
+    "One real scan; no independent semantic instance ground truth.",
+    "RoomPlan boxes supply an ownership prior; observed regions can omit object boundary faces.",
+    "Native library and child-process traffic is outside the CPython network guard.",
+    "Vertex colors/material presence and geometry are checked; quantitative appearance fidelity is not measured.",
+    "Capture pose/intrinsics metadata is retained; Blender capture viewport lens is illustrative.",
+    "Timings are individual local runs, not a hardware benchmark."
+  ]
+}
