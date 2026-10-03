@@ -1,0 +1,31 @@
+test_local_work_passes_and_caught_network_attempt_still_fails (test_offline_run.OfflineGuardTests.test_local_work_passes_and_caught_network_attempt_still_fails) ... ok
+test_ambiguous_selected_candidate_prevents_complete_claim (test_scan_pipeline.RGBDTests.test_ambiguous_selected_candidate_prevents_complete_claim) ... ok
+test_edit_rejects_target_identity_dimensions_or_scene_metadata_corruption (test_scan_pipeline.RGBDTests.test_edit_rejects_target_identity_dimensions_or_scene_metadata_corruption) ... ok
+test_invalid_sensor_values_and_confidence_do_not_create_points (test_scan_pipeline.RGBDTests.test_invalid_sensor_values_and_confidence_do_not_create_points) ... ok
+test_overlap_stays_ambiguous_and_structure_is_not_furniture (test_scan_pipeline.RGBDTests.test_overlap_stays_ambiguous_and_structure_is_not_furniture) ... ok
+test_physical_front_plane_millimetres_axes_pose_and_intrinsic_scale (test_scan_pipeline.RGBDTests.test_physical_front_plane_millimetres_axes_pose_and_intrinsic_scale) ... ok
+test_rotated_camera_faces_world_negative_x (test_scan_pipeline.RGBDTests.test_rotated_camera_faces_world_negative_x) ... ok
+test_rotated_narrow_obb_classifies_in_local_coordinates (test_scan_pipeline.RGBDTests.test_rotated_narrow_obb_classifies_in_local_coordinates) ... ok
+test_scan_with_no_valid_confidence_cannot_report_reconstruction_success (test_scan_pipeline.RGBDTests.test_scan_with_no_valid_confidence_cannot_report_reconstruction_success) ... ok
+test_synthetic_ray_groundtruth_and_saved_real_observation_edit (test_scan_pipeline.RGBDTests.test_synthetic_ray_groundtruth_and_saved_real_observation_edit) ... ok
+test_usd_negative_triangle_index_and_count_are_rejected (test_scan_pipeline.RGBDTests.test_usd_negative_triangle_index_and_count_are_rejected) ... ok
+test_usd_row_vector_translation_dimensions_and_uuid (test_scan_pipeline.RGBDTests.test_usd_row_vector_translation_dimensions_and_uuid) ... ok
+test_voxel_selection_keeps_real_color_and_no_averaged_position (test_scan_pipeline.RGBDTests.test_voxel_selection_keeps_real_color_and_no_averaged_position) ... ok
+test_invalid_edits_and_conventions_fail (test_scene.SceneTests.test_invalid_edits_and_conventions_fail) ... ok
+test_known_three_objects_and_rotated_edit_roundtrip (test_scene.SceneTests.test_known_three_objects_and_rotated_edit_roundtrip) ... ok
+test_meter_and_centimeter_scenes_export_identical_physical_geometry (test_scene.SceneTests.test_meter_and_centimeter_scenes_export_identical_physical_geometry) ... ok
+test_nonfinite_binary_vertices_are_rejected (test_scene.SceneTests.test_nonfinite_binary_vertices_are_rejected) ... ok
+test_source_hash_corruption_is_detected (test_scene.SceneTests.test_source_hash_corruption_is_detected) ... ok
+test_wrong_axis_conversion_is_detected (test_scene.SceneTests.test_wrong_axis_conversion_is_detected) ... ok
+test_wrong_unit_relabel_is_detected (test_scene.SceneTests.test_wrong_unit_relabel_is_detected) ... ok
+test_changed_raw_frame_is_rejected_between_stages (test_surface.SurfaceTests.test_changed_raw_frame_is_rejected_between_stages) ... ok
+test_cross_boundary_face_remains_environment (test_surface.SurfaceTests.test_cross_boundary_face_remains_environment) ... ok
+test_empty_reference_cannot_report_zero_error_success (test_surface.SurfaceTests.test_empty_reference_cannot_report_zero_error_success) ... ok
+test_failed_mesh_write_cannot_publish_success_manifest (test_surface.SurfaceTests.test_failed_mesh_write_cannot_publish_success_manifest) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.092s
+
+OK
+[Open3D WARNING] [CheckHeader] PCD has no data.
+[Open3D WARNING] Read PCD failed: unable to parse header.
