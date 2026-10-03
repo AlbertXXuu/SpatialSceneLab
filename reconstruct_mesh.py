@@ -42,7 +42,8 @@ def split_triangles(vertices, triangles, objects, structures, ownership):
     return face_owner, owner, candidates
 
 
-def reconstruct(scene_path, output_path, voxel_size=0.035, truncation=0.105):
+def reconstruct(scene_path, output_path, voxel_size=0.035, truncation=0.105,
+                require_editable=True):
     started = time.perf_counter()
     scene_path = Path(scene_path).resolve()
     scene = json.loads(scene_path.read_text(encoding="utf-8"))
@@ -138,9 +139,9 @@ def reconstruct(scene_path, output_path, voxel_size=0.035, truncation=0.105):
     cloud = o3d.geometry.PointCloud(o3d.utility.Vector3dVector(vertices))
     distances = np.asarray(cloud.compute_point_cloud_distance(reference))
     eligible = [part for part in parts if part["role"] == "observed_object_region"]
-    if not eligible:
+    if not eligible and require_editable:
         raise ValueError("surface has no uniquely owned editable object region")
-    preferred = max(eligible, key=lambda part: part["triangles"])
+    preferred = max(eligible, key=lambda part: part["triangles"]) if eligible else None
     result = {"schema": "spatial-scene-lab.surface.v1", "status": "pass",
               "units": "m", "up_axis": "Y", "method": "Open3D CPU ScalableTSDFVolume",
               "input_scene_sha256": sha256(scene_path), "frames": len(frame_records),
@@ -148,7 +149,7 @@ def reconstruct(scene_path, output_path, voxel_size=0.035, truncation=0.105):
                              "depth_scale": 1000, "max_depth_m": params["max_depth_m"],
                              "min_confidence": params["min_confidence"]},
               "vertices": len(vertices), "triangles": len(triangles), "parts": parts,
-              "preferred_editable_object": preferred["id"],
+              "preferred_editable_object": preferred["id"] if preferred else None,
               "cameras": scene["frames"], "structures": scene["structures"],
               "reference_pcd": {"points": len(reference.points), "independent_ground_truth": False,
                                 "mesh_vertex_distance_median_m": float(np.median(distances)),
@@ -168,8 +169,11 @@ def main(argv=None):
     parser.add_argument("--output", required=True)
     parser.add_argument("--voxel-size", type=float, default=.035)
     parser.add_argument("--truncation", type=float, default=.105)
+    parser.add_argument("--allow-unowned-surface", action="store_true",
+                        help="retain a finite surface for method comparison even when B0 has no editable part")
     args = parser.parse_args(argv)
-    result = reconstruct(args.scene, args.output, args.voxel_size, args.truncation)
+    result = reconstruct(args.scene, args.output, args.voxel_size, args.truncation,
+                         require_editable=not args.allow_unowned_surface)
     print(json.dumps({key: result[key] for key in ["status", "frames", "vertices", "triangles",
                                                    "preferred_editable_object", "elapsed_seconds"]}))
 

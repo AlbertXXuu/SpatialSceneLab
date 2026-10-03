@@ -65,3 +65,18 @@ class SurfaceTests(unittest.TestCase):
                 with self.assertRaisesRegex(OSError, 'could not write fused surface'):
                     mesh.reconstruct(scene, root / 'surface')
             self.assertFalse((root / 'surface/surface-scene.json').exists())
+
+    def test_comparison_retains_mesh_when_b0_has_no_editable_region(self):
+        with tempfile.TemporaryDirectory(prefix='AlvenX-unowned-comparison-') as tmp:
+            root = Path(tmp)
+            scene_path = self.make_scene(root)
+            scene = json.loads(scene_path.read_text(encoding='utf-8'))
+            scene['objects'] = []
+            scene_path.write_text(json.dumps(scene), encoding='utf-8')
+            with self.assertRaisesRegex(ValueError, 'no uniquely owned editable'):
+                mesh.reconstruct(scene_path, root / 'default-surface')
+            result = mesh.reconstruct(scene_path, root / 'comparison-surface', require_editable=False)
+            self.assertGreater(result['triangles'], 0)
+            self.assertIsNone(result['preferred_editable_object'])
+            self.assertTrue(result['partition']['all_triangles_accounted_for'])
+            self.assertEqual([part['id'] for part in result['parts']], ['environment'])

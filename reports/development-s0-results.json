@@ -1,0 +1,1714 @@
+{
+  "schema": "spatial-scene-lab.development.v1",
+  "scope": "six-scene development comparisons; no held-out or real-scene generalization claim",
+  "input_manifest_sha256": "f886ec9bf2db07bcfa5cfcb363505ed73028e862ff470422bc465b5ae4890d6b",
+  "input_generator_sha256": "52c69193a5582e1932f10f9cc8112853094ff52410fa784d82be82d42ec086c5",
+  "configuration": {
+    "voxel_size_m": 0.035,
+    "sdf_truncation_m": 0.105,
+    "matching_tolerance_m": 0.08,
+    "samples_per_face": 7,
+    "methods": [
+      "b0",
+      "b1",
+      "b2"
+    ]
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "open3d": "0.19.0",
+    "compute": "CPU; no learned-model inference",
+    "new_paid_allocation": 0
+  },
+  "code_sha256": {
+    "run_development.py": "b2310dbc43e3b566c02964d7c99f4b4e53cc0dbc9b0c54ed1f375dd63fa7323c",
+    "scan_pipeline.py": "ea80924e86748f4b6a4b37544da4dedb579a50cf1ad514c04b343b70beab4998",
+    "reconstruct_mesh.py": "7684e01880b93f5d4153b5acbac9a912f6f5e011a8b8bbb234fe2bf461e04391",
+    "partition_baselines.py": "4562069df9f45012c067ea6c4199dc3ffa863960ca092ff717a9eff0dd95a309",
+    "evaluate_partition.py": "cc2981da6c08e80445b77fcdc6134a3a47dda231b8866efb3c60034e62cb1f06",
+    "fixtures/make_complex_fixture.py": "52c69193a5582e1932f10f9cc8112853094ff52410fa784d82be82d42ec086c5",
+    "fixtures/complex-development-scenes.json": "23a4c020407ab3065ecf6a2704948941154ad206b1296be7920064059dbf05a0"
+  },
+  "scenes": [
+    {
+      "scene_id": "dev-contact-chair",
+      "target_id": "contact-chair",
+      "factors": {
+        "geometry": [
+          "four_18mm_legs",
+          "curved_back",
+          "table_stretchers",
+          "open_shelves"
+        ],
+        "contact": [
+          "chair_floor",
+          "table_floor",
+          "chair_under_table"
+        ],
+        "appearance": "distinct_materials",
+        "visibility": "wide_front_arc",
+        "prior_error": "chair_box_12_percent_oversize"
+      },
+      "status": "completed",
+      "methods": [
+        {
+          "method": "b0",
+          "status": "completed",
+          "parameters": {
+            "method": "b0",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "released-three-vertices-same-nonnegative-owner"
+          },
+          "face_owner_sha256": "fcfcb9910ebd9c12cd0d95ae452f51cf54a9bc8a55dfba0de58af5cbb86e5722",
+          "metrics_sha256": "c21bffb31002cc8d4817cac60acd498a0cca5a4463ecf1e74bf4dd74401315a3",
+          "partition_seconds": 0.02562709999619983,
+          "evaluation_seconds": 0.8417982000100892,
+          "target": {
+            "index": 0,
+            "object_id": "contact-chair",
+            "status": "evaluated",
+            "area_iou": 0.7800145199012418,
+            "precision": 1.0,
+            "recall": 0.7800145199012418,
+            "false_negative_ratio": 0.2199854800987581,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 1.1057763429477072,
+            "true_positive_area_m2": 0.8625216032625068,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.24325473968520034,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.7659626477711647,
+                "upper": 0.7800145199012418
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.7659626477711647,
+                "upper": 0.7800145199012418
+              },
+              "false_negative_ratio": {
+                "lower": 0.21998548009875818,
+                "upper": 0.23403735222883526
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 58.08253989046922,
+            "scorable_area_m2": 58.06225400861744,
+            "unscorable_area_m2": 0.020285881851783927,
+            "ambiguous_area_m2": 0.01968375584743665,
+            "distance_rejected_area_m2": 0.000602126004352557,
+            "scorable_fraction": 0.9996507404481616,
+            "faces": 99511,
+            "zero_area_faces": 0,
+            "samples": 696577,
+            "scorable_samples": 696248,
+            "unscorable_samples": 329
+          },
+          "metrics_path": "dev-contact-chair/b0-metrics.json"
+        },
+        {
+          "method": "b1",
+          "status": "completed",
+          "parameters": {
+            "method": "b1",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "centroid-unique-owner"
+          },
+          "face_owner_sha256": "5fd4c53884eb3bafe9d7cd466df27a7709db7ff261a5d83f7ff4ecc84aee81da",
+          "metrics_sha256": "2bad202f1ad575d2c0dc43dfcdd4223896a814c8a08e13c1cf4a3c7a7a27253d",
+          "partition_seconds": 0.04842130000179168,
+          "evaluation_seconds": 0.7771007999981521,
+          "target": {
+            "index": 0,
+            "object_id": "contact-chair",
+            "status": "evaluated",
+            "area_iou": 0.8263128094241967,
+            "precision": 1.0,
+            "recall": 0.8263128094241967,
+            "false_negative_ratio": 0.17368719057580329,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 1.105776342947704,
+            "true_positive_area_m2": 0.9137171565359314,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.1920591864117727,
+            "unresolved_target_area_m2": 0.1847087012713147,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8114268789174881,
+                "upper": 0.8263128094241967
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.8114268789174881,
+                "upper": 0.8263128094241967
+              },
+              "false_negative_ratio": {
+                "lower": 0.17368719057580329,
+                "upper": 0.1885731210825119
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 58.08253989046922,
+            "scorable_area_m2": 58.06225400861744,
+            "unscorable_area_m2": 0.020285881851783927,
+            "ambiguous_area_m2": 0.01968375584743665,
+            "distance_rejected_area_m2": 0.000602126004352557,
+            "scorable_fraction": 0.9996507404481616,
+            "faces": 99511,
+            "zero_area_faces": 0,
+            "samples": 696577,
+            "scorable_samples": 696248,
+            "unscorable_samples": 329
+          },
+          "metrics_path": "dev-contact-chair/b1-metrics.json"
+        },
+        {
+          "method": "b2",
+          "status": "completed",
+          "parameters": {
+            "method": "b2",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "uniform-area-majority-with-unresolved-threshold",
+            "samples_per_face": 49,
+            "sampling_rule": "hammersley-base2-square-root-triangle-v1",
+            "min_majority_fraction": 0.6,
+            "sample_weight": "face_area_m2 / samples_per_face",
+            "overlap_vote": "unresolved (-2)"
+          },
+          "face_owner_sha256": "a83143a38449392c126e552b53dfff3e0933f1dad1bd50623d893367f7dc38f6",
+          "metrics_sha256": "36f04b03d20586eec4d9f8adf581ea66d2eae227d62c003565315188091de59d",
+          "partition_seconds": 1.3169809999963036,
+          "evaluation_seconds": 0.8499440000014147,
+          "target": {
+            "index": 0,
+            "object_id": "contact-chair",
+            "status": "evaluated",
+            "area_iou": 0.8103744654014017,
+            "precision": 1.0,
+            "recall": 0.8103744654014017,
+            "false_negative_ratio": 0.18962553459859838,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 1.105776342947704,
+            "true_positive_area_m2": 0.8960929127697628,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.20968343017794144,
+            "unresolved_target_area_m2": 0.20233294503748345,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.7957756623345795,
+                "upper": 0.8103744654014017
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.7957756623345795,
+                "upper": 0.8103744654014017
+              },
+              "false_negative_ratio": {
+                "lower": 0.18962553459859832,
+                "upper": 0.20422433766542047
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 58.08253989046922,
+            "scorable_area_m2": 58.06225400861744,
+            "unscorable_area_m2": 0.020285881851783927,
+            "ambiguous_area_m2": 0.01968375584743665,
+            "distance_rejected_area_m2": 0.000602126004352557,
+            "scorable_fraction": 0.9996507404481616,
+            "faces": 99511,
+            "zero_area_faces": 0,
+            "samples": 696577,
+            "scorable_samples": 696248,
+            "unscorable_samples": 329
+          },
+          "metrics_path": "dev-contact-chair/b2-metrics.json"
+        }
+      ],
+      "frames": 16,
+      "observations": 66952,
+      "vertices": 52832,
+      "triangles": 99511,
+      "observation_seconds": 0.7559500000061234,
+      "tsdf_seconds": 0.6325157999963267,
+      "scene_sha256": "8e26184ae466d67e771116acec3ce1a15a093e5f857cb4728b077d11d9d6e17c",
+      "surface_manifest_sha256": "0926c680bc34a42a2927dd7117480cce2f44cd983fcfb48ae829cef3e83ba291",
+      "surface_sha256": "7382711847f3ed6a86d3b963e06e1278bbf5f8e686c152dd39bf59d94efbf738",
+      "reference_sha256": "5411e9fe10ebaae19a6f9204c950506c2d788b324821fbacaa36226f7a16909b",
+      "elapsed_seconds": 5.335027199995238,
+      "process_lifetime_peak_ram_bytes": 212856832
+    },
+    {
+      "scene_id": "dev-same-color-dining",
+      "target_id": "same-table",
+      "factors": {
+        "geometry": [
+          "table_legs",
+          "chair_slats",
+          "three_leg_stool"
+        ],
+        "contact": [
+          "floor",
+          "adjacent_furniture"
+        ],
+        "appearance": "identical_diffuse_rgb_149_133_110",
+        "visibility": "wide_front_arc",
+        "prior_error": "overlapping_oversized_boxes"
+      },
+      "status": "completed",
+      "methods": [
+        {
+          "method": "b0",
+          "status": "completed",
+          "parameters": {
+            "method": "b0",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "released-three-vertices-same-nonnegative-owner"
+          },
+          "face_owner_sha256": "05b2f7388b4b2d01223c40d3aed3bc3860603011f0f83c85a5304023cd3ff337",
+          "metrics_sha256": "e4aac9bbbfe608e750e0897a54a17dc7a194bca0c1e04864dcc3b6d5bb47965c",
+          "partition_seconds": 0.029620499990414828,
+          "evaluation_seconds": 0.844607699997141,
+          "target": {
+            "index": 0,
+            "object_id": "same-table",
+            "status": "evaluated",
+            "area_iou": 0.6326212476675754,
+            "precision": 1.0,
+            "recall": 0.6326212476675754,
+            "false_negative_ratio": 0.36737875233242456,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 2.4791581527977415,
+            "true_positive_area_m2": 1.5683681237881488,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.9107900290095926,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.6250196696486711,
+                "upper": 0.6326212476675754
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.6250196696486711,
+                "upper": 0.6326212476675754
+              },
+              "false_negative_ratio": {
+                "lower": 0.36737875233242456,
+                "upper": 0.37498033035132894
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 56.83200762115781,
+            "scorable_area_m2": 56.801855747489114,
+            "unscorable_area_m2": 0.030151873668692986,
+            "ambiguous_area_m2": 0.030151873668708126,
+            "distance_rejected_area_m2": 0.0,
+            "scorable_fraction": 0.9994694561228651,
+            "faces": 96518,
+            "zero_area_faces": 0,
+            "samples": 675626,
+            "scorable_samples": 675023,
+            "unscorable_samples": 603
+          },
+          "metrics_path": "dev-same-color-dining/b0-metrics.json"
+        },
+        {
+          "method": "b1",
+          "status": "completed",
+          "parameters": {
+            "method": "b1",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "centroid-unique-owner"
+          },
+          "face_owner_sha256": "0cc3f62fe1865a24def84f6b3bd5334ee1ec615c53c0761576e1d8e1c645646c",
+          "metrics_sha256": "c4c470bc2058ce4c024764bcf49adb706ab0fa083a28bad73a7259928b7fbad2",
+          "partition_seconds": 0.048722499996074475,
+          "evaluation_seconds": 0.8650906999973813,
+          "target": {
+            "index": 0,
+            "object_id": "same-table",
+            "status": "evaluated",
+            "area_iou": 0.6591308426866119,
+            "precision": 0.9996516964958309,
+            "recall": 0.6592822518483293,
+            "false_negative_ratio": 0.3407177481516707,
+            "false_positive_ratio": 0.00022971032746730495,
+            "scorable_target_area_m2": 2.4791581527977415,
+            "true_positive_area_m2": 1.6344649696646396,
+            "false_positive_area_m2": 0.000569488231122408,
+            "false_negative_area_m2": 0.844693183133102,
+            "unresolved_target_area_m2": 0.8401723053577554,
+            "unscorable_predicted_target_area_m2": 0.0004480839833099884,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.000569488231122408
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.6512125223913763,
+                "upper": 0.6591924262301715
+              },
+              "precision": {
+                "lower": 0.9993778153001478,
+                "upper": 0.9996517919228486
+              },
+              "recall": {
+                "lower": 0.6514766484308586,
+                "upper": 0.6593438221749044
+              },
+              "false_negative_ratio": {
+                "lower": 0.3406561778250956,
+                "upper": 0.3485233515691414
+              },
+              "false_positive_ratio": {
+                "lower": 0.00022695012777052153,
+                "upper": 0.0004104507061334757
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 56.83200762115781,
+            "scorable_area_m2": 56.801855747489114,
+            "unscorable_area_m2": 0.030151873668692986,
+            "ambiguous_area_m2": 0.030151873668708126,
+            "distance_rejected_area_m2": 0.0,
+            "scorable_fraction": 0.9994694561228651,
+            "faces": 96518,
+            "zero_area_faces": 0,
+            "samples": 675626,
+            "scorable_samples": 675023,
+            "unscorable_samples": 603
+          },
+          "metrics_path": "dev-same-color-dining/b1-metrics.json"
+        },
+        {
+          "method": "b2",
+          "status": "completed",
+          "parameters": {
+            "method": "b2",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "uniform-area-majority-with-unresolved-threshold",
+            "samples_per_face": 49,
+            "sampling_rule": "hammersley-base2-square-root-triangle-v1",
+            "min_majority_fraction": 0.6,
+            "sample_weight": "face_area_m2 / samples_per_face",
+            "overlap_vote": "unresolved (-2)"
+          },
+          "face_owner_sha256": "b750ac15d12489d3e1b33a67cb1e836b3b5438bfcafd93b7510bece0e35321b9",
+          "metrics_sha256": "c7cde4f3e5280af8bf2cf62f70168cb8658cb963e8c8897dcfe23f808737eb19",
+          "partition_seconds": 1.4210842000029515,
+          "evaluation_seconds": 0.8648902999993879,
+          "target": {
+            "index": 0,
+            "object_id": "same-table",
+            "status": "evaluated",
+            "area_iou": 0.6563718157510038,
+            "precision": 0.9998309645844734,
+            "recall": 0.6564446606537041,
+            "false_negative_ratio": 0.34355533934629595,
+            "false_positive_ratio": 0.00011098115572962334,
+            "scorable_target_area_m2": 2.4791581527977424,
+            "true_positive_area_m2": 1.6274301323201779,
+            "false_positive_area_m2": 0.0002751398370340116,
+            "false_negative_area_m2": 0.8517280204775646,
+            "unresolved_target_area_m2": 0.847207142702218,
+            "unscorable_predicted_target_area_m2": 0.0003484281586342257,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0002751398370340116
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.648485715556458,
+                "upper": 0.6564200981197658
+              },
+              "precision": {
+                "lower": 0.9996169856095366,
+                "upper": 0.9998310007606134
+              },
+              "recall": {
+                "lower": 0.6486468877872891,
+                "upper": 0.6564929381437485
+              },
+              "false_negative_ratio": {
+                "lower": 0.34350706185625146,
+                "upper": 0.3513531122127109
+              },
+              "false_positive_ratio": {
+                "lower": 0.00010964760596818659,
+                "upper": 0.00025152408891886856
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 56.83200762115781,
+            "scorable_area_m2": 56.801855747489114,
+            "unscorable_area_m2": 0.030151873668692986,
+            "ambiguous_area_m2": 0.030151873668708126,
+            "distance_rejected_area_m2": 0.0,
+            "scorable_fraction": 0.9994694561228651,
+            "faces": 96518,
+            "zero_area_faces": 0,
+            "samples": 675626,
+            "scorable_samples": 675023,
+            "unscorable_samples": 603
+          },
+          "metrics_path": "dev-same-color-dining/b2-metrics.json"
+        }
+      ],
+      "frames": 18,
+      "observations": 74430,
+      "vertices": 50968,
+      "triangles": 96518,
+      "observation_seconds": 1.1348868000059156,
+      "tsdf_seconds": 0.7880826000036905,
+      "scene_sha256": "2014c2121b9042e6d4f324e619eedaff91a57f2ee1891ab35a407177468d07c5",
+      "surface_manifest_sha256": "29ad41dd8cdbbde933cd2c80fa7dc22cb486c554ef030b00747be83bb0cdc0d7",
+      "surface_sha256": "e4d0a901df78b7dd0bb3bf82ff5de56ea51df3528f5f694dc7c3006cd8a824cc",
+      "reference_sha256": "9e9a4e604b301a0de07330dbaee3a1524e22c7f1c9cb375211f6fc7adc362aec",
+      "elapsed_seconds": 6.078741100005573,
+      "process_lifetime_peak_ram_bytes": 240291840
+    },
+    {
+      "scene_id": "dev-curved-sofa-wall",
+      "target_id": "curved-sofa",
+      "factors": {
+        "geometry": [
+          "ellipsoid_cushions",
+          "curved_arms",
+          "round_pedestal_table",
+          "lamp_shade"
+        ],
+        "contact": [
+          "floor",
+          "sofa_back_wall_contact",
+          "adjacent_ottoman"
+        ],
+        "appearance": "sofa_component_colour_changes",
+        "visibility": "wide_front_arc",
+        "prior_error": "sofa_box_yaw_7deg_and_translation_50mm"
+      },
+      "status": "completed",
+      "methods": [
+        {
+          "method": "b0",
+          "status": "completed",
+          "parameters": {
+            "method": "b0",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "released-three-vertices-same-nonnegative-owner"
+          },
+          "face_owner_sha256": "332bc9a90f7425d28ca9da877d04635f22dea074f441714fd571642ae48db869",
+          "metrics_sha256": "80566dfe46bee02f3018c9dae9843f6530d2625da177d56446a44214f3825881",
+          "partition_seconds": 0.01979859999846667,
+          "evaluation_seconds": 0.5923867999954382,
+          "target": {
+            "index": 0,
+            "object_id": "curved-sofa",
+            "status": "evaluated",
+            "area_iou": 0.978251139504781,
+            "precision": 0.9997467557017827,
+            "recall": 0.9784936095138246,
+            "false_negative_ratio": 0.021506390486175454,
+            "false_positive_ratio": 0.0002478606967596505,
+            "scorable_target_area_m2": 3.9124373402827612,
+            "true_positive_area_m2": 3.8282949350899464,
+            "false_positive_area_m2": 0.0009697394451909589,
+            "false_negative_area_m2": 0.08414240519281478,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0006353412372996211,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0009697394451909589
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9738055587775858,
+                "upper": 0.9782546698568955
+              },
+              "precision": {
+                "lower": 0.9995809079412308,
+                "upper": 0.9997467977124214
+              },
+              "recall": {
+                "lower": 0.9742033116549075,
+                "upper": 0.9784971013724874
+              },
+              "false_negative_ratio": {
+                "lower": 0.021502898627512645,
+                "upper": 0.025796688345092522
+              },
+              "false_positive_ratio": {
+                "lower": 0.00024673403657546637,
+                "upper": 0.00041025083417043994
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 37.2287034307383,
+            "scorable_area_m2": 37.210838091056786,
+            "unscorable_area_m2": 0.017865339681513603,
+            "ambiguous_area_m2": 0.017416170124277208,
+            "distance_rejected_area_m2": 0.0004491695572333009,
+            "scorable_fraction": 0.9995201192081602,
+            "faces": 67055,
+            "zero_area_faces": 0,
+            "samples": 469385,
+            "scorable_samples": 469069,
+            "unscorable_samples": 316
+          },
+          "metrics_path": "dev-curved-sofa-wall/b0-metrics.json"
+        },
+        {
+          "method": "b1",
+          "status": "completed",
+          "parameters": {
+            "method": "b1",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "centroid-unique-owner"
+          },
+          "face_owner_sha256": "082043d91ce20f142eafe7215748c870f5f949b7c86fe01719dc9adff50c4c09",
+          "metrics_sha256": "c71570aa3c6837a8b8fd4244f3220cc03b203febbedb726da6b0ffc7a0e26883",
+          "partition_seconds": 0.03828550000616815,
+          "evaluation_seconds": 0.6675384999980452,
+          "target": {
+            "index": 0,
+            "object_id": "curved-sofa",
+            "status": "evaluated",
+            "area_iou": 0.9896646543356,
+            "precision": 0.998511444762876,
+            "recall": 0.9911269299728199,
+            "false_negative_ratio": 0.008873070027180035,
+            "false_positive_ratio": 0.0014775465919833338,
+            "scorable_target_area_m2": 3.9124373402827706,
+            "true_positive_area_m2": 3.8777220097854874,
+            "false_positive_area_m2": 0.0057808084584831465,
+            "false_negative_area_m2": 0.03471533049728302,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.001765370201733279,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0057808084584831465
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9851727030666553,
+                "upper": 0.989669308873348
+              },
+              "precision": {
+                "lower": 0.9980577457477305,
+                "upper": 0.9985121211257245
+              },
+              "recall": {
+                "lower": 0.9870650840324754,
+                "upper": 0.9911309318742498
+              },
+              "false_negative_ratio": {
+                "lower": 0.008869068125750168,
+                "upper": 0.012934915967524607
+              },
+              "false_positive_ratio": {
+                "lower": 0.0014708303479913354,
+                "upper": 0.0019287666495052486
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 37.2287034307383,
+            "scorable_area_m2": 37.210838091056786,
+            "unscorable_area_m2": 0.017865339681513603,
+            "ambiguous_area_m2": 0.017416170124277208,
+            "distance_rejected_area_m2": 0.0004491695572333009,
+            "scorable_fraction": 0.9995201192081602,
+            "faces": 67055,
+            "zero_area_faces": 0,
+            "samples": 469385,
+            "scorable_samples": 469069,
+            "unscorable_samples": 316
+          },
+          "metrics_path": "dev-curved-sofa-wall/b1-metrics.json"
+        },
+        {
+          "method": "b2",
+          "status": "completed",
+          "parameters": {
+            "method": "b2",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "uniform-area-majority-with-unresolved-threshold",
+            "samples_per_face": 49,
+            "sampling_rule": "hammersley-base2-square-root-triangle-v1",
+            "min_majority_fraction": 0.6,
+            "sample_weight": "face_area_m2 / samples_per_face",
+            "overlap_vote": "unresolved (-2)"
+          },
+          "face_owner_sha256": "f970e97e4eb2d4a8ba82adcb938f3480d395a0d507de5206ca8e53a453710568",
+          "metrics_sha256": "1a643caf91b95d606ec53f5c1e987a01fca4eb4f8d62309c904c390f4281a133",
+          "partition_seconds": 0.9640062000107719,
+          "evaluation_seconds": 0.6737831999926129,
+          "target": {
+            "index": 0,
+            "object_id": "curved-sofa",
+            "status": "evaluated",
+            "area_iou": 0.9888765027636668,
+            "precision": 0.9985102601261966,
+            "recall": 0.9903376138702177,
+            "false_negative_ratio": 0.00966238612978239,
+            "false_positive_ratio": 0.001477546591983334,
+            "scorable_target_area_m2": 3.9124373402827697,
+            "true_positive_area_m2": 3.874633859992379,
+            "false_positive_area_m2": 0.0057808084584831465,
+            "false_negative_area_m2": 0.03780348029039094,
+            "unresolved_target_area_m2": 0.004743245900637799,
+            "unscorable_predicted_target_area_m2": 0.001765370201733279,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0057808084584831465
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9843881288059235,
+                "upper": 0.988881512246606
+              },
+              "precision": {
+                "lower": 0.998056200746724,
+                "upper": 0.998510937565768
+              },
+              "recall": {
+                "lower": 0.9862790027127349,
+                "upper": 0.9903419717662728
+              },
+              "false_negative_ratio": {
+                "lower": 0.00965802823372719,
+                "upper": 0.013720997287265058
+              },
+              "false_positive_ratio": {
+                "lower": 0.0014708303479913358,
+                "upper": 0.001928766649505249
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 37.2287034307383,
+            "scorable_area_m2": 37.210838091056786,
+            "unscorable_area_m2": 0.017865339681513603,
+            "ambiguous_area_m2": 0.017416170124277208,
+            "distance_rejected_area_m2": 0.0004491695572333009,
+            "scorable_fraction": 0.9995201192081602,
+            "faces": 67055,
+            "zero_area_faces": 0,
+            "samples": 469385,
+            "scorable_samples": 469069,
+            "unscorable_samples": 316
+          },
+          "metrics_path": "dev-curved-sofa-wall/b2-metrics.json"
+        }
+      ],
+      "frames": 16,
+      "observations": 70698,
+      "vertices": 35446,
+      "triangles": 67055,
+      "observation_seconds": 0.8739003999944543,
+      "tsdf_seconds": 0.6651185999944573,
+      "scene_sha256": "18cc1f70ab1b9b11a0b2224dbafbff4583b1d30f583e63af9bb8dfa50fec9278",
+      "surface_manifest_sha256": "02f8a5c477d7051db6e8d9695ac447baa6b0dc8a89b16d77bf6cb5ffee119aea",
+      "surface_sha256": "1b9211e13614ebe1110ae298e7bbb71aa6832b0c24a3f355b87a4f82a823b81b",
+      "reference_sha256": "11c639035a2863659cec6a3d4094616494422f7c7f0f0ea5f11a2b45f36e83cf",
+      "elapsed_seconds": 4.567054300001473,
+      "process_lifetime_peak_ram_bytes": 240291840
+    },
+    {
+      "scene_id": "dev-occluded-bookshelf",
+      "target_id": "occluded-shelf",
+      "factors": {
+        "geometry": [
+          "concave_shelf_bays",
+          "individual_books",
+          "folded_screen",
+          "stool"
+        ],
+        "contact": [
+          "floor",
+          "shelf_back_near_wall_10mm"
+        ],
+        "appearance": "mixed_book_spines",
+        "visibility": "screen_occlusion_and_65_degree_front_arc",
+        "prior_error": "shelf_height_underestimate_14_percent"
+      },
+      "status": "completed",
+      "methods": [
+        {
+          "method": "b0",
+          "status": "completed",
+          "parameters": {
+            "method": "b0",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "released-three-vertices-same-nonnegative-owner"
+          },
+          "face_owner_sha256": "a00471807caaa85ba1640056e8570206e055f36b02def3e5e47eb0c4c6fe1a30",
+          "metrics_sha256": "f4338e3cc46d5a8cf080c53ffdb827cb5a17866c33130170e79fad52bcd506df",
+          "partition_seconds": 0.016381599998567253,
+          "evaluation_seconds": 0.4384686999983387,
+          "target": {
+            "index": 0,
+            "object_id": "occluded-shelf",
+            "status": "evaluated",
+            "area_iou": 0.663291955978458,
+            "precision": 1.0,
+            "recall": 0.663291955978458,
+            "false_negative_ratio": 0.336708044021542,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 4.370233387213765,
+            "true_positive_area_m2": 2.89874065148738,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 1.471492735726385,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.6552178738577941,
+                "upper": 0.663291955978458
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.6552178738577941,
+                "upper": 0.663291955978458
+              },
+              "false_negative_ratio": {
+                "lower": 0.336708044021542,
+                "upper": 0.34478212614220594
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 28.193635243956592,
+            "scorable_area_m2": 28.139781976726447,
+            "unscorable_area_m2": 0.05385326723014572,
+            "ambiguous_area_m2": 0.023234870401578903,
+            "distance_rejected_area_m2": 0.03061839682856705,
+            "scorable_fraction": 0.9980898785571936,
+            "faces": 52131,
+            "zero_area_faces": 0,
+            "samples": 364917,
+            "scorable_samples": 363956,
+            "unscorable_samples": 961
+          },
+          "metrics_path": "dev-occluded-bookshelf/b0-metrics.json"
+        },
+        {
+          "method": "b1",
+          "status": "completed",
+          "parameters": {
+            "method": "b1",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "centroid-unique-owner"
+          },
+          "face_owner_sha256": "9dc8f78f2d2f932e5a314d3136494969736b908a554ebad9f33d013f78d6f446",
+          "metrics_sha256": "ecd26a2e85ff8144226b1ffb70f94d3fe3b920ecc42f28f6c2442ab604a9f7d9",
+          "partition_seconds": 0.03063280000060331,
+          "evaluation_seconds": 0.4951588999974774,
+          "target": {
+            "index": 0,
+            "object_id": "occluded-shelf",
+            "status": "evaluated",
+            "area_iou": 0.7240150106351799,
+            "precision": 1.0,
+            "recall": 0.7240150106351799,
+            "false_negative_ratio": 0.2759849893648201,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 4.370233387213769,
+            "true_positive_area_m2": 3.1641145723217954,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 1.2061188148919737,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.7152017624120223,
+                "upper": 0.7240150106351799
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.7152017624120223,
+                "upper": 0.7240150106351799
+              },
+              "false_negative_ratio": {
+                "lower": 0.2759849893648201,
+                "upper": 0.28479823758797773
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 28.193635243956592,
+            "scorable_area_m2": 28.139781976726447,
+            "unscorable_area_m2": 0.05385326723014572,
+            "ambiguous_area_m2": 0.023234870401578903,
+            "distance_rejected_area_m2": 0.03061839682856705,
+            "scorable_fraction": 0.9980898785571936,
+            "faces": 52131,
+            "zero_area_faces": 0,
+            "samples": 364917,
+            "scorable_samples": 363956,
+            "unscorable_samples": 961
+          },
+          "metrics_path": "dev-occluded-bookshelf/b1-metrics.json"
+        },
+        {
+          "method": "b2",
+          "status": "completed",
+          "parameters": {
+            "method": "b2",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "uniform-area-majority-with-unresolved-threshold",
+            "samples_per_face": 49,
+            "sampling_rule": "hammersley-base2-square-root-triangle-v1",
+            "min_majority_fraction": 0.6,
+            "sample_weight": "face_area_m2 / samples_per_face",
+            "overlap_vote": "unresolved (-2)"
+          },
+          "face_owner_sha256": "2739f74c04475c756214db81e117677e7b0ac0ac212e88aefa116bebd36d26d0",
+          "metrics_sha256": "74beb1df0a4b168c8edc5e279504931df7386dfbc1b0516e0c00a5625e55f6e2",
+          "partition_seconds": 0.8102686000056565,
+          "evaluation_seconds": 0.466666799999075,
+          "target": {
+            "index": 0,
+            "object_id": "occluded-shelf",
+            "status": "evaluated",
+            "area_iou": 0.7211010928275071,
+            "precision": 1.0,
+            "recall": 0.7211010928275071,
+            "false_negative_ratio": 0.27889890717249294,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 4.370233387213767,
+            "true_positive_area_m2": 3.151380071431105,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 1.2188533157826618,
+            "unresolved_target_area_m2": 0.01743227376471886,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.7123233149752171,
+                "upper": 0.7211010928275071
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.7123233149752171,
+                "upper": 0.7211010928275071
+              },
+              "false_negative_ratio": {
+                "lower": 0.2788989071724929,
+                "upper": 0.28767668502478294
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 28.193635243956592,
+            "scorable_area_m2": 28.139781976726447,
+            "unscorable_area_m2": 0.05385326723014572,
+            "ambiguous_area_m2": 0.023234870401578903,
+            "distance_rejected_area_m2": 0.03061839682856705,
+            "scorable_fraction": 0.9980898785571936,
+            "faces": 52131,
+            "zero_area_faces": 0,
+            "samples": 364917,
+            "scorable_samples": 363956,
+            "unscorable_samples": 961
+          },
+          "metrics_path": "dev-occluded-bookshelf/b2-metrics.json"
+        }
+      ],
+      "frames": 12,
+      "observations": 55234,
+      "vertices": 28692,
+      "triangles": 52131,
+      "observation_seconds": 0.6799238999956287,
+      "tsdf_seconds": 0.5271942000108538,
+      "scene_sha256": "a9397c2135e8a3f9d50256e6067fcf96df3c04cb653679386d5e3024db072024",
+      "surface_manifest_sha256": "7bd8f81abab390db8ca6cbed29785e0d971b4ed40e7a84e388577c14d85af5d5",
+      "surface_sha256": "873f4a3049487926a54e1d26d8d34736022bec7ab7f401ed6afc41725efe88d2",
+      "reference_sha256": "ecc1eb0d69df2ac472db65b4731892f4825fab9c6724a56d70380f2fa16285e5",
+      "elapsed_seconds": 3.529716599994572,
+      "process_lifetime_peak_ram_bytes": 240291840
+    },
+    {
+      "scene_id": "dev-thin-rack-noise",
+      "target_id": "thin-rack",
+      "factors": {
+        "geometry": [
+          "16mm_rack_rods",
+          "18mm_shelf_slats",
+          "lamp_pole",
+          "stool_legs"
+        ],
+        "contact": [
+          "floor",
+          "rack_near_table"
+        ],
+        "appearance": "metal_and_wood",
+        "visibility": "16_view_front_arc",
+        "sensor_stress": "12mm_gaussian_noise_9_percent_random_dropout_and_2px_stripes",
+        "prior_error": "rack_width_underestimate_15_percent"
+      },
+      "status": "completed",
+      "methods": [
+        {
+          "method": "b0",
+          "status": "completed",
+          "parameters": {
+            "method": "b0",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "released-three-vertices-same-nonnegative-owner"
+          },
+          "face_owner_sha256": "d1047f8f261086fc27c3393526d5ec6b60feb8340b66784d91e714427f2472c6",
+          "metrics_sha256": "92158be656ff03a4951de2dac2aeb9021bbd1f5987879851b776443d41cde701",
+          "partition_seconds": 0.03189439998823218,
+          "evaluation_seconds": 0.9087124999932712,
+          "target": {
+            "index": 0,
+            "object_id": "thin-rack",
+            "status": "evaluated",
+            "area_iou": 0.8813316654420308,
+            "precision": 1.0,
+            "recall": 0.8813316654420308,
+            "false_negative_ratio": 0.11866833455796925,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 0.7356726527127311,
+            "true_positive_area_m2": 0.648371604235468,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.0873010484772631,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8571626059541021,
+                "upper": 0.8813316654420308
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.8571626059541021,
+                "upper": 0.8813316654420308
+              },
+              "false_negative_ratio": {
+                "lower": 0.11866833455796921,
+                "upper": 0.1428373940458979
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 51.5425711635246,
+            "scorable_area_m2": 51.52182770600143,
+            "unscorable_area_m2": 0.020743457523167308,
+            "ambiguous_area_m2": 0.01593942131593016,
+            "distance_rejected_area_m2": 0.0048040362072405305,
+            "scorable_fraction": 0.9995975470944716,
+            "faces": 103884,
+            "zero_area_faces": 0,
+            "samples": 727188,
+            "scorable_samples": 726868,
+            "unscorable_samples": 320
+          },
+          "metrics_path": "dev-thin-rack-noise/b0-metrics.json"
+        },
+        {
+          "method": "b1",
+          "status": "completed",
+          "parameters": {
+            "method": "b1",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "centroid-unique-owner"
+          },
+          "face_owner_sha256": "fe2d35034a2ea7f011df8c7edaf292e7f92b3358eaaed1d3c9d194e164d06df2",
+          "metrics_sha256": "973eab6c9977b7334a69f2937c87aeb10e9321b534f4a7bcd9ee8d66405791de",
+          "partition_seconds": 0.0524672999890754,
+          "evaluation_seconds": 0.9928883999964455,
+          "target": {
+            "index": 0,
+            "object_id": "thin-rack",
+            "status": "evaluated",
+            "area_iou": 0.9149417206135494,
+            "precision": 1.0,
+            "recall": 0.9149417206135494,
+            "false_negative_ratio": 0.08505827938645065,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 0.7356726527127297,
+            "true_positive_area_m2": 0.6730976026813191,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.06257505003141065,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8898509610952177,
+                "upper": 0.9149417206135494
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.8898509610952177,
+                "upper": 0.9149417206135494
+              },
+              "false_negative_ratio": {
+                "lower": 0.08505827938645061,
+                "upper": 0.11014903890478234
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 51.5425711635246,
+            "scorable_area_m2": 51.52182770600143,
+            "unscorable_area_m2": 0.020743457523167308,
+            "ambiguous_area_m2": 0.01593942131593016,
+            "distance_rejected_area_m2": 0.0048040362072405305,
+            "scorable_fraction": 0.9995975470944716,
+            "faces": 103884,
+            "zero_area_faces": 0,
+            "samples": 727188,
+            "scorable_samples": 726868,
+            "unscorable_samples": 320
+          },
+          "metrics_path": "dev-thin-rack-noise/b1-metrics.json"
+        },
+        {
+          "method": "b2",
+          "status": "completed",
+          "parameters": {
+            "method": "b2",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "uniform-area-majority-with-unresolved-threshold",
+            "samples_per_face": 49,
+            "sampling_rule": "hammersley-base2-square-root-triangle-v1",
+            "min_majority_fraction": 0.6,
+            "sample_weight": "face_area_m2 / samples_per_face",
+            "overlap_vote": "unresolved (-2)"
+          },
+          "face_owner_sha256": "6ef649cb288b1474087f9e93817c13977342eabd6ab3e13ad9ed57c37b78a6a8",
+          "metrics_sha256": "f68e8f1a506d83869b828ce96e8ba755106a5bf18f1acb8bc6590796addf9597",
+          "partition_seconds": 1.5254208999976981,
+          "evaluation_seconds": 0.9429070000041975,
+          "target": {
+            "index": 0,
+            "object_id": "thin-rack",
+            "status": "evaluated",
+            "area_iou": 0.9087141565277157,
+            "precision": 1.0,
+            "recall": 0.9087141565277157,
+            "false_negative_ratio": 0.09128584347228433,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 0.7356726527127295,
+            "true_positive_area_m2": 0.6685161540903551,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.06715649862237441,
+            "unresolved_target_area_m2": 0.01283509604975732,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8837941776278019,
+                "upper": 0.9087141565277157
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.8837941776278019,
+                "upper": 0.9087141565277157
+              },
+              "false_negative_ratio": {
+                "lower": 0.0912858434722843,
+                "upper": 0.11620582237219812
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 51.5425711635246,
+            "scorable_area_m2": 51.52182770600143,
+            "unscorable_area_m2": 0.020743457523167308,
+            "ambiguous_area_m2": 0.01593942131593016,
+            "distance_rejected_area_m2": 0.0048040362072405305,
+            "scorable_fraction": 0.9995975470944716,
+            "faces": 103884,
+            "zero_area_faces": 0,
+            "samples": 727188,
+            "scorable_samples": 726868,
+            "unscorable_samples": 320
+          },
+          "metrics_path": "dev-thin-rack-noise/b2-metrics.json"
+        }
+      ],
+      "frames": 16,
+      "observations": 56954,
+      "vertices": 56190,
+      "triangles": 103884,
+      "observation_seconds": 0.8972537000081502,
+      "tsdf_seconds": 0.631667199995718,
+      "scene_sha256": "844900a9c90f7b7ce2947400b7ce79b1fe8bd9390c774d28d70e87f4e2b171f5",
+      "surface_manifest_sha256": "8024608bf7583c3655ac7bb7f3a81873dd7d3aca43cca7d2956b2a5c20abab56",
+      "surface_sha256": "6e5ac74dd7c9ac319c689b288dc7bebab2f8d238f41c0ed555f6e85bcca2fd2a",
+      "reference_sha256": "bd6da0ff4d0a0cb8924237cc9b719f76468b97b6dda138cd8a85e2371845fc75",
+      "elapsed_seconds": 6.082353100006003,
+      "process_lifetime_peak_ram_bytes": 240291840
+    },
+    {
+      "scene_id": "dev-combined-study",
+      "target_id": "combined-desk",
+      "factors": {
+        "geometry": [
+          "L_desk",
+          "drawer_handles",
+          "chair_back_and_legs",
+          "curved_sofa",
+          "shelves"
+        ],
+        "contact": [
+          "floor",
+          "adjacent_chair_desk",
+          "shelf_near_wall"
+        ],
+        "appearance": "desk_chair_shelf_same_wood_colour",
+        "visibility": "chair_occludes_desk_in_narrow_arc",
+        "sensor_stress": "6mm_noise_4.5_percent_dropout_12mm_pose_noise",
+        "prior_error": "100mm_offset_9_degree_yaw_and_anisotropic_box_error"
+      },
+      "status": "completed",
+      "methods": [
+        {
+          "method": "b0",
+          "status": "completed",
+          "parameters": {
+            "method": "b0",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "released-three-vertices-same-nonnegative-owner"
+          },
+          "face_owner_sha256": "2fba986c989a55e42e9244760ac26f743e015eeef4005eaaa7d56777bc070296",
+          "metrics_sha256": "a5d62550012dc63bb09b2196176f20be1bae8628ce75fb2a7c10a60eddfacef5",
+          "partition_seconds": 0.01978930000041146,
+          "evaluation_seconds": 0.7050234000053024,
+          "target": {
+            "index": 0,
+            "object_id": "combined-desk",
+            "status": "evaluated",
+            "area_iou": 0.8117146750561508,
+            "precision": 0.9981172551823347,
+            "recall": 0.8129594251434178,
+            "false_negative_ratio": 0.18704057485658218,
+            "false_positive_ratio": 0.0015334823005152378,
+            "scorable_target_area_m2": 2.879527603499077,
+            "true_positive_area_m2": 2.340939105225213,
+            "false_positive_area_m2": 0.004415704613810894,
+            "false_negative_area_m2": 0.5385884982738638,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0022996246559380817,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.004415704613810894
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.7954518569768725,
+                "upper": 0.8118646920802468
+              },
+              "precision": {
+                "lower": 0.9971395580324439,
+                "upper": 0.9981190994087847
+              },
+              "recall": {
+                "lower": 0.7972711268679465,
+                "upper": 0.8131086787535575
+              },
+              "false_negative_ratio": {
+                "lower": 0.18689132124644248,
+                "upper": 0.20272887313205346
+              },
+              "false_positive_ratio": {
+                "lower": 0.0015027125975483162,
+                "upper": 0.0023320940773718575
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 34.97057882219846,
+            "scorable_area_m2": 34.911617308739885,
+            "unscorable_area_m2": 0.05896151345857703,
+            "ambiguous_area_m2": 0.043997816495417175,
+            "distance_rejected_area_m2": 0.014963696963156586,
+            "scorable_fraction": 0.9983139680427265,
+            "faces": 71967,
+            "zero_area_faces": 0,
+            "samples": 503769,
+            "scorable_samples": 502658,
+            "unscorable_samples": 1111
+          },
+          "metrics_path": "dev-combined-study/b0-metrics.json"
+        },
+        {
+          "method": "b1",
+          "status": "completed",
+          "parameters": {
+            "method": "b1",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "centroid-unique-owner"
+          },
+          "face_owner_sha256": "daafff23d5562e8e2adfa5c540cc36887dd75a0761df05a20d9040f6d0460585",
+          "metrics_sha256": "d5771a65f2793217dec0ebf488ff35ef89165721e36661c9d0801a841c261747",
+          "partition_seconds": 0.04296990000875667,
+          "evaluation_seconds": 0.7446951000019908,
+          "target": {
+            "index": 0,
+            "object_id": "combined-desk",
+            "status": "evaluated",
+            "area_iou": 0.8269979197391673,
+            "precision": 0.9923892448774092,
+            "recall": 0.8322765075792132,
+            "false_negative_ratio": 0.16772349242078677,
+            "false_positive_ratio": 0.0063828308561052465,
+            "scorable_target_area_m2": 2.879527603499073,
+            "true_positive_area_m2": 2.39656317731815,
+            "false_positive_area_m2": 0.018379537638620675,
+            "false_negative_area_m2": 0.482964426180923,
+            "unresolved_target_area_m2": 0.06660716634651424,
+            "unscorable_predicted_target_area_m2": 0.0045187121327462006,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.018379537638620675
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8105071470093336,
+                "upper": 0.8272672622266537
+              },
+              "precision": {
+                "lower": 0.9905358070540053,
+                "upper": 0.9924034591199372
+              },
+              "recall": {
+                "lower": 0.8168327715156943,
+                "upper": 0.8325392960705217
+              },
+              "false_negative_ratio": {
+                "lower": 0.16746070392947832,
+                "upper": 0.18316722848430567
+              },
+              "false_positive_ratio": {
+                "lower": 0.006254757770772293,
+                "upper": 0.007952085523869244
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 34.97057882219846,
+            "scorable_area_m2": 34.911617308739885,
+            "unscorable_area_m2": 0.05896151345857703,
+            "ambiguous_area_m2": 0.043997816495417175,
+            "distance_rejected_area_m2": 0.014963696963156586,
+            "scorable_fraction": 0.9983139680427265,
+            "faces": 71967,
+            "zero_area_faces": 0,
+            "samples": 503769,
+            "scorable_samples": 502658,
+            "unscorable_samples": 1111
+          },
+          "metrics_path": "dev-combined-study/b1-metrics.json"
+        },
+        {
+          "method": "b2",
+          "status": "completed",
+          "parameters": {
+            "method": "b2",
+            "box_margin_m": 0.025,
+            "structure_tolerance_m": 0.025,
+            "reference_used": false,
+            "mesh_changed": false,
+            "rule": "uniform-area-majority-with-unresolved-threshold",
+            "samples_per_face": 49,
+            "sampling_rule": "hammersley-base2-square-root-triangle-v1",
+            "min_majority_fraction": 0.6,
+            "sample_weight": "face_area_m2 / samples_per_face",
+            "overlap_vote": "unresolved (-2)"
+          },
+          "face_owner_sha256": "2297e09e3393b6e4905f8a6cb985afe93cca8d17a3495b0df2e7bea667592975",
+          "metrics_sha256": "ea5a59203b0b0eec74760d167239986503dad6bbe9fea911cfa92b773aa16158",
+          "partition_seconds": 1.2445241000095848,
+          "evaluation_seconds": 0.7233741999953054,
+          "target": {
+            "index": 0,
+            "object_id": "combined-desk",
+            "status": "evaluated",
+            "area_iou": 0.825757508766315,
+            "precision": 0.9926176020444902,
+            "recall": 0.8308601607260808,
+            "false_negative_ratio": 0.1691398392739192,
+            "false_positive_ratio": 0.006179358837910039,
+            "scorable_target_area_m2": 2.879527603499075,
+            "true_positive_area_m2": 2.392484767458428,
+            "false_positive_area_m2": 0.017793634345687925,
+            "false_negative_area_m2": 0.48704283604064735,
+            "unresolved_target_area_m2": 0.0734558839967715,
+            "unscorable_predicted_target_area_m2": 0.004444560481759445,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.017793634345687925
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.80928820709171,
+                "upper": 0.8260243915351544
+              },
+              "precision": {
+                "lower": 0.9907905812903705,
+                "upper": 0.9926311901515841
+              },
+              "recall": {
+                "lower": 0.8154220978607302,
+                "upper": 0.8311208262952278
+              },
+              "false_negative_ratio": {
+                "lower": 0.16887917370477223,
+                "upper": 0.18457790213926983
+              },
+              "false_positive_ratio": {
+                "lower": 0.006055368469123501,
+                "upper": 0.007722862180735651
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "coverage": {
+            "mesh_area_m2": 34.97057882219846,
+            "scorable_area_m2": 34.911617308739885,
+            "unscorable_area_m2": 0.05896151345857703,
+            "ambiguous_area_m2": 0.043997816495417175,
+            "distance_rejected_area_m2": 0.014963696963156586,
+            "scorable_fraction": 0.9983139680427265,
+            "faces": 71967,
+            "zero_area_faces": 0,
+            "samples": 503769,
+            "scorable_samples": 502658,
+            "unscorable_samples": 1111
+          },
+          "metrics_path": "dev-combined-study/b2-metrics.json"
+        }
+      ],
+      "frames": 14,
+      "observations": 61733,
+      "vertices": 40070,
+      "triangles": 71967,
+      "observation_seconds": 0.8825214999960735,
+      "tsdf_seconds": 0.6596672000014223,
+      "scene_sha256": "2bffc2983cde22cf02a424978ffe91a86ba5fc61e1f70e5e5d64cd8a0080127d",
+      "surface_manifest_sha256": "16d20af088d133e55c60731ef950cfe1c0e2972791ee7783d31aab3cd0b1eede",
+      "surface_sha256": "06b3edfe5a7e236dd49908fae4ad0ee6e96e5af8a08a4dce29d91153d2746600",
+      "reference_sha256": "4d836004981184f4aa3c8ef30718c19d11e2453a9d9f39e0d4164a0c2166b749",
+      "elapsed_seconds": 5.09265440001036,
+      "process_lifetime_peak_ram_bytes": 240291840
+    }
+  ],
+  "status": "completed",
+  "attempted_scenes": 6,
+  "completed_scenes": 6,
+  "attempted_method_tasks": 18,
+  "completed_method_tasks": 18,
+  "aggregate": [
+    {
+      "method": "b0",
+      "attempted_scenes": 6,
+      "completed_scenes": 6,
+      "evaluable_target_scenes": 6,
+      "mean_area_iou": 0.7912042005917064,
+      "mean_false_positive_ratio": 0.0002968904995458147,
+      "mean_false_negative_ratio": 0.2085479293922419
+    },
+    {
+      "method": "b1",
+      "attempted_scenes": 6,
+      "completed_scenes": 6,
+      "evaluable_target_scenes": 6,
+      "mean_area_iou": 0.8235104929057174,
+      "mean_false_positive_ratio": 0.0013483479625926477,
+      "mean_false_negative_ratio": 0.1753407949877853
+    },
+    {
+      "method": "b2",
+      "attempted_scenes": 6,
+      "completed_scenes": 6,
+      "evaluable_target_scenes": 6,
+      "mean_area_iou": 0.8185325903396016,
+      "mean_false_positive_ratio": 0.0012946477642704994,
+      "mean_false_negative_ratio": 0.18036130833222885
+    }
+  ],
+  "elapsed_seconds": 30.760016499989433,
+  "process_lifetime_peak_ram_bytes": 240291840,
+  "memory_scope": "single-process lifetime peak through each marker; not per-case incremental or full process tree"
+}

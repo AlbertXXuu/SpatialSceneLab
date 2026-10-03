@@ -1,0 +1,403 @@
+{
+  "blender": "5.1.2",
+  "assets_sha256": {
+    "before.blend": "1e838643f29c34f101dcd7e9b7369743a6068749684603c76d1fedb9d05d9cd1",
+    "before.glb": "bb8d2e7b5dc0928a95b343ae41c3bd30f0284fa6a5c164e0336e98647d905e93"
+  },
+  "original_verifier_reproduced": {
+    "status": "fail",
+    "tolerance_m": 5e-05,
+    "objects": [
+      {
+        "id": "environment",
+        "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+        "triangles_match": true,
+        "connectivity_match": false,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "fail"
+      },
+      {
+        "id": "combined-desk",
+        "maximum_world_vertex_distance_m": 9.098254167838604e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "combined-chair",
+        "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "combined-shelf",
+        "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "combined-sofa",
+        "maximum_world_vertex_distance_m": 1.0662403155947686e-06,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      },
+      {
+        "id": "combined-lamp",
+        "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+        "triangles_match": true,
+        "connectivity_match": true,
+        "role_match": true,
+        "source_provenance_match": true,
+        "appearance_present": true,
+        "status": "pass"
+      }
+    ],
+    "maximum_world_vertex_distance_m": 1.2839233249906101e-06
+  },
+  "objects": {
+    "environment": {
+      "original_vertices": 26933,
+      "returned_vertices": 26975,
+      "original_faces": 48277,
+      "returned_faces": 48277,
+      "exact_duplicate_coordinate_groups": 0,
+      "exact_duplicate_excess_vertices": 0,
+      "exact_duplicate_examples": [],
+      "distinct_close_pairs_under_5e_5_m": 14,
+      "distinct_close_pairs_under_5e_6_m": 6,
+      "minimum_distinct_close_separation_m": 4.76837158203125e-07,
+      "original_mapping_nonidentity_vertices": 0,
+      "original_mapping_unique_source_indices": 26933,
+      "returned_mapping_unique_source_indices": 26932,
+      "original_mapped_degenerate_faces": 0,
+      "returned_mapped_degenerate_faces": 2,
+      "world_mapping_missing_face_instances": 5,
+      "world_mapping_extra_face_instances": 5,
+      "missing_faces_with_nearby_single_vertex_substitution": 5,
+      "substitution_examples": [
+        {
+          "missing_face": [
+            2018,
+            2019,
+            2020
+          ],
+          "extra_face": [
+            2018,
+            2020,
+            2021
+          ],
+          "substituted_source_vertex_indices": [
+            2019,
+            2021
+          ],
+          "source_vertex_separation_m": 1.6093254089355469e-06,
+          "source_vertex_coordinates_m": [
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174980640411377
+            ],
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174996733665466
+            ]
+          ]
+        },
+        {
+          "missing_face": [
+            2019,
+            2020,
+            2021
+          ],
+          "extra_face": [
+            2020,
+            2021,
+            2021
+          ],
+          "substituted_source_vertex_indices": [
+            2019,
+            2021
+          ],
+          "source_vertex_separation_m": 1.6093254089355469e-06,
+          "source_vertex_coordinates_m": [
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174980640411377
+            ],
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174996733665466
+            ]
+          ]
+        },
+        {
+          "missing_face": [
+            2019,
+            2041,
+            2042
+          ],
+          "extra_face": [
+            2021,
+            2041,
+            2042
+          ],
+          "substituted_source_vertex_indices": [
+            2019,
+            2021
+          ],
+          "source_vertex_separation_m": 1.6093254089355469e-06,
+          "source_vertex_coordinates_m": [
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174980640411377
+            ],
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174996733665466
+            ]
+          ]
+        },
+        {
+          "missing_face": [
+            2018,
+            2019,
+            2042
+          ],
+          "extra_face": [
+            2018,
+            2021,
+            2042
+          ],
+          "substituted_source_vertex_indices": [
+            2019,
+            2021
+          ],
+          "source_vertex_separation_m": 1.6093254089355469e-06,
+          "source_vertex_coordinates_m": [
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174980640411377
+            ],
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174996733665466
+            ]
+          ]
+        },
+        {
+          "missing_face": [
+            2019,
+            2021,
+            2041
+          ],
+          "extra_face": [
+            2021,
+            2021,
+            2041
+          ],
+          "substituted_source_vertex_indices": [
+            2019,
+            2021
+          ],
+          "source_vertex_separation_m": 1.6093254089355469e-06,
+          "source_vertex_coordinates_m": [
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174980640411377
+            ],
+            [
+              -1.4524999856948853,
+              4.182499885559082,
+              0.7174996733665466
+            ]
+          ]
+        }
+      ],
+      "cluster_5e_6_missing_face_instances": 0,
+      "cluster_5e_6_extra_face_instances": 0,
+      "local_coordinate_face_counter_missing_instances": 0,
+      "local_coordinate_face_counter_extra_instances": 0,
+      "source_matrix_normalized_missing_face_instances": 0,
+      "source_matrix_normalized_extra_face_instances": 0,
+      "returned_mapping_changes_after_source_matrix_normalization": 1,
+      "matrix_world_max_absolute_difference": 2.098567506436666e-07,
+      "limits": "near-coordinate clustering is diagnostic and can conceal genuine tiny topology changes; local face equality is geometric, not preserved vertex/seam identity"
+    },
+    "combined-desk": {
+      "original_vertices": 3044,
+      "returned_vertices": 3044,
+      "original_faces": 5225,
+      "returned_faces": 5225,
+      "exact_duplicate_coordinate_groups": 0,
+      "exact_duplicate_excess_vertices": 0,
+      "exact_duplicate_examples": [],
+      "distinct_close_pairs_under_5e_5_m": 4,
+      "distinct_close_pairs_under_5e_6_m": 1,
+      "minimum_distinct_close_separation_m": 3.607566213759128e-06,
+      "original_mapping_nonidentity_vertices": 0,
+      "original_mapping_unique_source_indices": 3044,
+      "returned_mapping_unique_source_indices": 3044,
+      "original_mapped_degenerate_faces": 0,
+      "returned_mapped_degenerate_faces": 0,
+      "world_mapping_missing_face_instances": 0,
+      "world_mapping_extra_face_instances": 0,
+      "missing_faces_with_nearby_single_vertex_substitution": 0,
+      "substitution_examples": [],
+      "cluster_5e_6_missing_face_instances": 0,
+      "cluster_5e_6_extra_face_instances": 0,
+      "local_coordinate_face_counter_missing_instances": 0,
+      "local_coordinate_face_counter_extra_instances": 0,
+      "source_matrix_normalized_missing_face_instances": 0,
+      "source_matrix_normalized_extra_face_instances": 0,
+      "returned_mapping_changes_after_source_matrix_normalization": 0,
+      "matrix_world_max_absolute_difference": 2.098567506436666e-07,
+      "limits": "near-coordinate clustering is diagnostic and can conceal genuine tiny topology changes; local face equality is geometric, not preserved vertex/seam identity"
+    },
+    "combined-chair": {
+      "original_vertices": 1076,
+      "returned_vertices": 1076,
+      "original_faces": 2057,
+      "returned_faces": 2057,
+      "exact_duplicate_coordinate_groups": 0,
+      "exact_duplicate_excess_vertices": 0,
+      "exact_duplicate_examples": [],
+      "distinct_close_pairs_under_5e_5_m": 1,
+      "distinct_close_pairs_under_5e_6_m": 1,
+      "minimum_distinct_close_separation_m": 1.8970764585901634e-06,
+      "original_mapping_nonidentity_vertices": 0,
+      "original_mapping_unique_source_indices": 1076,
+      "returned_mapping_unique_source_indices": 1076,
+      "original_mapped_degenerate_faces": 0,
+      "returned_mapped_degenerate_faces": 0,
+      "world_mapping_missing_face_instances": 0,
+      "world_mapping_extra_face_instances": 0,
+      "missing_faces_with_nearby_single_vertex_substitution": 0,
+      "substitution_examples": [],
+      "cluster_5e_6_missing_face_instances": 0,
+      "cluster_5e_6_extra_face_instances": 0,
+      "local_coordinate_face_counter_missing_instances": 0,
+      "local_coordinate_face_counter_extra_instances": 0,
+      "source_matrix_normalized_missing_face_instances": 0,
+      "source_matrix_normalized_extra_face_instances": 0,
+      "returned_mapping_changes_after_source_matrix_normalization": 0,
+      "matrix_world_max_absolute_difference": 2.098567506436666e-07,
+      "limits": "near-coordinate clustering is diagnostic and can conceal genuine tiny topology changes; local face equality is geometric, not preserved vertex/seam identity"
+    },
+    "combined-shelf": {
+      "original_vertices": 5506,
+      "returned_vertices": 5511,
+      "original_faces": 9858,
+      "returned_faces": 9858,
+      "exact_duplicate_coordinate_groups": 0,
+      "exact_duplicate_excess_vertices": 0,
+      "exact_duplicate_examples": [],
+      "distinct_close_pairs_under_5e_5_m": 6,
+      "distinct_close_pairs_under_5e_6_m": 0,
+      "minimum_distinct_close_separation_m": 7.088694019330433e-06,
+      "original_mapping_nonidentity_vertices": 0,
+      "original_mapping_unique_source_indices": 5506,
+      "returned_mapping_unique_source_indices": 5506,
+      "original_mapped_degenerate_faces": 0,
+      "returned_mapped_degenerate_faces": 0,
+      "world_mapping_missing_face_instances": 0,
+      "world_mapping_extra_face_instances": 0,
+      "missing_faces_with_nearby_single_vertex_substitution": 0,
+      "substitution_examples": [],
+      "cluster_5e_6_missing_face_instances": 0,
+      "cluster_5e_6_extra_face_instances": 0,
+      "local_coordinate_face_counter_missing_instances": 0,
+      "local_coordinate_face_counter_extra_instances": 0,
+      "source_matrix_normalized_missing_face_instances": 0,
+      "source_matrix_normalized_extra_face_instances": 0,
+      "returned_mapping_changes_after_source_matrix_normalization": 0,
+      "matrix_world_max_absolute_difference": 2.098567506436666e-07,
+      "limits": "near-coordinate clustering is diagnostic and can conceal genuine tiny topology changes; local face equality is geometric, not preserved vertex/seam identity"
+    },
+    "combined-sofa": {
+      "original_vertices": 3485,
+      "returned_vertices": 3485,
+      "original_faces": 5654,
+      "returned_faces": 5654,
+      "exact_duplicate_coordinate_groups": 0,
+      "exact_duplicate_excess_vertices": 0,
+      "exact_duplicate_examples": [],
+      "distinct_close_pairs_under_5e_5_m": 0,
+      "distinct_close_pairs_under_5e_6_m": 0,
+      "minimum_distinct_close_separation_m": null,
+      "original_mapping_nonidentity_vertices": 0,
+      "original_mapping_unique_source_indices": 3485,
+      "returned_mapping_unique_source_indices": 3485,
+      "original_mapped_degenerate_faces": 0,
+      "returned_mapped_degenerate_faces": 0,
+      "world_mapping_missing_face_instances": 0,
+      "world_mapping_extra_face_instances": 0,
+      "missing_faces_with_nearby_single_vertex_substitution": 0,
+      "substitution_examples": [],
+      "cluster_5e_6_missing_face_instances": 0,
+      "cluster_5e_6_extra_face_instances": 0,
+      "local_coordinate_face_counter_missing_instances": 0,
+      "local_coordinate_face_counter_extra_instances": 0,
+      "source_matrix_normalized_missing_face_instances": 0,
+      "source_matrix_normalized_extra_face_instances": 0,
+      "returned_mapping_changes_after_source_matrix_normalization": 0,
+      "matrix_world_max_absolute_difference": 2.098567506436666e-07,
+      "limits": "near-coordinate clustering is diagnostic and can conceal genuine tiny topology changes; local face equality is geometric, not preserved vertex/seam identity"
+    },
+    "combined-lamp": {
+      "original_vertices": 554,
+      "returned_vertices": 554,
+      "original_faces": 896,
+      "returned_faces": 896,
+      "exact_duplicate_coordinate_groups": 0,
+      "exact_duplicate_excess_vertices": 0,
+      "exact_duplicate_examples": [],
+      "distinct_close_pairs_under_5e_5_m": 0,
+      "distinct_close_pairs_under_5e_6_m": 0,
+      "minimum_distinct_close_separation_m": null,
+      "original_mapping_nonidentity_vertices": 0,
+      "original_mapping_unique_source_indices": 554,
+      "returned_mapping_unique_source_indices": 554,
+      "original_mapped_degenerate_faces": 0,
+      "returned_mapped_degenerate_faces": 0,
+      "world_mapping_missing_face_instances": 0,
+      "world_mapping_extra_face_instances": 0,
+      "missing_faces_with_nearby_single_vertex_substitution": 0,
+      "substitution_examples": [],
+      "cluster_5e_6_missing_face_instances": 0,
+      "cluster_5e_6_extra_face_instances": 0,
+      "local_coordinate_face_counter_missing_instances": 0,
+      "local_coordinate_face_counter_extra_instances": 0,
+      "source_matrix_normalized_missing_face_instances": 0,
+      "source_matrix_normalized_extra_face_instances": 0,
+      "returned_mapping_changes_after_source_matrix_normalization": 0,
+      "matrix_world_max_absolute_difference": 2.098567506436666e-07,
+      "limits": "near-coordinate clustering is diagnostic and can conceal genuine tiny topology changes; local face equality is geometric, not preserved vertex/seam identity"
+    }
+  },
+  "assets_unchanged": true
+}

@@ -1,6 +1,10 @@
 # Object-level editing: next-stage evaluation protocol
 
-Revision: 2026-10-04.1. Status: **planned; no results from this protocol yet**.
+Revision: 2026-10-04.1. Status: **S0 development comparison executed; full protocol pending**.
+
+The [S0 report](../reports/DEVELOPMENT-S0-2026-10-04.md) records implemented
+direct controls and current nearest-reference matching. Visibility-aware matching,
+held-out/real evidence and full editing gates remain pending. Targets are unchanged.
 
 [中文](NEXT-STAGE-PROTOCOL.zh-CN.md) · [Measured baseline](../reports/LOCAL-SCAN-2026-10-04.md)
 

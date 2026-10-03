@@ -1,0 +1,434 @@
+{
+  "schema": "spatial-scene-lab.fixture-suite.v1",
+  "generator_version": "2026-10-04.1",
+  "config_sha256": "23a4c020407ab3065ecf6a2704948941154ad206b1296be7920064059dbf05a0",
+  "generator_sha256": "52c69193a5582e1932f10f9cc8112853094ff52410fa784d82be82d42ec086c5",
+  "licence": "MIT; original AlvenX procedural geometry and generated RGB-D",
+  "split": "development",
+  "units": "m",
+  "up_axis": "Y",
+  "depth_resolution": [
+    160,
+    120
+  ],
+  "parameter_basis": "Declared development stress hypotheses, not empirical calibration or real sensor estimates; frozen before method comparison.",
+  "evidence": "docs/NEXT-STAGE-PROTOCOL.zh-CN.md: 场景矩阵与数据获取 / 独立性与参考构建",
+  "hypotheses": [
+    "Contact and overlapping inaccurate boxes can confuse ownership while physical ray labels remain independent.",
+    "Thin structures under 12 mm depth noise and sparse visibility stress observed-surface selection.",
+    "Curved and concave furniture plus shared material colours require geometry beyond two solid boxes."
+  ],
+  "dependencies": {
+    "numpy": "2.3.5",
+    "open3d": "0.19.0"
+  },
+  "scenes": [
+    {
+      "scene_id": "dev-contact-chair",
+      "scan": "dev-contact-chair/scan",
+      "reference_mesh": "dev-contact-chair/reference/mesh.ply",
+      "reference_labels": "dev-contact-chair/reference/labels.npz",
+      "reference_metadata": "dev-contact-chair/reference/physical-scene.json",
+      "reference_visibility": "dev-contact-chair/reference/visibility.npz",
+      "target_id": "contact-chair",
+      "seed": 10401,
+      "frames": 16,
+      "factors": {
+        "geometry": [
+          "four_18mm_legs",
+          "curved_back",
+          "table_stretchers",
+          "open_shelves"
+        ],
+        "contact": [
+          "chair_floor",
+          "table_floor",
+          "chair_under_table"
+        ],
+        "appearance": "distinct_materials",
+        "visibility": "wide_front_arc",
+        "prior_error": "chair_box_12_percent_oversize"
+      },
+      "edit_tasks": [
+        {
+          "operation": "translate",
+          "object_id": "contact-chair",
+          "translation_m": [
+            0.28,
+            0.0,
+            0.12
+          ]
+        },
+        {
+          "operation": "rotate_y",
+          "object_id": "contact-chair",
+          "rotation_degrees": 18.0,
+          "pivot_world_m": [
+            -0.73,
+            0.0,
+            -1.97
+          ]
+        },
+        {
+          "operation": "translate_then_rotate_y",
+          "object_id": "contact-table",
+          "translation_m": [
+            -0.15,
+            0.0,
+            0.1
+          ],
+          "rotation_degrees": -12.0,
+          "pivot_world_m": [
+            0.2,
+            0.0,
+            -2.12
+          ]
+        },
+        {
+          "operation": "reopen_undo",
+          "object_id": "contact-chair",
+          "expected": "restore exact pre-edit mesh, object IDs, ownership and world poses"
+        }
+      ]
+    },
+    {
+      "scene_id": "dev-same-color-dining",
+      "scan": "dev-same-color-dining/scan",
+      "reference_mesh": "dev-same-color-dining/reference/mesh.ply",
+      "reference_labels": "dev-same-color-dining/reference/labels.npz",
+      "reference_metadata": "dev-same-color-dining/reference/physical-scene.json",
+      "reference_visibility": "dev-same-color-dining/reference/visibility.npz",
+      "target_id": "same-table",
+      "seed": 10402,
+      "frames": 18,
+      "factors": {
+        "geometry": [
+          "table_legs",
+          "chair_slats",
+          "three_leg_stool"
+        ],
+        "contact": [
+          "floor",
+          "adjacent_furniture"
+        ],
+        "appearance": "identical_diffuse_rgb_149_133_110",
+        "visibility": "wide_front_arc",
+        "prior_error": "overlapping_oversized_boxes"
+      },
+      "edit_tasks": [
+        {
+          "operation": "translate",
+          "object_id": "same-table",
+          "translation_m": [
+            0.28,
+            0.0,
+            0.12
+          ]
+        },
+        {
+          "operation": "rotate_y",
+          "object_id": "same-table",
+          "rotation_degrees": 18.0,
+          "pivot_world_m": [
+            0.0,
+            0.0,
+            -2.12
+          ]
+        },
+        {
+          "operation": "translate_then_rotate_y",
+          "object_id": "same-chair-west",
+          "translation_m": [
+            -0.15,
+            0.0,
+            0.1
+          ],
+          "rotation_degrees": -12.0,
+          "pivot_world_m": [
+            -0.85,
+            0.0,
+            -2.15
+          ]
+        },
+        {
+          "operation": "reopen_undo",
+          "object_id": "same-table",
+          "expected": "restore exact pre-edit mesh, object IDs, ownership and world poses"
+        }
+      ]
+    },
+    {
+      "scene_id": "dev-curved-sofa-wall",
+      "scan": "dev-curved-sofa-wall/scan",
+      "reference_mesh": "dev-curved-sofa-wall/reference/mesh.ply",
+      "reference_labels": "dev-curved-sofa-wall/reference/labels.npz",
+      "reference_metadata": "dev-curved-sofa-wall/reference/physical-scene.json",
+      "reference_visibility": "dev-curved-sofa-wall/reference/visibility.npz",
+      "target_id": "curved-sofa",
+      "seed": 10403,
+      "frames": 16,
+      "factors": {
+        "geometry": [
+          "ellipsoid_cushions",
+          "curved_arms",
+          "round_pedestal_table",
+          "lamp_shade"
+        ],
+        "contact": [
+          "floor",
+          "sofa_back_wall_contact",
+          "adjacent_ottoman"
+        ],
+        "appearance": "sofa_component_colour_changes",
+        "visibility": "wide_front_arc",
+        "prior_error": "sofa_box_yaw_7deg_and_translation_50mm"
+      },
+      "edit_tasks": [
+        {
+          "operation": "translate",
+          "object_id": "curved-sofa",
+          "translation_m": [
+            0.28,
+            0.0,
+            0.12
+          ]
+        },
+        {
+          "operation": "rotate_y",
+          "object_id": "curved-sofa",
+          "rotation_degrees": 18.0,
+          "pivot_world_m": [
+            0.0,
+            0.0,
+            -3.72
+          ]
+        },
+        {
+          "operation": "translate_then_rotate_y",
+          "object_id": "curved-ottoman",
+          "translation_m": [
+            -0.15,
+            0.0,
+            0.1
+          ],
+          "rotation_degrees": -12.0,
+          "pivot_world_m": [
+            0.65,
+            0.0,
+            -2.77
+          ]
+        },
+        {
+          "operation": "reopen_undo",
+          "object_id": "curved-sofa",
+          "expected": "restore exact pre-edit mesh, object IDs, ownership and world poses"
+        }
+      ]
+    },
+    {
+      "scene_id": "dev-occluded-bookshelf",
+      "scan": "dev-occluded-bookshelf/scan",
+      "reference_mesh": "dev-occluded-bookshelf/reference/mesh.ply",
+      "reference_labels": "dev-occluded-bookshelf/reference/labels.npz",
+      "reference_metadata": "dev-occluded-bookshelf/reference/physical-scene.json",
+      "reference_visibility": "dev-occluded-bookshelf/reference/visibility.npz",
+      "target_id": "occluded-shelf",
+      "seed": 10404,
+      "frames": 12,
+      "factors": {
+        "geometry": [
+          "concave_shelf_bays",
+          "individual_books",
+          "folded_screen",
+          "stool"
+        ],
+        "contact": [
+          "floor",
+          "shelf_back_near_wall_10mm"
+        ],
+        "appearance": "mixed_book_spines",
+        "visibility": "screen_occlusion_and_65_degree_front_arc",
+        "prior_error": "shelf_height_underestimate_14_percent"
+      },
+      "edit_tasks": [
+        {
+          "operation": "translate",
+          "object_id": "occluded-shelf",
+          "translation_m": [
+            0.28,
+            0.0,
+            0.12
+          ]
+        },
+        {
+          "operation": "rotate_y",
+          "object_id": "occluded-shelf",
+          "rotation_degrees": 18.0,
+          "pivot_world_m": [
+            0.0,
+            0.0,
+            -3.95
+          ]
+        },
+        {
+          "operation": "translate_then_rotate_y",
+          "object_id": "occluding-screen",
+          "translation_m": [
+            -0.15,
+            0.0,
+            0.1
+          ],
+          "rotation_degrees": -12.0,
+          "pivot_world_m": [
+            -0.15,
+            0.0,
+            -2.67
+          ]
+        },
+        {
+          "operation": "reopen_undo",
+          "object_id": "occluded-shelf",
+          "expected": "restore exact pre-edit mesh, object IDs, ownership and world poses"
+        }
+      ]
+    },
+    {
+      "scene_id": "dev-thin-rack-noise",
+      "scan": "dev-thin-rack-noise/scan",
+      "reference_mesh": "dev-thin-rack-noise/reference/mesh.ply",
+      "reference_labels": "dev-thin-rack-noise/reference/labels.npz",
+      "reference_metadata": "dev-thin-rack-noise/reference/physical-scene.json",
+      "reference_visibility": "dev-thin-rack-noise/reference/visibility.npz",
+      "target_id": "thin-rack",
+      "seed": 10405,
+      "frames": 16,
+      "factors": {
+        "geometry": [
+          "16mm_rack_rods",
+          "18mm_shelf_slats",
+          "lamp_pole",
+          "stool_legs"
+        ],
+        "contact": [
+          "floor",
+          "rack_near_table"
+        ],
+        "appearance": "metal_and_wood",
+        "visibility": "16_view_front_arc",
+        "sensor_stress": "12mm_gaussian_noise_9_percent_random_dropout_and_2px_stripes",
+        "prior_error": "rack_width_underestimate_15_percent"
+      },
+      "edit_tasks": [
+        {
+          "operation": "translate",
+          "object_id": "thin-rack",
+          "translation_m": [
+            0.28,
+            0.0,
+            0.12
+          ]
+        },
+        {
+          "operation": "rotate_y",
+          "object_id": "thin-rack",
+          "rotation_degrees": 18.0,
+          "pivot_world_m": [
+            0.5,
+            0.0,
+            -2.53
+          ]
+        },
+        {
+          "operation": "translate_then_rotate_y",
+          "object_id": "thin-table",
+          "translation_m": [
+            -0.15,
+            0.0,
+            0.1
+          ],
+          "rotation_degrees": -12.0,
+          "pivot_world_m": [
+            -0.9,
+            0.0,
+            -3.16
+          ]
+        },
+        {
+          "operation": "reopen_undo",
+          "object_id": "thin-rack",
+          "expected": "restore exact pre-edit mesh, object IDs, ownership and world poses"
+        }
+      ]
+    },
+    {
+      "scene_id": "dev-combined-study",
+      "scan": "dev-combined-study/scan",
+      "reference_mesh": "dev-combined-study/reference/mesh.ply",
+      "reference_labels": "dev-combined-study/reference/labels.npz",
+      "reference_metadata": "dev-combined-study/reference/physical-scene.json",
+      "reference_visibility": "dev-combined-study/reference/visibility.npz",
+      "target_id": "combined-desk",
+      "seed": 10406,
+      "frames": 14,
+      "factors": {
+        "geometry": [
+          "L_desk",
+          "drawer_handles",
+          "chair_back_and_legs",
+          "curved_sofa",
+          "shelves"
+        ],
+        "contact": [
+          "floor",
+          "adjacent_chair_desk",
+          "shelf_near_wall"
+        ],
+        "appearance": "desk_chair_shelf_same_wood_colour",
+        "visibility": "chair_occludes_desk_in_narrow_arc",
+        "sensor_stress": "6mm_noise_4.5_percent_dropout_12mm_pose_noise",
+        "prior_error": "100mm_offset_9_degree_yaw_and_anisotropic_box_error"
+      },
+      "edit_tasks": [
+        {
+          "operation": "translate",
+          "object_id": "combined-desk",
+          "translation_m": [
+            0.28,
+            0.0,
+            0.12
+          ]
+        },
+        {
+          "operation": "rotate_y",
+          "object_id": "combined-desk",
+          "rotation_degrees": 18.0,
+          "pivot_world_m": [
+            -0.18,
+            0.0,
+            -2.65
+          ]
+        },
+        {
+          "operation": "translate_then_rotate_y",
+          "object_id": "combined-chair",
+          "translation_m": [
+            -0.15,
+            0.0,
+            0.1
+          ],
+          "rotation_degrees": -12.0,
+          "pivot_world_m": [
+            -0.32,
+            0.0,
+            -1.78
+          ]
+        },
+        {
+          "operation": "reopen_undo",
+          "object_id": "combined-desk",
+          "expected": "restore exact pre-edit mesh, object IDs, ownership and world poses"
+        }
+      ]
+    }
+  ]
+}

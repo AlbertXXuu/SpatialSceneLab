@@ -1,0 +1,29 @@
+{
+  "schema": "spatial-scene-lab.development-figures.v1",
+  "results_sha256": "5bb302eac773d8a2e0af299e6fe3f476f413740e4ffd5261419332621c7e2071",
+  "input_manifest_sha256": "f886ec9bf2db07bcfa5cfcb363505ed73028e862ff470422bc465b5ae4890d6b",
+  "plot_script_sha256": "ce5add175488c3ed4140156a0ff125f3dd3b9a32cfd81125ee7176fdf88cfe54",
+  "matplotlib": "3.10.0",
+  "numpy": "2.1.3",
+  "python": "3.13.5",
+  "mkl_threading_layer": "SEQUENTIAL",
+  "scope": "development comparisons and authored physical reference overview; no held-out result",
+  "files": {
+    "baseline-comparison.pdf": {
+      "bytes": 33165,
+      "sha256": "476ed60c9ab0d4165702ac95a23adcf0070e4542896b2ce5a4c0e6fea29e850b"
+    },
+    "baseline-comparison.png": {
+      "bytes": 137675,
+      "sha256": "dc40d7f0eecd292381e778818799be66a5c6b42525b5f7f6e11c9333a68a81e8"
+    },
+    "development-scene-overview.pdf": {
+      "bytes": 588855,
+      "sha256": "1c32ca2e732d7e9f8b9369e2bd14ec003a94e4fc30515c0ae34416287bb1c0b2"
+    },
+    "development-scene-overview.png": {
+      "bytes": 520180,
+      "sha256": "c7676ced0c06c9fde871608acf75c27c0ad3dc45d3ddca03d5893f204999dc73"
+    }
+  }
+}

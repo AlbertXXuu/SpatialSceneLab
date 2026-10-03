@@ -1,0 +1,91 @@
+{
+  "schema": "spatial-scene-lab.complex-development.v1",
+  "generator_version": "2026-10-04.1",
+  "licence": "MIT; original AlvenX procedural geometry and generated RGB-D",
+  "evidence": "docs/NEXT-STAGE-PROTOCOL.zh-CN.md: 场景矩阵与数据获取 / 独立性与参考构建",
+  "acceptance": "Six distinct multi-part physical scenes; metric Y-up RGB-D; independent triangle instance references; replayable explicit measurement perturbations; existing scan_pipeline compatibility.",
+  "hypotheses": [
+    "Contact and overlapping inaccurate boxes can confuse ownership while physical ray labels remain independent.",
+    "Thin structures under 12 mm depth noise and sparse visibility stress observed-surface selection.",
+    "Curved and concave furniture plus shared material colours require geometry beyond two solid boxes."
+  ],
+  "parameter_basis": "Declared development stress hypotheses, not empirical calibration or real sensor estimates; frozen before method comparison.",
+  "units": "m",
+  "up_axis": "Y",
+  "room": {"floor_y": 0.0, "bounds_x_m": [-3.0, 3.0], "bounds_z_m": [-4.2, 1.8], "wall_height_m": 2.8},
+  "defaults": {"resolution": [160, 120], "maximum_depth_m": 6.0, "colour_scale": 2, "depth_units_per_m": 1000},
+  "scenes": [
+    {
+      "scene_id": "dev-contact-chair", "seed": 10401, "target_id": "contact-chair",
+      "factors": {"geometry": ["four_18mm_legs", "curved_back", "table_stretchers", "open_shelves"], "contact": ["chair_floor", "table_floor", "chair_under_table"], "appearance": "distinct_materials", "visibility": "wide_front_arc", "prior_error": "chair_box_12_percent_oversize"},
+      "trajectory": {"frames": 16, "focus_m": [-0.15, 0.65, -2.1], "radius_m": 2.25, "arc_degrees": 250, "height_m": 1.35, "height_amplitude_m": 0.22},
+      "sensor": {"depth_noise_sigma_m": 0.0, "dropout_probability": 0.0, "pose_translation_sigma_m": 0.0, "pose_yaw_sigma_degrees": 0.0, "stripe_dropout_period_px": 0},
+      "objects": [
+        {"id": "contact-chair", "kind": "chair", "category": "Chair", "position_m": [-0.73, 0.0, -1.97], "yaw_degrees": 14, "scale": [1.0, 1.0, 1.0], "rgb": [195, 69, 46], "design": {"seat_width_m": 0.58, "seat_depth_m": 0.54, "back_slats": 3, "leg_radius_m": 0.018}, "prior": {"dimension_scale": [1.12, 1.12, 1.12]}},
+        {"id": "contact-table", "kind": "table", "category": "Table", "position_m": [0.2, 0.0, -2.12], "yaw_degrees": 0, "scale": [1.0, 1.0, 1.0], "rgb": [173, 134, 82], "prior": {"dimension_scale": [1.04, 1.02, 1.05]}},
+        {"id": "contact-shelf", "kind": "bookshelf", "category": "Storage", "position_m": [1.78, 0.0, -3.95], "yaw_degrees": 0, "scale": [0.8, 1.0, 1.0], "rgb": [89, 129, 163], "prior": {}}
+      ]
+    },
+    {
+      "scene_id": "dev-same-color-dining", "seed": 10402, "target_id": "same-table",
+      "factors": {"geometry": ["table_legs", "chair_slats", "three_leg_stool"], "contact": ["floor", "adjacent_furniture"], "appearance": "identical_diffuse_rgb_149_133_110", "visibility": "wide_front_arc", "prior_error": "overlapping_oversized_boxes"},
+      "trajectory": {"frames": 18, "focus_m": [0.0, 0.65, -2.1], "radius_m": 2.3, "arc_degrees": 240, "height_m": 1.3, "height_amplitude_m": 0.25},
+      "sensor": {"depth_noise_sigma_m": 0.002, "dropout_probability": 0.015, "pose_translation_sigma_m": 0.0, "pose_yaw_sigma_degrees": 0.0, "stripe_dropout_period_px": 0},
+      "objects": [
+        {"id": "same-table", "kind": "table", "category": "Table", "position_m": [0.0, 0.0, -2.12], "yaw_degrees": 8, "scale": [1.0, 1.0, 1.0], "rgb": [149, 133, 110], "design": {"width_m": 1.48, "depth_m": 0.92, "height_m": 0.82}, "prior": {"dimension_scale": [1.16, 1.06, 1.2]}},
+        {"id": "same-chair-west", "kind": "chair", "category": "Chair", "position_m": [-0.85, 0.0, -2.15], "yaw_degrees": 90, "scale": [1.0, 1.0, 1.0], "rgb": [149, 133, 110], "design": {"seat_width_m": 0.56, "seat_depth_m": 0.51, "back_slats": 4, "leg_radius_m": 0.021}, "prior": {"dimension_scale": [1.12, 1.06, 1.15]}},
+        {"id": "same-chair-east", "kind": "chair", "category": "Chair", "position_m": [0.87, 0.0, -2.04], "yaw_degrees": -82, "scale": [0.96, 1.04, 0.95], "rgb": [149, 133, 110], "design": {"seat_width_m": 0.56, "seat_depth_m": 0.51, "back_slats": 4, "leg_radius_m": 0.021}, "prior": {"dimension_scale": [1.12, 1.06, 1.15]}},
+        {"id": "same-stool", "kind": "stool", "category": "Chair", "position_m": [0.35, 0.0, -1.12], "yaw_degrees": 31, "scale": [1.0, 1.0, 1.0], "rgb": [149, 133, 110], "prior": {}}
+      ]
+    },
+    {
+      "scene_id": "dev-curved-sofa-wall", "seed": 10403, "target_id": "curved-sofa",
+      "factors": {"geometry": ["ellipsoid_cushions", "curved_arms", "round_pedestal_table", "lamp_shade"], "contact": ["floor", "sofa_back_wall_contact", "adjacent_ottoman"], "appearance": "sofa_component_colour_changes", "visibility": "wide_front_arc", "prior_error": "sofa_box_yaw_7deg_and_translation_50mm"},
+      "trajectory": {"frames": 16, "focus_m": [0.0, 0.65, -2.8], "radius_m": 2.1, "arc_degrees": 150, "height_m": 1.4, "height_amplitude_m": 0.2},
+      "sensor": {"depth_noise_sigma_m": 0.004, "dropout_probability": 0.025, "pose_translation_sigma_m": 0.002, "pose_yaw_sigma_degrees": 0.15, "stripe_dropout_period_px": 0},
+      "objects": [
+        {"id": "curved-sofa", "kind": "sofa", "category": "Sofa", "position_m": [0.0, 0.0, -3.72], "yaw_degrees": 0, "scale": [1.0, 1.0, 1.0], "rgb": [54, 122, 153], "accent_rgb": [212, 166, 74], "prior": {"offset_m": [0.05, 0.0, 0.0], "yaw_error_degrees": 7, "dimension_scale": [1.04, 0.92, 1.08]}},
+        {"id": "curved-ottoman", "kind": "ottoman", "category": "Sofa", "position_m": [0.65, 0.0, -2.77], "yaw_degrees": 13, "scale": [1.0, 1.0, 1.0], "rgb": [62, 127, 156], "prior": {"dimension_scale": [1.08, 1.08, 1.08]}},
+        {"id": "curved-roundtable", "kind": "roundtable", "category": "Table", "position_m": [-1.26, 0.0, -2.72], "yaw_degrees": 0, "scale": [1.0, 0.9, 1.0], "rgb": [171, 105, 66], "prior": {}},
+        {"id": "curved-lamp", "kind": "lamp", "category": "Storage", "position_m": [1.5, 0.0, -3.83], "yaw_degrees": 0, "scale": [1.0, 1.0, 1.0], "rgb": [205, 185, 124], "prior": {}}
+      ]
+    },
+    {
+      "scene_id": "dev-occluded-bookshelf", "seed": 10404, "target_id": "occluded-shelf",
+      "factors": {"geometry": ["concave_shelf_bays", "individual_books", "folded_screen", "stool"], "contact": ["floor", "shelf_back_near_wall_10mm"], "appearance": "mixed_book_spines", "visibility": "screen_occlusion_and_65_degree_front_arc", "prior_error": "shelf_height_underestimate_14_percent"},
+      "trajectory": {"frames": 12, "focus_m": [0.0, 0.8, -3.25], "radius_m": 2.6, "arc_degrees": 65, "height_m": 1.35, "height_amplitude_m": 0.15},
+      "sensor": {"depth_noise_sigma_m": 0.003, "dropout_probability": 0.03, "pose_translation_sigma_m": 0.0, "pose_yaw_sigma_degrees": 0.0, "stripe_dropout_period_px": 0},
+      "objects": [
+        {"id": "occluded-shelf", "kind": "bookshelf", "category": "Storage", "position_m": [0.0, 0.0, -3.95], "yaw_degrees": 0, "scale": [1.15, 1.0, 1.0], "rgb": [119, 84, 56], "accent_rgb": [185, 57, 41], "design": {"width_m": 1.12, "height_m": 1.98, "depth_m": 0.48, "shelf_levels": 6}, "prior": {"dimension_scale": [1.05, 0.86, 1.04], "offset_m": [0.0, -0.06, 0.0]}},
+        {"id": "occluding-screen", "kind": "screen", "category": "Storage", "position_m": [-0.15, 0.0, -2.67], "yaw_degrees": -10, "scale": [1.0, 1.0, 1.0], "rgb": [125, 140, 111], "prior": {"dimension_scale": [1.05, 1.0, 1.12]}},
+        {"id": "occluded-side-table", "kind": "roundtable", "category": "Table", "position_m": [1.15, 0.0, -2.48], "yaw_degrees": 0, "scale": [0.85, 1.1, 0.85], "rgb": [154, 126, 89], "design": {"radius_m": 0.37}, "prior": {}},
+        {"id": "occluded-stool", "kind": "stool", "category": "Chair", "position_m": [-1.03, 0.0, -2.42], "yaw_degrees": 9, "scale": [0.9, 1.0, 0.9], "rgb": [150, 125, 83], "design": {"legs": 4, "seat_radius_m": 0.28}, "prior": {}}
+      ]
+    },
+    {
+      "scene_id": "dev-thin-rack-noise", "seed": 10405, "target_id": "thin-rack",
+      "factors": {"geometry": ["16mm_rack_rods", "18mm_shelf_slats", "lamp_pole", "stool_legs"], "contact": ["floor", "rack_near_table"], "appearance": "metal_and_wood", "visibility": "16_view_front_arc", "sensor_stress": "12mm_gaussian_noise_9_percent_random_dropout_and_2px_stripes", "prior_error": "rack_width_underestimate_15_percent"},
+      "trajectory": {"frames": 16, "focus_m": [0.15, 0.7, -2.4], "radius_m": 2.3, "arc_degrees": 210, "height_m": 1.4, "height_amplitude_m": 0.27},
+      "sensor": {"depth_noise_sigma_m": 0.012, "dropout_probability": 0.09, "pose_translation_sigma_m": 0.004, "pose_yaw_sigma_degrees": 0.35, "stripe_dropout_period_px": 23},
+      "objects": [
+        {"id": "thin-rack", "kind": "rack", "category": "Storage", "position_m": [0.5, 0.0, -2.53], "yaw_degrees": -8, "scale": [1.0, 1.0, 1.0], "rgb": [84, 113, 131], "prior": {"dimension_scale": [0.85, 1.05, 1.12], "offset_m": [0.025, 0.0, 0.03]}},
+        {"id": "thin-table", "kind": "table", "category": "Table", "position_m": [-0.9, 0.0, -3.16], "yaw_degrees": 25, "scale": [0.8, 1.0, 0.8], "rgb": [179, 137, 82], "design": {"width_m": 1.25, "depth_m": 0.78, "height_m": 0.84}, "prior": {}},
+        {"id": "thin-stool", "kind": "stool", "category": "Chair", "position_m": [-0.52, 0.0, -1.57], "yaw_degrees": 11, "scale": [1.0, 1.0, 1.0], "rgb": [175, 127, 83], "design": {"legs": 3, "seat_radius_m": 0.26}, "prior": {}},
+        {"id": "thin-lamp", "kind": "lamp", "category": "Storage", "position_m": [1.47, 0.0, -3.18], "yaw_degrees": 0, "scale": [1.0, 1.0, 1.0], "rgb": [204, 187, 135], "design": {"height_m": 1.63, "shade_radius_m": 0.19}, "prior": {}}
+      ]
+    },
+    {
+      "scene_id": "dev-combined-study", "seed": 10406, "target_id": "combined-desk",
+      "factors": {"geometry": ["L_desk", "drawer_handles", "chair_back_and_legs", "curved_sofa", "shelves"], "contact": ["floor", "adjacent_chair_desk", "shelf_near_wall"], "appearance": "desk_chair_shelf_same_wood_colour", "visibility": "chair_occludes_desk_in_narrow_arc", "sensor_stress": "6mm_noise_4.5_percent_dropout_12mm_pose_noise", "prior_error": "100mm_offset_9_degree_yaw_and_anisotropic_box_error"},
+      "trajectory": {"frames": 14, "focus_m": [0.0, 0.7, -2.4], "radius_m": 2.1, "arc_degrees": 100, "height_m": 1.3, "height_amplitude_m": 0.16},
+      "sensor": {"depth_noise_sigma_m": 0.006, "dropout_probability": 0.045, "pose_translation_sigma_m": 0.012, "pose_yaw_sigma_degrees": 1.1, "stripe_dropout_period_px": 0},
+      "objects": [
+        {"id": "combined-desk", "kind": "desk", "category": "Table", "position_m": [-0.18, 0.0, -2.65], "yaw_degrees": -12, "scale": [1.0, 1.0, 1.0], "rgb": [143, 117, 91], "prior": {"offset_m": [0.1, -0.04, 0.07], "yaw_error_degrees": 9, "dimension_scale": [0.85, 1.08, 1.13]}},
+        {"id": "combined-chair", "kind": "chair", "category": "Chair", "position_m": [-0.32, 0.0, -1.78], "yaw_degrees": 168, "scale": [1.0, 1.0, 1.0], "rgb": [143, 117, 91], "design": {"seat_width_m": 0.61, "seat_depth_m": 0.57, "back_slats": 2, "leg_radius_m": 0.023}, "prior": {"dimension_scale": [1.15, 1.04, 1.15]}},
+        {"id": "combined-shelf", "kind": "bookshelf", "category": "Storage", "position_m": [1.75, 0.0, -3.95], "yaw_degrees": 0, "scale": [0.8, 0.95, 1.0], "rgb": [143, 117, 91], "design": {"width_m": 1.2, "height_m": 1.75, "depth_m": 0.44, "shelf_levels": 4}, "prior": {"dimension_scale": [1.05, 0.95, 1.08]}},
+        {"id": "combined-sofa", "kind": "sofa", "category": "Sofa", "position_m": [-1.73, 0.0, -3.35], "yaw_degrees": 20, "scale": [0.85, 0.9, 0.9], "rgb": [87, 109, 122], "design": {"cushions": 3}, "prior": {}},
+        {"id": "combined-lamp", "kind": "lamp", "category": "Storage", "position_m": [1.0, 0.0, -1.71], "yaw_degrees": 0, "scale": [1.0, 1.0, 1.0], "rgb": [189, 174, 139], "design": {"height_m": 1.48, "shade_radius_m": 0.26}, "prior": {}}
+      ]
+    }
+  ]
+}

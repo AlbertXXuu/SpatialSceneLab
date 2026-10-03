@@ -12,7 +12,17 @@ a prepared scanner capture on Windows, keeps meter units and object UUIDs,
 edits selected observations and fused surface regions, and checks their world
 geometry after saving and reopening.
 
-**Measured 2026-10-04:** 24 automated tests passed; a real 62-frame `tea_room` scan produced
+**S0 measured 2026-10-04:** six original complex development scenes, 92 RGB-D
+views and 18 fixed-mesh B0/B1/B2 comparisons completed locally on CPU. Target
+area IoU averaged 0.791204 / 0.823510 / 0.818533; the simple centroid rule is
+the strongest current control on these development targets.
+[English report](reports/DEVELOPMENT-S0-2026-10-04.md) ·
+[中文报告](reports/DEVELOPMENT-S0-2026-10-04.zh-CN.md) ·
+[Run it](docs/DEVELOPMENT-S0.md) · [中文复现](docs/DEVELOPMENT-S0.zh-CN.md).
+
+![Six complex original development scenes](reports/development-s0/development-scene-overview.png)
+
+**Earlier baseline, 2026-10-04:** 24 automated tests passed; a real 62-frame `tea_room` scan produced
 639,790 sampled observations and a TSDF mesh with 83,425 vertices and 155,768
 triangles. Sofa0's selected surface region moved +0.3 m X in Blender 5.1.2.
 Both GLB reimports had maximum world-vertex distance 8.94e-7 m; the edited
@@ -33,7 +43,9 @@ correction and a complete local Blender editing workflow. The
 [English evaluation protocol](docs/NEXT-STAGE-PROTOCOL.md) and
 [中文评测协议](docs/NEXT-STAGE-PROTOCOL.zh-CN.md) specify independent scenes,
 direct baselines, area-based metrics, ablations and claim gates. This protocol
-has not been executed; its scene counts and acceptance targets are not results.
+has begun with the six-scene S0 development comparison. The 18 held-out groups,
+real-room reference acquisition and full editing/product acceptance remain pending;
+their planned counts are not measured results.
 
 ## Run the original public fixture
 
