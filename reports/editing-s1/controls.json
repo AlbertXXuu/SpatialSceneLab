@@ -1,0 +1,334 @@
+{
+  "schema": "spatial-scene-lab.native-controls.v1",
+  "status": "pass",
+  "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+  "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+  "attempted": 15,
+  "passed": 15,
+  "elapsed_seconds": 12.130712199999834,
+  "scope": "scripted native small-mesh input/selection/export regressions; no interactive timing, render, undo or OS isolation claim",
+  "results": [
+    {
+      "case": "no_face_selection",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "select a nonempty proper subset of source faces",
+      "state_unchanged": true,
+      "elapsed_seconds": 0.09142750000000888,
+      "process_exit_code": 0
+    },
+    {
+      "case": "all_faces_selection",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "select a nonempty proper subset of source faces",
+      "state_unchanged": true,
+      "elapsed_seconds": 0.09380479999981617,
+      "process_exit_code": 0
+    },
+    {
+      "case": "self_destination",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "source and destination must be different regions",
+      "state_unchanged": true,
+      "elapsed_seconds": 0.09140179999985776,
+      "process_exit_code": 0
+    },
+    {
+      "case": "missing_id",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "requires one observed region with identity 'missing'",
+      "state_unchanged": true,
+      "elapsed_seconds": 0.08966890000010608,
+      "process_exit_code": 0
+    },
+    {
+      "case": "multi_object_edit",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "objects_in_mode": 2,
+      "diagnostic": "review one source mesh at a time; leave multi-object Edit Mode",
+      "state_unchanged": true,
+      "elapsed_seconds": 0.11389340000005177,
+      "process_exit_code": 0
+    },
+    {
+      "case": "object_mode_selection_exactness",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "state": {
+        "status": "pass",
+        "maximum_corner_distance_m": 0.0,
+        "maximum_linear_rgba_difference": 0.0,
+        "maximum_material_value_difference": 0.0,
+        "owners_match": true,
+        "reviewed_flags_match": true,
+        "source_face_instances": 8
+      },
+      "selected_face_ids": [
+        0
+      ],
+      "extra_selected_source_isolated": true,
+      "elapsed_seconds": 0.0985593999998855,
+      "process_exit_code": 0
+    },
+    {
+      "case": "nonfinite_transform",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "transform values must be finite",
+      "state_unchanged": true,
+      "rejected_inputs": [
+        "nan_translation",
+        "infinite_rotation",
+        "infinite_pivot"
+      ],
+      "elapsed_seconds": 0.09023100000013073,
+      "process_exit_code": 0
+    },
+    {
+      "case": "source_sha_preflight",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "surface path or SHA256 mismatch",
+      "state_unchanged": true,
+      "elapsed_seconds": 0.09478859999990163,
+      "process_exit_code": 0
+    },
+    {
+      "case": "duplicate_uuid_preflight",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "surface identities must be nonempty and unique",
+      "state_unchanged": true,
+      "elapsed_seconds": 0.09023209999986648,
+      "process_exit_code": 0
+    },
+    {
+      "case": "duplicate_current_id",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "duplicate observed object identity",
+      "state_unchanged_apart_from_injected_identity": true,
+      "elapsed_seconds": 0.096123599999828,
+      "process_exit_code": 0
+    },
+    {
+      "case": "hidden_region_export",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "geometry": {
+        "status": "pass",
+        "tolerance_m": 5e-05,
+        "objects": [
+          {
+            "id": "environment",
+            "maximum_world_vertex_distance_m": 2.5334713882330107e-08,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "surface_comparison": {
+              "status": "pass",
+              "method": "one_to_one_oriented_triangle_geometry",
+              "tolerance_m": 5e-05,
+              "expected_face_instances": 4,
+              "actual_face_instances": 4,
+              "matched_face_instances": 4,
+              "missing_face_instances": 0,
+              "extra_face_instances": 0,
+              "missing_face_indices_sample": [],
+              "extra_face_indices_sample": [],
+              "maximum_matched_corner_distance_m": 2.5334713065503992e-08,
+              "winding_ambiguous_matched_faces": 0,
+              "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+            },
+            "status": "pass"
+          },
+          {
+            "id": "target",
+            "maximum_world_vertex_distance_m": 2.5334713882330107e-08,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "surface_comparison": {
+              "status": "pass",
+              "method": "one_to_one_oriented_triangle_geometry",
+              "tolerance_m": 5e-05,
+              "expected_face_instances": 2,
+              "actual_face_instances": 2,
+              "matched_face_instances": 2,
+              "missing_face_instances": 0,
+              "extra_face_instances": 0,
+              "missing_face_indices_sample": [],
+              "extra_face_indices_sample": [],
+              "maximum_matched_corner_distance_m": 2.5334713065503992e-08,
+              "winding_ambiguous_matched_faces": 0,
+              "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+            },
+            "status": "pass"
+          },
+          {
+            "id": "other",
+            "maximum_world_vertex_distance_m": 2.5334713882330107e-08,
+            "triangles_match": true,
+            "connectivity_match": true,
+            "role_match": true,
+            "source_provenance_match": true,
+            "appearance_present": true,
+            "surface_comparison": {
+              "status": "pass",
+              "method": "one_to_one_oriented_triangle_geometry",
+              "tolerance_m": 5e-05,
+              "expected_face_instances": 2,
+              "actual_face_instances": 2,
+              "matched_face_instances": 2,
+              "missing_face_instances": 0,
+              "extra_face_instances": 0,
+              "missing_face_indices_sample": [],
+              "extra_face_indices_sample": [],
+              "maximum_matched_corner_distance_m": 2.5334713065503992e-08,
+              "winding_ambiguous_matched_faces": 0,
+              "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+            },
+            "status": "pass"
+          }
+        ],
+        "maximum_world_vertex_distance_m": 2.5334713882330107e-08
+      },
+      "appearance": {
+        "status": "pass",
+        "linear_rgba_tolerance": 0.0039225686274509805,
+        "objects": [
+          {
+            "id": "environment",
+            "status": "pass",
+            "maximum_linear_rgba_difference": 3.725290298461914e-09,
+            "maximum_material_value_difference": 0.0
+          },
+          {
+            "id": "target",
+            "status": "pass",
+            "maximum_linear_rgba_difference": 5.960464477539063e-08,
+            "maximum_material_value_difference": 0.0
+          },
+          {
+            "id": "other",
+            "status": "pass",
+            "maximum_linear_rgba_difference": 1.1920928955078125e-07,
+            "maximum_material_value_difference": 0.0
+          }
+        ]
+      },
+      "native_face_attributes_in_glb": false,
+      "sidecar_source_face_instances": 8,
+      "selection_visibility_restored": true,
+      "elapsed_seconds": 0.2246141999999054,
+      "process_exit_code": 0
+    },
+    {
+      "case": "excluded_view_layer_export",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "make all observed regions available in the active view layer before exporting",
+      "state_unchanged": true,
+      "elapsed_seconds": 0.09004950000007739,
+      "process_exit_code": 0
+    },
+    {
+      "case": "blocked_collection_export",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "make observed collections visible in the active view layer before exporting",
+      "state_unchanged": true,
+      "elapsed_seconds": 0.08981219999986934,
+      "process_exit_code": 0
+    },
+    {
+      "case": "sidecar_write_failure",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "injected sidecar write failure",
+      "state_unchanged": true,
+      "injected_failure": [
+        "sidecar_write"
+      ],
+      "prior_hashes_unchanged": {
+        "prior.blend": true,
+        "package.glb": true,
+        "package.identity.json": true
+      },
+      "selection_visibility_restored": true,
+      "elapsed_seconds": 0.19515159999991738,
+      "process_exit_code": 0
+    },
+    {
+      "case": "pair_replace_failure",
+      "status": "pass",
+      "blender": "5.1.2",
+      "script_sha256": "522659d7600dedc208ebc0fb690d3d6d1c725b7a126152ea80155d49fa81dbf5",
+      "addon_sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "execution": "one fresh background Blender process; scripted native operations",
+      "diagnostic": "injected second publication replace failure",
+      "state_unchanged": true,
+      "injected_failure": [
+        "sidecar_replace"
+      ],
+      "prior_hashes_unchanged": {
+        "prior.blend": true,
+        "package.glb": true,
+        "package.identity.json": true
+      },
+      "selection_visibility_restored": true,
+      "elapsed_seconds": 0.2044927000001735,
+      "process_exit_code": 0
+    }
+  ]
+}

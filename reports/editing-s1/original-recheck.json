@@ -1,0 +1,158 @@
+{
+  "blender": "5.1.2",
+  "assets_sha256": {
+    "before.blend": "1e838643f29c34f101dcd7e9b7369743a6068749684603c76d1fedb9d05d9cd1",
+    "before.glb": "bb8d2e7b5dc0928a95b343ae41c3bd30f0284fa6a5c164e0336e98647d905e93",
+    "after.blend": "3b0e3a7f37172b99988f5bc83747dee7a6952a1e66185ea84cdb18a61f395ad7",
+    "after.glb": "dcc180dd2a849e9c90def8e56411500c97337d0ad107ce18e11a664d67afbc96",
+    "blender-verification.json": "0cd01f80e82ae588bc7225e89710be3fcaa9fde912923eb66403014ed3fc3cfd"
+  },
+  "checks": {
+    "before": {
+      "status": "fail",
+      "tolerance_m": 5e-05,
+      "objects": [
+        {
+          "id": "environment",
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+          "triangles_match": true,
+          "connectivity_match": false,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "fail"
+        },
+        {
+          "id": "combined-desk",
+          "maximum_world_vertex_distance_m": 9.098254167838604e-07,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        },
+        {
+          "id": "combined-chair",
+          "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        },
+        {
+          "id": "combined-shelf",
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        },
+        {
+          "id": "combined-sofa",
+          "maximum_world_vertex_distance_m": 1.0662403155947686e-06,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        },
+        {
+          "id": "combined-lamp",
+          "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        }
+      ],
+      "maximum_world_vertex_distance_m": 1.2839233249906101e-06
+    },
+    "after": {
+      "status": "fail",
+      "tolerance_m": 5e-05,
+      "objects": [
+        {
+          "id": "environment",
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+          "triangles_match": true,
+          "connectivity_match": false,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "fail"
+        },
+        {
+          "id": "combined-desk",
+          "maximum_world_vertex_distance_m": 8.107108442345634e-07,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        },
+        {
+          "id": "combined-chair",
+          "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        },
+        {
+          "id": "combined-shelf",
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        },
+        {
+          "id": "combined-sofa",
+          "maximum_world_vertex_distance_m": 1.0662403155947686e-06,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        },
+        {
+          "id": "combined-lamp",
+          "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+          "triangles_match": true,
+          "connectivity_match": true,
+          "role_match": true,
+          "source_provenance_match": true,
+          "appearance_present": true,
+          "status": "pass"
+        }
+      ],
+      "maximum_world_vertex_distance_m": 1.2839233249906101e-06
+    }
+  },
+  "negative_controls": {
+    "status": "pass",
+    "injected_faults_detected": {
+      "missing_object": true,
+      "unexpected_other_vertex_change": true,
+      "changed_source_hash": true,
+      "missing_vertex_colors": true,
+      "changed_triangle_connectivity": true
+    }
+  },
+  "elapsed_seconds": 3.448639700000058,
+  "assets_unchanged": true
+}

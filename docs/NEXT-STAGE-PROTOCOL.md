@@ -1,6 +1,12 @@
 # Object-level editing: next-stage evaluation protocol
 
-Revision: 2026-10-04.1. Status: **S0 development comparison executed; full protocol pending**.
+Revision: 2026-10-06.1. Status: **S0 comparisons and S1 native scripted tasks executed; full protocol pending**.
+
+The [S1 report](../reports/EDITING-S1-2026-10-06.md) records six development
+ownership transfers, rigid edits, native undo/redo, fresh-process reopen and
+export preservation. Fixed scripted selections do not measure human correction
+quality or interaction cost. Full interaction, real references, held-out and
+whole-machine disconnected gates remain active.
 
 The [S0 report](../reports/DEVELOPMENT-S0-2026-10-04.md) records implemented
 direct controls and current nearest-reference matching. Visibility-aware matching,

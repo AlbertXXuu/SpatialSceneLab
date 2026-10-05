@@ -1,0 +1,35 @@
+{
+  "schema": "spatial-scene-lab.editing-figures.v1",
+  "measured_results_sha256": "fa5eceb62fe0ef45c58863ca9b3dd5eab0bfa79f789c18508e56da491b0f9ca9",
+  "script_sha256": "5495825114bb945ab3d20d509899d5b939150ce66a6c21270c39c9992ef3febd",
+  "matplotlib": "3.10.0",
+  "inputs": {
+    "before.png": {
+      "sha256": "f65743376b0bad6b60bbea3985e891029dbdf5eb177975789a6733cd57302491",
+      "bytes": 676440
+    },
+    "after.png": {
+      "sha256": "83f5c9f90df46b4a76e7fb25226755f4bbd621c2e361ba0d32d9a6f0c25ecee7",
+      "bytes": 679899
+    }
+  },
+  "outputs": {
+    "native-editing-comparison.png": {
+      "sha256": "34806c5a51c221c3fb866c638d766763f9683a8a9555ae2c9644587ac1fe9bf2",
+      "bytes": 848143
+    },
+    "native-editing-comparison.pdf": {
+      "sha256": "4a4f5913d72f889caefbed4097d9cb54673186c97e24626effe81d4441af4aba",
+      "bytes": 917068
+    },
+    "metrics.csv": {
+      "sha256": "49793ceb82ca8a58054a90a9546c57b4ad79dda2a9089beb62ac50cdbad0d2ab",
+      "bytes": 913
+    }
+  },
+  "image_dimensions": [
+    2400,
+    1080
+  ],
+  "scope": "actual observed-surface Blender renders; edited regions are incomplete B0 selections"
+}
