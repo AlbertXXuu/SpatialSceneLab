@@ -12,6 +12,24 @@ a prepared scanner capture on Windows, keeps meter units and object UUIDs,
 edits selected observations and fused surface regions, and checks their world
 geometry after saving and reopening.
 
+**S1 measured 2026-10-06:** all six development scenes completed native Blender
+face reassignment, metre translation, pivoted rotation, four undo/redo cycles
+and fresh-process save/reopen. Fifteen isolated fault controls passed. The
+standalone [Blender panel](blender_edit.py) preserves source-face lineage and
+observed colours during explicit reassignment, and exports a hash-bound GLB +
+identity record. The native `.blend` remains the editable authority.
+
+[English S1 report](reports/EDITING-S1-2026-10-06.md) ·
+[中文 S1 报告](reports/EDITING-S1-2026-10-06.zh-CN.md) ·
+[Run / install](docs/EDITING-S1.md) · [中文使用与复现](docs/EDITING-S1.zh-CN.md) ·
+[Download the editable study](examples/edit-workflow/combined-study-editable.zip).
+
+![Actual native before/after study renders](reports/editing-s1/native-editing-comparison.png)
+
+These are scripted engineering tasks on incomplete observed B0 regions. Visible
+holes and leftover fragments are retained; human correction quality, independent
+real-instance accuracy and whole-machine disconnected execution remain to be measured.
+
 **S0 measured 2026-10-04:** six original complex development scenes, 92 RGB-D
 views and 18 fixed-mesh B0/B1/B2 comparisons completed locally on CPU. Target
 area IoU averaged 0.791204 / 0.823510 / 0.818533; the simple centroid rule is
@@ -38,13 +56,13 @@ recorded checks; whole-machine network isolation remains pending.
 [Machine results](reports/local-scan-results.json) ·
 [Input hashes](docs/tea-room-source-manifest.json)
 
-**Next stage, planned:** object-level surface partition, assisted boundary
-correction and a complete local Blender editing workflow. The
+**Next stage:** diagnose remaining partition omissions and compare stronger
+geometric/interactive baselines with explicit correction budgets. The
 [English evaluation protocol](docs/NEXT-STAGE-PROTOCOL.md) and
 [中文评测协议](docs/NEXT-STAGE-PROTOCOL.zh-CN.md) specify independent scenes,
 direct baselines, area-based metrics, ablations and claim gates. This protocol
-has begun with the six-scene S0 development comparison. The 18 held-out groups,
-real-room reference acquisition and full editing/product acceptance remain pending;
+has begun with S0 comparisons and S1 native editing regression. The 18 held-out groups,
+real-room reference acquisition and full interactive/product acceptance remain pending;
 their planned counts are not measured results.
 
 ## Run the original public fixture

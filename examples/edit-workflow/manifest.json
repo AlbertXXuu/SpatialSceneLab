@@ -1,0 +1,51 @@
+{
+  "schema": "spatial-scene-lab.authored-edit-package.v1",
+  "licence": "MIT",
+  "recorded_suite_sha256": "fa5eceb62fe0ef45c58863ca9b3dd5eab0bfa79f789c18508e56da491b0f9ca9",
+  "members": {
+    "before.blend": {
+      "sha256": "4dac9efc8bc8076bd9cf9d0a89db1b35abb912d68faa652a602c759d12a5cb6a",
+      "bytes": 2475127
+    },
+    "after.blend": {
+      "sha256": "e3fbd15541a9a18ed4c59ea55c6c5fb9c7c0a74587b97b819a414025be3ebffb",
+      "bytes": 2493648
+    },
+    "after.glb": {
+      "sha256": "60504d6e7d7346e43e1fd93cb3d1dbb3224edfcded5a5ef53b3c1d234c98ec35",
+      "bytes": 1907692
+    },
+    "after.identity.json": {
+      "sha256": "1128bf7ad962dac161071732c63c10ec2fb4287001a28025fac42df725935e58",
+      "bytes": 2008692
+    },
+    "before.png": {
+      "sha256": "f65743376b0bad6b60bbea3985e891029dbdf5eb177975789a6733cd57302491",
+      "bytes": 676440
+    },
+    "after.png": {
+      "sha256": "83f5c9f90df46b4a76e7fb25226755f4bbd621c2e361ba0d32d9a6f0c25ecee7",
+      "bytes": 679899
+    },
+    "after-reimport.png": {
+      "sha256": "7b0a1343243d48471ad5040159ba7f61908c8ed4c20d13a9e72125123d03866b",
+      "bytes": 679282
+    },
+    "blender_edit.py": {
+      "sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "bytes": 24000
+    },
+    "LICENSE": {
+      "sha256": "818a922b9751d248f82b1580c5ea802d95ff0d48a9d779e2f816cc82e33aa6d5",
+      "bytes": 1063
+    },
+    "README.txt": {
+      "sha256": "4009756dce4a75311a109c73f861bb72ac0c057ddedf20af9353637434dd83a4",
+      "bytes": 1276
+    }
+  },
+  "archive": {
+    "sha256": "d643f3677228274c00057b51c57f69841ec04114bbd231c0240fd9823dd6fe16",
+    "bytes": 8095918
+  }
+}

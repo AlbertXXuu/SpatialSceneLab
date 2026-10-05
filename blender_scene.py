@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import argparse
 import copy
-from collections import Counter
 import hashlib
 import json
 from pathlib import Path
@@ -16,6 +15,12 @@ import sys
 import bpy
 from mathutils import Matrix, Vector
 from mathutils.kdtree import KDTree
+
+# Blender's --python entry point need not place the script's directory on
+# sys.path (for example when launched from an unrelated working directory).
+if str(Path(__file__).resolve().parent) not in sys.path:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+from geometry_compare import compare_triangle_geometry
 
 
 Y_UP_TO_Z_UP = Matrix(((1, 0, 0, 0), (0, 0, -1, 0), (0, 1, 0, 0), (0, 0, 0, 1)))
@@ -74,16 +79,11 @@ def compare_geometry(expected, actual, tolerance=5e-5):
         error = max(directed_distance(original["vertices"], returned["vertices"]),
                     directed_distance(returned["vertices"], original["vertices"]))
         triangle_match = original["triangles"] == returned["triangles"]
-        # Exporters may split color/normal seams and reorder vertices. Map
-        # both meshes into one positional reference before comparing faces.
-        reference = KDTree(len(original["vertices"]))
-        for index, point in enumerate(original["vertices"]):
-            reference.insert(Vector(point), index)
-        reference.balance()
-        def connectivity(record):
-            mapping = [reference.find(Vector(point))[1] for point in record["vertices"]]
-            return Counter(tuple(sorted(mapping[index] for index in face)) for face in record["faces"])
-        connectivity_match = connectivity(original) == connectivity(returned)
+        surface_check = compare_triangle_geometry(original["vertices"], original["faces"],
+                                                  returned["vertices"], returned["faces"], tolerance)
+        # Kept for report compatibility. This now means one-to-one oriented
+        # triangle geometry, not preservation of welded vertex-index topology.
+        connectivity_match = surface_check["status"] == "pass"
         role_match = original["role"] == returned["role"]
         provenance_match = original["source_sha256"] == returned["source_sha256"]
         appearance_present = (original["vertex_colors_present"] and returned["vertex_colors_present"]
@@ -91,6 +91,7 @@ def compare_geometry(expected, actual, tolerance=5e-5):
         objects.append({"id": identity, "maximum_world_vertex_distance_m": error,
                         "triangles_match": triangle_match, "connectivity_match": connectivity_match, "role_match": role_match,
                         "source_provenance_match": provenance_match, "appearance_present": appearance_present,
+                        "surface_comparison": surface_check,
                         "status": "pass" if error <= tolerance and triangle_match and connectivity_match and role_match
                         and provenance_match and appearance_present else "fail"})
     return {"status": "pass" if all(item["status"] == "pass" for item in objects) else "fail",
@@ -105,12 +106,18 @@ def verifier_negative_controls(geometry):
     missing = copy.deepcopy(geometry)
     del missing[identity]
     faults["missing_object"] = missing
+    changed_identity = copy.deepcopy(geometry)
+    changed_identity["wrong-object-id"] = changed_identity.pop(identity)
+    faults["changed_object_identity"] = changed_identity
     moved = copy.deepcopy(geometry)
     moved[identity]["vertices"][0][0] += .02
     faults["unexpected_other_vertex_change"] = moved
     provenance = copy.deepcopy(geometry)
     provenance[identity]["source_sha256"] = "wrong-source"
     faults["changed_source_hash"] = provenance
+    role = copy.deepcopy(geometry)
+    role[identity]["role"] = "wrong-role"
+    faults["changed_role"] = role
     appearance = copy.deepcopy(geometry)
     appearance[identity]["vertex_colors_present"] = False
     faults["missing_vertex_colors"] = appearance
@@ -118,6 +125,27 @@ def verifier_negative_controls(geometry):
     old = topology[identity]["faces"][0][0]
     topology[identity]["faces"][0][0] = (old + 7) % len(topology[identity]["vertices"])
     faults["changed_triangle_connectivity"] = topology
+    missing_face = copy.deepcopy(geometry)
+    missing_face[identity]["faces"].pop()
+    missing_face[identity]["triangles"] -= 1
+    faults["missing_face"] = missing_face
+    duplicate_face = copy.deepcopy(geometry)
+    duplicate_face[identity]["faces"].append(duplicate_face[identity]["faces"][0].copy())
+    duplicate_face[identity]["triangles"] += 1
+    faults["duplicate_face"] = duplicate_face
+    winding = copy.deepcopy(geometry)
+    # Select a well-resolved face: a sub-tolerance sliver has no reliable
+    # orientation at the verifier's stated geometric resolution.
+    for face_index, face in enumerate(geometry[identity]["faces"]):
+        points = [Vector(geometry[identity]["vertices"][index]) for index in face]
+        edges = [points[(index + 1) % 3] - points[index] for index in range(3)]
+        if (min(edge.length for edge in edges) > 1e-4
+                and edges[0].cross(-edges[2]).length > (5e-5) ** 2):
+            winding[identity]["faces"][face_index] = [face[0], face[2], face[1]]
+            break
+    else:
+        raise ValueError("negative control requires a well-resolved triangle")
+    faults["reversed_winding"] = winding
     results = {name: compare_geometry(geometry, returned)["status"] == "fail"
                for name, returned in faults.items()}
     if not all(results.values()):
