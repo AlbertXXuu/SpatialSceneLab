@@ -12,3 +12,6 @@ reports/development-s0/*.csv -text whitespace=trailing-space,space-before-tab,cr
 reports/editing-s1/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
 reports/editing-s1/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 examples/edit-workflow/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+reports/ownership-s2a/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+reports/ownership-s2a/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+examples/ownership-b1/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol

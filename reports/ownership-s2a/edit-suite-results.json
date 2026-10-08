@@ -1,0 +1,2929 @@
+{
+  "schema": "spatial-scene-lab.edit-suite.v1",
+  "status": "pass",
+  "scope": "six S0 authored development bundles; scripted ownership/edit/undo/reopen/export tasks",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "new_paid_allocation": 0,
+  "tasks": [
+    {
+      "scene_id": "dev-contact-chair",
+      "primary": "contact-chair",
+      "secondary": "contact-table",
+      "input_scene_sha256": "e2f8ec9e273be7e6486cfe6a1c485d19a89eb3378709598b00dc9abfbaad236e",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 30.22783139999956,
+        "sampled_process_tree_peak_rss_bytes": 576282624,
+        "memory_samples": 263,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "status": "pass",
+      "native_task": {
+        "schema": "spatial-scene-lab.native-edit-task.v1",
+        "status": "pass",
+        "blender": "5.1.2",
+        "source_scene_sha256": "e2f8ec9e273be7e6486cfe6a1c485d19a89eb3378709598b00dc9abfbaad236e",
+        "primary": "contact-chair",
+        "secondary": "contact-table",
+        "execution": "scripted native Blender operators; not interactive user timing",
+        "operations": [
+          {
+            "kind": "face_reassignment",
+            "target_id": "contact-chair",
+            "selected_faces": 12,
+            "source_face_ids": [
+              1888,
+              1889,
+              1890,
+              1918,
+              1919,
+              1920,
+              1921,
+              1922,
+              1923,
+              1952,
+              1953,
+              1955
+            ],
+            "operator_seconds": 0.1281293999927584,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 99511
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 99511
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 99511
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "contact-chair",
+            "operator_seconds": 0.001356099994154647,
+            "translation_blender_z_up_m": [
+              0.25,
+              -0.1,
+              0
+            ],
+            "rotation_world_z_degrees": 0,
+            "pivot_world_z_up_m": [
+              -0.8097475171089172,
+              1.986262857913971,
+              0.49778329182299785
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 99511
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 99511
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 99511
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "contact-table",
+            "operator_seconds": 0.0025514999870210886,
+            "translation_blender_z_up_m": [
+              0,
+              0,
+              0
+            ],
+            "rotation_world_z_degrees": 32,
+            "pivot_world_z_up_m": [
+              0.20418930053710938,
+              2.121318995952606,
+              0.40699267759919167
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 3.514257569792542e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 99511
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 99511
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 99511
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "face_reassignment",
+            "target_id": "contact-table",
+            "selected_faces": 8,
+            "source_face_ids": [
+              26029,
+              26030,
+              26031,
+              26061,
+              26062,
+              26063,
+              26064,
+              26094
+            ],
+            "operator_seconds": 0.12044389999937266,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 3.603931760863177e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 99511
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 99511
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 99511
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          }
+        ],
+        "initial_source_faces": 99511,
+        "identity_package": {
+          "status": "pass",
+          "scope": "source IDs in native blend face order; blend is authoritative for editing"
+        },
+        "glb_geometry": {
+          "status": "pass",
+          "tolerance_m": 5e-05,
+          "objects": [
+            {
+              "id": "environment",
+              "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 83678,
+                "actual_face_instances": 83678,
+                "matched_face_instances": 83678,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.2839233415447482e-06,
+                "winding_ambiguous_matched_faces": 6,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "unresolved",
+              "maximum_world_vertex_distance_m": 6.419616624953051e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 1216,
+                "actual_face_instances": 1216,
+                "matched_face_instances": 1216,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.419616707723741e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "contact-chair",
+              "maximum_world_vertex_distance_m": 5.960464477539062e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 2255,
+                "actual_face_instances": 2255,
+                "matched_face_instances": 2255,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 5.960464477539062e-07,
+                "winding_ambiguous_matched_faces": 4,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "contact-table",
+              "maximum_world_vertex_distance_m": 6.3430655927732e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 4703,
+                "actual_face_instances": 4703,
+                "matched_face_instances": 4703,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.343065695104826e-07,
+                "winding_ambiguous_matched_faces": 2,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "contact-shelf",
+              "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 7659,
+                "actual_face_instances": 7659,
+                "matched_face_instances": 7659,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.2839233415447482e-06,
+                "winding_ambiguous_matched_faces": 8,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            }
+          ],
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06
+        },
+        "glb_appearance": {
+          "status": "pass",
+          "linear_rgba_tolerance": 0.0039225686274509805,
+          "objects": [
+            {
+              "id": "environment",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "unresolved",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 1.1920928955078125e-07,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "contact-chair",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 1.1920928955078125e-07,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "contact-table",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "contact-shelf",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            }
+          ]
+        },
+        "changed_color_rejected": true,
+        "changed_material_rejected": true,
+        "elapsed_seconds": 25.194690300006187
+      },
+      "reopen_process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 1.0428200000023935,
+        "sampled_process_tree_peak_rss_bytes": 286961664,
+        "memory_samples": 8,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "reopen": {
+        "status": "pass",
+        "maximum_corner_distance_m": 0.0,
+        "maximum_linear_rgba_difference": 0.0,
+        "maximum_material_value_difference": 0.0,
+        "owners_match": true,
+        "reviewed_flags_match": true,
+        "source_face_instances": 99511,
+        "new_process": true,
+        "metadata_match": true
+      },
+      "assets": {
+        "after.blend": {
+          "sha256": "14ac803c0d3d2a79e850f1918015afcac5a9908e41d16e8533c60d4e46ca56c8",
+          "bytes": 3185571
+        },
+        "after.glb": {
+          "sha256": "bddb9f05a6f05aca92337bb16851266cb915a94b0e3e1358577934e11a72c209",
+          "bytes": 2524804
+        },
+        "after.identity.json": {
+          "sha256": "c3082dab5c116df8fe6ed8fd8a81339426e9ab2e263aae75ea5b29caa6b46c70",
+          "bytes": 2779594
+        },
+        "before.blend": {
+          "sha256": "47de274458fff06122f40a6f5f61a58de0a53e2a26e110c0a16f58170dd3e937",
+          "bytes": 3172841
+        }
+      }
+    },
+    {
+      "scene_id": "dev-same-color-dining",
+      "primary": "same-table",
+      "secondary": "same-chair-west",
+      "input_scene_sha256": "9fb2f34311992f0ff3dbc8f821940c166459f7568039e77dc17525e2cb12acd2",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 25.97086970001692,
+        "sampled_process_tree_peak_rss_bytes": 574586880,
+        "memory_samples": 224,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "status": "pass",
+      "native_task": {
+        "schema": "spatial-scene-lab.native-edit-task.v1",
+        "status": "pass",
+        "blender": "5.1.2",
+        "source_scene_sha256": "9fb2f34311992f0ff3dbc8f821940c166459f7568039e77dc17525e2cb12acd2",
+        "primary": "same-table",
+        "secondary": "same-chair-west",
+        "execution": "scripted native Blender operators; not interactive user timing",
+        "operations": [
+          {
+            "kind": "face_reassignment",
+            "target_id": "same-table",
+            "selected_faces": 12,
+            "source_face_ids": [
+              23186,
+              28163,
+              28194,
+              28195,
+              28196,
+              28197,
+              28198,
+              28226,
+              28227,
+              28228,
+              28229,
+              28230
+            ],
+            "operator_seconds": 0.10586810001404956,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 96518
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 96518
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 96518
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "same-table",
+            "operator_seconds": 0.0021612000127788633,
+            "translation_blender_z_up_m": [
+              0.25,
+              -0.1,
+              0
+            ],
+            "rotation_world_z_degrees": 0,
+            "pivot_world_z_up_m": [
+              -0.01760190725326538,
+              2.1274855732917786,
+              0.41214499983470887
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 96518
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 96518
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 96518
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "same-chair-west",
+            "operator_seconds": 0.0015166000230237842,
+            "translation_blender_z_up_m": [
+              0,
+              0,
+              0
+            ],
+            "rotation_world_z_degrees": 32,
+            "pivot_world_z_up_m": [
+              -1.0103137791156769,
+              2.1555620431900024,
+              0.5057085212320089
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 3.274635543044252e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 96518
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 96518
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 96518
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "face_reassignment",
+            "target_id": "same-chair-west",
+            "selected_faces": 8,
+            "source_face_ids": [
+              3857,
+              3859,
+              3888,
+              3889,
+              3890,
+              3891,
+              3892,
+              3922
+            ],
+            "operator_seconds": 0.19790590001503006,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 3.20144970197111e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 96518
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 96518
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 96518
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          }
+        ],
+        "initial_source_faces": 96518,
+        "identity_package": {
+          "status": "pass",
+          "scope": "source IDs in native blend face order; blend is authoritative for editing"
+        },
+        "glb_geometry": {
+          "status": "pass",
+          "tolerance_m": 5e-05,
+          "objects": [
+            {
+              "id": "environment",
+              "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 84257,
+                "actual_face_instances": 84257,
+                "matched_face_instances": 84257,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.2839233415447482e-06,
+                "winding_ambiguous_matched_faces": 3,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "unresolved",
+              "maximum_world_vertex_distance_m": 6.976544568715326e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 3605,
+                "actual_face_instances": 3605,
+                "matched_face_instances": 3605,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.976544803809897e-07,
+                "winding_ambiguous_matched_faces": 2,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "same-table",
+              "maximum_world_vertex_distance_m": 6.976544568715326e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 3469,
+                "actual_face_instances": 3469,
+                "matched_face_instances": 3469,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.976544803809897e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "same-chair-west",
+              "maximum_world_vertex_distance_m": 5.748063927057956e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 1805,
+                "actual_face_instances": 1805,
+                "matched_face_instances": 1805,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 5.748063779469106e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "same-chair-east",
+              "maximum_world_vertex_distance_m": 6.419616624953051e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 1794,
+                "actual_face_instances": 1794,
+                "matched_face_instances": 1794,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.419616707723741e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "same-stool",
+              "maximum_world_vertex_distance_m": 3.769728778024728e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 1588,
+                "actual_face_instances": 1588,
+                "matched_face_instances": 1588,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 3.769728732309794e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            }
+          ],
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06
+        },
+        "glb_appearance": {
+          "status": "pass",
+          "linear_rgba_tolerance": 0.0039225686274509805,
+          "objects": [
+            {
+              "id": "environment",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "unresolved",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "same-table",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "same-chair-west",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "same-chair-east",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "same-stool",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            }
+          ]
+        },
+        "changed_color_rejected": true,
+        "changed_material_rejected": true,
+        "elapsed_seconds": 25.253407999989577
+      },
+      "reopen_process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.9280728999874555,
+        "sampled_process_tree_peak_rss_bytes": 257200128,
+        "memory_samples": 8,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "reopen": {
+        "status": "pass",
+        "maximum_corner_distance_m": 0.0,
+        "maximum_linear_rgba_difference": 0.0,
+        "maximum_material_value_difference": 0.0,
+        "owners_match": true,
+        "reviewed_flags_match": true,
+        "source_face_instances": 96518,
+        "new_process": true,
+        "metadata_match": true
+      },
+      "assets": {
+        "after.blend": {
+          "sha256": "009ae55a997c3780ae166171aa65d0c2b5a525885b5b5f7a607c1091547d04e1",
+          "bytes": 3084501
+        },
+        "after.glb": {
+          "sha256": "ca7f353a4038bc1f03385df9c8cf428cdb705dba73c36b16464a0e44dbff5056",
+          "bytes": 2438304
+        },
+        "after.identity.json": {
+          "sha256": "0f8e2fd5dd04b54c486f9db120385efb5d844c55eeaefa940f8a13c3c7e92d83",
+          "bytes": 2696116
+        },
+        "before.blend": {
+          "sha256": "2ce7686072c0d9e64ef6027fe6a619fd4db5f18bd7d176fe1ce892c44751968c",
+          "bytes": 3064980
+        }
+      }
+    },
+    {
+      "scene_id": "dev-curved-sofa-wall",
+      "primary": "curved-sofa",
+      "secondary": "curved-ottoman",
+      "input_scene_sha256": "b583f90368548b3f27f3937accad606028fe328d723489c4287ac0cb0ace5b8d",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 16.20930539999972,
+        "sampled_process_tree_peak_rss_bytes": 485236736,
+        "memory_samples": 141,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "status": "pass",
+      "native_task": {
+        "schema": "spatial-scene-lab.native-edit-task.v1",
+        "status": "pass",
+        "blender": "5.1.2",
+        "source_scene_sha256": "b583f90368548b3f27f3937accad606028fe328d723489c4287ac0cb0ace5b8d",
+        "primary": "curved-sofa",
+        "secondary": "curved-ottoman",
+        "execution": "scripted native Blender operators; not interactive user timing",
+        "operations": [
+          {
+            "kind": "face_reassignment",
+            "target_id": "curved-sofa",
+            "selected_faces": 12,
+            "source_face_ids": [
+              11423,
+              11425,
+              11435,
+              11436,
+              11437,
+              11438,
+              11439,
+              11970,
+              11971,
+              11972,
+              11973,
+              11974
+            ],
+            "operator_seconds": 0.07022049999795854,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 67055
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 67055
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 67055
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "curved-sofa",
+            "operator_seconds": 0.005808599991723895,
+            "translation_blender_z_up_m": [
+              0.25,
+              -0.1,
+              0
+            ],
+            "rotation_world_z_degrees": 0,
+            "pivot_world_z_up_m": [
+              0.0014300644397735596,
+              3.736330986022949,
+              0.516131010837853
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 67055
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 67055
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 67055
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "curved-ottoman",
+            "operator_seconds": 0.0015348000160884112,
+            "translation_blender_z_up_m": [
+              0,
+              0,
+              0
+            ],
+            "rotation_world_z_degrees": 32,
+            "pivot_world_z_up_m": [
+              0.6686548143625259,
+              2.8025081157684326,
+              0.23321636766195297
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 4.4628192548543145e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 67055
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 67055
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 67055
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "face_reassignment",
+            "target_id": "curved-ottoman",
+            "selected_faces": 8,
+            "source_face_ids": [
+              2659,
+              2660,
+              2661,
+              2662,
+              12260,
+              12261,
+              12280,
+              12281
+            ],
+            "operator_seconds": 0.06501670001307502,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 5.821465977095962e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 67055
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 67055
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 67055
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          }
+        ],
+        "initial_source_faces": 67055,
+        "identity_package": {
+          "status": "pass",
+          "scope": "source IDs in native blend face order; blend is authoritative for editing"
+        },
+        "glb_geometry": {
+          "status": "pass",
+          "tolerance_m": 5e-05,
+          "objects": [
+            {
+              "id": "environment",
+              "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 52131,
+                "actual_face_instances": 52131,
+                "matched_face_instances": 52131,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.2839233415447482e-06,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "curved-sofa",
+              "maximum_world_vertex_distance_m": 1.17407535071834e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 9237,
+                "actual_face_instances": 9237,
+                "matched_face_instances": 9237,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.1740753414387827e-06,
+                "winding_ambiguous_matched_faces": 5,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "curved-ottoman",
+              "maximum_world_vertex_distance_m": 6.769786295990343e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 2305,
+                "actual_face_instances": 2305,
+                "matched_face_instances": 2305,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.76978629326853e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "curved-roundtable",
+              "maximum_world_vertex_distance_m": 8.596304041930125e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 2353,
+                "actual_face_instances": 2353,
+                "matched_face_instances": 2353,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 8.596304119739507e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "curved-lamp",
+              "maximum_world_vertex_distance_m": 1.17407535071834e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 1029,
+                "actual_face_instances": 1029,
+                "matched_face_instances": 1029,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.1740753414387827e-06,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            }
+          ],
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06
+        },
+        "glb_appearance": {
+          "status": "pass",
+          "linear_rgba_tolerance": 0.0039225686274509805,
+          "objects": [
+            {
+              "id": "environment",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 1.7881393432617188e-07,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "curved-sofa",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 1.7881393432617188e-07,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "curved-ottoman",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "curved-roundtable",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "curved-lamp",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 1.7881393432617188e-07,
+              "maximum_material_value_difference": 0.0
+            }
+          ]
+        },
+        "changed_color_rejected": true,
+        "changed_material_rejected": true,
+        "elapsed_seconds": 15.543484800000442
+      },
+      "reopen_process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.8097987999790348,
+        "sampled_process_tree_peak_rss_bytes": 243896320,
+        "memory_samples": 7,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "reopen": {
+        "status": "pass",
+        "maximum_corner_distance_m": 0.0,
+        "maximum_linear_rgba_difference": 0.0,
+        "maximum_material_value_difference": 0.0,
+        "owners_match": true,
+        "reviewed_flags_match": true,
+        "source_face_instances": 67055,
+        "new_process": true,
+        "metadata_match": true
+      },
+      "assets": {
+        "after.blend": {
+          "sha256": "678f094b6ccce6ae63071c6616f1168e955a3a021704d9037eb805cf3d8b291c",
+          "bytes": 2197959
+        },
+        "after.glb": {
+          "sha256": "4f284b9000ee945e15a9a45739948e0397d7173310f0ec0019e49e29679a8b11",
+          "bytes": 1700024
+        },
+        "after.identity.json": {
+          "sha256": "d082a0123d72bb5ae252026a4e6e5850f88daa2435803ecc7d6c87894d3fc50c",
+          "bytes": 1870840
+        },
+        "before.blend": {
+          "sha256": "549d0ddf17fef97bf0f8cf731537ab15f340bff134a5b31e4c0cbb6bb9457857",
+          "bytes": 2194089
+        }
+      }
+    },
+    {
+      "scene_id": "dev-occluded-bookshelf",
+      "primary": "occluded-shelf",
+      "secondary": "occluding-screen",
+      "input_scene_sha256": "7bc6ed690fc09d04b5f4b467d657763483e9d7e866ae635b643ad61397b05754",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 17.002871200005757,
+        "sampled_process_tree_peak_rss_bytes": 470757376,
+        "memory_samples": 144,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "status": "pass",
+      "native_task": {
+        "schema": "spatial-scene-lab.native-edit-task.v1",
+        "status": "pass",
+        "blender": "5.1.2",
+        "source_scene_sha256": "7bc6ed690fc09d04b5f4b467d657763483e9d7e866ae635b643ad61397b05754",
+        "primary": "occluded-shelf",
+        "secondary": "occluding-screen",
+        "execution": "scripted native Blender operators; not interactive user timing",
+        "operations": [
+          {
+            "kind": "face_reassignment",
+            "target_id": "occluded-shelf",
+            "selected_faces": 12,
+            "source_face_ids": [
+              4807,
+              4808,
+              24787,
+              24788,
+              24789,
+              24790,
+              24791,
+              24792,
+              24793,
+              30764,
+              30765,
+              33506
+            ],
+            "operator_seconds": 0.0483300999912899,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 52131
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 52131
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 52131
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "occluded-shelf",
+            "operator_seconds": 0.005158200016012415,
+            "translation_blender_z_up_m": [
+              0.25,
+              -0.1,
+              0
+            ],
+            "rotation_world_z_degrees": 0,
+            "pivot_world_z_up_m": [
+              0.0024371743202209473,
+              3.953928828239441,
+              0.9323376566171646
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 52131
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 52131
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 52131
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "occluding-screen",
+            "operator_seconds": 0.005343299999367446,
+            "translation_blender_z_up_m": [
+              0,
+              0,
+              0
+            ],
+            "rotation_world_z_degrees": 32,
+            "pivot_world_z_up_m": [
+              -0.16722968220710754,
+              2.663733720779419,
+              0.7720328466966748
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 4.038789961853055e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 52131
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 52131
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 52131
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "face_reassignment",
+            "target_id": "occluding-screen",
+            "selected_faces": 8,
+            "source_face_ids": [
+              14824,
+              14839,
+              14840,
+              14841,
+              14849,
+              14850,
+              14851,
+              14852
+            ],
+            "operator_seconds": 0.048032999999122694,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 4.6532096891207746e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 52131
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 52131
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 52131
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          }
+        ],
+        "initial_source_faces": 52131,
+        "identity_package": {
+          "status": "pass",
+          "scope": "source IDs in native blend face order; blend is authoritative for editing"
+        },
+        "glb_geometry": {
+          "status": "pass",
+          "tolerance_m": 5e-05,
+          "objects": [
+            {
+              "id": "environment",
+              "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 33592,
+                "actual_face_instances": 33592,
+                "matched_face_instances": 33592,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.2839233415447482e-06,
+                "winding_ambiguous_matched_faces": 10,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "unresolved",
+              "maximum_world_vertex_distance_m": 6.69723874580086e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 67,
+                "actual_face_instances": 67,
+                "matched_face_instances": 67,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.697238997889826e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "occluded-shelf",
+              "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 6538,
+                "actual_face_instances": 6538,
+                "matched_face_instances": 6538,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.2839233415447482e-06,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "occluding-screen",
+              "maximum_world_vertex_distance_m": 6.769786295990343e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 9171,
+                "actual_face_instances": 9171,
+                "matched_face_instances": 9171,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.76978629326853e-07,
+                "winding_ambiguous_matched_faces": 12,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "occluded-side-table",
+              "maximum_world_vertex_distance_m": 6.976544568715326e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 1425,
+                "actual_face_instances": 1425,
+                "matched_face_instances": 1425,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.976544803809897e-07,
+                "winding_ambiguous_matched_faces": 2,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "occluded-stool",
+              "maximum_world_vertex_distance_m": 6.69723874580086e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 1338,
+                "actual_face_instances": 1338,
+                "matched_face_instances": 1338,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.697238997889826e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            }
+          ],
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06
+        },
+        "glb_appearance": {
+          "status": "pass",
+          "linear_rgba_tolerance": 0.0039225686274509805,
+          "objects": [
+            {
+              "id": "environment",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "unresolved",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "occluded-shelf",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "occluding-screen",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "occluded-side-table",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "occluded-stool",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            }
+          ]
+        },
+        "changed_color_rejected": true,
+        "changed_material_rejected": true,
+        "elapsed_seconds": 16.29903719999129
+      },
+      "reopen_process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.9728270999912638,
+        "sampled_process_tree_peak_rss_bytes": 222113792,
+        "memory_samples": 8,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "reopen": {
+        "status": "pass",
+        "maximum_corner_distance_m": 0.0,
+        "maximum_linear_rgba_difference": 0.0,
+        "maximum_material_value_difference": 0.0,
+        "owners_match": true,
+        "reviewed_flags_match": true,
+        "source_face_instances": 52131,
+        "new_process": true,
+        "metadata_match": true
+      },
+      "assets": {
+        "after.blend": {
+          "sha256": "4c2803d83412c643271493fbccf18ddcd570c42700912a50c257820597fd5579",
+          "bytes": 1733190
+        },
+        "after.glb": {
+          "sha256": "6c28ebc76d56701ae5dbd2b54c43b29dcdceadc57768d055c08711f74a68703e",
+          "bytes": 1388596
+        },
+        "after.identity.json": {
+          "sha256": "196ca1f01974d9f15bfefdd62c2bbcc038b83ef24fcdb46d719a349ff60ed95e",
+          "bytes": 1453318
+        },
+        "before.blend": {
+          "sha256": "e041c8164d8fcc2be4c0124b2684b3b4228d5c198613f51f84aaef239e7c0835",
+          "bytes": 1752672
+        }
+      }
+    },
+    {
+      "scene_id": "dev-thin-rack-noise",
+      "primary": "thin-rack",
+      "secondary": "thin-table",
+      "input_scene_sha256": "16f5398a6a36e54c1cf09ee276ea84a8e73835c911fa153d1b6da5f66601d70b",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 31.91058399999747,
+        "sampled_process_tree_peak_rss_bytes": 677998592,
+        "memory_samples": 272,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "status": "pass",
+      "native_task": {
+        "schema": "spatial-scene-lab.native-edit-task.v1",
+        "status": "pass",
+        "blender": "5.1.2",
+        "source_scene_sha256": "16f5398a6a36e54c1cf09ee276ea84a8e73835c911fa153d1b6da5f66601d70b",
+        "primary": "thin-rack",
+        "secondary": "thin-table",
+        "execution": "scripted native Blender operators; not interactive user timing",
+        "operations": [
+          {
+            "kind": "face_reassignment",
+            "target_id": "thin-rack",
+            "selected_faces": 12,
+            "source_face_ids": [
+              8937,
+              8938,
+              8942,
+              8943,
+              8944,
+              8945,
+              8948,
+              8949,
+              8950,
+              8951,
+              8952,
+              8953
+            ],
+            "operator_seconds": 0.13670239999191836,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 103884
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 103884
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 103884
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "thin-rack",
+            "operator_seconds": 0.0020121000125072896,
+            "translation_blender_z_up_m": [
+              0.25,
+              -0.1,
+              0
+            ],
+            "rotation_world_z_degrees": 0,
+            "pivot_world_z_up_m": [
+              0.5049280310049653,
+              2.552934408187866,
+              0.8076637163758278
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 103884
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 103884
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 103884
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "thin-table",
+            "operator_seconds": 0.0017094000068027526,
+            "translation_blender_z_up_m": [
+              0,
+              0,
+              0
+            ],
+            "rotation_world_z_degrees": 32,
+            "pivot_world_z_up_m": [
+              -0.9239103049039841,
+              3.1688822507858276,
+              0.44676206074655056
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 4.776202598697845e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 103884
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 103884
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 103884
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "face_reassignment",
+            "target_id": "thin-table",
+            "selected_faces": 8,
+            "source_face_ids": [
+              47591,
+              47592,
+              47593,
+              47594,
+              47623,
+              47624,
+              47625,
+              47626
+            ],
+            "operator_seconds": 0.16082669998286292,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 5.43752787425003e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 103884
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 103884
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 103884
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          }
+        ],
+        "initial_source_faces": 103884,
+        "identity_package": {
+          "status": "pass",
+          "scope": "source IDs in native blend face order; blend is authoritative for editing"
+        },
+        "glb_geometry": {
+          "status": "pass",
+          "tolerance_m": 5e-05,
+          "objects": [
+            {
+              "id": "environment",
+              "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 96489,
+                "actual_face_instances": 96489,
+                "matched_face_instances": 96489,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.2839233415447482e-06,
+                "winding_ambiguous_matched_faces": 45,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "thin-rack",
+              "maximum_world_vertex_distance_m": 7.152557373046875e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 2506,
+                "actual_face_instances": 2506,
+                "matched_face_instances": 2506,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 7.152557373046875e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "thin-table",
+              "maximum_world_vertex_distance_m": 6.769786295990343e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 2620,
+                "actual_face_instances": 2620,
+                "matched_face_instances": 2620,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.76978629326853e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "thin-stool",
+              "maximum_world_vertex_distance_m": 5.066394805908203e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 1310,
+                "actual_face_instances": 1310,
+                "matched_face_instances": 1310,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 5.066394805908203e-07,
+                "winding_ambiguous_matched_faces": 14,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "thin-lamp",
+              "maximum_world_vertex_distance_m": 9.830249609876773e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 959,
+                "actual_face_instances": 959,
+                "matched_face_instances": 959,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 9.830249847454215e-07,
+                "winding_ambiguous_matched_faces": 4,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            }
+          ],
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06
+        },
+        "glb_appearance": {
+          "status": "pass",
+          "linear_rgba_tolerance": 0.0039225686274509805,
+          "objects": [
+            {
+              "id": "environment",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 1.1920928955078125e-07,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "thin-rack",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "thin-table",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "thin-stool",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "thin-lamp",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 1.1920928955078125e-07,
+              "maximum_material_value_difference": 0.0
+            }
+          ]
+        },
+        "changed_color_rejected": true,
+        "changed_material_rejected": true,
+        "elapsed_seconds": 31.07864430002519
+      },
+      "reopen_process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 1.0918105999880936,
+        "sampled_process_tree_peak_rss_bytes": 252928000,
+        "memory_samples": 9,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "reopen": {
+        "status": "pass",
+        "maximum_corner_distance_m": 0.0,
+        "maximum_linear_rgba_difference": 0.0,
+        "maximum_material_value_difference": 0.0,
+        "owners_match": true,
+        "reviewed_flags_match": true,
+        "source_face_instances": 103884,
+        "new_process": true,
+        "metadata_match": true
+      },
+      "assets": {
+        "after.blend": {
+          "sha256": "524ecb8776de5593aa5b4dbdf755239c86ef986eaf58f5468e257bc8780483a9",
+          "bytes": 3543489
+        },
+        "after.glb": {
+          "sha256": "e5e7e0ad08b124305584a85ae3f6c71d70780fc8f7a4aac7cd544dd86d862667",
+          "bytes": 2667172
+        },
+        "after.identity.json": {
+          "sha256": "2453e4a97384ec6f1d867d6394c5586e5a837bd9883a8f043bab9937aab9257e",
+          "bytes": 2905885
+        },
+        "before.blend": {
+          "sha256": "2dd2d53dce6319506d9dd8e1dfd5cda52c7e16239a629bddf764d55a05d7e276",
+          "bytes": 3536527
+        }
+      }
+    },
+    {
+      "scene_id": "dev-combined-study",
+      "primary": "combined-desk",
+      "secondary": "combined-chair",
+      "input_scene_sha256": "76f9c0fce083cc3c79dffd20a89f6b9f0496f8a3b64f9711c6c7b929c02d3edd",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 25.333257599995704,
+        "sampled_process_tree_peak_rss_bytes": 1244901376,
+        "memory_samples": 210,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "status": "pass",
+      "native_task": {
+        "schema": "spatial-scene-lab.native-edit-task.v1",
+        "status": "pass",
+        "blender": "5.1.2",
+        "source_scene_sha256": "76f9c0fce083cc3c79dffd20a89f6b9f0496f8a3b64f9711c6c7b929c02d3edd",
+        "primary": "combined-desk",
+        "secondary": "combined-chair",
+        "execution": "scripted native Blender operators; not interactive user timing",
+        "operations": [
+          {
+            "kind": "face_reassignment",
+            "target_id": "combined-desk",
+            "selected_faces": 12,
+            "source_face_ids": [
+              26315,
+              26317,
+              26348,
+              26351,
+              26352,
+              26377,
+              26379,
+              26412,
+              26413,
+              26414,
+              26415,
+              26448
+            ],
+            "operator_seconds": 0.10421240000869147,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 71967
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 71967
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 71967
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "combined-desk",
+            "operator_seconds": 0.0032669999927747995,
+            "translation_blender_z_up_m": [
+              0.25,
+              -0.1,
+              0
+            ],
+            "rotation_world_z_degrees": 0,
+            "pivot_world_z_up_m": [
+              -0.20022863149642944,
+              2.420990288257599,
+              0.3965119272470474
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 0.0,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 71967
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 71967
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 71967
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "rigid_edit",
+            "target_id": "combined-chair",
+            "operator_seconds": 0.002353199990466237,
+            "translation_blender_z_up_m": [
+              0,
+              0,
+              0
+            ],
+            "rotation_world_z_degrees": 32,
+            "pivot_world_z_up_m": [
+              -0.358391054905951,
+              1.6212776899337769,
+              0.5004262384027243
+            ],
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 2.3766724805898637e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 71967
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 71967
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 71967
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            }
+          },
+          {
+            "kind": "face_reassignment",
+            "target_id": "combined-chair",
+            "selected_faces": 8,
+            "source_face_ids": [
+              29487,
+              29488,
+              29520,
+              29521,
+              29522,
+              29554,
+              29946,
+              29947
+            ],
+            "operator_seconds": 0.10386329999892041,
+            "state": {
+              "status": "pass",
+              "maximum_corner_distance_m": 2.4136510014042743e-07,
+              "maximum_linear_rgba_difference": 0.0,
+              "maximum_material_value_difference": 0.0,
+              "owners_match": true,
+              "reviewed_flags_match": true,
+              "source_face_instances": 71967
+            },
+            "undo_redo": {
+              "status": "pass",
+              "native_undo_return": [
+                "FINISHED"
+              ],
+              "native_redo_return": [
+                "FINISHED"
+              ],
+              "undo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 71967
+              },
+              "redo": {
+                "status": "pass",
+                "maximum_corner_distance_m": 0.0,
+                "maximum_linear_rgba_difference": 0.0,
+                "maximum_material_value_difference": 0.0,
+                "owners_match": true,
+                "reviewed_flags_match": true,
+                "source_face_instances": 71967
+              },
+              "context": "background Blender native undo stack, explicit checkpoints"
+            },
+            "selection_policy": "scripted nearest centroids to target bounds centre; no reference labels"
+          }
+        ],
+        "initial_source_faces": 71967,
+        "identity_package": {
+          "status": "pass",
+          "scope": "source IDs in native blend face order; blend is authoritative for editing"
+        },
+        "glb_geometry": {
+          "status": "pass",
+          "tolerance_m": 5e-05,
+          "objects": [
+            {
+              "id": "environment",
+              "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 46726,
+                "actual_face_instances": 46726,
+                "matched_face_instances": 46726,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.2839233415447482e-06,
+                "winding_ambiguous_matched_faces": 20,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "unresolved",
+              "maximum_world_vertex_distance_m": 6.419616624953051e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 877,
+                "actual_face_instances": 877,
+                "matched_face_instances": 877,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 6.419616707723741e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "combined-desk",
+              "maximum_world_vertex_distance_m": 9.098254167838604e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 5366,
+                "actual_face_instances": 5366,
+                "matched_face_instances": 5366,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 9.098254157587139e-07,
+                "winding_ambiguous_matched_faces": 6,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "combined-chair",
+              "maximum_world_vertex_distance_m": 4.0425837255497754e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 2122,
+                "actual_face_instances": 2122,
+                "matched_face_instances": 2122,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 4.042583693936627e-07,
+                "winding_ambiguous_matched_faces": 2,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "combined-shelf",
+              "maximum_world_vertex_distance_m": 1.2839233249906101e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 10265,
+                "actual_face_instances": 10265,
+                "matched_face_instances": 10265,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.2839233415447482e-06,
+                "winding_ambiguous_matched_faces": 7,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "combined-sofa",
+              "maximum_world_vertex_distance_m": 1.0662403155947686e-06,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 5680,
+                "actual_face_instances": 5680,
+                "matched_face_instances": 5680,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 1.066240299940009e-06,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            },
+            {
+              "id": "combined-lamp",
+              "maximum_world_vertex_distance_m": 4.915124804938387e-07,
+              "triangles_match": true,
+              "connectivity_match": true,
+              "role_match": true,
+              "source_provenance_match": true,
+              "appearance_present": true,
+              "surface_comparison": {
+                "status": "pass",
+                "method": "one_to_one_oriented_triangle_geometry",
+                "tolerance_m": 5e-05,
+                "expected_face_instances": 931,
+                "actual_face_instances": 931,
+                "matched_face_instances": 931,
+                "missing_face_instances": 0,
+                "extra_face_instances": 0,
+                "missing_face_indices_sample": [],
+                "extra_face_indices_sample": [],
+                "maximum_matched_corner_distance_m": 4.915124923727108e-07,
+                "winding_ambiguous_matched_faces": 0,
+                "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+              },
+              "status": "pass"
+            }
+          ],
+          "maximum_world_vertex_distance_m": 1.2839233249906101e-06
+        },
+        "glb_appearance": {
+          "status": "pass",
+          "linear_rgba_tolerance": 0.0039225686274509805,
+          "objects": [
+            {
+              "id": "environment",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "unresolved",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "combined-desk",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "combined-chair",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "combined-shelf",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 8.940696716308594e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "combined-sofa",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 7.450580596923828e-08,
+              "maximum_material_value_difference": 0.0
+            },
+            {
+              "id": "combined-lamp",
+              "status": "pass",
+              "maximum_linear_rgba_difference": 1.1920928955078125e-07,
+              "maximum_material_value_difference": 0.0
+            }
+          ]
+        },
+        "changed_color_rejected": true,
+        "changed_material_rejected": true,
+        "render_roundtrip": {
+          "status": "pass",
+          "rgb_mean_absolute_difference": 2.737254908424802e-05,
+          "rgb_maximum_difference": 0.047058820724487305,
+          "mean_difference_tolerance": 0.01,
+          "scope": "same-state fixed-view CPU Cycles render; one authored development case"
+        },
+        "elapsed_seconds": 24.510490399989067
+      },
+      "reopen_process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.9778652999957558,
+        "sampled_process_tree_peak_rss_bytes": 228069376,
+        "memory_samples": 8,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "reopen": {
+        "status": "pass",
+        "maximum_corner_distance_m": 0.0,
+        "maximum_linear_rgba_difference": 0.0,
+        "maximum_material_value_difference": 0.0,
+        "owners_match": true,
+        "reviewed_flags_match": true,
+        "source_face_instances": 71967,
+        "new_process": true,
+        "metadata_match": true
+      },
+      "assets": {
+        "after-reimport.png": {
+          "sha256": "70146e2cd4eb2363b18ecd236c13565ce02b9172d5a836870c57738fe67c8e21",
+          "bytes": 678966
+        },
+        "after.blend": {
+          "sha256": "7d282c84075f26cd72baf4ba25270b98fa09185e35094f3cabb86e4618dd774d",
+          "bytes": 2491032
+        },
+        "after.glb": {
+          "sha256": "3361b16b0cb43e63dbe2ce78e2fc66d3dce751110d32347fd984ff1d62f74062",
+          "bytes": 1910448
+        },
+        "after.identity.json": {
+          "sha256": "6b7ed8b7280c49c0a95ee7b19a22ff7d7f7e0dd56a91e998388cc04328d16ac7",
+          "bytes": 2009031
+        },
+        "after.png": {
+          "sha256": "12cda6ec8a30598dbb31c86692de256a317ec1a3ea636677a09992a7d3fc6b65",
+          "bytes": 679702
+        },
+        "before.blend": {
+          "sha256": "279826604f5c9e8b154e099d4de646f6cde99da4f8fa7416c871de50568c8df3",
+          "bytes": 2471672
+        },
+        "before.png": {
+          "sha256": "b69a4e12dcc2e973a6dce0bef19061152c52799d72585692237dbe3f2f895530",
+          "bytes": 676131
+        }
+      }
+    }
+  ],
+  "code_sha256": {
+    "blender_edit.py": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+    "verify_blender_edit.py": "1c7c000cf1e3d885168405a378e8c2fcde483b3a7e555174a18a445cdae4c5be",
+    "geometry_compare.py": "375b5c5b5b3ded5fe82dd1737a6a08406a351288b27511c7ac8989f698e39bc0",
+    "blender_scene.py": "aa3c3e481a3fbf96d3ccdf0e14aab247c75c928e1b3e99710347cb59aee391df",
+    "run_edit_suite.py": "ab55ba73a730c0ce1773de165797d34ec5e015a28ebe39e3d0d169679a0141f0"
+  },
+  "elapsed_seconds": 152.59038019998115,
+  "completed_tasks": 6,
+  "attempted_tasks": 6
+}

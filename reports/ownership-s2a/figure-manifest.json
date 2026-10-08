@@ -1,0 +1,10 @@
+{
+  "results_sha256": "9050c18dacfbbb8980a931fbee2a2f8e67388e25c4c671bc57a1776128e43d3f",
+  "generator_sha256": "ec3dace24cf229494a47f1cbdad679af6d1eee7cf9477d38b159261f3d09fc98",
+  "matplotlib": "3.10.0",
+  "outputs": {
+    "ownership-failure-causes.png": "722bdd9f90a62267982c7f4e53ecac26cc3a19f389a25be4b158a9408f4bcdaf",
+    "ownership-failure-causes.pdf": "e68095f7439fbbce02f52655af85f570d59f8cd682b618b9b8616398a613c21a"
+  },
+  "scope": "decision-path attribution of existing B1 false-negative area; not a new method improvement"
+}

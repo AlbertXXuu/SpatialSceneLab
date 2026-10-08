@@ -1,0 +1,2495 @@
+{
+  "schema": "spatial-scene-lab.partition-diagnostics.v1",
+  "status": "completed",
+  "scope": "frozen B1 development error attribution; reference used only for diagnosis",
+  "method_changed": false,
+  "reference_used_for_partition": false,
+  "reason_order": [
+    "tp",
+    "fn_structure_exclusion",
+    "fn_target_box_overlap",
+    "fn_outside_target_box_other_object",
+    "fn_outside_target_box_other_overlap",
+    "fn_outside_target_box_environment",
+    "fp_other_object",
+    "fp_environment",
+    "tn",
+    "unscorable_predicted_target",
+    "unscorable_other"
+  ],
+  "reason_definitions": {
+    "tp": "scorable reference target area selected as this target",
+    "fn_structure_exclusion": "target centroid box hit removed by the structure prior (takes precedence over overlap)",
+    "fn_target_box_overlap": "target centroid box hit and another box hit, with no structure exclusion; B1 is -2",
+    "fn_outside_target_box_other_object": "centroid outside the target box plus margin and uniquely assigned to another object",
+    "fn_outside_target_box_other_overlap": "centroid outside the target box plus margin and unresolved in multiple other boxes",
+    "fn_outside_target_box_environment": "centroid outside the target box plus margin and assigned environment; raw structure flag is also retained",
+    "fp_other_object": "uniquely accepted target centroid prior covers sampled area matched to another reference object",
+    "fp_environment": "uniquely accepted target centroid prior covers sampled area matched to reference environment",
+    "tn": "scorable non-target reference area not selected as this target",
+    "unscorable_predicted_target": "unscorable sampled area on faces selected as this target",
+    "unscorable_other": "unscorable sampled area on faces not selected as this target"
+  },
+  "source": {
+    "results_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\results-final",
+    "suite_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs",
+    "published_results": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\reports\\development-s0-results.json",
+    "development_results_sha256": "5bb302eac773d8a2e0af299e6fe3f476f413740e4ffd5261419332621c7e2071",
+    "published_results_sha256": "5bb302eac773d8a2e0af299e6fe3f476f413740e4ffd5261419332621c7e2071",
+    "input_manifest_sha256": "f886ec9bf2db07bcfa5cfcb363505ed73028e862ff470422bc465b5ae4890d6b"
+  },
+  "parameters": {
+    "batch_faces": 1024,
+    "max_seconds": 1200,
+    "relative_tolerance": 1e-09,
+    "absolute_tolerance": 1e-10,
+    "trace_rule": "unchanged evaluator; temporary batch-local face IDs as grouping keys"
+  },
+  "limitations": [
+    "nearest reference matching has no normal or visibility filter",
+    "unreconstructed physical surfaces are not partition errors",
+    "finite barycentric area estimates; no real-scene or held-out generalization",
+    "prior decision traces explain selection mechanics, not colour or ultimate physical causality"
+  ],
+  "code_sha256": {
+    "partition_diagnostics.py": "76efa0c28f294cb3d0691d89241195df06653d19d292de114b72849d4c2fa180",
+    "evaluate_partition.py": "cc2981da6c08e80445b77fcdc6134a3a47dda231b8866efb3c60034e62cb1f06",
+    "partition_baselines.py": "4562069df9f45012c067ea6c4199dc3ffa863960ca092ff717a9eff0dd95a309",
+    "scan_pipeline.py": "ea80924e86748f4b6a4b37544da4dedb579a50cf1ad514c04b343b70beab4998",
+    "reevaluate_development.py": "732c22aa0bd590638e0e0f1f347d5e328a9abaef5da57889069510d1755ccaa8",
+    "run_development.py": "b2310dbc43e3b566c02964d7c99f4b4e53cc0dbc9b0c54ed1f375dd63fa7323c"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "open3d": "0.19.0",
+    "compute": "CPU",
+    "new_paid_allocation": 0
+  },
+  "resources": {
+    "wall_seconds": 16.307761100004427,
+    "process_lifetime_peak_ram_bytes": 228728832,
+    "new_paid_allocation": 0,
+    "model_calls": 0
+  },
+  "findings": [],
+  "scenes": [
+    {
+      "scene_id": "dev-contact-chair",
+      "target_id": "contact-chair",
+      "status": "completed",
+      "source": {
+        "scene_sha256": "8e26184ae466d67e771116acec3ce1a15a093e5f857cb4728b077d11d9d6e17c",
+        "surface_manifest_sha256": "0926c680bc34a42a2927dd7117480cce2f44cd983fcfb48ae829cef3e83ba291",
+        "surface_sha256": "7382711847f3ed6a86d3b963e06e1278bbf5f8e686c152dd39bf59d94efbf738",
+        "reference_sha256": "5411e9fe10ebaae19a6f9204c950506c2d788b324821fbacaa36226f7a16909b",
+        "reference_mesh_sha256": "40338710313da78d125ad48f07a7d63b523e6b2161547c9799ae32f823e5d531",
+        "face_owner_sha256": "5fd4c53884eb3bafe9d7cd466df27a7709db7ff261a5d83f7ff4ecc84aee81da",
+        "metrics_sha256": "2bad202f1ad575d2c0dc43dfcdd4223896a814c8a08e13c1cf4a3c7a7a27253d"
+      },
+      "coverage": {
+        "mesh_area_m2": 58.08253989046919,
+        "scorable_area_m2": 58.06225400861741,
+        "unscorable_area_m2": 0.020285881851789922,
+        "ambiguous_area_m2": 0.019683755847436653,
+        "distance_rejected_area_m2": 0.000602126004352557,
+        "faces": 99511,
+        "zero_area_faces": 0,
+        "samples": 696577,
+        "scorable_samples": 696248,
+        "unscorable_samples": 329
+      },
+      "targets": [
+        {
+          "index": 0,
+          "object_id": "contact-chair",
+          "original_metrics": {
+            "index": 0,
+            "object_id": "contact-chair",
+            "status": "evaluated",
+            "area_iou": 0.8263128094241967,
+            "precision": 1.0,
+            "recall": 0.8263128094241967,
+            "false_negative_ratio": 0.17368719057580329,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 1.105776342947704,
+            "true_positive_area_m2": 0.9137171565359314,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.1920591864117727,
+            "unresolved_target_area_m2": 0.1847087012713147,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8114268789174881,
+                "upper": 0.8263128094241967
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.8114268789174881,
+                "upper": 0.8263128094241967
+              },
+              "false_negative_ratio": {
+                "lower": 0.17368719057580329,
+                "upper": 0.1885731210825119
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.9137171565359373,
+            "fn_structure_exclusion": 0.007350485140457992,
+            "fn_target_box_overlap": 0.18470870127131458,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0,
+            "tn": 56.95647766566958,
+            "unscorable_predicted_target": 0.0,
+            "unscorable_other": 0.020285881851789193
+          },
+          "face_count_by_reason": {
+            "tp": 2243,
+            "fn_structure_exclusion": 45,
+            "fn_target_box_overlap": 523,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 0,
+            "tn": 96784,
+            "unscorable_predicted_target": 0,
+            "unscorable_other": 236
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.038271978954959436,
+            "fn_target_box_overlap": 0.9617280210450405,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": null,
+            "fp_environment": null
+          }
+        },
+        {
+          "index": 1,
+          "object_id": "contact-table",
+          "original_metrics": {
+            "index": 1,
+            "object_id": "contact-table",
+            "status": "evaluated",
+            "area_iou": 0.8704877964132378,
+            "precision": 0.9994224252151924,
+            "recall": 0.8709259264632946,
+            "false_negative_ratio": 0.12907407353670547,
+            "false_positive_ratio": 0.0005033155569348813,
+            "scorable_target_area_m2": 2.5140128563577884,
+            "true_positive_area_m2": 2.1895189760640403,
+            "false_positive_area_m2": 0.001265341780939172,
+            "false_negative_area_m2": 0.32449388029374815,
+            "unresolved_target_area_m2": 0.31646556212053184,
+            "unscorable_predicted_target_area_m2": 0.0008210691600883107,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.001265341780939172
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8635234239760305,
+                "upper": 0.8705300596409261
+              },
+              "precision": {
+                "lower": 0.9990479988079064,
+                "upper": 0.9994226415994221
+              },
+              "recall": {
+                "lower": 0.8642345669008834,
+                "upper": 0.8709680679105181
+              },
+              "false_negative_ratio": {
+                "lower": 0.12903193208948194,
+                "upper": 0.1357654330991166
+              },
+              "false_positive_ratio": {
+                "lower": 0.0004992867501615491,
+                "upper": 0.0008299125980008711
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 2.1895189760640483,
+            "fn_structure_exclusion": 0.008028318173216304,
+            "fn_target_box_overlap": 0.3164655621205339,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0012653417809391722,
+            "tn": 55.546975810478614,
+            "unscorable_predicted_target": 0.0008210691600883106,
+            "unscorable_other": 0.019464812691700886
+          },
+          "face_count_by_reason": {
+            "tp": 4695,
+            "fn_structure_exclusion": 49,
+            "fn_target_box_overlap": 750,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 9,
+            "tn": 94100,
+            "unscorable_predicted_target": 9,
+            "unscorable_other": 227
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.0247410464750479,
+            "fn_target_box_overlap": 0.9752589535249521,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 2,
+          "object_id": "contact-shelf",
+          "original_metrics": {
+            "index": 2,
+            "object_id": "contact-shelf",
+            "status": "evaluated",
+            "area_iou": 0.9522583523333648,
+            "precision": 1.0,
+            "recall": 0.9522583523333648,
+            "false_negative_ratio": 0.04774164766663519,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 3.599309634836825,
+            "true_positive_area_m2": 3.42747266240732,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.17183697242950507,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.00012551899257169741,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9469214575508555,
+                "upper": 0.9522600171733362
+              },
+              "precision": {
+                "lower": 0.9999633798987136,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.9469542956811542,
+                "upper": 0.9522600171733362
+              },
+              "false_negative_ratio": {
+                "lower": 0.04773998282666381,
+                "upper": 0.05304570431884581
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 3.487307436871511e-05
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 3.4274726624073097,
+            "fn_structure_exclusion": 0.03830976918213561,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.13352720324736939,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0,
+            "tn": 54.46294437378054,
+            "unscorable_predicted_target": 0.00012551899257169741,
+            "unscorable_other": 0.020160362859217497
+          },
+          "face_count_by_reason": {
+            "tp": 7659,
+            "fn_structure_exclusion": 238,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 286,
+            "fp_other_object": 0,
+            "fp_environment": 0,
+            "tn": 91481,
+            "unscorable_predicted_target": 2,
+            "unscorable_other": 234
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.22294252884286558,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.7770574711571344
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": null,
+            "fp_environment": null
+          }
+        }
+      ],
+      "conservation": {
+        "status": "pass",
+        "maximum_absolute_difference_m2": 3.836930773104541e-13,
+        "b1_replay_exact": true,
+        "reason_partition_complete": true
+      },
+      "face_trace": {
+        "path": "dev-contact-chair/face-diagnostics.npz",
+        "sha256": "fcb313d4757477a284b4c1bf8dda8bf2a1c6f0f53bcf29541c05dbb66c259f8c",
+        "face_index_basis": "zero-based triangles in the hash-bound frozen surface.ply",
+        "reference_area_columns": "reference_owner_order; -1 environment then source object order",
+        "reason_area_arrays": "target_<index>_reason_area_m2; columns follow reason_names",
+        "contains_evaluation_reference": true,
+        "use_for_partition_or_edit_ownership": false
+      },
+      "seconds": 1.8504780000075698
+    },
+    {
+      "scene_id": "dev-same-color-dining",
+      "target_id": "same-table",
+      "status": "completed",
+      "source": {
+        "scene_sha256": "2014c2121b9042e6d4f324e619eedaff91a57f2ee1891ab35a407177468d07c5",
+        "surface_manifest_sha256": "29ad41dd8cdbbde933cd2c80fa7dc22cb486c554ef030b00747be83bb0cdc0d7",
+        "surface_sha256": "e4d0a901df78b7dd0bb3bf82ff5de56ea51df3528f5f694dc7c3006cd8a824cc",
+        "reference_sha256": "9e9a4e604b301a0de07330dbaee3a1524e22c7f1c9cb375211f6fc7adc362aec",
+        "reference_mesh_sha256": "c3d454ee1892a103512ae011ff9e216b4425d055083b7cc7134b05659622c5a1",
+        "face_owner_sha256": "0cc3f62fe1865a24def84f6b3bd5334ee1ec615c53c0761576e1d8e1c645646c",
+        "metrics_sha256": "c4c470bc2058ce4c024764bcf49adb706ab0fa083a28bad73a7259928b7fbad2"
+      },
+      "coverage": {
+        "mesh_area_m2": 56.83200762115783,
+        "scorable_area_m2": 56.801855747489114,
+        "unscorable_area_m2": 0.030151873668709805,
+        "ambiguous_area_m2": 0.030151873668708126,
+        "distance_rejected_area_m2": 0.0,
+        "faces": 96518,
+        "zero_area_faces": 0,
+        "samples": 675626,
+        "scorable_samples": 675023,
+        "unscorable_samples": 603
+      },
+      "targets": [
+        {
+          "index": 0,
+          "object_id": "same-table",
+          "original_metrics": {
+            "index": 0,
+            "object_id": "same-table",
+            "status": "evaluated",
+            "area_iou": 0.6591308426866119,
+            "precision": 0.9996516964958309,
+            "recall": 0.6592822518483293,
+            "false_negative_ratio": 0.3407177481516707,
+            "false_positive_ratio": 0.00022971032746730495,
+            "scorable_target_area_m2": 2.4791581527977415,
+            "true_positive_area_m2": 1.6344649696646396,
+            "false_positive_area_m2": 0.000569488231122408,
+            "false_negative_area_m2": 0.844693183133102,
+            "unresolved_target_area_m2": 0.8401723053577554,
+            "unscorable_predicted_target_area_m2": 0.0004480839833099884,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.000569488231122408
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.6512125223913763,
+                "upper": 0.6591924262301715
+              },
+              "precision": {
+                "lower": 0.9993778153001478,
+                "upper": 0.9996517919228486
+              },
+              "recall": {
+                "lower": 0.6514766484308586,
+                "upper": 0.6593438221749044
+              },
+              "false_negative_ratio": {
+                "lower": 0.3406561778250956,
+                "upper": 0.3485233515691414
+              },
+              "false_positive_ratio": {
+                "lower": 0.00022695012777052153,
+                "upper": 0.0004104507061334757
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 1.634464969664646,
+            "fn_structure_exclusion": 0.004520877775346593,
+            "fn_target_box_overlap": 0.8401723053577561,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.000569488231122408,
+            "tn": 54.32212810645984,
+            "unscorable_predicted_target": 0.0004480839833099884,
+            "unscorable_other": 0.029703789685398132
+          },
+          "face_count_by_reason": {
+            "tp": 3457,
+            "fn_structure_exclusion": 43,
+            "fn_target_box_overlap": 1988,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 5,
+            "tn": 91186,
+            "unscorable_predicted_target": 6,
+            "unscorable_other": 319
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.005352094542278572,
+            "fn_target_box_overlap": 0.9946479054577214,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 1,
+          "object_id": "same-chair-west",
+          "original_metrics": {
+            "index": 1,
+            "object_id": "same-chair-west",
+            "status": "evaluated",
+            "area_iou": 0.6725466909096179,
+            "precision": 0.9989624207223827,
+            "recall": 0.6730168236525398,
+            "false_negative_ratio": 0.3269831763474603,
+            "false_positive_ratio": 0.0006990336125003303,
+            "scorable_target_area_m2": 1.093796886453726,
+            "true_positive_area_m2": 0.7361437062421243,
+            "false_positive_area_m2": 0.0007646007888793617,
+            "false_negative_area_m2": 0.3576531802116017,
+            "unresolved_target_area_m2": 0.35216576188411275,
+            "unscorable_predicted_target_area_m2": 0.0008318789006191877,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0007646007888793617
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.6545167256176847,
+                "upper": 0.6727953700665215
+              },
+              "precision": {
+                "lower": 0.9978359865438501,
+                "upper": 0.9989635907010896
+              },
+              "recall": {
+                "lower": 0.6554471031023051,
+                "upper": 0.673265319228273
+              },
+              "false_negative_ratio": {
+                "lower": 0.32673468077172696,
+                "upper": 0.34455289689769486
+              },
+              "false_positive_ratio": {
+                "lower": 0.0006802808241864001,
+                "upper": 0.001459576004713824
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.7361437062421259,
+            "fn_structure_exclusion": 0.005487418327488963,
+            "fn_target_box_overlap": 0.35216576188411075,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0007646007888793618,
+            "tn": 55.70729426024595,
+            "unscorable_predicted_target": 0.0008318789006191877,
+            "unscorable_other": 0.02931999476808893
+          },
+          "face_count_by_reason": {
+            "tp": 1797,
+            "fn_structure_exclusion": 36,
+            "fn_target_box_overlap": 898,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 6,
+            "tn": 93866,
+            "unscorable_predicted_target": 10,
+            "unscorable_other": 315
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.01534284785121279,
+            "fn_target_box_overlap": 0.9846571521487872,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 2,
+          "object_id": "same-chair-east",
+          "original_metrics": {
+            "index": 2,
+            "object_id": "same-chair-east",
+            "status": "evaluated",
+            "area_iou": 0.6792667614025963,
+            "precision": 0.9965373806239597,
+            "recall": 0.6808737697337939,
+            "false_negative_ratio": 0.3191262302662061,
+            "false_positive_ratio": 0.0023657985676781208,
+            "scorable_target_area_m2": 1.1074545033135514,
+            "true_positive_area_m2": 0.754036722479764,
+            "false_positive_area_m2": 0.002620014277707885,
+            "false_negative_area_m2": 0.35341778083378733,
+            "unresolved_target_area_m2": 0.34749590997631924,
+            "unscorable_predicted_target_area_m2": 0.0006947232920724762,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.002620014277707885
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.6613043938112607,
+                "upper": 0.6794673618902531
+              },
+              "precision": {
+                "lower": 0.9956232505717181,
+                "upper": 0.9965405569066488
+              },
+              "recall": {
+                "lower": 0.6632324684440715,
+                "upper": 0.6810738370351593
+              },
+              "false_negative_ratio": {
+                "lower": 0.31892616296484066,
+                "upper": 0.33676753155592853
+              },
+              "false_positive_ratio": {
+                "lower": 0.0023030938738740716,
+                "upper": 0.0029931139923694595
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.7540367224797615,
+            "fn_structure_exclusion": 0.0059218708574680645,
+            "fn_target_box_overlap": 0.3474959099763194,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0026200142777078857,
+            "tn": 55.69178122989731,
+            "unscorable_predicted_target": 0.0006947232920724762,
+            "unscorable_other": 0.029457150376635648
+          },
+          "face_count_by_reason": {
+            "tp": 1792,
+            "fn_structure_exclusion": 31,
+            "fn_target_box_overlap": 846,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 14,
+            "tn": 93933,
+            "unscorable_predicted_target": 9,
+            "unscorable_other": 316
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.016756007135512865,
+            "fn_target_box_overlap": 0.983243992864487,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 3,
+          "object_id": "same-stool",
+          "original_metrics": {
+            "index": 3,
+            "object_id": "same-stool",
+            "status": "evaluated",
+            "area_iou": 0.9904282493298723,
+            "precision": 0.9972549276748669,
+            "recall": 0.9931358166529566,
+            "false_negative_ratio": 0.006864183347043396,
+            "false_positive_ratio": 0.002733733942783094,
+            "scorable_target_area_m2": 0.67531703807708,
+            "true_positive_area_m2": 0.6706815381103366,
+            "false_positive_area_m2": 0.001846137109131057,
+            "false_negative_area_m2": 0.004635499966743364,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0008508326683599873,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.001846137109131057
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9482076469263949,
+                "upper": 0.9904402608194126
+              },
+              "precision": {
+                "lower": 0.9959948680483574,
+                "upper": 0.9972583961508932
+              },
+              "recall": {
+                "lower": 0.9518369710134162,
+                "upper": 0.9931444539628406
+              },
+              "false_negative_ratio": {
+                "lower": 0.006855546037159432,
+                "upper": 0.048163028986583756
+              },
+              "false_positive_ratio": {
+                "lower": 0.002616893641085551,
+                "upper": 0.003993635026846775
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.6706815381103364,
+            "fn_structure_exclusion": 0.004635499966743366,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0018461371091310567,
+            "tn": 56.12469257230247,
+            "unscorable_predicted_target": 0.0008508326683599873,
+            "unscorable_other": 0.02930104100034814
+          },
+          "face_count_by_reason": {
+            "tp": 1587,
+            "fn_structure_exclusion": 36,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 11,
+            "tn": 94918,
+            "unscorable_predicted_target": 10,
+            "unscorable_other": 315
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 1.0,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        }
+      ],
+      "conservation": {
+        "status": "pass",
+        "maximum_absolute_difference_m2": 6.821210263296962e-13,
+        "b1_replay_exact": true,
+        "reason_partition_complete": true
+      },
+      "face_trace": {
+        "path": "dev-same-color-dining/face-diagnostics.npz",
+        "sha256": "cf9d2096c75fc51ef14bb0ee74058c5b73480d2e01aba5477c824f2a05ea53ae",
+        "face_index_basis": "zero-based triangles in the hash-bound frozen surface.ply",
+        "reference_area_columns": "reference_owner_order; -1 environment then source object order",
+        "reason_area_arrays": "target_<index>_reason_area_m2; columns follow reason_names",
+        "contains_evaluation_reference": true,
+        "use_for_partition_or_edit_ownership": false
+      },
+      "seconds": 2.124707600014517
+    },
+    {
+      "scene_id": "dev-curved-sofa-wall",
+      "target_id": "curved-sofa",
+      "status": "completed",
+      "source": {
+        "scene_sha256": "18cc1f70ab1b9b11a0b2224dbafbff4583b1d30f583e63af9bb8dfa50fec9278",
+        "surface_manifest_sha256": "02f8a5c477d7051db6e8d9695ac447baa6b0dc8a89b16d77bf6cb5ffee119aea",
+        "surface_sha256": "1b9211e13614ebe1110ae298e7bbb71aa6832b0c24a3f355b87a4f82a823b81b",
+        "reference_sha256": "11c639035a2863659cec6a3d4094616494422f7c7f0f0ea5f11a2b45f36e83cf",
+        "reference_mesh_sha256": "8f7dadcf408f5bf7e62c5ad96eb9817d782a689af15b549b15218a9d01c5a7de",
+        "face_owner_sha256": "082043d91ce20f142eafe7215748c870f5f949b7c86fe01719dc9adff50c4c09",
+        "metrics_sha256": "c71570aa3c6837a8b8fd4244f3220cc03b203febbedb726da6b0ffc7a0e26883"
+      },
+      "coverage": {
+        "mesh_area_m2": 37.228703430738314,
+        "scorable_area_m2": 37.2108380910568,
+        "unscorable_area_m2": 0.017865339681511105,
+        "ambiguous_area_m2": 0.017416170124277208,
+        "distance_rejected_area_m2": 0.00044916955723330103,
+        "faces": 67055,
+        "zero_area_faces": 0,
+        "samples": 469385,
+        "scorable_samples": 469069,
+        "unscorable_samples": 316
+      },
+      "targets": [
+        {
+          "index": 0,
+          "object_id": "curved-sofa",
+          "original_metrics": {
+            "index": 0,
+            "object_id": "curved-sofa",
+            "status": "evaluated",
+            "area_iou": 0.9896646543356,
+            "precision": 0.998511444762876,
+            "recall": 0.9911269299728199,
+            "false_negative_ratio": 0.008873070027180035,
+            "false_positive_ratio": 0.0014775465919833338,
+            "scorable_target_area_m2": 3.9124373402827706,
+            "true_positive_area_m2": 3.8777220097854874,
+            "false_positive_area_m2": 0.0057808084584831465,
+            "false_negative_area_m2": 0.03471533049728302,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.001765370201733279,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0057808084584831465
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9851727030666553,
+                "upper": 0.989669308873348
+              },
+              "precision": {
+                "lower": 0.9980577457477305,
+                "upper": 0.9985121211257245
+              },
+              "recall": {
+                "lower": 0.9870650840324754,
+                "upper": 0.9911309318742498
+              },
+              "false_negative_ratio": {
+                "lower": 0.008869068125750168,
+                "upper": 0.012934915967524607
+              },
+              "false_positive_ratio": {
+                "lower": 0.0014708303479913354,
+                "upper": 0.0019287666495052486
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 3.8777220097854395,
+            "fn_structure_exclusion": 9.495497842986976e-05,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.03462037551885315,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.005780808458483146,
+            "tn": 33.29261994231573,
+            "unscorable_predicted_target": 0.001765370201733279,
+            "unscorable_other": 0.016099969479777234
+          },
+          "face_count_by_reason": {
+            "tp": 9220,
+            "fn_structure_exclusion": 1,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 83,
+            "fp_other_object": 0,
+            "fp_environment": 27,
+            "tn": 57763,
+            "unscorable_predicted_target": 25,
+            "unscorable_other": 181
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.002735246275051345,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.9972647537249486
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 1,
+          "object_id": "curved-ottoman",
+          "original_metrics": {
+            "index": 1,
+            "object_id": "curved-ottoman",
+            "status": "evaluated",
+            "area_iou": 0.9876268660291401,
+            "precision": 0.9878671787157536,
+            "recall": 0.9997537488381883,
+            "false_negative_ratio": 0.0002462511618115776,
+            "false_positive_ratio": 0.012278810172313113,
+            "scorable_target_area_m2": 1.0042179087447993,
+            "true_positive_area_m2": 1.0039706189180588,
+            "false_positive_area_m2": 0.012330601073114643,
+            "false_negative_area_m2": 0.00024728982674039965,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.004156539596404425,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.012330601073114643
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9705695833479987,
+                "upper": 0.9876772522022182
+              },
+              "precision": {
+                "lower": 0.9838433874262641,
+                "upper": 0.9879165982547891
+              },
+              "recall": {
+                "lower": 0.9862896908089858,
+                "upper": 0.9997547638903909
+              },
+              "false_negative_ratio": {
+                "lower": 0.0002452361096091371,
+                "upper": 0.013710309191014236
+              },
+              "false_positive_ratio": {
+                "lower": 0.012064184685640718,
+                "upper": 0.016417891501384216
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 1.0039706189180548,
+            "fn_structure_exclusion": 0.00024728982674039965,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.012330601073114636,
+            "tn": 36.19428958123934,
+            "unscorable_predicted_target": 0.004156539596404424,
+            "unscorable_other": 0.013708800085106087
+          },
+          "face_count_by_reason": {
+            "tp": 2293,
+            "fn_structure_exclusion": 1,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 61,
+            "tn": 64755,
+            "unscorable_predicted_target": 40,
+            "unscorable_other": 166
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 1.0,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 2,
+          "object_id": "curved-roundtable",
+          "original_metrics": {
+            "index": 2,
+            "object_id": "curved-roundtable",
+            "status": "evaluated",
+            "area_iou": 0.9709935253734238,
+            "precision": 0.986556178375279,
+            "recall": 0.9840137483310375,
+            "false_negative_ratio": 0.015986251668962555,
+            "false_positive_ratio": 0.01340917587746679,
+            "scorable_target_area_m2": 1.1649503967793207,
+            "true_positive_area_m2": 1.1463272065545487,
+            "false_positive_area_m2": 0.015621024758938633,
+            "false_negative_area_m2": 0.018623190224772004,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0018147754129904617,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.015621024758938633
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9565187281036115,
+                "upper": 0.9710380457146672
+              },
+              "precision": {
+                "lower": 0.9850177398051397,
+                "upper": 0.9865771427097699
+              },
+              "recall": {
+                "lower": 0.9706403672503952,
+                "upper": 0.9840386131943074
+              },
+              "false_negative_ratio": {
+                "lower": 0.01596138680569259,
+                "upper": 0.029359632749604847
+              },
+              "false_positive_ratio": {
+                "lower": 0.01320664265566768,
+                "upper": 0.014966989341462922
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 1.1463272065545456,
+            "fn_structure_exclusion": 0.010478900108565491,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.00814429011620651,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.015621024758938631,
+            "tn": 36.03026666951894,
+            "unscorable_predicted_target": 0.0018147754129904615,
+            "unscorable_other": 0.01605056426852005
+          },
+          "face_count_by_reason": {
+            "tp": 2336,
+            "fn_structure_exclusion": 77,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 16,
+            "fp_other_object": 0,
+            "fp_environment": 40,
+            "tn": 64652,
+            "unscorable_predicted_target": 16,
+            "unscorable_other": 190
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.5626801843341952,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.43731981566580486
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 3,
+          "object_id": "curved-lamp",
+          "original_metrics": {
+            "index": 3,
+            "object_id": "curved-lamp",
+            "status": "evaluated",
+            "area_iou": 0.9554504575435497,
+            "precision": 0.9974102603320336,
+            "recall": 0.9578266267105371,
+            "false_negative_ratio": 0.04217337328946293,
+            "false_positive_ratio": 0.002486962194875571,
+            "scorable_target_area_m2": 0.4429776787042487,
+            "true_positive_area_m2": 0.42429581570135466,
+            "false_positive_area_m2": 0.001101668740111204,
+            "false_negative_area_m2": 0.018681863002894056,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0018180296359322258,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.001101668740111204
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9184991786381125,
+                "upper": 0.9556320966215442
+              },
+              "precision": {
+                "lower": 0.9931657482468802,
+                "upper": 0.997421281054153
+              },
+              "recall": {
+                "lower": 0.9243414326024789,
+                "upper": 0.9579990034692374
+              },
+              "false_negative_ratio": {
+                "lower": 0.04200099653076261,
+                "upper": 0.07565856739752108
+              },
+              "false_positive_ratio": {
+                "lower": 0.002390551003615334,
+                "upper": 0.006591073357429254
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.42429581570135383,
+            "fn_structure_exclusion": 0.018681863002894036,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0011016687401112038,
+            "tn": 36.76675874361271,
+            "unscorable_predicted_target": 0.0018180296359322258,
+            "unscorable_other": 0.016047310045578286
+          },
+          "face_count_by_reason": {
+            "tp": 1027,
+            "fn_structure_exclusion": 91,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 7,
+            "tn": 65976,
+            "unscorable_predicted_target": 17,
+            "unscorable_other": 189
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 1.0,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        }
+      ],
+      "conservation": {
+        "status": "pass",
+        "maximum_absolute_difference_m2": 4.405364961712621e-13,
+        "b1_replay_exact": true,
+        "reason_partition_complete": true
+      },
+      "face_trace": {
+        "path": "dev-curved-sofa-wall/face-diagnostics.npz",
+        "sha256": "fd7e260ab22f1f74a8606a1488bbc2f5d770a98c808037501c72c9568c424d77",
+        "face_index_basis": "zero-based triangles in the hash-bound frozen surface.ply",
+        "reference_area_columns": "reference_owner_order; -1 environment then source object order",
+        "reason_area_arrays": "target_<index>_reason_area_m2; columns follow reason_names",
+        "contains_evaluation_reference": true,
+        "use_for_partition_or_edit_ownership": false
+      },
+      "seconds": 1.5477676000155043
+    },
+    {
+      "scene_id": "dev-occluded-bookshelf",
+      "target_id": "occluded-shelf",
+      "status": "completed",
+      "source": {
+        "scene_sha256": "a9397c2135e8a3f9d50256e6067fcf96df3c04cb653679386d5e3024db072024",
+        "surface_manifest_sha256": "7bd8f81abab390db8ca6cbed29785e0d971b4ed40e7a84e388577c14d85af5d5",
+        "surface_sha256": "873f4a3049487926a54e1d26d8d34736022bec7ab7f401ed6afc41725efe88d2",
+        "reference_sha256": "ecc1eb0d69df2ac472db65b4731892f4825fab9c6724a56d70380f2fa16285e5",
+        "reference_mesh_sha256": "31e941b0fb9b708147455dae5cc1edeeb976c1bd4ba407fe129ab0ef2d40d73f",
+        "face_owner_sha256": "9dc8f78f2d2f932e5a314d3136494969736b908a554ebad9f33d013f78d6f446",
+        "metrics_sha256": "ecd26a2e85ff8144226b1ffb70f94d3fe3b920ecc42f28f6c2442ab604a9f7d9"
+      },
+      "coverage": {
+        "mesh_area_m2": 28.19363524395658,
+        "scorable_area_m2": 28.139781976726436,
+        "unscorable_area_m2": 0.05385326723014594,
+        "ambiguous_area_m2": 0.023234870401578903,
+        "distance_rejected_area_m2": 0.03061839682856705,
+        "faces": 52131,
+        "zero_area_faces": 0,
+        "samples": 364917,
+        "scorable_samples": 363956,
+        "unscorable_samples": 961
+      },
+      "targets": [
+        {
+          "index": 0,
+          "object_id": "occluded-shelf",
+          "original_metrics": {
+            "index": 0,
+            "object_id": "occluded-shelf",
+            "status": "evaluated",
+            "area_iou": 0.7240150106351799,
+            "precision": 1.0,
+            "recall": 0.7240150106351799,
+            "false_negative_ratio": 0.2759849893648201,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 4.370233387213769,
+            "true_positive_area_m2": 3.1641145723217954,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 1.2061188148919737,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.7152017624120223,
+                "upper": 0.7240150106351799
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.7152017624120223,
+                "upper": 0.7240150106351799
+              },
+              "false_negative_ratio": {
+                "lower": 0.2759849893648201,
+                "upper": 0.28479823758797773
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 3.164114572321787,
+            "fn_structure_exclusion": 0.009829359967903645,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 1.196289454924061,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0,
+            "tn": 23.76954858951269,
+            "unscorable_predicted_target": 0.0,
+            "unscorable_other": 0.053853267230145926
+          },
+          "face_count_by_reason": {
+            "tp": 6526,
+            "fn_structure_exclusion": 58,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 2419,
+            "fp_other_object": 0,
+            "fp_environment": 0,
+            "tn": 43196,
+            "unscorable_predicted_target": 0,
+            "unscorable_other": 425
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.008149578504655105,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.991850421495345
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": null,
+            "fp_environment": null
+          }
+        },
+        {
+          "index": 1,
+          "object_id": "occluding-screen",
+          "original_metrics": {
+            "index": 1,
+            "object_id": "occluding-screen",
+            "status": "evaluated",
+            "area_iou": 0.9508640791719987,
+            "precision": 0.9922689193645845,
+            "recall": 0.9579611172920314,
+            "false_negative_ratio": 0.04203888270796852,
+            "false_positive_ratio": 0.007463777710703787,
+            "scorable_target_area_m2": 4.204845471269232,
+            "true_positive_area_m2": 4.028078465697412,
+            "false_positive_area_m2": 0.03138403190541306,
+            "false_negative_area_m2": 0.17676700557181985,
+            "unresolved_target_area_m2": 0.0052683413032956535,
+            "unscorable_predicted_target_area_m2": 0.023724128380476307,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.031083441268672934,
+              "3": 0.0003005906367401195
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9389279138121017,
+                "upper": 0.9511377222664168
+              },
+              "precision": {
+                "lower": 0.9865036391099028,
+                "upper": 0.992313838484457
+              },
+              "recall": {
+                "lower": 0.951145835933198,
+                "upper": 0.9581969738451358
+              },
+              "false_negative_ratio": {
+                "lower": 0.0418030261548642,
+                "upper": 0.048854164066801986
+              },
+              "false_positive_ratio": {
+                "lower": 0.007369394698360779,
+                "upper": 0.013105870515915765
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 4.028078465697434,
+            "fn_structure_exclusion": 0.007133577438505453,
+            "fn_target_box_overlap": 0.005268341303295655,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.16436508683001827,
+            "fp_other_object": 0.0003005906367401195,
+            "fp_environment": 0.031083441268672976,
+            "tn": 23.903552473552065,
+            "unscorable_predicted_target": 0.023724128380476304,
+            "unscorable_other": 0.03012913884966966
+          },
+          "face_count_by_reason": {
+            "tp": 9105,
+            "fn_structure_exclusion": 49,
+            "fn_target_box_overlap": 14,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 364,
+            "fp_other_object": 3,
+            "fp_environment": 126,
+            "tn": 42569,
+            "unscorable_predicted_target": 151,
+            "unscorable_other": 274
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.040355819885216776,
+            "fn_target_box_overlap": 0.02980387253974928,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.929840307575034
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.009577820900961861,
+            "fp_environment": 0.9904221790990381
+          }
+        },
+        {
+          "index": 2,
+          "object_id": "occluded-side-table",
+          "original_metrics": {
+            "index": 2,
+            "object_id": "occluded-side-table",
+            "status": "evaluated",
+            "area_iou": 0.9731704626597532,
+            "precision": 0.9915908612642329,
+            "recall": 0.981268800899345,
+            "false_negative_ratio": 0.018731199100654978,
+            "false_positive_ratio": 0.008321602997956134,
+            "scorable_target_area_m2": 0.7356717083827662,
+            "true_positive_area_m2": 0.7218916951403296,
+            "false_positive_area_m2": 0.006121967893989538,
+            "false_negative_area_m2": 0.013780013242436582,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0014274266777029383,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.006121967893989538
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9073015374866049,
+                "upper": 0.9732219913329807
+              },
+              "precision": {
+                "lower": 0.9896504396610384,
+                "upper": 0.9916073169165636
+              },
+              "recall": {
+                "lower": 0.9159928185485039,
+                "upper": 0.981305074735563
+              },
+              "false_negative_ratio": {
+                "lower": 0.018694925264436946,
+                "upper": 0.0840071814514961
+              },
+              "false_positive_ratio": {
+                "lower": 0.0077539888959649765,
+                "upper": 0.010261906888180298
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.7218916951403319,
+            "fn_structure_exclusion": 0.006167056387261043,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.007612956855175535,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.006121967893989536,
+            "tn": 27.397988300449942,
+            "unscorable_predicted_target": 0.0014274266777029381,
+            "unscorable_other": 0.052425840552442995
+          },
+          "face_count_by_reason": {
+            "tp": 1419,
+            "fn_structure_exclusion": 36,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 20,
+            "fp_other_object": 0,
+            "fp_environment": 14,
+            "tn": 50639,
+            "unscorable_predicted_target": 13,
+            "unscorable_other": 412
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.44753631790926973,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.5524636820907303
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 3,
+          "object_id": "occluded-stool",
+          "original_metrics": {
+            "index": 3,
+            "object_id": "occluded-stool",
+            "status": "evaluated",
+            "area_iou": 0.9311039973089906,
+            "precision": 0.9909140535576542,
+            "recall": 0.9391217801372156,
+            "false_negative_ratio": 0.06087821986278432,
+            "false_positive_ratio": 0.00861104973386149,
+            "scorable_target_area_m2": 0.5757074786167233,
+            "true_positive_area_m2": 0.5406594321568452,
+            "false_positive_area_m2": 0.004957445730524605,
+            "false_negative_area_m2": 0.035048046459878086,
+            "unresolved_target_area_m2": 0.021853938766251715,
+            "unscorable_predicted_target_area_m2": 0.0032552332633329485,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.004957445730524605
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8520786942495402,
+                "upper": 0.9314880781747518
+              },
+              "precision": {
+                "lower": 0.9850371719987014,
+                "upper": 0.9909679401998922
+              },
+              "recall": {
+                "lower": 0.86325191347367,
+                "upper": 0.9394640695493719
+              },
+              "false_negative_ratio": {
+                "lower": 0.060535930450628106,
+                "upper": 0.13674808652632997
+              },
+              "false_positive_ratio": {
+                "lower": 0.00787445177169675,
+                "upper": 0.0142653679149531
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.5406594321568478,
+            "fn_structure_exclusion": 0.0038192593603065504,
+            "fn_target_box_overlap": 0.021853938766251704,
+            "fn_outside_target_box_other_object": 0.0003005906367401195,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.00907425769657971,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.004957445730524606,
+            "tn": 27.559117052379385,
+            "unscorable_predicted_target": 0.0032552332633329494,
+            "unscorable_other": 0.05059803396681296
+          },
+          "face_count_by_reason": {
+            "tp": 1330,
+            "fn_structure_exclusion": 24,
+            "fn_target_box_overlap": 56,
+            "fn_outside_target_box_other_object": 3,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 19,
+            "fp_other_object": 0,
+            "fp_environment": 16,
+            "tn": 50679,
+            "unscorable_predicted_target": 38,
+            "unscorable_other": 387
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.10897210389967728,
+            "fn_target_box_overlap": 0.6235422790616709,
+            "fn_outside_target_box_other_object": 0.008576530423292676,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.2589090866153593
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        }
+      ],
+      "conservation": {
+        "status": "pass",
+        "maximum_absolute_difference_m2": 2.948752353404416e-13,
+        "b1_replay_exact": true,
+        "reason_partition_complete": true
+      },
+      "face_trace": {
+        "path": "dev-occluded-bookshelf/face-diagnostics.npz",
+        "sha256": "170be00e72455becd157aaee42990ed365ff8343dc4686f9a4bc38469e0418f3",
+        "face_index_basis": "zero-based triangles in the hash-bound frozen surface.ply",
+        "reference_area_columns": "reference_owner_order; -1 environment then source object order",
+        "reason_area_arrays": "target_<index>_reason_area_m2; columns follow reason_names",
+        "contains_evaluation_reference": true,
+        "use_for_partition_or_edit_ownership": false
+      },
+      "seconds": 1.0353453000134323
+    },
+    {
+      "scene_id": "dev-thin-rack-noise",
+      "target_id": "thin-rack",
+      "status": "completed",
+      "source": {
+        "scene_sha256": "844900a9c90f7b7ce2947400b7ce79b1fe8bd9390c774d28d70e87f4e2b171f5",
+        "surface_manifest_sha256": "8024608bf7583c3655ac7bb7f3a81873dd7d3aca43cca7d2956b2a5c20abab56",
+        "surface_sha256": "6e5ac74dd7c9ac319c689b288dc7bebab2f8d238f41c0ed555f6e85bcca2fd2a",
+        "reference_sha256": "bd6da0ff4d0a0cb8924237cc9b719f76468b97b6dda138cd8a85e2371845fc75",
+        "reference_mesh_sha256": "260744cffea24f8c2c623f1feddf176229182852157ba10c6c677e08db8714ef",
+        "face_owner_sha256": "fe2d35034a2ea7f011df8c7edaf292e7f92b3358eaaed1d3c9d194e164d06df2",
+        "metrics_sha256": "973eab6c9977b7334a69f2937c87aeb10e9321b534f4a7bcd9ee8d66405791de"
+      },
+      "coverage": {
+        "mesh_area_m2": 51.5425711635246,
+        "scorable_area_m2": 51.521827706001424,
+        "unscorable_area_m2": 0.020743457523172526,
+        "ambiguous_area_m2": 0.01593942131593016,
+        "distance_rejected_area_m2": 0.004804036207240531,
+        "faces": 103884,
+        "zero_area_faces": 0,
+        "samples": 727188,
+        "scorable_samples": 726868,
+        "unscorable_samples": 320
+      },
+      "targets": [
+        {
+          "index": 0,
+          "object_id": "thin-rack",
+          "original_metrics": {
+            "index": 0,
+            "object_id": "thin-rack",
+            "status": "evaluated",
+            "area_iou": 0.9149417206135494,
+            "precision": 1.0,
+            "recall": 0.9149417206135494,
+            "false_negative_ratio": 0.08505827938645065,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 0.7356726527127297,
+            "true_positive_area_m2": 0.6730976026813191,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.06257505003141065,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8898509610952177,
+                "upper": 0.9149417206135494
+              },
+              "precision": {
+                "lower": 1.0,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.8898509610952177,
+                "upper": 0.9149417206135494
+              },
+              "false_negative_ratio": {
+                "lower": 0.08505827938645061,
+                "upper": 0.11014903890478234
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.6730976026813151,
+            "fn_structure_exclusion": 0.0,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0625750500314105,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0,
+            "tn": 50.78615505328824,
+            "unscorable_predicted_target": 0.0,
+            "unscorable_other": 0.020743457523170698
+          },
+          "face_count_by_reason": {
+            "tp": 2494,
+            "fn_structure_exclusion": 0,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 291,
+            "fp_other_object": 0,
+            "fp_environment": 0,
+            "tn": 101090,
+            "unscorable_predicted_target": 0,
+            "unscorable_other": 154
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.0,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 1.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": null,
+            "fp_environment": null
+          }
+        },
+        {
+          "index": 1,
+          "object_id": "thin-table",
+          "original_metrics": {
+            "index": 1,
+            "object_id": "thin-table",
+            "status": "evaluated",
+            "area_iou": 0.9686172000881549,
+            "precision": 1.0,
+            "recall": 0.9686172000881549,
+            "false_negative_ratio": 0.03138279991184513,
+            "false_positive_ratio": 0.0,
+            "scorable_target_area_m2": 1.203673910516498,
+            "true_positive_area_m2": 1.1658992530236505,
+            "false_positive_area_m2": 0,
+            "false_negative_area_m2": 0.03777465749284743,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0009680586434982888,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {},
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9522073791637697,
+                "upper": 0.968642419523879
+              },
+              "precision": {
+                "lower": 0.999170378127985,
+                "upper": 1.0
+              },
+              "recall": {
+                "lower": 0.952960816659482,
+                "upper": 0.968642419523879
+              },
+              "false_negative_ratio": {
+                "lower": 0.03135758047612103,
+                "upper": 0.04703918334051804
+              },
+              "false_positive_ratio": {
+                "lower": 0.0,
+                "upper": 0.0008042532408822366
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 1.1658992530236467,
+            "fn_structure_exclusion": 0.01191824953185353,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.025856407960993946,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0,
+            "tn": 50.31815379548446,
+            "unscorable_predicted_target": 0.0009680586434982888,
+            "unscorable_other": 0.01977539887967241
+          },
+          "face_count_by_reason": {
+            "tp": 2612,
+            "fn_structure_exclusion": 62,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 68,
+            "fp_other_object": 0,
+            "fp_environment": 0,
+            "tn": 101166,
+            "unscorable_predicted_target": 8,
+            "unscorable_other": 146
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.31550913556556315,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.6844908644344369
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": null,
+            "fp_environment": null
+          }
+        },
+        {
+          "index": 2,
+          "object_id": "thin-stool",
+          "original_metrics": {
+            "index": 2,
+            "object_id": "thin-stool",
+            "status": "evaluated",
+            "area_iou": 0.978980175146019,
+            "precision": 0.9949565797480051,
+            "recall": 0.9838625300751453,
+            "false_negative_ratio": 0.016137469924854785,
+            "false_positive_ratio": 0.004987184677563166,
+            "scorable_target_area_m2": 0.5205082653834308,
+            "true_positive_area_m2": 0.5121085789051674,
+            "false_positive_area_m2": 0.0025958708456652276,
+            "false_negative_area_m2": 0.008399686478263446,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0003955929596481698,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0025958708456652276
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.941639872619251,
+                "upper": 0.9789960591938257
+              },
+              "precision": {
+                "lower": 0.9941924605760616,
+                "upper": 0.994960453056836
+              },
+              "recall": {
+                "lower": 0.9468480628210644,
+                "upper": 0.9838747854450884
+              },
+              "false_negative_ratio": {
+                "lower": 0.01612521455491156,
+                "upper": 0.053151937178935627
+              },
+              "false_positive_ratio": {
+                "lower": 0.004796050960771145,
+                "upper": 0.005747197507247546
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.5121085789051674,
+            "fn_structure_exclusion": 0.00839968647826345,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0025958708456652285,
+            "tn": 50.99872356977193,
+            "unscorable_predicted_target": 0.00039559295964816985,
+            "unscorable_other": 0.020347864563522527
+          },
+          "face_count_by_reason": {
+            "tp": 1307,
+            "fn_structure_exclusion": 48,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 8,
+            "tn": 102542,
+            "unscorable_predicted_target": 4,
+            "unscorable_other": 150
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 1.0,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 3,
+          "object_id": "thin-lamp",
+          "original_metrics": {
+            "index": 3,
+            "object_id": "thin-lamp",
+            "status": "evaluated",
+            "area_iou": 0.9395398645214853,
+            "precision": 0.9983615228153309,
+            "recall": 0.9409908169060857,
+            "false_negative_ratio": 0.0590091830939143,
+            "false_positive_ratio": 0.0015443223213732157,
+            "scorable_target_area_m2": 0.4414791691113394,
+            "true_positive_area_m2": 0.4154278439890992,
+            "false_positive_area_m2": 0.0006817861352799421,
+            "false_negative_area_m2": 0.02605132512224018,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.002147523075915322,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0006817861352799421
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8974376405344431,
+                "upper": 0.9398320928773413
+              },
+              "precision": {
+                "lower": 0.9932354792032921,
+                "upper": 0.9983699355048367
+              },
+              "recall": {
+                "lower": 0.9029565842095034,
+                "upper": 0.9412764705527594
+              },
+              "false_negative_ratio": {
+                "lower": 0.058723529447240574,
+                "upper": 0.09704341579049658
+              },
+              "false_positive_ratio": {
+                "lower": 0.0014750167905974254,
+                "upper": 0.006408703760339194
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.4154278439890998,
+            "fn_structure_exclusion": 0.025759884347960275,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0002914407742799429,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0006817861352799421,
+            "tn": 51.079666750754406,
+            "unscorable_predicted_target": 0.002147523075915322,
+            "unscorable_other": 0.018595934447255373
+          },
+          "face_count_by_reason": {
+            "tp": 955,
+            "fn_structure_exclusion": 118,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 3,
+            "fp_other_object": 0,
+            "fp_environment": 5,
+            "tn": 102850,
+            "unscorable_predicted_target": 11,
+            "unscorable_other": 143
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.988812823420213,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.011187176579787017
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        }
+      ],
+      "conservation": {
+        "status": "pass",
+        "maximum_absolute_difference_m2": 4.902744876744691e-13,
+        "b1_replay_exact": true,
+        "reason_partition_complete": true
+      },
+      "face_trace": {
+        "path": "dev-thin-rack-noise/face-diagnostics.npz",
+        "sha256": "ed193c746f79d1dedf3df5d1d09b2c3b9ed8c5875f82521298ebd3a9b4e92c70",
+        "face_index_basis": "zero-based triangles in the hash-bound frozen surface.ply",
+        "reference_area_columns": "reference_owner_order; -1 environment then source object order",
+        "reason_area_arrays": "target_<index>_reason_area_m2; columns follow reason_names",
+        "contains_evaluation_reference": true,
+        "use_for_partition_or_edit_ownership": false
+      },
+      "seconds": 2.383612399979029
+    },
+    {
+      "scene_id": "dev-combined-study",
+      "target_id": "combined-desk",
+      "status": "completed",
+      "source": {
+        "scene_sha256": "2bffc2983cde22cf02a424978ffe91a86ba5fc61e1f70e5e5d64cd8a0080127d",
+        "surface_manifest_sha256": "16d20af088d133e55c60731ef950cfe1c0e2972791ee7783d31aab3cd0b1eede",
+        "surface_sha256": "06b3edfe5a7e236dd49908fae4ad0ee6e96e5af8a08a4dce29d91153d2746600",
+        "reference_sha256": "4d836004981184f4aa3c8ef30718c19d11e2453a9d9f39e0d4164a0c2166b749",
+        "reference_mesh_sha256": "b97e7ae1d898bbf0c4bbf2940bac3c8728d18bd0047b2ff5d1f1e0bd7ed09cec",
+        "face_owner_sha256": "daafff23d5562e8e2adfa5c540cc36887dd75a0761df05a20d9040f6d0460585",
+        "metrics_sha256": "d5771a65f2793217dec0ebf488ff35ef89165721e36661c9d0801a841c261747"
+      },
+      "coverage": {
+        "mesh_area_m2": 34.97057882219846,
+        "scorable_area_m2": 34.911617308739885,
+        "unscorable_area_m2": 0.0589615134585737,
+        "ambiguous_area_m2": 0.04399781649541718,
+        "distance_rejected_area_m2": 0.01496369696315659,
+        "faces": 71967,
+        "zero_area_faces": 0,
+        "samples": 503769,
+        "scorable_samples": 502658,
+        "unscorable_samples": 1111
+      },
+      "targets": [
+        {
+          "index": 0,
+          "object_id": "combined-desk",
+          "original_metrics": {
+            "index": 0,
+            "object_id": "combined-desk",
+            "status": "evaluated",
+            "area_iou": 0.8269979197391673,
+            "precision": 0.9923892448774092,
+            "recall": 0.8322765075792132,
+            "false_negative_ratio": 0.16772349242078677,
+            "false_positive_ratio": 0.0063828308561052465,
+            "scorable_target_area_m2": 2.879527603499073,
+            "true_positive_area_m2": 2.39656317731815,
+            "false_positive_area_m2": 0.018379537638620675,
+            "false_negative_area_m2": 0.482964426180923,
+            "unresolved_target_area_m2": 0.06660716634651424,
+            "unscorable_predicted_target_area_m2": 0.0045187121327462006,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.018379537638620675
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8105071470093336,
+                "upper": 0.8272672622266537
+              },
+              "precision": {
+                "lower": 0.9905358070540053,
+                "upper": 0.9924034591199372
+              },
+              "recall": {
+                "lower": 0.8168327715156943,
+                "upper": 0.8325392960705217
+              },
+              "false_negative_ratio": {
+                "lower": 0.16746070392947832,
+                "upper": 0.18316722848430567
+              },
+              "false_positive_ratio": {
+                "lower": 0.006254757770772293,
+                "upper": 0.007952085523869244
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 2.3965631773181553,
+            "fn_structure_exclusion": 0.002769882120433276,
+            "fn_target_box_overlap": 0.06660716634651404,
+            "fn_outside_target_box_other_object": 0.007745908431584411,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.4058414692823925,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0183795376386207,
+            "tn": 32.0137101676019,
+            "unscorable_predicted_target": 0.004518712132746201,
+            "unscorable_other": 0.05444280132582757
+          },
+          "face_count_by_reason": {
+            "tp": 5344,
+            "fn_structure_exclusion": 16,
+            "fn_target_box_overlap": 163,
+            "fn_outside_target_box_other_object": 19,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 1030,
+            "fp_other_object": 0,
+            "fp_environment": 57,
+            "tn": 65372,
+            "unscorable_predicted_target": 32,
+            "unscorable_other": 408
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.005735167996401552,
+            "fn_target_box_overlap": 0.1379131934689579,
+            "fn_outside_target_box_other_object": 0.01603825874471902,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.8403133797899216
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 1,
+          "object_id": "combined-chair",
+          "original_metrics": {
+            "index": 1,
+            "object_id": "combined-chair",
+            "status": "evaluated",
+            "area_iou": 0.7334409870507621,
+            "precision": 0.9979821523691829,
+            "recall": 0.7345302694045535,
+            "false_negative_ratio": 0.2654697305954465,
+            "false_positive_ratio": 0.001485167004603053,
+            "scorable_target_area_m2": 1.1742184422498552,
+            "true_positive_area_m2": 0.8624989887255812,
+            "false_positive_area_m2": 0.0017439104866258804,
+            "false_negative_area_m2": 0.3117194535242739,
+            "unresolved_target_area_m2": 0.30405142837379623,
+            "unscorable_predicted_target_area_m2": 0.001026961357577343,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0017439104866258804
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.6984228034907443,
+                "upper": 0.7336735684366208
+              },
+              "precision": {
+                "lower": 0.9967976790011169,
+                "upper": 0.9979845472885447
+              },
+              "recall": {
+                "lower": 0.6999934202002069,
+                "upper": 0.7347622440662633
+              },
+              "false_negative_ratio": {
+                "lower": 0.26523775593373666,
+                "upper": 0.30000657979979306
+              },
+              "false_positive_ratio": {
+                "lower": 0.0014141573405837965,
+                "upper": 0.002359758409937855
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.8624989887255783,
+            "fn_structure_exclusion": 0.007668025150477679,
+            "fn_target_box_overlap": 0.3040514283737969,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0017439104866258804,
+            "tn": 33.735654956003046,
+            "unscorable_predicted_target": 0.0010269613575773432,
+            "unscorable_other": 0.057934552100996434
+          },
+          "face_count_by_reason": {
+            "tp": 2113,
+            "fn_structure_exclusion": 48,
+            "fn_target_box_overlap": 714,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 13,
+            "tn": 69064,
+            "unscorable_predicted_target": 10,
+            "unscorable_other": 430
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.02459912290934562,
+            "fn_target_box_overlap": 0.9754008770906545,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 2,
+          "object_id": "combined-shelf",
+          "original_metrics": {
+            "index": 2,
+            "object_id": "combined-shelf",
+            "status": "evaluated",
+            "area_iou": 0.9606702931084294,
+            "precision": 0.9958706797162,
+            "recall": 0.9645122965840746,
+            "false_negative_ratio": 0.03548770341592553,
+            "false_positive_ratio": 0.003999294558400067,
+            "scorable_target_area_m2": 4.539680299278212,
+            "true_positive_area_m2": 4.378577471214307,
+            "false_positive_area_m2": 0.01815551871777934,
+            "false_negative_area_m2": 0.16110282806390525,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.004491408800281574,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.01815551871777934
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9484014906573325,
+                "upper": 0.9607090114604598
+              },
+              "precision": {
+                "lower": 0.9948544028964796,
+                "upper": 0.9958748936493653
+              },
+              "recall": {
+                "lower": 0.9530766488320699,
+                "upper": 0.9645473722356263
+              },
+              "false_negative_ratio": {
+                "lower": 0.035452627764373745,
+                "upper": 0.046923351167930116
+              },
+              "false_positive_ratio": {
+                "lower": 0.00394801757934142,
+                "upper": 0.004988661320855935
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 4.37857747121421,
+            "fn_structure_exclusion": 0.019033265801596255,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.14206956226230932,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.01815551871777933,
+            "tn": 30.35378149074366,
+            "unscorable_predicted_target": 0.004491408800281575,
+            "unscorable_other": 0.054470104658292204
+          },
+          "face_count_by_reason": {
+            "tp": 10263,
+            "fn_structure_exclusion": 121,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 404,
+            "fp_other_object": 0,
+            "fp_environment": 89,
+            "tn": 61190,
+            "unscorable_predicted_target": 47,
+            "unscorable_other": 393
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.11814358587203833,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.8818564141279617
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        },
+        {
+          "index": 3,
+          "object_id": "combined-sofa",
+          "original_metrics": {
+            "index": 3,
+            "object_id": "combined-sofa",
+            "status": "evaluated",
+            "area_iou": 0.9944209798789472,
+            "precision": 0.9962636694972437,
+            "recall": 0.9981434759058614,
+            "false_negative_ratio": 0.0018565240941386663,
+            "false_positive_ratio": 0.003743380421607068,
+            "scorable_target_area_m2": 2.2438886777858733,
+            "true_positive_area_m2": 2.239722844390999,
+            "false_positive_area_m2": 0.008399728944689409,
+            "false_negative_area_m2": 0.004165833394874428,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.00037355036662934776,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "0": 0.007745908431584418,
+              "-1": 0.0006538205131049905
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.9690526432588098,
+                "upper": 0.9944219050266397
+              },
+              "precision": {
+                "lower": 0.9960981567996333,
+                "upper": 0.9962642902266344
+              },
+              "recall": {
+                "lower": 0.9727450887567324,
+                "upper": 0.998143784918439
+              },
+              "false_negative_ratio": {
+                "lower": 0.0018562150815609746,
+                "upper": 0.02725491124326762
+              },
+              "false_positive_ratio": {
+                "lower": 0.0036475359867635293,
+                "upper": 0.003909854975504253
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 2.2397228443910078,
+            "fn_structure_exclusion": 0.0018095769650724092,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0023562564298020196,
+            "fp_other_object": 0.007745908431584411,
+            "fp_environment": 0.0006538205131049905,
+            "tn": 32.65932890200897,
+            "unscorable_predicted_target": 0.00037355036662934776,
+            "unscorable_other": 0.058587963091944445
+          },
+          "face_count_by_reason": {
+            "tp": 5660,
+            "fn_structure_exclusion": 15,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 10,
+            "fp_other_object": 19,
+            "fp_environment": 3,
+            "tn": 66221,
+            "unscorable_predicted_target": 4,
+            "unscorable_other": 436
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 0.43438534227002024,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.5656146577299798
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.9221617129064196,
+            "fp_environment": 0.07783828709358037
+          }
+        },
+        {
+          "index": 4,
+          "object_id": "combined-lamp",
+          "original_metrics": {
+            "index": 4,
+            "object_id": "combined-lamp",
+            "status": "evaluated",
+            "area_iou": 0.9437604687177571,
+            "precision": 0.9955985135915889,
+            "recall": 0.9477146310356799,
+            "false_negative_ratio": 0.05228536896432011,
+            "false_positive_ratio": 0.004189794390620224,
+            "scorable_target_area_m2": 0.44657839960304274,
+            "true_positive_area_m2": 0.42322888320830204,
+            "false_positive_area_m2": 0.0018710716736289853,
+            "false_negative_area_m2": 0.023349516394740675,
+            "unresolved_target_area_m2": 0,
+            "unscorable_predicted_target_area_m2": 0.0011641635063509709,
+            "target_outside_candidate_area_m2": null,
+            "false_positive_by_reference_owner_area_m2": {
+              "-1": 0.0018710716736289853
+            },
+            "conservative_bounds": {
+              "area_iou": {
+                "lower": 0.8340948381894604,
+                "upper": 0.9439060870995587
+              },
+              "precision": {
+                "lower": 0.9928794495031478,
+                "upper": 0.9956105344247516
+              },
+              "recall": {
+                "lower": 0.8391142587277092,
+                "upper": 0.9478505768301597
+              },
+              "false_negative_ratio": {
+                "lower": 0.05214942316984028,
+                "upper": 0.16088574127229083
+              },
+              "false_positive_ratio": {
+                "lower": 0.0037011354104516023,
+                "upper": 0.006796645746139835
+              }
+            },
+            "bounds_definition": "assign all unscorable mesh area adversarially to target/non-target; finite sampling error is not bounded",
+            "denominator": "all scorable target area on the fixed reconstructed mesh, including outside candidates",
+            "failure_counts": {
+              "method_failures": 0,
+              "no_target": 0,
+              "no_scorable_target": 0
+            }
+          },
+          "area_m2": {
+            "tp": 0.4232288832083026,
+            "fn_structure_exclusion": 0.023349516394740734,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0,
+            "fp_other_object": 0.0,
+            "fp_environment": 0.0018710716736289853,
+            "tn": 34.463167837462976,
+            "unscorable_predicted_target": 0.0011641635063509709,
+            "unscorable_other": 0.05779734995222281
+          },
+          "face_count_by_reason": {
+            "tp": 930,
+            "fn_structure_exclusion": 107,
+            "fn_target_box_overlap": 0,
+            "fn_outside_target_box_other_object": 0,
+            "fn_outside_target_box_other_overlap": 0,
+            "fn_outside_target_box_environment": 0,
+            "fp_other_object": 0,
+            "fp_environment": 7,
+            "tn": 70911,
+            "unscorable_predicted_target": 11,
+            "unscorable_other": 429
+          },
+          "fn_reason_fraction": {
+            "fn_structure_exclusion": 1.0,
+            "fn_target_box_overlap": 0.0,
+            "fn_outside_target_box_other_object": 0.0,
+            "fn_outside_target_box_other_overlap": 0.0,
+            "fn_outside_target_box_environment": 0.0
+          },
+          "fp_reason_fraction": {
+            "fp_other_object": 0.0,
+            "fp_environment": 1.0
+          }
+        }
+      ],
+      "conservation": {
+        "status": "pass",
+        "maximum_absolute_difference_m2": 3.694822225952521e-13,
+        "b1_replay_exact": true,
+        "reason_partition_complete": true
+      },
+      "face_trace": {
+        "path": "dev-combined-study/face-diagnostics.npz",
+        "sha256": "5a02eb4b30050c626e2c9f05b4ffff7a5db13d189599e14a5421154cb58763d2",
+        "face_index_basis": "zero-based triangles in the hash-bound frozen surface.ply",
+        "reference_area_columns": "reference_owner_order; -1 environment then source object order",
+        "reason_area_arrays": "target_<index>_reason_area_m2; columns follow reason_names",
+        "contains_evaluation_reference": true,
+        "use_for_partition_or_edit_ownership": false
+      },
+      "seconds": 1.859468000009656
+    }
+  ],
+  "completed_scenes": 6
+}

@@ -12,6 +12,20 @@ a prepared scanner capture on Windows, keeps meter units and object UUIDs,
 edits selected observations and fused surface regions, and checks their world
 geometry after saving and reopening.
 
+**S2a measured 2026-10-08:** B1 omissions now have per-face decision traces.
+Dining misses are dominated by competing boxes (99.46% of missed scorable area);
+shelf misses by observed surface outside its target box (99.19%). All six B1
+partitions passed native editing and independent source-lineage checks across
+491,066 faces. These diagnostics preserve the original scores.
+
+[English S2a report](reports/OWNERSHIP-S2A-2026-10-08.md) ·
+[中文 S2a 报告](reports/OWNERSHIP-S2A-2026-10-08.zh-CN.md) ·
+[Reproduce / edit](docs/OWNERSHIP-S2A.md) · [中文操作](docs/OWNERSHIP-S2A.zh-CN.md) ·
+[Download the initial B1 dining task](examples/ownership-b1/dining-b1-author-task.zip).
+
+Actual author correction and timing remain pending. The download is a starting
+scene with unresolved faces, plus the standalone Blender panel and source maps.
+
 **S1 measured 2026-10-06:** all six development scenes completed native Blender
 face reassignment, metre translation, pivoted rotation, four undo/redo cycles
 and fresh-process save/reopen. Fifteen isolated fault controls passed. The
@@ -56,12 +70,13 @@ recorded checks; whole-machine network isolation remains pending.
 [Machine results](reports/local-scan-results.json) ·
 [Input hashes](docs/tea-room-source-manifest.json)
 
-**Next stage:** diagnose remaining partition omissions and compare stronger
-geometric/interactive baselines with explicit correction budgets. The
+**Next stage:** measure one real author-operated correction, then compare a
+targeted geometric/interactive baseline with explicit correction budgets. S2a
+separates competing-box and outside-box omissions before choosing a method. The
 [English evaluation protocol](docs/NEXT-STAGE-PROTOCOL.md) and
 [中文评测协议](docs/NEXT-STAGE-PROTOCOL.zh-CN.md) specify independent scenes,
 direct baselines, area-based metrics, ablations and claim gates. This protocol
-has begun with S0 comparisons and S1 native editing regression. The 18 held-out groups,
+has begun with S0 comparisons, S1 native editing and S2a attribution. The 18 held-out groups,
 real-room reference acquisition and full interactive/product acceptance remain pending;
 their planned counts are not measured results.
 
