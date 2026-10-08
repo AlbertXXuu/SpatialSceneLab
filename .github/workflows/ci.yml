@@ -27,11 +27,28 @@ jobs:
       - name: Check units, frames, identity, source hash and edits
         run: python -B -m unittest discover -s tests -v
       - name: Compile optional native Blender entry points
-        run: python -m py_compile blender_edit.py blender_scene.py verify_blender_edit.py blender_edit_controls.py
+        run: python -m py_compile blender_edit.py blender_scene.py verify_blender_edit.py blender_edit_controls.py blender_stool.py render_stool_quality.py
       - name: Read back published controlled exports
         run: |
           python -B scene_lab.py verify fixtures/three-objects.json examples/three-objects-before.glb
           python -B scene_lab.py verify examples/three-objects-edited.json examples/three-objects-after.glb
+
+  observation-stool-fit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Install optional fitting dependencies in a separate job
+        run: python -m pip install -r requirements-fit.txt
+      - name: Check malformed inputs, missing-leg rejection and observation sensitivity
+        run: python -B -m unittest discover -s tests -p test_stool_fit.py -v
+      - name: Replay the bundled observations under Python outbound network guard
+        run: python offline_run.py --script fit_stool.py --report .local/stool-fit-guard.json -- --scene examples/stool-fit/input/scene.json --observations examples/stool-fit/input/observations.npz --output .local/stool-fit --self-test
 
   cpu-rgbd-surface:
     runs-on: ubuntu-latest

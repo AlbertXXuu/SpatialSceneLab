@@ -12,6 +12,26 @@ a prepared scanner capture on Windows, keeps meter units and object UUIDs,
 edits selected observations and fused surface regions, and checks their world
 geometry after saving and reopening.
 
+**Geometry quality, 2026-10-09:** a broken dining stool now has an observation-fitted
+editable assembly: one seat, three legs and three braces. All nine intended joints
+have solid contact. Independent distance to the exported triangles is **1.047 mm
+mean / 2.954 mm P95** on 1,885 odd-frame validation points. The native Blender
+file reopens with all seven parts and its GLB round trip has zero measured error.
+This is one synthetic development case with an explicitly selected furniture
+family; it establishes a usable bounded asset, not general furniture recovery.
+
+[Download Blender](examples/stool-fit/native/editable-stool.blend) ·
+[Download GLB](examples/stool-fit/native/editable-stool.glb) ·
+[Reproduce / 使用与复现](examples/stool-fit/README.md) ·
+[English report](reports/STOOL-QUALITY-2026-10-09.md) ·
+[中文实测报告](reports/STOOL-QUALITY-2026-10-09.zh-CN.md)
+
+![Observation-constrained stool: front and underside](reports/stool-quality/fitted-stool-views.png)
+
+The input observations and independent evaluation reference are included. Fitting
+reads only the observations and existing box/floor priors. Structural assumptions,
+train/validation split, all fitted parts and counterexamples are inspectable.
+
 **S2a measured 2026-10-08:** B1 omissions now have per-face decision traces.
 Dining misses are dominated by competing boxes (99.46% of missed scorable area);
 shelf misses by observed surface outside its target box (99.19%). All six B1
@@ -74,9 +94,11 @@ recorded checks; whole-machine network isolation remains pending.
 [Machine results](reports/local-scan-results.json) ·
 [Input hashes](docs/tea-room-source-manifest.json)
 
-**Next stage:** measure one real author-operated correction, then compare a
-targeted geometric/interactive baseline with explicit correction budgets. S2a
-separates competing-box and outside-box omissions before choosing a method. The
+**Next stage:** expand the verified geometry-quality result beyond this one stool,
+starting with a changed shape and an incompatible-family rejection. Separately
+measure actual author correction effort; source-preserving edits alone do not
+measure geometry completeness. S2a separates competing-box and outside-box
+omissions before choosing a method. The
 [English evaluation protocol](docs/NEXT-STAGE-PROTOCOL.md) and
 [中文评测协议](docs/NEXT-STAGE-PROTOCOL.zh-CN.md) specify independent scenes,
 direct baselines, area-based metrics, ablations and claim gates. This protocol

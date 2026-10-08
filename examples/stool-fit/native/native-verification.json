@@ -1,0 +1,690 @@
+{
+  "schema": "alvenx.spatial.editable-stool-native-verification.v1",
+  "status": "passed",
+  "fit_json_sha256": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+  "fit_quality_gate": {
+    "passed": true,
+    "criteria": "optimizer success; all nine contacts; odd-frame validation equal-part and equal-height mean <15mm; each part >=5 training closest-point supports",
+    "interpretation": "Validation thresholds declared for one development example; not a global shape-completeness, ground-truth-accuracy, or product-quality claim"
+  },
+  "native_units": "metres",
+  "native_up_axis": "Z",
+  "glb_units": "metres",
+  "glb_up_axis": "Y",
+  "frame": 1,
+  "root_name": "Fitted Stool (structural completion)",
+  "saved_view_count": 10,
+  "observations_validation": {
+    "status": "passed",
+    "expected_sha256": "4bd8e427fc273c88220fe7dcf93478f06e0164b41c5bd48d230d4df39b757c22",
+    "actual_sha256": "4bd8e427fc273c88220fe7dcf93478f06e0164b41c5bd48d230d4df39b757c22"
+  },
+  "build_process_id": 57152,
+  "reference_geometry_read": false,
+  "part_source_files": {
+    "seat": {
+      "filename": "seat.ply",
+      "sha256": "bca734ebb78ca46363bd5753a2497e46a17f5c0e9ecd13e522b42e51ae1ef499"
+    },
+    "leg_1": {
+      "filename": "leg_1.ply",
+      "sha256": "3581469ab8a8c4761d73faa371f0aea23af5c3ed35670a1845ce02278afa576d"
+    },
+    "leg_2": {
+      "filename": "leg_2.ply",
+      "sha256": "fb81146129c86d2d408627ed3df2eb65b4b61d6538eda4a984bc246e09cfd454"
+    },
+    "leg_3": {
+      "filename": "leg_3.ply",
+      "sha256": "e4c57ed03298bd8b2d88246c59751cb1ae3c21273632e3db4c8c6c6b4b8ffe0c"
+    },
+    "brace_1_2": {
+      "filename": "brace_1_2.ply",
+      "sha256": "f8dee940a7658f6731090a3260c6ad04d33292201d4ef8916b1068c1f69febbe"
+    },
+    "brace_2_3": {
+      "filename": "brace_2_3.ply",
+      "sha256": "f27db72d89d6a15df5eb6c3966bec68fa4051eaa21c122a232b1e8866206a962"
+    },
+    "brace_3_1": {
+      "filename": "brace_3_1.ply",
+      "sha256": "409846a1b8a1b6c19acf7d0ae01643dff2e7c8e9db041767d42dbd150bc61c3a"
+    }
+  },
+  "build_parts": {
+    "Brace 1-2": {
+      "vertices": 162,
+      "faces": 320,
+      "local_mesh_bytes_sha256": "91fbb36771dec39820b2d80643d4f8c0d2ee9b143531d730613d56d1ece319aa",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.34798404574394226
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2276198863983154
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1905282586812973
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_min_blender_m": [
+        0.16133899986743927,
+        1.2127704424783587,
+        0.17904614377766848
+      ],
+      "bounds_max_blender_m": [
+        0.5346290916204453,
+        1.2424693293869495,
+        0.20201037358492613
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "provenance_role": "fitted/structural",
+      "source_part": "brace_1_2",
+      "source_ply_sha256": "f8dee940a7658f6731090a3260c6ad04d33292201d4ef8916b1068c1f69febbe"
+    },
+    "Brace 2-3": {
+      "vertices": 162,
+      "faces": 320,
+      "local_mesh_bytes_sha256": "585e1b3ed8ed889cdb95e60349d0a88d0afd3f42a019a3813d59353c96ac5aa5",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.4440786838531494
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0675177574157715
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1903696060180664
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_min_blender_m": [
+        0.3434012904763222,
+        0.8983328342437744,
+        0.17858155444264412
+      ],
+      "bounds_max_blender_m": [
+        0.5447560772299767,
+        1.2367026805877686,
+        0.2021576575934887
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "provenance_role": "fitted/structural",
+      "source_part": "brace_2_3",
+      "source_ply_sha256": "f27db72d89d6a15df5eb6c3966bec68fa4051eaa21c122a232b1e8866206a962"
+    },
+    "Brace 3-1": {
+      "vertices": 162,
+      "faces": 320,
+      "local_mesh_bytes_sha256": "f1002177dc4e9fec4de3a683369edf7120cbdfb4f4e5811ffd2baddb5433c82a",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.25760746002197266
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0641380548477173
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.19009020924568176
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_min_blender_m": [
+        0.151197649538517,
+        0.8978159725666046,
+        0.17807789985090494
+      ],
+      "bounds_max_blender_m": [
+        0.3640172705054283,
+        1.23046013712883,
+        0.202102517709136
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "provenance_role": "fitted/structural",
+      "source_part": "brace_3_1",
+      "source_ply_sha256": "409846a1b8a1b6c19acf7d0ae01643dff2e7c8e9db041767d42dbd150bc61c3a"
+    },
+    "Leg 1": {
+      "vertices": 162,
+      "faces": 320,
+      "local_mesh_bytes_sha256": "55f071a66343ac3b09860243c867939f69739b47bcef2de0f6977eef48174d41",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.16784009337425232
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2206611633300781
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.2467433512210846
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_min_blender_m": [
+        0.11712711676955223,
+        1.181574486196041,
+        1.1622905731201172e-06
+      ],
+      "bounds_max_blender_m": [
+        0.2185530699789524,
+        1.2597478404641151,
+        0.49348554015159607
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "provenance_role": "fitted/structural",
+      "source_part": "leg_1",
+      "source_ply_sha256": "3581469ab8a8c4761d73faa371f0aea23af5c3ed35670a1845ce02278afa576d"
+    },
+    "Leg 2": {
+      "vertices": 162,
+      "faces": 320,
+      "local_mesh_bytes_sha256": "5ecaca58bd06d96104d18e6cf14ed38dd160827f0e76fc28aff0a44e8d1aaeb3",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.5282338857650757
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2270129919052124
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.24677614867687225
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_min_blender_m": [
+        0.477821908891201,
+        1.1861010529100895,
+        9.834766387939453e-07
+      ],
+      "bounds_max_blender_m": [
+        0.57864585891366,
+        1.2679249309003353,
+        0.4935513138771057
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "provenance_role": "fitted/structural",
+      "source_part": "leg_2",
+      "source_ply_sha256": "fb81146129c86d2d408627ed3df2eb65b4b61d6538eda4a984bc246e09cfd454"
+    },
+    "Leg 3": {
+      "vertices": 162,
+      "faces": 320,
+      "local_mesh_bytes_sha256": "09b968a77090e59b2abee05da9071d532a33280c49f6e479196491700f416c08",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.3538650870323181
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.9116805791854858
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.24681691825389862
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_min_blender_m": [
+        0.32968986965715885,
+        0.8553506620228291,
+        5.662441253662109e-07
+      ],
+      "bounds_max_blender_m": [
+        0.3780403044074774,
+        0.9680104963481426,
+        0.4936332702636719
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "provenance_role": "fitted/structural",
+      "source_part": "leg_3",
+      "source_ply_sha256": "e4c57ed03298bd8b2d88246c59751cb1ae3c21273632e3db4c8c6c6b4b8ffe0c"
+    },
+    "Seat": {
+      "vertices": 162,
+      "faces": 320,
+      "local_mesh_bytes_sha256": "28aba042c8291865b8c96e7df9cb788ba0042db563a1882d343a40dfaef3ced4",
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.34948042035102844
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.1201553344726562
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.49047359824180603
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "bounds_min_blender_m": [
+        0.06287121772766113,
+        0.8335461318492889,
+        0.465941296890378
+      ],
+      "bounds_max_blender_m": [
+        0.6360896229743958,
+        1.4067645370960236,
+        0.5150058995932341
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "provenance_role": "fitted/structural",
+      "source_part": "seat",
+      "source_ply_sha256": "bca734ebb78ca46363bd5753a2497e46a17f5c0e9ecd13e522b42e51ae1ef499"
+    }
+  },
+  "blend_sha256": "12a1488124bafa73a2e509ef172e1fda932db2898a8e8702b3bba59a7e4a566d",
+  "glb_sha256": "e63d9d71a84805619b6885bce150845d1fde7a35639c867ce3f90741f0e0691c",
+  "fresh_background_native_reopen": true,
+  "native_mesh_count": 7,
+  "native_scene_object_count": 8,
+  "native_checks": {
+    "Seat": {
+      "exact_local_mesh_bytes_match": true,
+      "exact_source_face_indices_match": true,
+      "max_source_vertex_error_m": 1.865049747973302e-08,
+      "closed_two_faces_per_edge": true,
+      "positive_signed_volume_m3": 0.012648873818120063,
+      "parent_root_and_metadata_match": true
+    },
+    "Leg 1": {
+      "exact_local_mesh_bytes_match": true,
+      "exact_source_face_indices_match": true,
+      "max_source_vertex_error_m": 5.054213136901353e-08,
+      "closed_two_faces_per_edge": true,
+      "positive_signed_volume_m3": 0.0008570329062381187,
+      "parent_root_and_metadata_match": true
+    },
+    "Leg 2": {
+      "exact_local_mesh_bytes_match": true,
+      "exact_source_face_indices_match": true,
+      "max_source_vertex_error_m": 6.22696036955972e-08,
+      "closed_two_faces_per_edge": true,
+      "positive_signed_volume_m3": 0.000869767142310854,
+      "parent_root_and_metadata_match": true
+    },
+    "Leg 3": {
+      "exact_local_mesh_bytes_match": true,
+      "exact_source_face_indices_match": true,
+      "max_source_vertex_error_m": 2.559982104077818e-08,
+      "closed_two_faces_per_edge": true,
+      "positive_signed_volume_m3": 0.0008553279571868426,
+      "parent_root_and_metadata_match": true
+    },
+    "Brace 1-2": {
+      "exact_local_mesh_bytes_match": true,
+      "exact_source_face_indices_match": true,
+      "max_source_vertex_error_m": 4.411065490650401e-08,
+      "closed_two_faces_per_edge": true,
+      "positive_signed_volume_m3": 0.00015430552020641482,
+      "parent_root_and_metadata_match": true
+    },
+    "Brace 2-3": {
+      "exact_local_mesh_bytes_match": true,
+      "exact_source_face_indices_match": true,
+      "max_source_vertex_error_m": 1.728717802240709e-08,
+      "closed_two_faces_per_edge": true,
+      "positive_signed_volume_m3": 0.00016292109708358188,
+      "parent_root_and_metadata_match": true
+    },
+    "Brace 3-1": {
+      "exact_local_mesh_bytes_match": true,
+      "exact_source_face_indices_match": true,
+      "max_source_vertex_error_m": 3.991094210675783e-08,
+      "closed_two_faces_per_edge": true,
+      "positive_signed_volume_m3": 0.00016915618902637718,
+      "parent_root_and_metadata_match": true
+    }
+  },
+  "saved_view_checks": [
+    {
+      "screen": "Animation",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    },
+    {
+      "screen": "Animation",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    },
+    {
+      "screen": "Geometry Nodes",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    },
+    {
+      "screen": "Layout",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    },
+    {
+      "screen": "Modeling",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    },
+    {
+      "screen": "Scripting",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    },
+    {
+      "screen": "Sculpting",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    },
+    {
+      "screen": "Shading",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    },
+    {
+      "screen": "Texture Paint",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    },
+    {
+      "screen": "UV Editing",
+      "overlays": false,
+      "mode": "SOLID",
+      "view_distance_m": 1.375724196434021,
+      "view_location": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.2575032413005829
+      ]
+    }
+  ],
+  "glb_roundtrip": {
+    "Brace 1-2": {
+      "triangles": 320,
+      "max_triangle_coordinate_error_m": 0.0,
+      "name_parent_provenance_and_fit_hash_preserved": true,
+      "oriented_geometry": {
+        "status": "pass",
+        "method": "one_to_one_oriented_triangle_geometry",
+        "tolerance_m": 5e-07,
+        "expected_face_instances": 320,
+        "actual_face_instances": 320,
+        "matched_face_instances": 320,
+        "missing_face_instances": 0,
+        "extra_face_instances": 0,
+        "missing_face_indices_sample": [],
+        "extra_face_indices_sample": [],
+        "maximum_matched_corner_distance_m": 0.0,
+        "winding_ambiguous_matched_faces": 0,
+        "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+      }
+    },
+    "Brace 2-3": {
+      "triangles": 320,
+      "max_triangle_coordinate_error_m": 0.0,
+      "name_parent_provenance_and_fit_hash_preserved": true,
+      "oriented_geometry": {
+        "status": "pass",
+        "method": "one_to_one_oriented_triangle_geometry",
+        "tolerance_m": 5e-07,
+        "expected_face_instances": 320,
+        "actual_face_instances": 320,
+        "matched_face_instances": 320,
+        "missing_face_instances": 0,
+        "extra_face_instances": 0,
+        "missing_face_indices_sample": [],
+        "extra_face_indices_sample": [],
+        "maximum_matched_corner_distance_m": 0.0,
+        "winding_ambiguous_matched_faces": 0,
+        "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+      }
+    },
+    "Brace 3-1": {
+      "triangles": 320,
+      "max_triangle_coordinate_error_m": 0.0,
+      "name_parent_provenance_and_fit_hash_preserved": true,
+      "oriented_geometry": {
+        "status": "pass",
+        "method": "one_to_one_oriented_triangle_geometry",
+        "tolerance_m": 5e-07,
+        "expected_face_instances": 320,
+        "actual_face_instances": 320,
+        "matched_face_instances": 320,
+        "missing_face_instances": 0,
+        "extra_face_instances": 0,
+        "missing_face_indices_sample": [],
+        "extra_face_indices_sample": [],
+        "maximum_matched_corner_distance_m": 0.0,
+        "winding_ambiguous_matched_faces": 0,
+        "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+      }
+    },
+    "Leg 1": {
+      "triangles": 320,
+      "max_triangle_coordinate_error_m": 0.0,
+      "name_parent_provenance_and_fit_hash_preserved": true,
+      "oriented_geometry": {
+        "status": "pass",
+        "method": "one_to_one_oriented_triangle_geometry",
+        "tolerance_m": 5e-07,
+        "expected_face_instances": 320,
+        "actual_face_instances": 320,
+        "matched_face_instances": 320,
+        "missing_face_instances": 0,
+        "extra_face_instances": 0,
+        "missing_face_indices_sample": [],
+        "extra_face_indices_sample": [],
+        "maximum_matched_corner_distance_m": 0.0,
+        "winding_ambiguous_matched_faces": 0,
+        "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+      }
+    },
+    "Leg 2": {
+      "triangles": 320,
+      "max_triangle_coordinate_error_m": 0.0,
+      "name_parent_provenance_and_fit_hash_preserved": true,
+      "oriented_geometry": {
+        "status": "pass",
+        "method": "one_to_one_oriented_triangle_geometry",
+        "tolerance_m": 5e-07,
+        "expected_face_instances": 320,
+        "actual_face_instances": 320,
+        "matched_face_instances": 320,
+        "missing_face_instances": 0,
+        "extra_face_instances": 0,
+        "missing_face_indices_sample": [],
+        "extra_face_indices_sample": [],
+        "maximum_matched_corner_distance_m": 0.0,
+        "winding_ambiguous_matched_faces": 0,
+        "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+      }
+    },
+    "Leg 3": {
+      "triangles": 320,
+      "max_triangle_coordinate_error_m": 0.0,
+      "name_parent_provenance_and_fit_hash_preserved": true,
+      "oriented_geometry": {
+        "status": "pass",
+        "method": "one_to_one_oriented_triangle_geometry",
+        "tolerance_m": 5e-07,
+        "expected_face_instances": 320,
+        "actual_face_instances": 320,
+        "matched_face_instances": 320,
+        "missing_face_instances": 0,
+        "extra_face_instances": 0,
+        "missing_face_indices_sample": [],
+        "extra_face_indices_sample": [],
+        "maximum_matched_corner_distance_m": 0.0,
+        "winding_ambiguous_matched_faces": 0,
+        "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+      }
+    },
+    "Seat": {
+      "triangles": 320,
+      "max_triangle_coordinate_error_m": 0.0,
+      "name_parent_provenance_and_fit_hash_preserved": true,
+      "oriented_geometry": {
+        "status": "pass",
+        "method": "one_to_one_oriented_triangle_geometry",
+        "tolerance_m": 5e-07,
+        "expected_face_instances": 320,
+        "actual_face_instances": 320,
+        "matched_face_instances": 320,
+        "missing_face_instances": 0,
+        "extra_face_instances": 0,
+        "missing_face_indices_sample": [],
+        "extra_face_indices_sample": [],
+        "maximum_matched_corner_distance_m": 0.0,
+        "winding_ambiguous_matched_faces": 0,
+        "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+      }
+    }
+  },
+  "glb_header_version": 2,
+  "asset_files_unchanged_by_verification": true
+}

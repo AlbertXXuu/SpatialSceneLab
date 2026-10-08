@@ -1,0 +1,2463 @@
+{
+  "schema": "local-stool-geometry-audit.v1",
+  "self_check": {
+    "status": "pass",
+    "checks": [
+      "analytic unsigned distances",
+      "inclusive distance thresholds",
+      "single-triangle topology",
+      "area sample plane",
+      "empty mesh",
+      "missing mesh",
+      "empty sample denominator",
+      "non-finite input rejected"
+    ]
+  },
+  "script_sha256": "ed1c8f8a53355b63d50b6c9d33288276b105ef3d16c08a6593d9705a70654598",
+  "open3d_version": "0.19.0",
+  "thresholds_m": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "reference": {
+    "reference_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference",
+    "files": [
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\labels.npz",
+        "sha256": "9e9a4e604b301a0de07330dbaee3a1524e22c7f1c9cb375211f6fc7adc362aec"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\physical-scene.json",
+        "sha256": "c20cd3e2813a0284520ce5a34699ec4b67b57086b911e7481145dc6bfaf8c6a7"
+      }
+    ],
+    "frame_files": [
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00000.npz",
+        "sha256": "e86345b3b9f0b297048967e2712c59f8bc8cd66fb242f7eed8b9b0a6b27895d5"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00001.npz",
+        "sha256": "d861c0aa59b3fe6d434cf1d63ea24d68084ed3947fda3de577493ce25656cf40"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00002.npz",
+        "sha256": "dc3b1f6699a8cf34c1125bdcf863bff08f00580eab171874b90432830fe0f407"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00003.npz",
+        "sha256": "4c35772866818e7da44086e9941fd0e74df703abddc736c715381e171ee97ea6"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00004.npz",
+        "sha256": "01c33e6d13130699f5df73e30a0f20f898da32e827ecc588a5d1729a888bc85c"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00005.npz",
+        "sha256": "9757f28d1288b9372863029eb2ddab57fed3ee89cd76045a5e0d3c2ee813f1f1"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00006.npz",
+        "sha256": "5583c7e62fcae57e2cc9a353b55046ed6eed724c9c6ac4fdd5945b38067ef232"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00007.npz",
+        "sha256": "a741eed03d0d67c33707a4fb5b4ff9eaf6dbef93832ed206f403a0c7b4c75ff6"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00008.npz",
+        "sha256": "5b9d652b832ad54eb6ee4715276d491942e05cae816f99cf3a14e2c13b72841d"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00009.npz",
+        "sha256": "e8907084bb8a092c59332f415ae350bfd26ee62bcf873bf7ffea29773546f947"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00010.npz",
+        "sha256": "41ec30b3fec2f90c8abb62a337e3248868fee81443528e66b352a0dcec133238"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00011.npz",
+        "sha256": "d7d350e09a6fa363b1b59abda09aa3b05265766e78078c878f0cfa9c8d52b65e"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00012.npz",
+        "sha256": "b0bf4f979ee4dccafb40009a9be11c1c1f486b263485a61f2b17f8d8ed4fc649"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00013.npz",
+        "sha256": "0f9d94b454810325a127051b2eb38b49cb8c002bf5a234c64956f2097f557619"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00014.npz",
+        "sha256": "15a5270cf40bc1b929cdaf740d17249b8ef48242e58fa71f4c2d8bbb7f168cc9"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00015.npz",
+        "sha256": "1543b2be7e91332224669c899e162b1a713b7c759d1f821c5230c5538fc6a5d5"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00016.npz",
+        "sha256": "d7a4037361a8f8d79ef64812fead07742c09282ae96dc0719daa49fa0cb398d8"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00017.npz",
+        "sha256": "baa9dba56620e6bb7cc8940caa3cb52380303ffabe07a3ff59e41689b2cae00e"
+      }
+    ],
+    "frames": [
+      {
+        "frame_index": 0,
+        "valid_stool_ray_hits": 32
+      },
+      {
+        "frame_index": 1,
+        "valid_stool_ray_hits": 19
+      },
+      {
+        "frame_index": 2,
+        "valid_stool_ray_hits": 351
+      },
+      {
+        "frame_index": 3,
+        "valid_stool_ray_hits": 512
+      },
+      {
+        "frame_index": 4,
+        "valid_stool_ray_hits": 612
+      },
+      {
+        "frame_index": 5,
+        "valid_stool_ray_hits": 820
+      },
+      {
+        "frame_index": 6,
+        "valid_stool_ray_hits": 1044
+      },
+      {
+        "frame_index": 7,
+        "valid_stool_ray_hits": 1277
+      },
+      {
+        "frame_index": 8,
+        "valid_stool_ray_hits": 1411
+      },
+      {
+        "frame_index": 9,
+        "valid_stool_ray_hits": 1550
+      },
+      {
+        "frame_index": 10,
+        "valid_stool_ray_hits": 1617
+      },
+      {
+        "frame_index": 11,
+        "valid_stool_ray_hits": 1592
+      },
+      {
+        "frame_index": 12,
+        "valid_stool_ray_hits": 1468
+      },
+      {
+        "frame_index": 13,
+        "valid_stool_ray_hits": 1095
+      },
+      {
+        "frame_index": 14,
+        "valid_stool_ray_hits": 795
+      },
+      {
+        "frame_index": 15,
+        "valid_stool_ray_hits": 712
+      },
+      {
+        "frame_index": 16,
+        "valid_stool_ray_hits": 435
+      },
+      {
+        "frame_index": 17,
+        "valid_stool_ray_hits": 12
+      }
+    ],
+    "valid_stool_ray_hits": 15354,
+    "reference_ray_consistency_tolerance_m": 0.0001,
+    "reference_rays_to_physical_mesh": {
+      "sample_count": 15354,
+      "finite_distance_count": 15354,
+      "mean_distance_m": 5.801459485888775e-07,
+      "median_distance_m": 5.960464477539063e-08,
+      "p95_distance_m": 2.998243587626346e-06,
+      "max_distance_m": 6.306549767032266e-05,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 15354,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 15354,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 15354,
+          "fraction": 1.0
+        }
+      ]
+    },
+    "stool_primitives": [
+      {
+        "id": "seat",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 2920,
+        "global_triangle_index_last": 2983,
+        "world_bounds_m": [
+          [
+            0.06318540126085281,
+            0.4650000035762787,
+            -1.4068145751953125
+          ],
+          [
+            0.6368145942687988,
+            0.5149999856948853,
+            -0.8331853747367859
+          ]
+        ]
+      },
+      {
+        "id": "leg_local_angle_0",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 2984,
+        "global_triangle_index_last": 3047,
+        "world_bounds_m": [
+          [
+            0.4807099997997284,
+            -0.0030713120941072702,
+            -1.2673065662384033
+          ],
+          [
+            0.5793002843856812,
+            0.468071311712265,
+            -1.1890093088150024
+          ]
+        ]
+      },
+      {
+        "id": "leg_local_angle_120",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3048,
+        "global_triangle_index_last": 3111,
+        "world_bounds_m": [
+          [
+            0.32939210534095764,
+            -0.0030464474111795425,
+            -0.9635806083679199
+          ],
+          [
+            0.377937912940979,
+            0.4680464565753937,
+            -0.8564833998680115
+          ]
+        ]
+      },
+      {
+        "id": "leg_local_angle_240",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3112,
+        "global_triangle_index_last": 3175,
+        "world_bounds_m": [
+          [
+            0.1165042445063591,
+            -0.0030464474111795425,
+            -1.2600194215774536
+          ],
+          [
+            0.21615548431873322,
+            0.4680464565753937,
+            -1.183600664138794
+          ]
+        ]
+      },
+      {
+        "id": "brace_local_angles_0_120",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3176,
+        "global_triangle_index_last": 3239,
+        "world_bounds_m": [
+          [
+            0.34323936700820923,
+            0.17800000309944153,
+            -1.2360358238220215
+          ],
+          [
+            0.5439292192459106,
+            0.20200000703334808,
+            -0.9002148509025574
+          ]
+        ]
+      },
+      {
+        "id": "brace_local_angles_120_240",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3240,
+        "global_triangle_index_last": 3303,
+        "world_bounds_m": [
+          [
+            0.15254537761211395,
+            0.17800000309944153,
+            -1.2299296855926514
+          ],
+          [
+            0.36402082443237305,
+            0.20200000703334808,
+            -0.8998521566390991
+          ]
+        ]
+      },
+      {
+        "id": "brace_local_angles_240_360",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3304,
+        "global_triangle_index_last": 3367,
+        "world_bounds_m": [
+          [
+            0.16262196004390717,
+            0.17800000309944153,
+            -1.2422163486480713
+          ],
+          [
+            0.5336432456970215,
+            0.20200000703334808,
+            -1.211751103401184
+          ]
+        ]
+      }
+    ]
+  },
+  "reference_stool_topology": {
+    "vertices": 1790,
+    "triangles": 448,
+    "connected_triangle_components": 7,
+    "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+    "boundary_edges": 0,
+    "boundary_edge_length_m": 0.0,
+    "nonmanifold_edges": 0,
+    "mesh_triangle_area_m2": 0.91273436440485,
+    "largest_component_area_fraction": 0.6633482178285697,
+    "largest_components": [
+      {
+        "triangles": 64,
+        "area_m2": 0.6054607139788495
+      },
+      {
+        "triangles": 64,
+        "area_m2": 0.07377507411393512
+      },
+      {
+        "triangles": 64,
+        "area_m2": 0.07377505599394313
+      },
+      {
+        "triangles": 64,
+        "area_m2": 0.07377505163256216
+      },
+      {
+        "triangles": 64,
+        "area_m2": 0.0286494956562955
+      },
+      {
+        "triangles": 64,
+        "area_m2": 0.02864948784904448
+      },
+      {
+        "triangles": 64,
+        "area_m2": 0.028649485180219997
+      }
+    ]
+  },
+  "definitions": {
+    "ray_hit_denominator": "Every reference frame pixel with measurement_valid=true and instance_owner=same-stool, unweighted; repeated views/rays are retained. Coordinates use exact_depth_m, depth intrinsics and true camera poses.",
+    "recall": "Fraction of these exact physical hit points whose unsigned nearest triangle distance is <= threshold. Full TSDF surface ignores ownership; assigned stool tests the delivered object region.",
+    "accuracy": "100000 pseudorandom uniform-area source stool mesh samples, seed 20261009, distance to any physical stool triangle; sample fraction, not an exact surface-area integral.",
+    "primitive_names": "Generator make_complex_fixture.py _furniture stool order: seat, legs at local 0/120/240 degrees, then braces between those angles. Seven disconnected reference primitives each have 64 triangles. Connectivity does not describe physical assembly integrity."
+  },
+  "limitations": [
+    "Ray-hit recall is observation-weighted coverage of captured valid rays, not visible-area coverage, full-surface completeness, or unseen-surface accuracy.",
+    "Full TSDF nearest-surface matches can include nearby non-stool geometry, especially near the floor; assigned-stool metrics are reported alongside.",
+    "Physical reference contains overlapping closed primitives and hidden internal triangles. Reverse accuracy can match those faces, so it is proximity to authored primitive geometry, not a physical outer-shell metric.",
+    "Boundary edges and connected components use raw mesh topology; open observed surfaces can be legitimate. Counts are not a standalone quality score and depend on tessellation.",
+    "The fixture has synthetic diffuse materials, 2 mm Gaussian depth noise, 1.5 percent pixel dropout, and no pose perturbation. This is a single local development diagnostic, not a real-room or held-out claim."
+  ],
+  "sensor_parameters": {
+    "depth_noise_sigma_m": 0.002,
+    "dropout_probability": 0.015,
+    "pose_translation_sigma_m": 0.0,
+    "pose_yaw_sigma_degrees": 0.0,
+    "stripe_dropout_period_px": 0
+  },
+  "source_area_sampling": {
+    "method": "triangle selected proportional to area, uniform barycentric point",
+    "sample_count_per_nonempty_stool_mesh": 100000,
+    "seed": 20261009
+  },
+  "variants": [
+    {
+      "name": "baseline35mm",
+      "surface_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\results-final\\dev-same-color-dining\\surface",
+      "reconstruction_parameters": {
+        "voxel_size_m": 0.035,
+        "sdf_truncation_m": 0.105,
+        "depth_scale": 1000,
+        "max_depth_m": 6,
+        "min_confidence": 1
+      },
+      "input_scene_sha256": "2014c2121b9042e6d4f324e619eedaff91a57f2ee1891ab35a407177468d07c5",
+      "full_tsdf_surface": {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\results-final\\dev-same-color-dining\\surface\\surface.ply",
+        "status": "ok",
+        "sha256": "e4d0a901df78b7dd0bb3bf82ff5de56ea51df3528f5f694dc7c3006cd8a824cc",
+        "valid_reference_ray_hit_recall": {
+          "sample_count": 15354,
+          "finite_distance_count": 15354,
+          "mean_distance_m": 0.0043922180580719915,
+          "median_distance_m": 0.001159332343377173,
+          "p95_distance_m": 0.016372807323932644,
+          "max_distance_m": 0.12037064880132675,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 11142,
+              "fraction": 0.7256740914419695
+            },
+            {
+              "distance_m": 0.01,
+              "count": 13479,
+              "fraction": 0.8778819851504494
+            },
+            {
+              "distance_m": 0.02,
+              "count": 14862,
+              "fraction": 0.9679562329034779
+            }
+          ]
+        },
+        "per_primitive_ray_hit_recall": [
+          {
+            "id": "seat",
+            "sample_count": 12382,
+            "finite_distance_count": 12382,
+            "mean_distance_m": 0.00222684926442121,
+            "median_distance_m": 0.0008489240717608482,
+            "p95_distance_m": 0.009078705497086045,
+            "max_distance_m": 0.017957108095288277,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 10351,
+                "fraction": 0.8359715716362461
+              },
+              {
+                "distance_m": 0.01,
+                "count": 11948,
+                "fraction": 0.9649491196898724
+              },
+              {
+                "distance_m": 0.02,
+                "count": 12382,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_0",
+            "sample_count": 727,
+            "finite_distance_count": 727,
+            "mean_distance_m": 0.012176317349424556,
+            "median_distance_m": 0.011807641945779324,
+            "p95_distance_m": 0.0238920034840703,
+            "max_distance_m": 0.028383376076817513,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 139,
+                "fraction": 0.19119669876203577
+              },
+              {
+                "distance_m": 0.01,
+                "count": 308,
+                "fraction": 0.4236588720770289
+              },
+              {
+                "distance_m": 0.02,
+                "count": 592,
+                "fraction": 0.8143053645116919
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_120",
+            "sample_count": 693,
+            "finite_distance_count": 693,
+            "mean_distance_m": 0.009303169888880802,
+            "median_distance_m": 0.00746852857992053,
+            "p95_distance_m": 0.022869760170578953,
+            "max_distance_m": 0.031050169840455055,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 237,
+                "fraction": 0.341991341991342
+              },
+              {
+                "distance_m": 0.01,
+                "count": 424,
+                "fraction": 0.6118326118326118
+              },
+              {
+                "distance_m": 0.02,
+                "count": 625,
+                "fraction": 0.9018759018759018
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_240",
+            "sample_count": 674,
+            "finite_distance_count": 674,
+            "mean_distance_m": 0.007200331529365103,
+            "median_distance_m": 0.005898867268115282,
+            "p95_distance_m": 0.018595934193581347,
+            "max_distance_m": 0.024555904790759087,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 295,
+                "fraction": 0.43768545994065283
+              },
+              {
+                "distance_m": 0.01,
+                "count": 485,
+                "fraction": 0.7195845697329377
+              },
+              {
+                "distance_m": 0.02,
+                "count": 651,
+                "fraction": 0.9658753709198813
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_0_120",
+            "sample_count": 274,
+            "finite_distance_count": 274,
+            "mean_distance_m": 0.013460420497854998,
+            "median_distance_m": 0.011940928176045418,
+            "p95_distance_m": 0.02563099972903728,
+            "max_distance_m": 0.031415291130542755,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 27,
+                "fraction": 0.09854014598540146
+              },
+              {
+                "distance_m": 0.01,
+                "count": 95,
+                "fraction": 0.3467153284671533
+              },
+              {
+                "distance_m": 0.02,
+                "count": 217,
+                "fraction": 0.791970802919708
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_120_240",
+            "sample_count": 381,
+            "finite_distance_count": 381,
+            "mean_distance_m": 0.011788825812325458,
+            "median_distance_m": 0.010562191717326641,
+            "p95_distance_m": 0.027481231838464737,
+            "max_distance_m": 0.03335720673203468,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 72,
+                "fraction": 0.1889763779527559
+              },
+              {
+                "distance_m": 0.01,
+                "count": 179,
+                "fraction": 0.46981627296587924
+              },
+              {
+                "distance_m": 0.02,
+                "count": 331,
+                "fraction": 0.868766404199475
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_240_360",
+            "sample_count": 223,
+            "finite_distance_count": 223,
+            "mean_distance_m": 0.05171868934460776,
+            "median_distance_m": 0.048632580786943436,
+            "p95_distance_m": 0.11244620457291603,
+            "max_distance_m": 0.12037064880132675,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 21,
+                "fraction": 0.09417040358744394
+              },
+              {
+                "distance_m": 0.01,
+                "count": 40,
+                "fraction": 0.17937219730941703
+              },
+              {
+                "distance_m": 0.02,
+                "count": 64,
+                "fraction": 0.28699551569506726
+              }
+            ]
+          }
+        ]
+      },
+      "assigned_stool_mesh": {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\results-final\\dev-same-color-dining\\surface\\same-stool.ply",
+        "status": "ok",
+        "sha256": "d3fa2cc3571ff8df55e3a509e196f7834f7818d952c500046ee46ebebf340f2c",
+        "valid_reference_ray_hit_recall": {
+          "sample_count": 15354,
+          "finite_distance_count": 15354,
+          "mean_distance_m": 0.004638918227647219,
+          "median_distance_m": 0.001162853790447116,
+          "p95_distance_m": 0.01792011121287934,
+          "max_distance_m": 0.12037064880132675,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 11066,
+              "fraction": 0.7207242412400677
+            },
+            {
+              "distance_m": 0.01,
+              "count": 13359,
+              "fraction": 0.8700664322000782
+            },
+            {
+              "distance_m": 0.02,
+              "count": 14736,
+              "fraction": 0.9597499023055881
+            }
+          ]
+        },
+        "per_primitive_ray_hit_recall": [
+          {
+            "id": "seat",
+            "sample_count": 12382,
+            "finite_distance_count": 12382,
+            "mean_distance_m": 0.00222684926442121,
+            "median_distance_m": 0.0008489240717608482,
+            "p95_distance_m": 0.009078705497086045,
+            "max_distance_m": 0.017957108095288277,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 10351,
+                "fraction": 0.8359715716362461
+              },
+              {
+                "distance_m": 0.01,
+                "count": 11948,
+                "fraction": 0.9649491196898724
+              },
+              {
+                "distance_m": 0.02,
+                "count": 12382,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_0",
+            "sample_count": 727,
+            "finite_distance_count": 727,
+            "mean_distance_m": 0.014060432502992376,
+            "median_distance_m": 0.013195817358791828,
+            "p95_distance_m": 0.027660047635436055,
+            "max_distance_m": 0.052421197295188904,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 110,
+                "fraction": 0.15130674002751032
+              },
+              {
+                "distance_m": 0.01,
+                "count": 266,
+                "fraction": 0.3658872077028886
+              },
+              {
+                "distance_m": 0.02,
+                "count": 549,
+                "fraction": 0.7551581843191196
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_120",
+            "sample_count": 693,
+            "finite_distance_count": 693,
+            "mean_distance_m": 0.010572792108349889,
+            "median_distance_m": 0.008159861899912357,
+            "p95_distance_m": 0.0267516627907753,
+            "max_distance_m": 0.050449952483177185,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 219,
+                "fraction": 0.31601731601731603
+              },
+              {
+                "distance_m": 0.01,
+                "count": 391,
+                "fraction": 0.5642135642135642
+              },
+              {
+                "distance_m": 0.02,
+                "count": 596,
+                "fraction": 0.86002886002886
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_240",
+            "sample_count": 674,
+            "finite_distance_count": 674,
+            "mean_distance_m": 0.009482578545570105,
+            "median_distance_m": 0.006713917478919029,
+            "p95_distance_m": 0.029055345710367005,
+            "max_distance_m": 0.0543910376727581,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 266,
+                "fraction": 0.39465875370919884
+              },
+              {
+                "distance_m": 0.01,
+                "count": 440,
+                "fraction": 0.6528189910979229
+              },
+              {
+                "distance_m": 0.02,
+                "count": 597,
+                "fraction": 0.8857566765578635
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_0_120",
+            "sample_count": 274,
+            "finite_distance_count": 274,
+            "mean_distance_m": 0.013460420497854998,
+            "median_distance_m": 0.011940928176045418,
+            "p95_distance_m": 0.02563099972903728,
+            "max_distance_m": 0.031415291130542755,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 27,
+                "fraction": 0.09854014598540146
+              },
+              {
+                "distance_m": 0.01,
+                "count": 95,
+                "fraction": 0.3467153284671533
+              },
+              {
+                "distance_m": 0.02,
+                "count": 217,
+                "fraction": 0.791970802919708
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_120_240",
+            "sample_count": 381,
+            "finite_distance_count": 381,
+            "mean_distance_m": 0.011788825812325458,
+            "median_distance_m": 0.010562191717326641,
+            "p95_distance_m": 0.027481231838464737,
+            "max_distance_m": 0.03335720673203468,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 72,
+                "fraction": 0.1889763779527559
+              },
+              {
+                "distance_m": 0.01,
+                "count": 179,
+                "fraction": 0.46981627296587924
+              },
+              {
+                "distance_m": 0.02,
+                "count": 331,
+                "fraction": 0.868766404199475
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_240_360",
+            "sample_count": 223,
+            "finite_distance_count": 223,
+            "mean_distance_m": 0.05171868934460776,
+            "median_distance_m": 0.048632580786943436,
+            "p95_distance_m": 0.11244620457291603,
+            "max_distance_m": 0.12037064880132675,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 21,
+                "fraction": 0.09417040358744394
+              },
+              {
+                "distance_m": 0.01,
+                "count": 40,
+                "fraction": 0.17937219730941703
+              },
+              {
+                "distance_m": 0.02,
+                "count": 64,
+                "fraction": 0.28699551569506726
+              }
+            ]
+          }
+        ],
+        "assignment": "B0 original reconstruction split: three vertices share the same nonnegative hard-prior owner; not B1",
+        "topology": {
+          "vertices": 849,
+          "triangles": 1545,
+          "connected_triangle_components": 14,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 115,
+          "boundary_edge_length_m": 3.266351102244188,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.6524211086924665,
+          "largest_component_area_fraction": 0.7085347967330059,
+          "largest_components": [
+            {
+              "triangles": 968,
+              "area_m2": 0.4622630576317391
+            },
+            {
+              "triangles": 169,
+              "area_m2": 0.06131970393722709
+            },
+            {
+              "triangles": 165,
+              "area_m2": 0.05964733101630631
+            },
+            {
+              "triangles": 146,
+              "area_m2": 0.059384535107463915
+            },
+            {
+              "triangles": 16,
+              "area_m2": 0.005184771475602606
+            },
+            {
+              "triangles": 8,
+              "area_m2": 0.0015077363629262606
+            },
+            {
+              "triangles": 16,
+              "area_m2": 0.0009105155245975818
+            },
+            {
+              "triangles": 16,
+              "area_m2": 0.0005742287746418455
+            },
+            {
+              "triangles": 8,
+              "area_m2": 0.0005195748815748466
+            },
+            {
+              "triangles": 1,
+              "area_m2": 0.0003665029607057802
+            }
+          ]
+        },
+        "source_mesh_area_samples_to_physical_stool": {
+          "sample_count": 100000,
+          "finite_distance_count": 100000,
+          "mean_distance_m": 0.007740260231291156,
+          "median_distance_m": 0.003586652921512723,
+          "p95_distance_m": 0.030803131498396384,
+          "max_distance_m": 0.06805786490440369,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 56151,
+              "fraction": 0.56151
+            },
+            {
+              "distance_m": 0.01,
+              "count": 73407,
+              "fraction": 0.73407
+            },
+            {
+              "distance_m": 0.02,
+              "count": 88067,
+              "fraction": 0.88067
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "10mm-fixed",
+      "surface_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-quality-20261009\\recon-10mm-fixed",
+      "reconstruction_parameters": {
+        "voxel_size_m": 0.01,
+        "sdf_truncation_m": 0.105,
+        "depth_scale": 1000,
+        "max_depth_m": 6,
+        "min_confidence": 1
+      },
+      "input_scene_sha256": "2014c2121b9042e6d4f324e619eedaff91a57f2ee1891ab35a407177468d07c5",
+      "full_tsdf_surface": {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-quality-20261009\\recon-10mm-fixed\\surface.ply",
+        "status": "ok",
+        "sha256": "82746cadb2f0dd583b539b67c3b02726e80e5ee542d5ef5609c282046f4b5df9",
+        "valid_reference_ray_hit_recall": {
+          "sample_count": 15354,
+          "finite_distance_count": 15354,
+          "mean_distance_m": 0.0023343749084284242,
+          "median_distance_m": 0.0010191001929342747,
+          "p95_distance_m": 0.008888976275920855,
+          "max_distance_m": 0.025182632729411125,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 13033,
+              "fraction": 0.8488341800182363
+            },
+            {
+              "distance_m": 0.01,
+              "count": 14763,
+              "fraction": 0.9615084017194216
+            },
+            {
+              "distance_m": 0.02,
+              "count": 15343,
+              "fraction": 0.9992835743128826
+            }
+          ]
+        },
+        "per_primitive_ray_hit_recall": [
+          {
+            "id": "seat",
+            "sample_count": 12382,
+            "finite_distance_count": 12382,
+            "mean_distance_m": 0.0018035679880500195,
+            "median_distance_m": 0.0008382920932490379,
+            "p95_distance_m": 0.0076778963208198455,
+            "max_distance_m": 0.01828436367213726,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 11109,
+                "fraction": 0.8971894685834275
+              },
+              {
+                "distance_m": 0.01,
+                "count": 12025,
+                "fraction": 0.9711678242610241
+              },
+              {
+                "distance_m": 0.02,
+                "count": 12382,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_0",
+            "sample_count": 727,
+            "finite_distance_count": 727,
+            "mean_distance_m": 0.0036663780847372863,
+            "median_distance_m": 0.0030841403640806675,
+            "p95_distance_m": 0.00960460361093282,
+            "max_distance_m": 0.021978111937642097,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 561,
+                "fraction": 0.7716643741403026
+              },
+              {
+                "distance_m": 0.01,
+                "count": 693,
+                "fraction": 0.953232462173315
+              },
+              {
+                "distance_m": 0.02,
+                "count": 725,
+                "fraction": 0.9972489683631361
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_120",
+            "sample_count": 693,
+            "finite_distance_count": 693,
+            "mean_distance_m": 0.005485981854213779,
+            "median_distance_m": 0.004221104085445404,
+            "p95_distance_m": 0.014072993397712707,
+            "max_distance_m": 0.025182632729411125,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 398,
+                "fraction": 0.5743145743145743
+              },
+              {
+                "distance_m": 0.01,
+                "count": 585,
+                "fraction": 0.8441558441558441
+              },
+              {
+                "distance_m": 0.02,
+                "count": 687,
+                "fraction": 0.9913419913419913
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_240",
+            "sample_count": 674,
+            "finite_distance_count": 674,
+            "mean_distance_m": 0.004301554172827407,
+            "median_distance_m": 0.003207852249033749,
+            "p95_distance_m": 0.011435923632234335,
+            "max_distance_m": 0.02111460268497467,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 465,
+                "fraction": 0.6899109792284867
+              },
+              {
+                "distance_m": 0.01,
+                "count": 621,
+                "fraction": 0.9213649851632048
+              },
+              {
+                "distance_m": 0.02,
+                "count": 672,
+                "fraction": 0.9970326409495549
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_0_120",
+            "sample_count": 274,
+            "finite_distance_count": 274,
+            "mean_distance_m": 0.004817659269430314,
+            "median_distance_m": 0.004948000656440854,
+            "p95_distance_m": 0.008729939395561812,
+            "max_distance_m": 0.015013232827186584,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 139,
+                "fraction": 0.5072992700729927
+              },
+              {
+                "distance_m": 0.01,
+                "count": 271,
+                "fraction": 0.9890510948905109
+              },
+              {
+                "distance_m": 0.02,
+                "count": 274,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_120_240",
+            "sample_count": 381,
+            "finite_distance_count": 381,
+            "mean_distance_m": 0.004622956757832305,
+            "median_distance_m": 0.004506398923695087,
+            "p95_distance_m": 0.01034450065344572,
+            "max_distance_m": 0.015378347598016262,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 228,
+                "fraction": 0.5984251968503937
+              },
+              {
+                "distance_m": 0.01,
+                "count": 357,
+                "fraction": 0.937007874015748
+              },
+              {
+                "distance_m": 0.02,
+                "count": 381,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_240_360",
+            "sample_count": 223,
+            "finite_distance_count": 223,
+            "mean_distance_m": 0.004763849983662965,
+            "median_distance_m": 0.004280980676412582,
+            "p95_distance_m": 0.010032074153423307,
+            "max_distance_m": 0.021785356104373932,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 133,
+                "fraction": 0.5964125560538116
+              },
+              {
+                "distance_m": 0.01,
+                "count": 211,
+                "fraction": 0.9461883408071748
+              },
+              {
+                "distance_m": 0.02,
+                "count": 222,
+                "fraction": 0.9955156950672646
+              }
+            ]
+          }
+        ]
+      },
+      "assigned_stool_mesh": {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-quality-20261009\\recon-10mm-fixed\\same-stool.ply",
+        "status": "ok",
+        "sha256": "067f67fcaab5b9ef6b9961b9e9cfaaecee1a7331a5fa8c9b51fb6475f7dc064a",
+        "valid_reference_ray_hit_recall": {
+          "sample_count": 15354,
+          "finite_distance_count": 15354,
+          "mean_distance_m": 0.0024133914479073752,
+          "median_distance_m": 0.001021081698127091,
+          "p95_distance_m": 0.009222667012363666,
+          "max_distance_m": 0.04109805449843407,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 12993,
+              "fraction": 0.8462289957014458
+            },
+            {
+              "distance_m": 0.01,
+              "count": 14709,
+              "fraction": 0.9579914028917546
+            },
+            {
+              "distance_m": 0.02,
+              "count": 15300,
+              "fraction": 0.9964830011723329
+            }
+          ]
+        },
+        "per_primitive_ray_hit_recall": [
+          {
+            "id": "seat",
+            "sample_count": 12382,
+            "finite_distance_count": 12382,
+            "mean_distance_m": 0.0018035679880500195,
+            "median_distance_m": 0.0008382920932490379,
+            "p95_distance_m": 0.0076778963208198455,
+            "max_distance_m": 0.01828436367213726,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 11109,
+                "fraction": 0.8971894685834275
+              },
+              {
+                "distance_m": 0.01,
+                "count": 12025,
+                "fraction": 0.9711678242610241
+              },
+              {
+                "distance_m": 0.02,
+                "count": 12382,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_0",
+            "sample_count": 727,
+            "finite_distance_count": 727,
+            "mean_distance_m": 0.004173378849490562,
+            "median_distance_m": 0.0031748416367918253,
+            "p95_distance_m": 0.011527448520064348,
+            "max_distance_m": 0.03171283006668091,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 547,
+                "fraction": 0.7524071526822559
+              },
+              {
+                "distance_m": 0.01,
+                "count": 675,
+                "fraction": 0.9284731774415406
+              },
+              {
+                "distance_m": 0.02,
+                "count": 711,
+                "fraction": 0.9779917469050894
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_120",
+            "sample_count": 693,
+            "finite_distance_count": 693,
+            "mean_distance_m": 0.005993126752039802,
+            "median_distance_m": 0.004369603004306555,
+            "p95_distance_m": 0.01585922800004481,
+            "max_distance_m": 0.04109805449843407,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 389,
+                "fraction": 0.5613275613275613
+              },
+              {
+                "distance_m": 0.01,
+                "count": 569,
+                "fraction": 0.8210678210678211
+              },
+              {
+                "distance_m": 0.02,
+                "count": 675,
+                "fraction": 0.974025974025974
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_240",
+            "sample_count": 674,
+            "finite_distance_count": 674,
+            "mean_distance_m": 0.005033273723258784,
+            "median_distance_m": 0.003368401317857206,
+            "p95_distance_m": 0.015100173605605963,
+            "max_distance_m": 0.03617027774453163,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 448,
+                "fraction": 0.6646884272997032
+              },
+              {
+                "distance_m": 0.01,
+                "count": 601,
+                "fraction": 0.8916913946587537
+              },
+              {
+                "distance_m": 0.02,
+                "count": 655,
+                "fraction": 0.9718100890207715
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_0_120",
+            "sample_count": 274,
+            "finite_distance_count": 274,
+            "mean_distance_m": 0.004817659269430314,
+            "median_distance_m": 0.004948000656440854,
+            "p95_distance_m": 0.008729939395561812,
+            "max_distance_m": 0.015013232827186584,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 139,
+                "fraction": 0.5072992700729927
+              },
+              {
+                "distance_m": 0.01,
+                "count": 271,
+                "fraction": 0.9890510948905109
+              },
+              {
+                "distance_m": 0.02,
+                "count": 274,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_120_240",
+            "sample_count": 381,
+            "finite_distance_count": 381,
+            "mean_distance_m": 0.004622956757832305,
+            "median_distance_m": 0.004506398923695087,
+            "p95_distance_m": 0.01034450065344572,
+            "max_distance_m": 0.015378347598016262,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 228,
+                "fraction": 0.5984251968503937
+              },
+              {
+                "distance_m": 0.01,
+                "count": 357,
+                "fraction": 0.937007874015748
+              },
+              {
+                "distance_m": 0.02,
+                "count": 381,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_240_360",
+            "sample_count": 223,
+            "finite_distance_count": 223,
+            "mean_distance_m": 0.004763849983662965,
+            "median_distance_m": 0.004280980676412582,
+            "p95_distance_m": 0.010032074153423307,
+            "max_distance_m": 0.021785356104373932,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 133,
+                "fraction": 0.5964125560538116
+              },
+              {
+                "distance_m": 0.01,
+                "count": 211,
+                "fraction": 0.9461883408071748
+              },
+              {
+                "distance_m": 0.02,
+                "count": 222,
+                "fraction": 0.9955156950672646
+              }
+            ]
+          }
+        ],
+        "assignment": "B0 original reconstruction split: three vertices share the same nonnegative hard-prior owner; not B1",
+        "topology": {
+          "vertices": 14377,
+          "triangles": 28169,
+          "connected_triangle_components": 37,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 513,
+          "boundary_edge_length_m": 4.421341427334442,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.8973583387034333,
+          "largest_component_area_fraction": 0.9931136142002425,
+          "largest_components": [
+            {
+              "triangles": 27730,
+              "area_m2": 0.891178782982492
+            },
+            {
+              "triangles": 56,
+              "area_m2": 0.001638834935683638
+            },
+            {
+              "triangles": 60,
+              "area_m2": 0.0012246885342454968
+            },
+            {
+              "triangles": 32,
+              "area_m2": 0.0006597248185571282
+            },
+            {
+              "triangles": 36,
+              "area_m2": 0.0006530624234765825
+            },
+            {
+              "triangles": 24,
+              "area_m2": 0.0003721347554208765
+            },
+            {
+              "triangles": 24,
+              "area_m2": 0.0002787740254900024
+            },
+            {
+              "triangles": 3,
+              "area_m2": 0.00016714298653694795
+            },
+            {
+              "triangles": 2,
+              "area_m2": 0.00012535798587638475
+            },
+            {
+              "triangles": 8,
+              "area_m2": 0.0001217406745396751
+            }
+          ]
+        },
+        "source_mesh_area_samples_to_physical_stool": {
+          "sample_count": 100000,
+          "finite_distance_count": 100000,
+          "mean_distance_m": 0.010802020150663552,
+          "median_distance_m": 0.004394815070554614,
+          "p95_distance_m": 0.04001820031553501,
+          "max_distance_m": 0.08679879456758499,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 52610,
+              "fraction": 0.5261
+            },
+            {
+              "distance_m": 0.01,
+              "count": 65138,
+              "fraction": 0.65138
+            },
+            {
+              "distance_m": 0.02,
+              "count": 79244,
+              "fraction": 0.79244
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "10mm-local",
+      "surface_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-quality-20261009\\recon-10mm-local",
+      "reconstruction_parameters": {
+        "voxel_size_m": 0.01,
+        "sdf_truncation_m": 0.03,
+        "depth_scale": 1000,
+        "max_depth_m": 6,
+        "min_confidence": 1
+      },
+      "input_scene_sha256": "2014c2121b9042e6d4f324e619eedaff91a57f2ee1891ab35a407177468d07c5",
+      "full_tsdf_surface": {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-quality-20261009\\recon-10mm-local\\surface.ply",
+        "status": "ok",
+        "sha256": "880b33bf4408552d1ee915472c11e82535572308999b3f6f08850ebbb424d30d",
+        "valid_reference_ray_hit_recall": {
+          "sample_count": 15354,
+          "finite_distance_count": 15354,
+          "mean_distance_m": 0.001290485462486274,
+          "median_distance_m": 0.00098622206132859,
+          "p95_distance_m": 0.00376484794542193,
+          "max_distance_m": 0.020923014730215073,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 15083,
+              "fraction": 0.9823498762537449
+            },
+            {
+              "distance_m": 0.01,
+              "count": 15348,
+              "fraction": 0.9996092223524814
+            },
+            {
+              "distance_m": 0.02,
+              "count": 15353,
+              "fraction": 0.9999348703920803
+            }
+          ]
+        },
+        "per_primitive_ray_hit_recall": [
+          {
+            "id": "seat",
+            "sample_count": 12382,
+            "finite_distance_count": 12382,
+            "mean_distance_m": 0.0011322449101782695,
+            "median_distance_m": 0.0008950493356678635,
+            "p95_distance_m": 0.0031429543276317363,
+            "max_distance_m": 0.009603694081306458,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 12209,
+                "fraction": 0.9860281053141657
+              },
+              {
+                "distance_m": 0.01,
+                "count": 12382,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 12382,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_0",
+            "sample_count": 727,
+            "finite_distance_count": 727,
+            "mean_distance_m": 0.0018039488215493543,
+            "median_distance_m": 0.0015787199372425675,
+            "p95_distance_m": 0.0040871565230190705,
+            "max_distance_m": 0.006224476732313633,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 718,
+                "fraction": 0.9876203576341128
+              },
+              {
+                "distance_m": 0.01,
+                "count": 727,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 727,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_120",
+            "sample_count": 693,
+            "finite_distance_count": 693,
+            "mean_distance_m": 0.0014763449138585042,
+            "median_distance_m": 0.0012758919037878513,
+            "p95_distance_m": 0.0036283901892602438,
+            "max_distance_m": 0.007033925037831068,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 682,
+                "fraction": 0.9841269841269841
+              },
+              {
+                "distance_m": 0.01,
+                "count": 693,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 693,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_240",
+            "sample_count": 674,
+            "finite_distance_count": 674,
+            "mean_distance_m": 0.0018335015818667984,
+            "median_distance_m": 0.0014438267098739743,
+            "p95_distance_m": 0.004337924066931011,
+            "max_distance_m": 0.020923014730215073,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 653,
+                "fraction": 0.9688427299703264
+              },
+              {
+                "distance_m": 0.01,
+                "count": 668,
+                "fraction": 0.9910979228486647
+              },
+              {
+                "distance_m": 0.02,
+                "count": 673,
+                "fraction": 0.9985163204747775
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_0_120",
+            "sample_count": 274,
+            "finite_distance_count": 274,
+            "mean_distance_m": 0.0026928857937989457,
+            "median_distance_m": 0.002777869231067598,
+            "p95_distance_m": 0.005018809461034834,
+            "max_distance_m": 0.00811583548784256,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 259,
+                "fraction": 0.9452554744525548
+              },
+              {
+                "distance_m": 0.01,
+                "count": 274,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 274,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_120_240",
+            "sample_count": 381,
+            "finite_distance_count": 381,
+            "mean_distance_m": 0.0024148974597571976,
+            "median_distance_m": 0.002342103747650981,
+            "p95_distance_m": 0.00506127392873168,
+            "max_distance_m": 0.008860982023179531,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 359,
+                "fraction": 0.9422572178477691
+              },
+              {
+                "distance_m": 0.01,
+                "count": 381,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 381,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_240_360",
+            "sample_count": 223,
+            "finite_distance_count": 223,
+            "mean_distance_m": 0.0025397882904482864,
+            "median_distance_m": 0.0021789895836263895,
+            "p95_distance_m": 0.0054513334762304995,
+            "max_distance_m": 0.007643444929271936,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 203,
+                "fraction": 0.9103139013452914
+              },
+              {
+                "distance_m": 0.01,
+                "count": 223,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 223,
+                "fraction": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "assigned_stool_mesh": {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-quality-20261009\\recon-10mm-local\\same-stool.ply",
+        "status": "ok",
+        "sha256": "a0bb5015d3895b822ec5bb01f07a6c1c455d38a3935b7b69177d62efce8c1af8",
+        "valid_reference_ray_hit_recall": {
+          "sample_count": 15354,
+          "finite_distance_count": 15354,
+          "mean_distance_m": 0.0014133415226109814,
+          "median_distance_m": 0.000991013483144343,
+          "p95_distance_m": 0.00392710359301418,
+          "max_distance_m": 0.03409561142325401,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 14979,
+              "fraction": 0.9755763970300899
+            },
+            {
+              "distance_m": 0.01,
+              "count": 15256,
+              "fraction": 0.9936172984238635
+            },
+            {
+              "distance_m": 0.02,
+              "count": 15302,
+              "fraction": 0.9966132603881724
+            }
+          ]
+        },
+        "per_primitive_ray_hit_recall": [
+          {
+            "id": "seat",
+            "sample_count": 12382,
+            "finite_distance_count": 12382,
+            "mean_distance_m": 0.0011322449101782695,
+            "median_distance_m": 0.0008950493356678635,
+            "p95_distance_m": 0.0031429543276317363,
+            "max_distance_m": 0.009603694081306458,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 12209,
+                "fraction": 0.9860281053141657
+              },
+              {
+                "distance_m": 0.01,
+                "count": 12382,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 12382,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_0",
+            "sample_count": 727,
+            "finite_distance_count": 727,
+            "mean_distance_m": 0.0026577262840766437,
+            "median_distance_m": 0.0016911792336031795,
+            "p95_distance_m": 0.006078205257654175,
+            "max_distance_m": 0.03295454755425453,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 681,
+                "fraction": 0.936726272352132
+              },
+              {
+                "distance_m": 0.01,
+                "count": 695,
+                "fraction": 0.9559834938101788
+              },
+              {
+                "distance_m": 0.02,
+                "count": 711,
+                "fraction": 0.9779917469050894
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_120",
+            "sample_count": 693,
+            "finite_distance_count": 693,
+            "mean_distance_m": 0.0022293707540141784,
+            "median_distance_m": 0.0013305568136274815,
+            "p95_distance_m": 0.004991884343326089,
+            "max_distance_m": 0.03409561142325401,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 658,
+                "fraction": 0.9494949494949495
+              },
+              {
+                "distance_m": 0.01,
+                "count": 667,
+                "fraction": 0.9624819624819625
+              },
+              {
+                "distance_m": 0.02,
+                "count": 677,
+                "fraction": 0.976911976911977
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_240",
+            "sample_count": 674,
+            "finite_distance_count": 674,
+            "mean_distance_m": 0.002937045832118336,
+            "median_distance_m": 0.0015343876439146698,
+            "p95_distance_m": 0.013187499623745685,
+            "max_distance_m": 0.033800262957811356,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 610,
+                "fraction": 0.9050445103857567
+              },
+              {
+                "distance_m": 0.01,
+                "count": 634,
+                "fraction": 0.9406528189910979
+              },
+              {
+                "distance_m": 0.02,
+                "count": 654,
+                "fraction": 0.9703264094955489
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_0_120",
+            "sample_count": 274,
+            "finite_distance_count": 274,
+            "mean_distance_m": 0.0026928857937989457,
+            "median_distance_m": 0.002777869231067598,
+            "p95_distance_m": 0.005018809461034834,
+            "max_distance_m": 0.00811583548784256,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 259,
+                "fraction": 0.9452554744525548
+              },
+              {
+                "distance_m": 0.01,
+                "count": 274,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 274,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_120_240",
+            "sample_count": 381,
+            "finite_distance_count": 381,
+            "mean_distance_m": 0.0024148974597571976,
+            "median_distance_m": 0.002342103747650981,
+            "p95_distance_m": 0.00506127392873168,
+            "max_distance_m": 0.008860982023179531,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 359,
+                "fraction": 0.9422572178477691
+              },
+              {
+                "distance_m": 0.01,
+                "count": 381,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 381,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_240_360",
+            "sample_count": 223,
+            "finite_distance_count": 223,
+            "mean_distance_m": 0.0025397882904482864,
+            "median_distance_m": 0.0021789895836263895,
+            "p95_distance_m": 0.0054513334762304995,
+            "max_distance_m": 0.007643444929271936,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 203,
+                "fraction": 0.9103139013452914
+              },
+              {
+                "distance_m": 0.01,
+                "count": 223,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 223,
+                "fraction": 1.0
+              }
+            ]
+          }
+        ],
+        "assignment": "B0 original reconstruction split: three vertices share the same nonnegative hard-prior owner; not B1",
+        "topology": {
+          "vertices": 9986,
+          "triangles": 19354,
+          "connected_triangle_components": 5,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 634,
+          "boundary_edge_length_m": 5.210404414527246,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.611738470573366,
+          "largest_component_area_fraction": 0.6234461401851021,
+          "largest_components": [
+            {
+              "triangles": 12545,
+              "area_m2": 0.3813859882817027
+            },
+            {
+              "triangles": 6805,
+              "area_m2": 0.23022444696890387
+            },
+            {
+              "triangles": 2,
+              "area_m2": 0.00010078294099653564
+            },
+            {
+              "triangles": 1,
+              "area_m2": 1.9960865183356604e-05
+            },
+            {
+              "triangles": 1,
+              "area_m2": 7.291516579439978e-06
+            }
+          ]
+        },
+        "source_mesh_area_samples_to_physical_stool": {
+          "sample_count": 100000,
+          "finite_distance_count": 100000,
+          "mean_distance_m": 0.0017347271467680653,
+          "median_distance_m": 0.0012164211948402226,
+          "p95_distance_m": 0.004930392443202426,
+          "max_distance_m": 0.023695409297943115,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 95161,
+              "fraction": 0.95161
+            },
+            {
+              "distance_m": 0.01,
+              "count": 99061,
+              "fraction": 0.99061
+            },
+            {
+              "distance_m": 0.02,
+              "count": 99997,
+              "fraction": 0.99997
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "5mm-local",
+      "surface_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-quality-20261009\\recon-5mm-local",
+      "reconstruction_parameters": {
+        "voxel_size_m": 0.005,
+        "sdf_truncation_m": 0.015,
+        "depth_scale": 1000,
+        "max_depth_m": 6,
+        "min_confidence": 1
+      },
+      "input_scene_sha256": "2014c2121b9042e6d4f324e619eedaff91a57f2ee1891ab35a407177468d07c5",
+      "full_tsdf_surface": {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-quality-20261009\\recon-5mm-local\\surface.ply",
+        "status": "ok",
+        "sha256": "274ea1fa1b3b6f765213954e5273bcea8880d0822aeaf9d021ac7b37d2c3a07c",
+        "valid_reference_ray_hit_recall": {
+          "sample_count": 15354,
+          "finite_distance_count": 15354,
+          "mean_distance_m": 0.0012743965133690666,
+          "median_distance_m": 0.0010062752407975495,
+          "p95_distance_m": 0.003348060464486479,
+          "max_distance_m": 0.026961542665958405,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 15254,
+              "fraction": 0.993487039208024
+            },
+            {
+              "distance_m": 0.01,
+              "count": 15344,
+              "fraction": 0.9993487039208024
+            },
+            {
+              "distance_m": 0.02,
+              "count": 15352,
+              "fraction": 0.9998697407841605
+            }
+          ]
+        },
+        "per_primitive_ray_hit_recall": [
+          {
+            "id": "seat",
+            "sample_count": 12382,
+            "finite_distance_count": 12382,
+            "mean_distance_m": 0.0011750133878154437,
+            "median_distance_m": 0.0009509409428574145,
+            "p95_distance_m": 0.0030921612284146244,
+            "max_distance_m": 0.014888464473187923,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 12353,
+                "fraction": 0.9976578904861896
+              },
+              {
+                "distance_m": 0.01,
+                "count": 12380,
+                "fraction": 0.9998384752059442
+              },
+              {
+                "distance_m": 0.02,
+                "count": 12382,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_0",
+            "sample_count": 727,
+            "finite_distance_count": 727,
+            "mean_distance_m": 0.0015357198071684437,
+            "median_distance_m": 0.0011996978428214788,
+            "p95_distance_m": 0.00393649754114449,
+            "max_distance_m": 0.011078153736889362,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 711,
+                "fraction": 0.9779917469050894
+              },
+              {
+                "distance_m": 0.01,
+                "count": 726,
+                "fraction": 0.9986244841815681
+              },
+              {
+                "distance_m": 0.02,
+                "count": 727,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_120",
+            "sample_count": 693,
+            "finite_distance_count": 693,
+            "mean_distance_m": 0.0013958640419821896,
+            "median_distance_m": 0.0011297184973955154,
+            "p95_distance_m": 0.0035932252649217844,
+            "max_distance_m": 0.006356141064316034,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 684,
+                "fraction": 0.987012987012987
+              },
+              {
+                "distance_m": 0.01,
+                "count": 693,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 693,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_240",
+            "sample_count": 674,
+            "finite_distance_count": 674,
+            "mean_distance_m": 0.001802185589291233,
+            "median_distance_m": 0.0013337971759028733,
+            "p95_distance_m": 0.00420213348697871,
+            "max_distance_m": 0.026961542665958405,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 656,
+                "fraction": 0.973293768545994
+              },
+              {
+                "distance_m": 0.01,
+                "count": 667,
+                "fraction": 0.9896142433234422
+              },
+              {
+                "distance_m": 0.02,
+                "count": 672,
+                "fraction": 0.9970326409495549
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_0_120",
+            "sample_count": 274,
+            "finite_distance_count": 274,
+            "mean_distance_m": 0.0021247272391114844,
+            "median_distance_m": 0.0018464146996848285,
+            "p95_distance_m": 0.004681801702827215,
+            "max_distance_m": 0.007098204456269741,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 266,
+                "fraction": 0.9708029197080292
+              },
+              {
+                "distance_m": 0.01,
+                "count": 274,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 274,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_120_240",
+            "sample_count": 381,
+            "finite_distance_count": 381,
+            "mean_distance_m": 0.0018614498248412448,
+            "median_distance_m": 0.001565152546390891,
+            "p95_distance_m": 0.004333635326474905,
+            "max_distance_m": 0.006150254048407078,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 370,
+                "fraction": 0.9711286089238845
+              },
+              {
+                "distance_m": 0.01,
+                "count": 381,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 381,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_240_360",
+            "sample_count": 223,
+            "finite_distance_count": 223,
+            "mean_distance_m": 0.0019202039617459883,
+            "median_distance_m": 0.0015278981300070882,
+            "p95_distance_m": 0.0046809744089841825,
+            "max_distance_m": 0.007076752372086048,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 214,
+                "fraction": 0.9596412556053812
+              },
+              {
+                "distance_m": 0.01,
+                "count": 223,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 223,
+                "fraction": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "assigned_stool_mesh": {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-quality-20261009\\recon-5mm-local\\same-stool.ply",
+        "status": "ok",
+        "sha256": "3cee89a95c291ec42cd72d8427d96974b9207ec89e647a805306bb7c96d84fcf",
+        "valid_reference_ray_hit_recall": {
+          "sample_count": 15354,
+          "finite_distance_count": 15354,
+          "mean_distance_m": 0.001351646977950682,
+          "median_distance_m": 0.0010138762299902737,
+          "p95_distance_m": 0.0034426831174641814,
+          "max_distance_m": 0.02741841971874237,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 15171,
+              "fraction": 0.9880812817506839
+            },
+            {
+              "distance_m": 0.01,
+              "count": 15281,
+              "fraction": 0.9952455386218575
+            },
+            {
+              "distance_m": 0.02,
+              "count": 15331,
+              "fraction": 0.9985020190178455
+            }
+          ]
+        },
+        "per_primitive_ray_hit_recall": [
+          {
+            "id": "seat",
+            "sample_count": 12382,
+            "finite_distance_count": 12382,
+            "mean_distance_m": 0.0011750133878154437,
+            "median_distance_m": 0.0009509409428574145,
+            "p95_distance_m": 0.0030921612284146244,
+            "max_distance_m": 0.014888464473187923,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 12353,
+                "fraction": 0.9976578904861896
+              },
+              {
+                "distance_m": 0.01,
+                "count": 12380,
+                "fraction": 0.9998384752059442
+              },
+              {
+                "distance_m": 0.02,
+                "count": 12382,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_0",
+            "sample_count": 727,
+            "finite_distance_count": 727,
+            "mean_distance_m": 0.002039166899785001,
+            "median_distance_m": 0.001245829276740551,
+            "p95_distance_m": 0.0055863238871097474,
+            "max_distance_m": 0.02522195875644684,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 682,
+                "fraction": 0.938101788170564
+              },
+              {
+                "distance_m": 0.01,
+                "count": 704,
+                "fraction": 0.9683631361760661
+              },
+              {
+                "distance_m": 0.02,
+                "count": 723,
+                "fraction": 0.9944979367262724
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_120",
+            "sample_count": 693,
+            "finite_distance_count": 693,
+            "mean_distance_m": 0.0018991098222154459,
+            "median_distance_m": 0.0011912798509001732,
+            "p95_distance_m": 0.004748303908854723,
+            "max_distance_m": 0.02659781090915203,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 662,
+                "fraction": 0.9552669552669553
+              },
+              {
+                "distance_m": 0.01,
+                "count": 676,
+                "fraction": 0.9754689754689755
+              },
+              {
+                "distance_m": 0.02,
+                "count": 685,
+                "fraction": 0.9884559884559885
+              }
+            ]
+          },
+          {
+            "id": "leg_local_angle_240",
+            "sample_count": 674,
+            "finite_distance_count": 674,
+            "mean_distance_m": 0.0025015153684488554,
+            "median_distance_m": 0.0015052417293190956,
+            "p95_distance_m": 0.008253763802349578,
+            "max_distance_m": 0.02741841971874237,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 624,
+                "fraction": 0.9258160237388724
+              },
+              {
+                "distance_m": 0.01,
+                "count": 643,
+                "fraction": 0.9540059347181009
+              },
+              {
+                "distance_m": 0.02,
+                "count": 663,
+                "fraction": 0.983679525222552
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_0_120",
+            "sample_count": 274,
+            "finite_distance_count": 274,
+            "mean_distance_m": 0.0021247272391114844,
+            "median_distance_m": 0.0018464146996848285,
+            "p95_distance_m": 0.004681801702827215,
+            "max_distance_m": 0.007098204456269741,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 266,
+                "fraction": 0.9708029197080292
+              },
+              {
+                "distance_m": 0.01,
+                "count": 274,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 274,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_120_240",
+            "sample_count": 381,
+            "finite_distance_count": 381,
+            "mean_distance_m": 0.0018614498248412448,
+            "median_distance_m": 0.001565152546390891,
+            "p95_distance_m": 0.004333635326474905,
+            "max_distance_m": 0.006150254048407078,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 370,
+                "fraction": 0.9711286089238845
+              },
+              {
+                "distance_m": 0.01,
+                "count": 381,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 381,
+                "fraction": 1.0
+              }
+            ]
+          },
+          {
+            "id": "brace_local_angles_240_360",
+            "sample_count": 223,
+            "finite_distance_count": 223,
+            "mean_distance_m": 0.0019202039617459883,
+            "median_distance_m": 0.0015278981300070882,
+            "p95_distance_m": 0.0046809744089841825,
+            "max_distance_m": 0.007076752372086048,
+            "within": [
+              {
+                "distance_m": 0.005,
+                "count": 214,
+                "fraction": 0.9596412556053812
+              },
+              {
+                "distance_m": 0.01,
+                "count": 223,
+                "fraction": 1.0
+              },
+              {
+                "distance_m": 0.02,
+                "count": 223,
+                "fraction": 1.0
+              }
+            ]
+          }
+        ],
+        "assignment": "B0 original reconstruction split: three vertices share the same nonnegative hard-prior owner; not B1",
+        "topology": {
+          "vertices": 34893,
+          "triangles": 66838,
+          "connected_triangle_components": 32,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 3148,
+          "boundary_edge_length_m": 12.357554131670561,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.596542367599708,
+          "largest_component_area_fraction": 0.6269744164245868,
+          "largest_components": [
+            {
+              "triangles": 40244,
+              "area_m2": 0.3740168027983683
+            },
+            {
+              "triangles": 26419,
+              "area_m2": 0.22200993701206675
+            },
+            {
+              "triangles": 12,
+              "area_m2": 0.00012413999320849966
+            },
+            {
+              "triangles": 8,
+              "area_m2": 5.721283995933056e-05
+            },
+            {
+              "triangles": 16,
+              "area_m2": 3.883118264424964e-05
+            },
+            {
+              "triangles": 3,
+              "area_m2": 3.5330764122908925e-05
+            },
+            {
+              "triangles": 5,
+              "area_m2": 3.503168976305569e-05
+            },
+            {
+              "triangles": 4,
+              "area_m2": 2.460609535175791e-05
+            },
+            {
+              "triangles": 8,
+              "area_m2": 2.283383798405001e-05
+            },
+            {
+              "triangles": 8,
+              "area_m2": 2.094889947968094e-05
+            }
+          ]
+        },
+        "source_mesh_area_samples_to_physical_stool": {
+          "sample_count": 100000,
+          "finite_distance_count": 100000,
+          "mean_distance_m": 0.0015546804258245422,
+          "median_distance_m": 0.0012045959592796862,
+          "p95_distance_m": 0.004170825402252375,
+          "max_distance_m": 0.014281868934631348,
+          "within": [
+            {
+              "distance_m": 0.005,
+              "count": 97586,
+              "fraction": 0.97586
+            },
+            {
+              "distance_m": 0.01,
+              "count": 99966,
+              "fraction": 0.99966
+            },
+            {
+              "distance_m": 0.02,
+              "count": 100000,
+              "fraction": 1.0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

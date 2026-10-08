@@ -1,0 +1,1252 @@
+{
+  "schema": "local-frozen-stool-fit-geometry-audit.v1",
+  "provenance_role": "fitted/structural",
+  "self_check": {
+    "status": "pass",
+    "checks": [
+      "analytic unsigned distances",
+      "inclusive distance thresholds",
+      "single-triangle topology",
+      "area sample plane",
+      "empty mesh",
+      "missing mesh",
+      "empty sample denominator",
+      "non-finite input rejected"
+    ]
+  },
+  "script_sha256": "c9e0f58eb9b1109629c572bf9ade7bd1334d173fcb0ff1f3493f464eebd52220",
+  "shared_evaluator_sha256": "23908278918fc516b0bde2e877ae389d23a6f2ee53123a0c579c36a9a0b092ef",
+  "same_reference_as_tsdf_evaluation": true,
+  "prior_evaluator_sha256": "ed1c8f8a53355b63d50b6c9d33288276b105ef3d16c08a6593d9705a70654598",
+  "evaluator_source_file_identical_to_prior": false,
+  "fitter_source_hash_verified": true,
+  "declared_fitter_sha256": "6c4740aca48738553be62ce48cbdc97bc4b8884204026b5f516724eeff6f219b",
+  "prior_metrics_path": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\reports\\stool-quality\\tsdf-metrics.json",
+  "prior_metrics_sha256": "08e367deefe5bf3cdcada2c7ef7eb4814cdb70bc6c2cc99eaf49448c74665b39",
+  "reference": {
+    "reference_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference",
+    "files": [
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\labels.npz",
+        "sha256": "9e9a4e604b301a0de07330dbaee3a1524e22c7f1c9cb375211f6fc7adc362aec"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\physical-scene.json",
+        "sha256": "c20cd3e2813a0284520ce5a34699ec4b67b57086b911e7481145dc6bfaf8c6a7"
+      }
+    ],
+    "frame_files": [
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00000.npz",
+        "sha256": "e86345b3b9f0b297048967e2712c59f8bc8cd66fb242f7eed8b9b0a6b27895d5"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00001.npz",
+        "sha256": "d861c0aa59b3fe6d434cf1d63ea24d68084ed3947fda3de577493ce25656cf40"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00002.npz",
+        "sha256": "dc3b1f6699a8cf34c1125bdcf863bff08f00580eab171874b90432830fe0f407"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00003.npz",
+        "sha256": "4c35772866818e7da44086e9941fd0e74df703abddc736c715381e171ee97ea6"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00004.npz",
+        "sha256": "01c33e6d13130699f5df73e30a0f20f898da32e827ecc588a5d1729a888bc85c"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00005.npz",
+        "sha256": "9757f28d1288b9372863029eb2ddab57fed3ee89cd76045a5e0d3c2ee813f1f1"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00006.npz",
+        "sha256": "5583c7e62fcae57e2cc9a353b55046ed6eed724c9c6ac4fdd5945b38067ef232"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00007.npz",
+        "sha256": "a741eed03d0d67c33707a4fb5b4ff9eaf6dbef93832ed206f403a0c7b4c75ff6"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00008.npz",
+        "sha256": "5b9d652b832ad54eb6ee4715276d491942e05cae816f99cf3a14e2c13b72841d"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00009.npz",
+        "sha256": "e8907084bb8a092c59332f415ae350bfd26ee62bcf873bf7ffea29773546f947"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00010.npz",
+        "sha256": "41ec30b3fec2f90c8abb62a337e3248868fee81443528e66b352a0dcec133238"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00011.npz",
+        "sha256": "d7d350e09a6fa363b1b59abda09aa3b05265766e78078c878f0cfa9c8d52b65e"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00012.npz",
+        "sha256": "b0bf4f979ee4dccafb40009a9be11c1c1f486b263485a61f2b17f8d8ed4fc649"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00013.npz",
+        "sha256": "0f9d94b454810325a127051b2eb38b49cb8c002bf5a234c64956f2097f557619"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00014.npz",
+        "sha256": "15a5270cf40bc1b929cdaf740d17249b8ef48242e58fa71f4c2d8bbb7f168cc9"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00015.npz",
+        "sha256": "1543b2be7e91332224669c899e162b1a713b7c759d1f821c5230c5538fc6a5d5"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00016.npz",
+        "sha256": "d7a4037361a8f8d79ef64812fead07742c09282ae96dc0719daa49fa0cb398d8"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\frame_labels\\frame_00017.npz",
+        "sha256": "baa9dba56620e6bb7cc8940caa3cb52380303ffabe07a3ff59e41689b2cae00e"
+      }
+    ],
+    "frames": [
+      {
+        "frame_index": 0,
+        "valid_stool_ray_hits": 32
+      },
+      {
+        "frame_index": 1,
+        "valid_stool_ray_hits": 19
+      },
+      {
+        "frame_index": 2,
+        "valid_stool_ray_hits": 351
+      },
+      {
+        "frame_index": 3,
+        "valid_stool_ray_hits": 512
+      },
+      {
+        "frame_index": 4,
+        "valid_stool_ray_hits": 612
+      },
+      {
+        "frame_index": 5,
+        "valid_stool_ray_hits": 820
+      },
+      {
+        "frame_index": 6,
+        "valid_stool_ray_hits": 1044
+      },
+      {
+        "frame_index": 7,
+        "valid_stool_ray_hits": 1277
+      },
+      {
+        "frame_index": 8,
+        "valid_stool_ray_hits": 1411
+      },
+      {
+        "frame_index": 9,
+        "valid_stool_ray_hits": 1550
+      },
+      {
+        "frame_index": 10,
+        "valid_stool_ray_hits": 1617
+      },
+      {
+        "frame_index": 11,
+        "valid_stool_ray_hits": 1592
+      },
+      {
+        "frame_index": 12,
+        "valid_stool_ray_hits": 1468
+      },
+      {
+        "frame_index": 13,
+        "valid_stool_ray_hits": 1095
+      },
+      {
+        "frame_index": 14,
+        "valid_stool_ray_hits": 795
+      },
+      {
+        "frame_index": 15,
+        "valid_stool_ray_hits": 712
+      },
+      {
+        "frame_index": 16,
+        "valid_stool_ray_hits": 435
+      },
+      {
+        "frame_index": 17,
+        "valid_stool_ray_hits": 12
+      }
+    ],
+    "valid_stool_ray_hits": 15354,
+    "reference_ray_consistency_tolerance_m": 0.0001,
+    "reference_rays_to_physical_mesh": {
+      "sample_count": 15354,
+      "finite_distance_count": 15354,
+      "mean_distance_m": 5.801459485888775e-07,
+      "median_distance_m": 5.960464477539063e-08,
+      "p95_distance_m": 2.998243587626346e-06,
+      "max_distance_m": 6.306549767032266e-05,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 15354,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 15354,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 15354,
+          "fraction": 1.0
+        }
+      ]
+    },
+    "stool_primitives": [
+      {
+        "id": "seat",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 2920,
+        "global_triangle_index_last": 2983,
+        "world_bounds_m": [
+          [
+            0.06318540126085281,
+            0.4650000035762787,
+            -1.4068145751953125
+          ],
+          [
+            0.6368145942687988,
+            0.5149999856948853,
+            -0.8331853747367859
+          ]
+        ]
+      },
+      {
+        "id": "leg_local_angle_0",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 2984,
+        "global_triangle_index_last": 3047,
+        "world_bounds_m": [
+          [
+            0.4807099997997284,
+            -0.0030713120941072702,
+            -1.2673065662384033
+          ],
+          [
+            0.5793002843856812,
+            0.468071311712265,
+            -1.1890093088150024
+          ]
+        ]
+      },
+      {
+        "id": "leg_local_angle_120",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3048,
+        "global_triangle_index_last": 3111,
+        "world_bounds_m": [
+          [
+            0.32939210534095764,
+            -0.0030464474111795425,
+            -0.9635806083679199
+          ],
+          [
+            0.377937912940979,
+            0.4680464565753937,
+            -0.8564833998680115
+          ]
+        ]
+      },
+      {
+        "id": "leg_local_angle_240",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3112,
+        "global_triangle_index_last": 3175,
+        "world_bounds_m": [
+          [
+            0.1165042445063591,
+            -0.0030464474111795425,
+            -1.2600194215774536
+          ],
+          [
+            0.21615548431873322,
+            0.4680464565753937,
+            -1.183600664138794
+          ]
+        ]
+      },
+      {
+        "id": "brace_local_angles_0_120",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3176,
+        "global_triangle_index_last": 3239,
+        "world_bounds_m": [
+          [
+            0.34323936700820923,
+            0.17800000309944153,
+            -1.2360358238220215
+          ],
+          [
+            0.5439292192459106,
+            0.20200000703334808,
+            -0.9002148509025574
+          ]
+        ]
+      },
+      {
+        "id": "brace_local_angles_120_240",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3240,
+        "global_triangle_index_last": 3303,
+        "world_bounds_m": [
+          [
+            0.15254537761211395,
+            0.17800000309944153,
+            -1.2299296855926514
+          ],
+          [
+            0.36402082443237305,
+            0.20200000703334808,
+            -0.8998521566390991
+          ]
+        ]
+      },
+      {
+        "id": "brace_local_angles_240_360",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 3304,
+        "global_triangle_index_last": 3367,
+        "world_bounds_m": [
+          [
+            0.16262196004390717,
+            0.17800000309944153,
+            -1.2422163486480713
+          ],
+          [
+            0.5336432456970215,
+            0.20200000703334808,
+            -1.211751103401184
+          ]
+        ]
+      }
+    ]
+  },
+  "thresholds_m": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "frozen_files": {
+    "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\fit.json": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+    "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\fitted_stool.ply": "cff4622beee26630db14429d9523806d0a76db495b8287ce74b377b21e87a55d",
+    "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\seat.ply": "bca734ebb78ca46363bd5753a2497e46a17f5c0e9ecd13e522b42e51ae1ef499",
+    "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\leg_1.ply": "3581469ab8a8c4761d73faa371f0aea23af5c3ed35670a1845ce02278afa576d",
+    "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\leg_2.ply": "fb81146129c86d2d408627ed3df2eb65b4b61d6538eda4a984bc246e09cfd454",
+    "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\leg_3.ply": "e4c57ed03298bd8b2d88246c59751cb1ae3c21273632e3db4c8c6c6b4b8ffe0c",
+    "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\brace_1_2.ply": "f8dee940a7658f6731090a3260c6ad04d33292201d4ef8916b1068c1f69febbe",
+    "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\brace_2_3.ply": "f27db72d89d6a15df5eb6c3966bec68fa4051eaa21c122a232b1e8866206a962",
+    "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\brace_3_1.ply": "409846a1b8a1b6c19acf7d0ae01643dff2e7c8e9db041767d42dbd150bc61c3a"
+  },
+  "valid_reference_ray_hit_recall": {
+    "sample_count": 15354,
+    "finite_distance_count": 15354,
+    "mean_distance_m": 0.0003266571961196676,
+    "median_distance_m": 5.9604644775390625e-06,
+    "p95_distance_m": 0.0018387074349448082,
+    "max_distance_m": 0.004010773729532957,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 15354,
+        "fraction": 1.0
+      },
+      {
+        "distance_m": 0.01,
+        "count": 15354,
+        "fraction": 1.0
+      },
+      {
+        "distance_m": 0.02,
+        "count": 15354,
+        "fraction": 1.0
+      }
+    ]
+  },
+  "per_reference_primitive_ray_hit_recall": [
+    {
+      "id": "seat",
+      "sample_count": 12382,
+      "finite_distance_count": 12382,
+      "mean_distance_m": 0.0003016554372783798,
+      "median_distance_m": 5.902741122554289e-06,
+      "p95_distance_m": 0.002021280757617203,
+      "max_distance_m": 0.004010773729532957,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 12382,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 12382,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 12382,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "leg_local_angle_0",
+      "sample_count": 727,
+      "finite_distance_count": 727,
+      "mean_distance_m": 0.0003105433272027512,
+      "median_distance_m": 0.0002712523564696312,
+      "p95_distance_m": 0.0007305601087864487,
+      "max_distance_m": 0.002667088061571121,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 727,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 727,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 727,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "leg_local_angle_120",
+      "sample_count": 693,
+      "finite_distance_count": 693,
+      "mean_distance_m": 0.0005865850637144524,
+      "median_distance_m": 0.000492831866722554,
+      "p95_distance_m": 0.0014617707347497344,
+      "max_distance_m": 0.0026794658042490482,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 693,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 693,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 693,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "leg_local_angle_240",
+      "sample_count": 674,
+      "finite_distance_count": 674,
+      "mean_distance_m": 0.00020568368840814737,
+      "median_distance_m": 0.00016855066496646032,
+      "p95_distance_m": 0.0004836245891056025,
+      "max_distance_m": 0.002508079167455435,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 674,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 674,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 674,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "brace_local_angles_0_120",
+      "sample_count": 274,
+      "finite_distance_count": 274,
+      "mean_distance_m": 0.000552964339008578,
+      "median_distance_m": 0.0005688623059540987,
+      "p95_distance_m": 0.000911705655744299,
+      "max_distance_m": 0.001092253834940493,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 274,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 274,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 274,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "brace_local_angles_120_240",
+      "sample_count": 381,
+      "finite_distance_count": 381,
+      "mean_distance_m": 0.000664077738180495,
+      "median_distance_m": 0.000710141146555543,
+      "p95_distance_m": 0.0011404069373384118,
+      "max_distance_m": 0.001276036724448204,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 381,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 381,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 381,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "brace_local_angles_240_360",
+      "sample_count": 223,
+      "finite_distance_count": 223,
+      "mean_distance_m": 0.00047072584613341465,
+      "median_distance_m": 0.00039365372504107654,
+      "p95_distance_m": 0.0010761079262010752,
+      "max_distance_m": 0.0012687838170677423,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 223,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 223,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 223,
+          "fraction": 1.0
+        }
+      ]
+    }
+  ],
+  "reference_primitive_balanced_ray_hit_recall": {
+    "definition": "Arithmetic mean of seven per-reference-primitive statistics; each primitive has equal weight",
+    "primitive_count": 7,
+    "mean_distance_m": 0.00044174791998945976,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "fraction": 1.0
+      },
+      {
+        "distance_m": 0.01,
+        "fraction": 1.0
+      },
+      {
+        "distance_m": 0.02,
+        "fraction": 1.0
+      }
+    ]
+  },
+  "reference_ray_recall_by_frame_group": {
+    "even_frames_used_by_fitter": {
+      "sample_count": 7765,
+      "finite_distance_count": 7765,
+      "mean_distance_m": 0.0003273686958793902,
+      "median_distance_m": 5.960469025012571e-06,
+      "p95_distance_m": 0.0018118789885193064,
+      "max_distance_m": 0.003954950254410505,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 7765,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 7765,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 7765,
+          "fraction": 1.0
+        }
+      ]
+    },
+    "odd_frames_used_for_fitter_validation": {
+      "sample_count": 7589,
+      "finite_distance_count": 7589,
+      "mean_distance_m": 0.00032592919564078415,
+      "median_distance_m": 5.9604644775390625e-06,
+      "p95_distance_m": 0.0018566899467259636,
+      "max_distance_m": 0.004010773729532957,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 7589,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 7589,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 7589,
+          "fraction": 1.0
+        }
+      ]
+    }
+  },
+  "source_mesh_area_samples_to_physical_stool": {
+    "sample_count": 100000,
+    "finite_distance_count": 100000,
+    "mean_distance_m": 0.0008497473289839955,
+    "median_distance_m": 0.0005230075039435178,
+    "p95_distance_m": 0.0019369064306374616,
+    "max_distance_m": 0.02499982714653015,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 98492,
+        "fraction": 0.98492
+      },
+      {
+        "distance_m": 0.01,
+        "count": 98737,
+        "fraction": 0.98737
+      },
+      {
+        "distance_m": 0.02,
+        "count": 99223,
+        "fraction": 0.99223
+      }
+    ]
+  },
+  "reverse_error_tail_location": {
+    "samples_outside_5mm": 1508,
+    "outside_5mm_samples_inside_fitted_seat": 1508,
+    "definition": "Inside uses strict halfspaces of the actual convex fitted seat; this localizes discrepancies without removing them from accuracy"
+  },
+  "source_area_sampling": {
+    "method": "triangle selected proportional to area, uniform barycentric point",
+    "sample_count_per_nonempty_stool_mesh": 100000,
+    "seed": 20261009
+  },
+  "assembly_topology": {
+    "vertices": 1134,
+    "triangles": 2240,
+    "connected_triangle_components": 7,
+    "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+    "boundary_edges": 0,
+    "boundary_edge_length_m": 0.0,
+    "nonmanifold_edges": 0,
+    "mesh_triangle_area_m2": 0.9186027994783876,
+    "largest_component_area_fraction": 0.6574490444974276,
+    "largest_components": [
+      {
+        "triangles": 320,
+        "area_m2": 0.603934532789728
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.07685501663653072
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.07626106046191164
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.0761998836813212
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.029091244342123453
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.028535264361140737
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.027725797205631966
+      }
+    ]
+  },
+  "assembly_equals_seven_component_files": true,
+  "components": [
+    {
+      "id": "seat",
+      "provenance_role": "fitted/structural",
+      "path": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\seat.ply",
+      "sha256": "bca734ebb78ca46363bd5753a2497e46a17f5c0e9ecd13e522b42e51ae1ef499",
+      "topology": {
+        "vertices": 162,
+        "triangles": 320,
+        "connected_triangle_components": 1,
+        "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+        "boundary_edges": 0,
+        "boundary_edge_length_m": 0.0,
+        "nonmanifold_edges": 0,
+        "mesh_triangle_area_m2": 0.603934532789728,
+        "largest_component_area_fraction": 1.0,
+        "largest_components": [
+          {
+            "triangles": 320,
+            "area_m2": 0.603934532789728
+          }
+        ]
+      },
+      "watertight_individual_mesh": true,
+      "positive_signed_volume_m3": 0.012648873411113854,
+      "endpoint_centers_nearest_vertex_error_m": [
+        4.4754474738855653e-10,
+        5.337568343477831e-10
+      ],
+      "max_rim_radius_error_against_fit_record_m": 5.641670464129334e-10,
+      "vertex_min_y_m": 0.465941296,
+      "floor_clearance_m": null,
+      "source_area_samples_to_physical_stool": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.0006153022509083983,
+        "median_distance_m": 0.0009413063526153564,
+        "p95_distance_m": 0.0017923565406817927,
+        "max_distance_m": 0.003937310539186001,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 100000,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.01,
+            "count": 100000,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.02,
+            "count": 100000,
+            "fraction": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "leg_1",
+      "provenance_role": "fitted/structural",
+      "path": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\leg_1.ply",
+      "sha256": "3581469ab8a8c4761d73faa371f0aea23af5c3ed35670a1845ce02278afa576d",
+      "topology": {
+        "vertices": 162,
+        "triangles": 320,
+        "connected_triangle_components": 1,
+        "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+        "boundary_edges": 0,
+        "boundary_edge_length_m": 0.0,
+        "nonmanifold_edges": 0,
+        "mesh_triangle_area_m2": 0.07626106046191164,
+        "largest_component_area_fraction": 1.0,
+        "largest_components": [
+          {
+            "triangles": 320,
+            "area_m2": 0.07626106046191164
+          }
+        ]
+      },
+      "watertight_individual_mesh": true,
+      "positive_signed_volume_m3": 0.0008570328822957186,
+      "endpoint_centers_nearest_vertex_error_m": [
+        5.599784660379963e-10,
+        5.685097959155346e-10
+      ],
+      "max_rim_radius_error_against_fit_record_m": 7.01663834673516e-10,
+      "vertex_min_y_m": 1.173e-06,
+      "floor_clearance_m": 1.173e-06,
+      "source_area_samples_to_physical_stool": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.0014083541523893627,
+        "median_distance_m": 0.0002211695973528549,
+        "p95_distance_m": 0.010765900416299592,
+        "max_distance_m": 0.02499854564666748,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 93826,
+            "fraction": 0.93826
+          },
+          {
+            "distance_m": 0.01,
+            "count": 94824,
+            "fraction": 0.94824
+          },
+          {
+            "distance_m": 0.02,
+            "count": 96844,
+            "fraction": 0.96844
+          }
+        ]
+      }
+    },
+    {
+      "id": "leg_2",
+      "provenance_role": "fitted/structural",
+      "path": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\leg_2.ply",
+      "sha256": "fb81146129c86d2d408627ed3df2eb65b4b61d6538eda4a984bc246e09cfd454",
+      "topology": {
+        "vertices": 162,
+        "triangles": 320,
+        "connected_triangle_components": 1,
+        "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+        "boundary_edges": 0,
+        "boundary_edge_length_m": 0.0,
+        "nonmanifold_edges": 0,
+        "mesh_triangle_area_m2": 0.07685501663653072,
+        "largest_component_area_fraction": 1.0,
+        "largest_components": [
+          {
+            "triangles": 320,
+            "area_m2": 0.07685501663653072
+          }
+        ]
+      },
+      "watertight_individual_mesh": true,
+      "positive_signed_volume_m3": 0.0008697671509214731,
+      "endpoint_centers_nearest_vertex_error_m": [
+        4.1360022475448604e-10,
+        4.5345258091004884e-10
+      ],
+      "max_rim_radius_error_against_fit_record_m": 6.149938301669433e-10,
+      "vertex_min_y_m": 9.78e-07,
+      "floor_clearance_m": 9.78e-07,
+      "source_area_samples_to_physical_stool": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.0015336431242107913,
+        "median_distance_m": 0.0003602081415010616,
+        "p95_distance_m": 0.010828294185921458,
+        "max_distance_m": 0.024999350309371948,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 93797,
+            "fraction": 0.93797
+          },
+          {
+            "distance_m": 0.01,
+            "count": 94830,
+            "fraction": 0.9483
+          },
+          {
+            "distance_m": 0.02,
+            "count": 96825,
+            "fraction": 0.96825
+          }
+        ]
+      }
+    },
+    {
+      "id": "leg_3",
+      "provenance_role": "fitted/structural",
+      "path": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\leg_3.ply",
+      "sha256": "e4c57ed03298bd8b2d88246c59751cb1ae3c21273632e3db4c8c6c6b4b8ffe0c",
+      "topology": {
+        "vertices": 162,
+        "triangles": 320,
+        "connected_triangle_components": 1,
+        "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+        "boundary_edges": 0,
+        "boundary_edge_length_m": 0.0,
+        "nonmanifold_edges": 0,
+        "mesh_triangle_area_m2": 0.0761998836813212,
+        "largest_component_area_fraction": 1.0,
+        "largest_components": [
+          {
+            "triangles": 320,
+            "area_m2": 0.0761998836813212
+          }
+        ]
+      },
+      "watertight_individual_mesh": true,
+      "positive_signed_volume_m3": 0.0008553279551051417,
+      "endpoint_centers_nearest_vertex_error_m": [
+        5.47925669158139e-10,
+        4.464361810166191e-10
+      ],
+      "max_rim_radius_error_against_fit_record_m": 6.013871865773179e-10,
+      "vertex_min_y_m": 5.72e-07,
+      "floor_clearance_m": 5.72e-07,
+      "source_area_samples_to_physical_stool": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.0017821262038644561,
+        "median_distance_m": 0.000616525299847126,
+        "p95_distance_m": 0.010877756401896359,
+        "max_distance_m": 0.024999767541885376,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 93804,
+            "fraction": 0.93804
+          },
+          {
+            "distance_m": 0.01,
+            "count": 94823,
+            "fraction": 0.94823
+          },
+          {
+            "distance_m": 0.02,
+            "count": 96827,
+            "fraction": 0.96827
+          }
+        ]
+      }
+    },
+    {
+      "id": "brace_1_2",
+      "provenance_role": "fitted/structural",
+      "path": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\brace_1_2.ply",
+      "sha256": "f8dee940a7658f6731090a3260c6ad04d33292201d4ef8916b1068c1f69febbe",
+      "topology": {
+        "vertices": 162,
+        "triangles": 320,
+        "connected_triangle_components": 1,
+        "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+        "boundary_edges": 0,
+        "boundary_edge_length_m": 0.0,
+        "nonmanifold_edges": 0,
+        "mesh_triangle_area_m2": 0.027725797205631966,
+        "largest_component_area_fraction": 1.0,
+        "largest_components": [
+          {
+            "triangles": 320,
+            "area_m2": 0.027725797205631966
+          }
+        ]
+      },
+      "watertight_individual_mesh": true,
+      "positive_signed_volume_m3": 0.00015430552082847047,
+      "endpoint_centers_nearest_vertex_error_m": [
+        5.102171908158823e-10,
+        4.0089429957742075e-10
+      ],
+      "max_rim_radius_error_against_fit_record_m": 6.482087679116066e-10,
+      "vertex_min_y_m": 0.179046149,
+      "floor_clearance_m": null,
+      "source_area_samples_to_physical_stool": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.0005801587385071399,
+        "median_distance_m": 0.0004803577030543238,
+        "p95_distance_m": 0.0012124401284381743,
+        "max_distance_m": 0.001398403663188219,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 100000,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.01,
+            "count": 100000,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.02,
+            "count": 100000,
+            "fraction": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "brace_2_3",
+      "provenance_role": "fitted/structural",
+      "path": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\brace_2_3.ply",
+      "sha256": "f27db72d89d6a15df5eb6c3966bec68fa4051eaa21c122a232b1e8866206a962",
+      "topology": {
+        "vertices": 162,
+        "triangles": 320,
+        "connected_triangle_components": 1,
+        "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+        "boundary_edges": 0,
+        "boundary_edge_length_m": 0.0,
+        "nonmanifold_edges": 0,
+        "mesh_triangle_area_m2": 0.028535264361140737,
+        "largest_component_area_fraction": 1.0,
+        "largest_components": [
+          {
+            "triangles": 320,
+            "area_m2": 0.028535264361140737
+          }
+        ]
+      },
+      "watertight_individual_mesh": true,
+      "positive_signed_volume_m3": 0.00016292109497869852,
+      "endpoint_centers_nearest_vertex_error_m": [
+        6.493017753572353e-10,
+        6.455746407650902e-10
+      ],
+      "max_rim_radius_error_against_fit_record_m": 7.773684976980499e-10,
+      "vertex_min_y_m": 0.17858155,
+      "floor_clearance_m": null,
+      "source_area_samples_to_physical_stool": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.0005426167009830668,
+        "median_distance_m": 0.0005438828375190496,
+        "p95_distance_m": 0.0009922404307872055,
+        "max_distance_m": 0.0020132516510784626,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 100000,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.01,
+            "count": 100000,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.02,
+            "count": 100000,
+            "fraction": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "brace_3_1",
+      "provenance_role": "fitted/structural",
+      "path": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\examples\\stool-fit\\fitted\\brace_3_1.ply",
+      "sha256": "409846a1b8a1b6c19acf7d0ae01643dff2e7c8e9db041767d42dbd150bc61c3a",
+      "topology": {
+        "vertices": 162,
+        "triangles": 320,
+        "connected_triangle_components": 1,
+        "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+        "boundary_edges": 0,
+        "boundary_edge_length_m": 0.0,
+        "nonmanifold_edges": 0,
+        "mesh_triangle_area_m2": 0.029091244342123453,
+        "largest_component_area_fraction": 1.0,
+        "largest_components": [
+          {
+            "triangles": 320,
+            "area_m2": 0.029091244342123453
+          }
+        ]
+      },
+      "watertight_individual_mesh": true,
+      "positive_signed_volume_m3": 0.00016915619254431543,
+      "endpoint_centers_nearest_vertex_error_m": [
+        9.441542341331066e-11,
+        4.951794056829874e-10
+      ],
+      "max_rim_radius_error_against_fit_record_m": 5.997121636097669e-10,
+      "vertex_min_y_m": 0.178077903,
+      "floor_clearance_m": null,
+      "source_area_samples_to_physical_stool": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.0006464898258627471,
+        "median_distance_m": 0.000663762737531215,
+        "p95_distance_m": 0.0011631504923570902,
+        "max_distance_m": 0.0021569018717855215,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 100000,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.01,
+            "count": 100000,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.02,
+            "count": 100000,
+            "fraction": 1.0
+          }
+        ]
+      }
+    }
+  ],
+  "joint_forensics": {
+    "method": "Source cap-center endpoint strictly inside actual target component convex face halfspaces; each target is a closed convex 80-sided cylinder. Positive interior margin proves solid overlap for these frozen components, not welding.",
+    "intended_joint_count": 9,
+    "all_nine_positive_solid_overlaps": true,
+    "joints": [
+      {
+        "source_part": "leg_1",
+        "source_endpoint": "end_m",
+        "target_part": "seat",
+        "max_signed_target_convex_face_plane_distance_m": -0.02453230033635445,
+        "strictly_inside_actual_target_polyhedron": true
+      },
+      {
+        "source_part": "leg_2",
+        "source_endpoint": "end_m",
+        "target_part": "seat",
+        "max_signed_target_convex_face_plane_distance_m": -0.02453230033635445,
+        "strictly_inside_actual_target_polyhedron": true
+      },
+      {
+        "source_part": "leg_3",
+        "source_endpoint": "end_m",
+        "target_part": "seat",
+        "max_signed_target_convex_face_plane_distance_m": -0.02453230033635445,
+        "strictly_inside_actual_target_polyhedron": true
+      },
+      {
+        "source_part": "brace_1_2",
+        "source_endpoint": "start_m",
+        "target_part": "leg_1",
+        "max_signed_target_convex_face_plane_distance_m": -0.02355340354911384,
+        "strictly_inside_actual_target_polyhedron": true
+      },
+      {
+        "source_part": "brace_1_2",
+        "source_endpoint": "end_m",
+        "target_part": "leg_2",
+        "max_signed_target_convex_face_plane_distance_m": -0.023726497840641736,
+        "strictly_inside_actual_target_polyhedron": true
+      },
+      {
+        "source_part": "brace_2_3",
+        "source_endpoint": "start_m",
+        "target_part": "leg_2",
+        "max_signed_target_convex_face_plane_distance_m": -0.023726497840500516,
+        "strictly_inside_actual_target_polyhedron": true
+      },
+      {
+        "source_part": "brace_2_3",
+        "source_endpoint": "end_m",
+        "target_part": "leg_3",
+        "max_signed_target_convex_face_plane_distance_m": -0.023523458096667005,
+        "strictly_inside_actual_target_polyhedron": true
+      },
+      {
+        "source_part": "brace_3_1",
+        "source_endpoint": "start_m",
+        "target_part": "leg_3",
+        "max_signed_target_convex_face_plane_distance_m": -0.02352345809628187,
+        "strictly_inside_actual_target_polyhedron": true
+      },
+      {
+        "source_part": "brace_3_1",
+        "source_endpoint": "end_m",
+        "target_part": "leg_1",
+        "max_signed_target_convex_face_plane_distance_m": -0.02355340354907076,
+        "strictly_inside_actual_target_polyhedron": true
+      }
+    ]
+  },
+  "observed_point_mesh_distance": {
+    "definition": "Unsigned distance to actual exported primitive triangle shells, independently replacing the fitter's min-SDF residual",
+    "training_even": {
+      "sample_count": 1927,
+      "finite_distance_count": 1927,
+      "mean_distance_m": 0.0010147256131014376,
+      "median_distance_m": 0.0007379055023193359,
+      "p95_distance_m": 0.0028122772928327305,
+      "max_distance_m": 0.009728173725306988,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1914,
+          "fraction": 0.9932537623248573
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1927,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1927,
+          "fraction": 1.0
+        }
+      ]
+    },
+    "validation_odd": {
+      "sample_count": 1885,
+      "finite_distance_count": 1885,
+      "mean_distance_m": 0.0010469326768941791,
+      "median_distance_m": 0.0007748948410153389,
+      "p95_distance_m": 0.0029538629576563824,
+      "max_distance_m": 0.006294322200119495,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1876,
+          "fraction": 0.9952254641909815
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1885,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1885,
+          "fraction": 1.0
+        }
+      ]
+    }
+  },
+  "interpretation": {
+    "reference_scope": "The reference is used only by this evaluator. This report cannot establish what any upstream fitter read or whether a model family was selected from prior knowledge.",
+    "train_validation": "Odd frames are validation because the fitter prototype gate uses their errors for acceptance. This report cannot establish an untouched holdout across earlier iterations.",
+    "residual_limit": "Fitter abs(min signed cylinder distances) is not exact distance to union boundary in overlap interiors. Closest-part labels use argmin(abs signed distances), which can differ from the primitive providing the residual. Independent metrics here query triangles.",
+    "gate_limit": "Fitter gate checks balanced mean errors and >=5 training supports per primitive, not tail error or a minimum validation support per primitive. It is correctly labeled a bounded prototype gate, not product quality or unique recovery."
+  },
+  "limitations": [
+    "Ray-hit recall is observation-weighted coverage of captured valid rays, not visible-area coverage, full-surface completeness, or unseen-surface accuracy.",
+    "All reverse samples include hidden/internal primitive surfaces in both fitted and physical reference geometry. Accuracy is proximity to authored shells, not exposed union surface accuracy.",
+    "Same development fixture and operator-selected seven-part family; these metrics do not establish generalization or unseen-region correctness. Geometry was frozen before this reference evaluation.",
+    "Seven individually watertight overlapping shells constitute an editable assembly, not a welded watertight union mesh or a completed full scene.",
+    "Reference primitive-balanced recall gives each of the seven reference components equal weight; reverse accuracy remains uniform fitted-source-area sampling."
+  ]
+}

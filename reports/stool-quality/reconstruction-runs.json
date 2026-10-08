@@ -1,0 +1,40 @@
+{
+  "input_scene": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\results-final\\dev-same-color-dining\\points\\scene.json",
+  "input_sha256": "2014c2121b9042e6d4f324e619eedaff91a57f2ee1891ab35a407177468d07c5",
+  "reference_used": false,
+  "runs": [
+    {
+      "name": "recon-10mm-fixed",
+      "voxel_size_m": 0.01,
+      "truncation_m": 0.105,
+      "status": "pass",
+      "vertices": 828413,
+      "triangles": 1630779,
+      "frames": 18,
+      "elapsed_seconds": 14.702293999987887,
+      "mesh_sha256": "82746cadb2f0dd583b539b67c3b02726e80e5ee542d5ef5609c282046f4b5df9"
+    },
+    {
+      "name": "recon-10mm-local",
+      "voxel_size_m": 0.01,
+      "truncation_m": 0.03,
+      "status": "pass",
+      "vertices": 689227,
+      "triangles": 1281324,
+      "frames": 18,
+      "elapsed_seconds": 11.114429500012193,
+      "mesh_sha256": "880b33bf4408552d1ee915472c11e82535572308999b3f6f08850ebbb424d30d"
+    },
+    {
+      "name": "recon-5mm-local",
+      "voxel_size_m": 0.005,
+      "truncation_m": 0.015,
+      "status": "pass",
+      "vertices": 2879890,
+      "triangles": 5348247,
+      "frames": 18,
+      "elapsed_seconds": 36.006969300011406,
+      "mesh_sha256": "274ea1fa1b3b6f765213954e5273bcea8880d0822aeaf9d021ac7b37d2c3a07c"
+    }
+  ]
+}
