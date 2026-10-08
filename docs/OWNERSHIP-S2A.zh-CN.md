@@ -73,3 +73,37 @@ $Blender = 'C:\path\to\blender-5.1.2\blender.exe'
 自动 S1 链转移固定的 12/8 个面来验证数据保持，这些选择不代表对象边界已修好。
 诊断参考继续保留 S0 的最近表面匹配及法向/可见性限制；没有重建出的表面不计入
 分区错误分母。
+
+## 首次有界修正与评分
+
+使用 `dev-same-color-dining`，目标为桌子 `same-table`（样例显示名 `Object00`）。
+正式选面前，描述一块能根据几何明确判断属于桌面的连续区域，或某条桌腿的
+完整观测段。从多个方向检查 **Unresolved (-2)**；完成该区域或主动修正达到
+20 分钟即停止，保留失败和歧义。软件学习/准备和休息单独记录，任务结束前
+不查看参考标签。本轮不删除面或改变拓扑。
+
+实时记录实际起止时间、选面、归属提交、撤销/重做、失败和恢复。现有面板
+日志只含成功归属和变换，不能从 sidecar 反推人工耗时或失败次数。
+
+修正后另存 `corrected.blend`，导出 `corrected.glb` 与
+`corrected.identity.json`。随后将桌子平移 `(0.25, 0, 0)` 米、旋转设为 0；
+将 `same-chair-west` 平移设为 0、旋转设为 15 度，实际执行 Undo/Redo，
+另存、重开并导出 `final` 文件。保留原 `before.blend`。不要求修完整个房间
+或补齐观测孔洞。当前面板只转移真子集；如遇到需要转走整个来源区域的情况，
+记录为现有限制。
+
+完成后，将 sidecar 声明的最终归属映射回原冻结网格，用原 S0 参考匹配器评分：
+
+```powershell
+& $Python score_review.py --results '.local\s0-results' --suite '.local\s0-input' --published-results '.local\s0-results\development-results.json' --bundle '.local\b1-bundles\dev-same-color-dining\surface\surface-scene.json' --identity '.local\author-dining\results\corrected.identity.json' --glb '.local\author-dining\results\corrected.glb' --output '.local\author-dining-score'
+```
+
+必须使用创建原生起点时的同一 B1 表面包及其 S0 输入/结果。重新重建可能改变
+面索引，应从该次 B1 启动独立人工任务，不能用新网格替代下载样例的原网格。
+本工作区已经保留下载样例对应的原始准备输入。
+
+检查逐对象/宏平均 IoU、目标 precision/recall、漏选/误选面积、改变的面数
+和面积、未知面积，以及其他对象是否变差。评分使用原几何，刚体变换不会
+制造虚假的分区误差。这个入口核对声明归属和来源，不验证实际修改后的
+原生/GLB 几何，也不证明人工操作或耗时；相应原生文件和记录需要另外保留。
+变差或无法判断的结果同样记录，不能从任务分母中删除。

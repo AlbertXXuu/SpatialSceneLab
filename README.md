@@ -25,6 +25,10 @@ partitions passed native editing and independent source-lineage checks across
 
 Actual author correction and timing remain pending. The download is a starting
 scene with unresolved faces, plus the standalone Blender panel and source maps.
+The [bounded author task and score command](docs/OWNERSHIP-S2A.md#first-bounded-correction-and-scoring)
+connect the final ownership sidecar back to the original fixed-mesh evaluator.
+Successful edit logs do not measure human time or failed attempts; record them
+during the task.
 
 **S1 measured 2026-10-06:** all six development scenes completed native Blender
 face reassignment, metre translation, pivoted rotation, four undo/redo cycles
