@@ -1,0 +1,156 @@
+{
+  "schema": "spatial-scene-lab.partition-export.v1",
+  "status": "pass",
+  "method": "b1",
+  "published_results_sha256": "5bb302eac773d8a2e0af299e6fe3f476f413740e4ffd5261419332621c7e2071",
+  "exporter_sha256": "765494507c54909812162748d950b1d59e8c7d65b22d7d97cd2cdec6765fdb0f",
+  "reference_used": false,
+  "scope": "frozen source geometry and ownership export; scripted engineering acceptance",
+  "scenes": [
+    {
+      "scene_id": "dev-contact-chair",
+      "status": "pass",
+      "vertices": 52832,
+      "triangles": 99511,
+      "partition": {
+        "parameters": {
+          "method": "b1",
+          "box_margin_m": 0.025,
+          "structure_tolerance_m": 0.025,
+          "reference_used": false,
+          "mesh_changed": false,
+          "rule": "centroid-unique-owner"
+        },
+        "all_triangles_accounted_for": true,
+        "environment_triangles": 83698,
+        "unresolved_triangles": 1216,
+        "object_triangles": 14597,
+        "geometry_color_normals_exact": true,
+        "owner_array_bytes_exact": true
+      },
+      "bundle": "dev-contact-chair/surface/surface-scene.json",
+      "bundle_sha256": "e2f8ec9e273be7e6486cfe6a1c485d19a89eb3378709598b00dc9abfbaad236e"
+    },
+    {
+      "scene_id": "dev-same-color-dining",
+      "status": "pass",
+      "vertices": 50968,
+      "triangles": 96518,
+      "partition": {
+        "parameters": {
+          "method": "b1",
+          "box_margin_m": 0.025,
+          "structure_tolerance_m": 0.025,
+          "reference_used": false,
+          "mesh_changed": false,
+          "rule": "centroid-unique-owner"
+        },
+        "all_triangles_accounted_for": true,
+        "environment_triangles": 84277,
+        "unresolved_triangles": 3605,
+        "object_triangles": 8636,
+        "geometry_color_normals_exact": true,
+        "owner_array_bytes_exact": true
+      },
+      "bundle": "dev-same-color-dining/surface/surface-scene.json",
+      "bundle_sha256": "9fb2f34311992f0ff3dbc8f821940c166459f7568039e77dc17525e2cb12acd2"
+    },
+    {
+      "scene_id": "dev-curved-sofa-wall",
+      "status": "pass",
+      "vertices": 35446,
+      "triangles": 67055,
+      "partition": {
+        "parameters": {
+          "method": "b1",
+          "box_margin_m": 0.025,
+          "structure_tolerance_m": 0.025,
+          "reference_used": false,
+          "mesh_changed": false,
+          "rule": "centroid-unique-owner"
+        },
+        "all_triangles_accounted_for": true,
+        "environment_triangles": 52151,
+        "unresolved_triangles": 0,
+        "object_triangles": 14904,
+        "geometry_color_normals_exact": true,
+        "owner_array_bytes_exact": true
+      },
+      "bundle": "dev-curved-sofa-wall/surface/surface-scene.json",
+      "bundle_sha256": "b583f90368548b3f27f3937accad606028fe328d723489c4287ac0cb0ace5b8d"
+    },
+    {
+      "scene_id": "dev-occluded-bookshelf",
+      "status": "pass",
+      "vertices": 28692,
+      "triangles": 52131,
+      "partition": {
+        "parameters": {
+          "method": "b1",
+          "box_margin_m": 0.025,
+          "structure_tolerance_m": 0.025,
+          "reference_used": false,
+          "mesh_changed": false,
+          "rule": "centroid-unique-owner"
+        },
+        "all_triangles_accounted_for": true,
+        "environment_triangles": 33612,
+        "unresolved_triangles": 67,
+        "object_triangles": 18452,
+        "geometry_color_normals_exact": true,
+        "owner_array_bytes_exact": true
+      },
+      "bundle": "dev-occluded-bookshelf/surface/surface-scene.json",
+      "bundle_sha256": "7bc6ed690fc09d04b5f4b467d657763483e9d7e866ae635b643ad61397b05754"
+    },
+    {
+      "scene_id": "dev-thin-rack-noise",
+      "status": "pass",
+      "vertices": 56190,
+      "triangles": 103884,
+      "partition": {
+        "parameters": {
+          "method": "b1",
+          "box_margin_m": 0.025,
+          "structure_tolerance_m": 0.025,
+          "reference_used": false,
+          "mesh_changed": false,
+          "rule": "centroid-unique-owner"
+        },
+        "all_triangles_accounted_for": true,
+        "environment_triangles": 96509,
+        "unresolved_triangles": 0,
+        "object_triangles": 7375,
+        "geometry_color_normals_exact": true,
+        "owner_array_bytes_exact": true
+      },
+      "bundle": "dev-thin-rack-noise/surface/surface-scene.json",
+      "bundle_sha256": "16f5398a6a36e54c1cf09ee276ea84a8e73835c911fa153d1b6da5f66601d70b"
+    },
+    {
+      "scene_id": "dev-combined-study",
+      "status": "pass",
+      "vertices": 40070,
+      "triangles": 71967,
+      "partition": {
+        "parameters": {
+          "method": "b1",
+          "box_margin_m": 0.025,
+          "structure_tolerance_m": 0.025,
+          "reference_used": false,
+          "mesh_changed": false,
+          "rule": "centroid-unique-owner"
+        },
+        "all_triangles_accounted_for": true,
+        "environment_triangles": 46746,
+        "unresolved_triangles": 877,
+        "object_triangles": 24344,
+        "geometry_color_normals_exact": true,
+        "owner_array_bytes_exact": true
+      },
+      "bundle": "dev-combined-study/surface/surface-scene.json",
+      "bundle_sha256": "76f9c0fce083cc3c79dffd20a89f6b9f0496f8a3b64f9711c6c7b929c02d3edd"
+    }
+  ],
+  "elapsed_seconds": 2.259358700015582
+}

@@ -57,3 +57,7 @@ jobs:
           python fixtures/make_complex_fixture.py --output .local/s0-input --width 80 --height 60 --scene dev-same-color-dining
           python offline_run.py --script run_development.py --report .local/s0-guard.json -- --suite .local/s0-input --output .local/s0-results
           python reevaluate_development.py --suite .local/s0-input --results .local/s0-results --output .local/s0-sensitivity
+      - name: Diagnose and export the measured B1 partition
+        run: |
+          python partition_diagnostics.py --suite .local/s0-input --results .local/s0-results --published-results .local/s0-results/development-results.json --output .local/s2a-diagnostics
+          python export_partition.py --results .local/s0-results --published-results .local/s0-results/development-results.json --output .local/b1-bundles

@@ -1,0 +1,108 @@
+{
+  "schema": "spatial-scene-lab.b1-author-task.v1",
+  "scene_id": "dev-same-color-dining",
+  "state": "initial B1; author-operated correction pending",
+  "files": {
+    "before.blend": {
+      "sha256": "2ce7686072c0d9e64ef6027fe6a619fd4db5f18bd7d176fe1ce892c44751968c",
+      "bytes": 3064980
+    },
+    "blender_edit.py": {
+      "sha256": "87a6a014165545b6d2f1a8a9aab41110afd5f937a07925b620ce824fbc7e9427",
+      "bytes": 24000
+    },
+    "LICENSE": {
+      "sha256": "818a922b9751d248f82b1580c5ea802d95ff0d48a9d779e2f816cc82e33aa6d5",
+      "bytes": 1063
+    },
+    "surface/b1-face-owner.npy": {
+      "sha256": "0cc3f62fe1865a24def84f6b3bd5334ee1ec615c53c0761576e1d8e1c645646c",
+      "bytes": 386200
+    },
+    "surface/environment.ply": {
+      "sha256": "4ceddf095ddcea67581670743f85af26fe47bbe54060da65b66774ac0599cfc0",
+      "bytes": 3368638
+    },
+    "surface/environment.source-face-indices.npy": {
+      "sha256": "b15dd00f8436b34f7e40cd4f7121cc611cd2a34c4e96e472f32713dc167c21e0",
+      "bytes": 674344
+    },
+    "surface/environment.source-vertex-indices.npy": {
+      "sha256": "49b1c50d8f2df119207330b5231090a31af813c4df1a7a9547b819fc00a6f4a3",
+      "bytes": 178380
+    },
+    "surface/same-chair-east.ply": {
+      "sha256": "71284e5c82dbe72017bdc388c292149ecd1b08201e1c9989ac2060dfe7f6627e",
+      "bytes": 71226
+    },
+    "surface/same-chair-east.source-face-indices.npy": {
+      "sha256": "3d24067efa32124bd83ebc72db2501ad6e73fd98b019090e319245ccebed1bd7",
+      "bytes": 14480
+    },
+    "surface/same-chair-east.source-vertex-indices.npy": {
+      "sha256": "7cca459fe3924ce1d6673b5b7d0ca42ed7e709ea905ba729a3fcfbe81388fcc5",
+      "bytes": 3860
+    },
+    "surface/same-chair-west.ply": {
+      "sha256": "c95597281d2793f7fc5c9ed19a8b402064f700779e3ada4e6ed4a7716b26353b",
+      "bytes": 71571
+    },
+    "surface/same-chair-west.source-face-indices.npy": {
+      "sha256": "0b18beaed66de54f55aac7e735fd00f7c1aa7c007004a731c4d062998f8d9f11",
+      "bytes": 14504
+    },
+    "surface/same-chair-west.source-vertex-indices.npy": {
+      "sha256": "4fb796524400954996ff43e2aeba733b773b3ac5b1fbf932b60258ec5d876a71",
+      "bytes": 3884
+    },
+    "surface/same-stool.ply": {
+      "sha256": "e1d73867d4cd4d2a1d7d0373809823438cfd3bebb6ec2e2428838a31c764054a",
+      "bytes": 65386
+    },
+    "surface/same-stool.source-face-indices.npy": {
+      "sha256": "708c6355d370df4a9ccee210d2bcd1873c936735fe147429a87e07d3cc46ef98",
+      "bytes": 12832
+    },
+    "surface/same-stool.source-vertex-indices.npy": {
+      "sha256": "78bbfa8ae8eca8348f5f1cf5e44e490be01c1eb127fce9396364bbbdaa17c251",
+      "bytes": 3612
+    },
+    "surface/same-table.ply": {
+      "sha256": "07daa97f8d9290b5716435c9121672a43064d762132b4ac51e36da4edd6f2d38",
+      "bytes": 146039
+    },
+    "surface/same-table.source-face-indices.npy": {
+      "sha256": "1acdf9f45dd7c5affce9be87dee982ff194505455ffacd045a218edea6bffadb",
+      "bytes": 27784
+    },
+    "surface/same-table.source-vertex-indices.npy": {
+      "sha256": "fc425204b415df464c076baedb57975b1188a9725594db2402c9ceb28c8aac6f",
+      "bytes": 8032
+    },
+    "surface/surface-scene.json": {
+      "sha256": "9fb2f34311992f0ff3dbc8f821940c166459f7568039e77dc17525e2cb12acd2",
+      "bytes": 28253
+    },
+    "surface/unresolved.ply": {
+      "sha256": "bc307c653fe3cc9a8212218ead62a3f58546ecf8466015fe26533b7546dedc71",
+      "bytes": 148983
+    },
+    "surface/unresolved.source-face-indices.npy": {
+      "sha256": "28d9be3918d34f2174a41440ed89839c878d079dda84173e1cb996323f3dd9e9",
+      "bytes": 28968
+    },
+    "surface/unresolved.source-vertex-indices.npy": {
+      "sha256": "b736fb55ec34f49bac14347e3b021c739e7fdc9cb5b5a65cee3a7f233e996f74",
+      "bytes": 8112
+    },
+    "README.txt": {
+      "sha256": "25494c7d44df538bb3437c7f4b60989cef5bc3e5841eed3b64712a11dd94e579",
+      "bytes": 1534
+    }
+  },
+  "archive": {
+    "path": "dining-b1-author-task.zip",
+    "sha256": "393f52c7b01590c63408e35ecbfc4366533dfcf8b2d1ca9c64be2025e43ae14a",
+    "bytes": 5344133
+  }
+}

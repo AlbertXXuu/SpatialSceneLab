@@ -1,0 +1,197 @@
+{
+  "schema": "spatial-scene-lab.partition-native-lineage.v1",
+  "status": "pass",
+  "verifier_sha256": "11794f69ebbd763eca438c44fba8bed478d3169ea070a7195921b1d2ebb66d70",
+  "published_results_sha256": "5bb302eac773d8a2e0af299e6fe3f476f413740e4ffd5261419332621c7e2071",
+  "color_conversion": "source PLY RGB8 sRGB to linear using IEC 61966-2-1; alpha = 1",
+  "scope": "initial native face ID to frozen directed source triangle and corner colors",
+  "scenes": [
+    {
+      "scene_id": "dev-contact-chair",
+      "status": "pass",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 1.20525890000863,
+        "sampled_process_tree_peak_rss_bytes": 272363520,
+        "memory_samples": 10,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "native": {
+        "status": "pass",
+        "execution": "scripted fresh-process native initial lineage comparison",
+        "source_faces": 99511,
+        "owners_match": true,
+        "native_ids_match": true,
+        "maximum_directed_corner_distance_m": 5.721977952802008e-07,
+        "position_tolerance_m": 1e-06,
+        "maximum_linear_rgba_difference": 1.8886988301103358e-07,
+        "linear_rgba_tolerance": 1e-06,
+        "comparison": "same mapped source face and corner order; no nearest-point or triangle reassignment",
+        "registry_match": true,
+        "bundle_manifest_match": true,
+        "blender": "5.1.2",
+        "source_surface_sha256": "7382711847f3ed6a86d3b963e06e1278bbf5f8e686c152dd39bf59d94efbf738",
+        "before_blend_sha256": "47de274458fff06122f40a6f5f61a58de0a53e2a26e110c0a16f58170dd3e937"
+      }
+    },
+    {
+      "scene_id": "dev-same-color-dining",
+      "status": "pass",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 1.057084500003839,
+        "sampled_process_tree_peak_rss_bytes": 242282496,
+        "memory_samples": 9,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "native": {
+        "status": "pass",
+        "execution": "scripted fresh-process native initial lineage comparison",
+        "source_faces": 96518,
+        "owners_match": true,
+        "native_ids_match": true,
+        "maximum_directed_corner_distance_m": 5.963364942629364e-07,
+        "position_tolerance_m": 1e-06,
+        "maximum_linear_rgba_difference": 1.2408368926797309e-07,
+        "linear_rgba_tolerance": 1e-06,
+        "comparison": "same mapped source face and corner order; no nearest-point or triangle reassignment",
+        "registry_match": true,
+        "bundle_manifest_match": true,
+        "blender": "5.1.2",
+        "source_surface_sha256": "e4d0a901df78b7dd0bb3bf82ff5de56ea51df3528f5f694dc7c3006cd8a824cc",
+        "before_blend_sha256": "2ce7686072c0d9e64ef6027fe6a619fd4db5f18bd7d176fe1ce892c44751968c"
+      }
+    },
+    {
+      "scene_id": "dev-curved-sofa-wall",
+      "status": "pass",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 1.0516935999912675,
+        "sampled_process_tree_peak_rss_bytes": 241176576,
+        "memory_samples": 9,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "native": {
+        "status": "pass",
+        "execution": "scripted fresh-process native initial lineage comparison",
+        "source_faces": 67055,
+        "owners_match": true,
+        "native_ids_match": true,
+        "maximum_directed_corner_distance_m": 5.386739666638613e-07,
+        "position_tolerance_m": 1e-06,
+        "maximum_linear_rgba_difference": 2.1943937100754596e-07,
+        "linear_rgba_tolerance": 1e-06,
+        "comparison": "same mapped source face and corner order; no nearest-point or triangle reassignment",
+        "registry_match": true,
+        "bundle_manifest_match": true,
+        "blender": "5.1.2",
+        "source_surface_sha256": "1b9211e13614ebe1110ae298e7bbb71aa6832b0c24a3f355b87a4f82a823b81b",
+        "before_blend_sha256": "549d0ddf17fef97bf0f8cf731537ab15f340bff134a5b31e4c0cbb6bb9457857"
+      }
+    },
+    {
+      "scene_id": "dev-occluded-bookshelf",
+      "status": "pass",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.9315271000086796,
+        "sampled_process_tree_peak_rss_bytes": 247500800,
+        "memory_samples": 8,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "native": {
+        "status": "pass",
+        "execution": "scripted fresh-process native initial lineage comparison",
+        "source_faces": 52131,
+        "owners_match": true,
+        "native_ids_match": true,
+        "maximum_directed_corner_distance_m": 6.039952466740262e-07,
+        "position_tolerance_m": 1e-06,
+        "maximum_linear_rgba_difference": 1.766905805000718e-07,
+        "linear_rgba_tolerance": 1e-06,
+        "comparison": "same mapped source face and corner order; no nearest-point or triangle reassignment",
+        "registry_match": true,
+        "bundle_manifest_match": true,
+        "blender": "5.1.2",
+        "source_surface_sha256": "873f4a3049487926a54e1d26d8d34736022bec7ab7f401ed6afc41725efe88d2",
+        "before_blend_sha256": "e041c8164d8fcc2be4c0124b2684b3b4228d5c198613f51f84aaef239e7c0835"
+      }
+    },
+    {
+      "scene_id": "dev-thin-rack-noise",
+      "status": "pass",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.9283140999905299,
+        "sampled_process_tree_peak_rss_bytes": 269660160,
+        "memory_samples": 8,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "native": {
+        "status": "pass",
+        "execution": "scripted fresh-process native initial lineage comparison",
+        "source_faces": 103884,
+        "owners_match": true,
+        "native_ids_match": true,
+        "maximum_directed_corner_distance_m": 6.143976862422673e-07,
+        "position_tolerance_m": 1e-06,
+        "maximum_linear_rgba_difference": 1.8886988301103358e-07,
+        "linear_rgba_tolerance": 1e-06,
+        "comparison": "same mapped source face and corner order; no nearest-point or triangle reassignment",
+        "registry_match": true,
+        "bundle_manifest_match": true,
+        "blender": "5.1.2",
+        "source_surface_sha256": "6e5ac74dd7c9ac319c689b288dc7bebab2f8d238f41c0ed555f6e85bcca2fd2a",
+        "before_blend_sha256": "2dd2d53dce6319506d9dd8e1dfd5cda52c7e16239a629bddf764d55a05d7e276"
+      }
+    },
+    {
+      "scene_id": "dev-combined-study",
+      "status": "pass",
+      "process": {
+        "status": "pass",
+        "exit_code": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.8087538999971002,
+        "sampled_process_tree_peak_rss_bytes": 251117568,
+        "memory_samples": 7,
+        "psutil": "7.2.2",
+        "memory_scope": "concurrent RSS of Blender parent and observed descendants, sampled every 0.1 seconds"
+      },
+      "native": {
+        "status": "pass",
+        "execution": "scripted fresh-process native initial lineage comparison",
+        "source_faces": 71967,
+        "owners_match": true,
+        "native_ids_match": true,
+        "maximum_directed_corner_distance_m": 5.67427787520379e-07,
+        "position_tolerance_m": 1e-06,
+        "maximum_linear_rgba_difference": 1.8886988301103358e-07,
+        "linear_rgba_tolerance": 1e-06,
+        "comparison": "same mapped source face and corner order; no nearest-point or triangle reassignment",
+        "registry_match": true,
+        "bundle_manifest_match": true,
+        "blender": "5.1.2",
+        "source_surface_sha256": "06b3edfe5a7e236dd49908fae4ad0ee6e96e5af8a08a4dce29d91153d2746600",
+        "before_blend_sha256": "279826604f5c9e8b154e099d4de646f6cde99da4f8fa7416c871de50568c8df3"
+      }
+    }
+  ],
+  "elapsed_seconds": 8.415380699996604
+}

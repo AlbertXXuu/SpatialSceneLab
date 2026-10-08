@@ -1,0 +1,39 @@
+{
+  "schema": "spatial-scene-lab.s2a-public-evidence.v1",
+  "files": {
+    "diagnostics-results.json": {
+      "sha256": "9050c18dacfbbb8980a931fbee2a2f8e67388e25c4c671bc57a1776128e43d3f",
+      "bytes": 106748
+    },
+    "diagnostics-metrics.csv": {
+      "sha256": "543ec9615790738d32d8882cb9956ebef2c3334657d1b08ef0475cb68e64aa30",
+      "bytes": 21013
+    },
+    "partition-export-results.json": {
+      "sha256": "9201ab0c8d0c57943af0cded01ac0177e44c7f01e18e539b958ec025efff7b8d",
+      "bytes": 5439
+    },
+    "edit-suite-results.json": {
+      "sha256": "58158f4d4b21fff37cb7243c5a2f9fe80c214db3d01fcc55538bfc1e1b26575f",
+      "bytes": 116473
+    },
+    "native-lineage-results.json": {
+      "sha256": "f23767a604ba6118d2bfb6a6ff5cab8c37acfda60c9eba067e567e8b04c4b621",
+      "bytes": 8533
+    },
+    "ownership-failure-causes.png": {
+      "sha256": "722bdd9f90a62267982c7f4e53ecac26cc3a19f389a25be4b158a9408f4bcdaf",
+      "bytes": 129369
+    },
+    "ownership-failure-causes.pdf": {
+      "sha256": "e68095f7439fbbce02f52655af85f570d59f8cd682b618b9b8616398a613c21a",
+      "bytes": 26923
+    },
+    "figure-manifest.json": {
+      "sha256": "84ab7cee5f9f63df326752ef79a7fe71dca769559e0d70b61f320a4adf41774f",
+      "bytes": 549
+    }
+  },
+  "per_face_traces": "Reproduced by partition_diagnostics.py; hashes in diagnostics-results.json. Raw NPZ arrays are retained in the local run, not duplicated in this public summary.",
+  "author_task": "../../examples/ownership-b1/dining-b1-author-task.zip"
+}
