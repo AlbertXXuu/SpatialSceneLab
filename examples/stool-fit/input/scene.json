@@ -1,0 +1,1453 @@
+{
+  "schema": "spatial-scene-lab.observations.v1",
+  "units": "m",
+  "up_axis": "Y",
+  "source": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\scan",
+  "input_files": {
+    "conf_00000.png": "eccf34c6b7a32093a310fb0ba1be3126e0201a4016ac6743e4918ba0c582b5b8",
+    "conf_00001.png": "396222c2fcb034f2c9125ddea10a2704927d2728f3b8477983388a2c0ca32a84",
+    "conf_00002.png": "b71f8371e1e1b6e28f0d0b8d19e11479081d17b564c23f95a210ba4b58274657",
+    "conf_00003.png": "0c5544f3038ecdcfa3fa43198cec311d965ca35dc6ff8671b41f706875e3b45d",
+    "conf_00004.png": "3056ecfab4f2a0f233b9e451775ee8c5a7724c97253b19bafaaefebe18ef9aa1",
+    "conf_00005.png": "0e828098c3f393618aba10847edefbdb3ee938931f331e43c11d5a6431ca8469",
+    "conf_00006.png": "4b06e55215e656a9457481e2f75f49706c9e044db9b82ee348ad15f4b8361488",
+    "conf_00007.png": "2e21f1f60fde5df04b7a5c7fd05135897d7476b7b1481818c514e9d551d163ef",
+    "conf_00008.png": "29093799678eb3291117118a9ef94b74b2e4bacdcd29b257fda2de6566010972",
+    "conf_00009.png": "f3c828d263f0bb2cec856258c0db0f0bf8e3ae2ed153401bd10d954b5482083c",
+    "conf_00010.png": "939065e881b9eba8a9b3b74530162db4798078d1de360453d266666050981481",
+    "conf_00011.png": "14476cebc7805d0caf10062b87360d547e63b073202718a57ac9c7dab7ff7cf9",
+    "conf_00012.png": "8ec947f57bdaca74e030317a23ea286fb39a27ea69fcc5f2a2d902723c85c812",
+    "conf_00013.png": "dce70529ad203a8d920ac897624b43b9f3ba3f240fe9680463f1bc9a7fc62c19",
+    "conf_00014.png": "002c14fe996ffda9b96aa8e314dea0612419896fe98357dc8cbec9d50f7f6ee8",
+    "conf_00015.png": "fb3f08bac04b4a699a18fedbb7914f07e8ba8f713b9f1f08d3973cd8f485584f",
+    "conf_00016.png": "5189ccee5afbbe8cdc22b0d16e2d28aaa454b2235ba6d067104695f48049ed88",
+    "conf_00017.png": "cb7ce86c9e38c47659a90e2ad85c2a82e0dfcb50e7980ea7d5553ae83f06bf40",
+    "depth_00000.png": "522b556697821990eceb21fcc644ac9571b2d4adf686005f413c8e4a6c91ac8f",
+    "depth_00001.png": "eea7858b8c09eeab3948f46c487933961d2cf89f352baa4dc4a6a111b0b5063c",
+    "depth_00002.png": "75046fb21d649697b32d18a4715369b2ebff394a56bce6c6c7afbd9a0aaf72da",
+    "depth_00003.png": "150b0f50b45f54e16bbd1c1d2346b3f87b5857458d141cc6e7f00feb5a3407a2",
+    "depth_00004.png": "3b4538d304ffcec72cfe9a38b08bc675d63216de65e08638a63c90e92b238ffe",
+    "depth_00005.png": "5906a033a129df90bcb798787e22cb5a593834481a03d18203c724cc86d16af0",
+    "depth_00006.png": "391994f336b9441bf8b7fb723a930f05acd0b6bdaa1596ce82fce0475ae2b8c5",
+    "depth_00007.png": "5ecff6b33fd50d151239e15481f0673b556b125525eb676390a249bce6ae639a",
+    "depth_00008.png": "7cc7e320374c85e91872c4c02f0d1b3a69d48445248654e76ca77ecbd15ad39d",
+    "depth_00009.png": "708768ac41b8541130b54a6415279c1cc21c090901ed2b41dd30c4ffb5a1e87d",
+    "depth_00010.png": "b4bcb948b16140075f33ef4314768e3cfc065ad9cb6abe58373de3a1b50ab836",
+    "depth_00011.png": "3db278761b9bcf39d4420c0bd430c7cf7be44f6bcf8c202c08f151999e61766f",
+    "depth_00012.png": "e084dcd9fef6c213247abf09f4c1f79098e35182ebeda942f680aaea0044bd5e",
+    "depth_00013.png": "4f94fc5edbbee271e78624139b9957cf53fc38b55028f7e8c6c029457a3b0814",
+    "depth_00014.png": "be6dd494c23d38b3177692f2b6840e2105a8d4aeecf62fc34c094bd1d6089e43",
+    "depth_00015.png": "a95811153f9b09e1ac5e52e35efe7680a854014329b8804474ed15c2ab5f8579",
+    "depth_00016.png": "819080e180da20bc98f5f84fd0199aabb45632c5df72feca67c9a8d2632512fc",
+    "depth_00017.png": "6e7d3770498b1703313b57f05ffa3114fedbf87550fc709156d545e4693f2543",
+    "frame_00000.jpg": "92220b96f394f105e5513af191c22fb889cde99777a99fd4e2c8fdd050136853",
+    "frame_00000.json": "bde9d0518108272582cce37e6478bd326fbc5ec8081c9352e51fa322500d2714",
+    "frame_00001.jpg": "d63928e2f121fd233afa4f28327f45332852d1ef4b2615788173603513a5381f",
+    "frame_00001.json": "b35d4b0d10feb081d065ad35f6e189f8092bc8be7640483d6e27df52107ac151",
+    "frame_00002.jpg": "812bdbc53961cf96519a4d0a8d6af5dfe2ceea6dce674fc3cea3e9a46cc816b2",
+    "frame_00002.json": "d9286090a1b8846bbba739f009dd003c6e9d536fecd65ea8b52db42f856af3d7",
+    "frame_00003.jpg": "4f6b17d2d1cb310c7653ef05a43443cbb24c1dce67b2136eb8521f65dfc6c474",
+    "frame_00003.json": "ce89ebddac7aec8e6b8a2d184652a093e231c10161aa402727171b0f4a5be0b5",
+    "frame_00004.jpg": "e8adf59e464d56f9677d6deea5982b1b633de6841843a3142ed5c5e88ca1ae69",
+    "frame_00004.json": "3104ab843cd61b8b19e3cb034a644d8af6424db46cd249282cdc210e8a247357",
+    "frame_00005.jpg": "7416f2d07d4aa3f5882c2f2c8f586e9cc787486ef1c5961ffbc5fc821590f4ab",
+    "frame_00005.json": "20a06b3e756e6b12631bf1709975506b38690458cab35b331b9e7bb51391e75c",
+    "frame_00006.jpg": "10e3b2659c9539d477cbb0f4306397302bfd37cdd6232db9c8aa76eb46d496d1",
+    "frame_00006.json": "4022f914ffd7e4504bbe233d72bcad70feb34adcebaefee2830892327b3545e4",
+    "frame_00007.jpg": "fcd54c6093c8d72f9a262515136e0758f70219c81e068447f7b52196d9f37beb",
+    "frame_00007.json": "8f19ef0022dd3ae2c3812a4243c727d8d4d65767fdcc7b15c2bd9ab7413b887a",
+    "frame_00008.jpg": "8c301ad875bd7669988d155f169323e3f6243d12c198425e996f9969eef6dd6a",
+    "frame_00008.json": "902c8b8b2f685c257acdfa2205234fded254d2a9333128330d23a4ba4fa26f2a",
+    "frame_00009.jpg": "8db2415a811e8cf848602c5357876582b91d557d4181f900879e76f232e65dbd",
+    "frame_00009.json": "32cc1201947b928e8e61b6c18dafc61e727a738e2023abbb973749b27d1cc838",
+    "frame_00010.jpg": "0eca72f23b6579267f2be7f762d07014919e038d186597793fbb8eb7c50e41e0",
+    "frame_00010.json": "0b0bfc023e64abfc615412e3c27c5ec3c10008bc9f9647c11f01ea3dcb96c939",
+    "frame_00011.jpg": "c1254761618e61bb64b81154ee2dca72390dfd168d35fec2d98864f465d88683",
+    "frame_00011.json": "d2540c3e2b97997dcc034cc2698977da08ef37a703d0ca4f83745d3ce52d39df",
+    "frame_00012.jpg": "3c714503de0dda9a8654cb3fd70fd3e43a2f92a0f06ef17eae7c200b70709dd3",
+    "frame_00012.json": "ba59d2125bfa42d1320c3ab6cbdaf69da79c6d0c8dd3fb5ea6b59311a167148f",
+    "frame_00013.jpg": "1ea1ff3754a0d1404eb0c8ea0b45b7cb2f7ba2375fb67262982537ee110b44d5",
+    "frame_00013.json": "6d937ecf47aede00b39e0ece6ea5b6ebe25e59866dc740fb63a93ea2469f207e",
+    "frame_00014.jpg": "613405e3fd2ebc6896376a0543a4e5b2b468c2cdc7b87bedf3109a1d2c1abdac",
+    "frame_00014.json": "2cb4dcc39f3c2fdb1e4df57f8be65433dd8d0c1fbc961a47eefec227ad5bd5e0",
+    "frame_00015.jpg": "b06be6c0c9559361c0e288a2b6a3a6ab46c9cd96504bd0a70cd70c77a0f38652",
+    "frame_00015.json": "48afc651c49383ee9f3942c6eb028a9e53811a4ea8fe796ada79e79d74004ea8",
+    "frame_00016.jpg": "61907f9bd78c95f50e9e4480e1d45e336f1fd26c10a530aee64eb529659a39b8",
+    "frame_00016.json": "359a802d4553980836057f80210b969fdb1b376a8c18be99a39076b4af562c60",
+    "frame_00017.jpg": "32c919cf01b0a6b4747840cf1b59ec2ae9575b9580717ab8416d64141a5e8a3b",
+    "frame_00017.json": "561388e0c0653becec52a4acc4913ab2115a5df8c761e47c005bbfdec1bf1054",
+    "pointcloud.pcd": "27702b1ee8ccb91355c435217089db735b4d9d18b08624ed7da30885226fc02a",
+    "room.usdz": "3b2b61ba00c709b5d4a0f49a74b8cebd61dc9e6e84afcf5a3a6f38fb574c8f3b"
+  },
+  "objects": [
+    {
+      "name": "Object00",
+      "uuid": "same-table",
+      "category": "Table",
+      "category_label": "Table",
+      "source_member": "assets/00_same-table.usda",
+      "source_kind": "RoomPlan parametric measurement",
+      "transform_world": [
+        [
+          0.990268068742,
+          0.0,
+          0.13917310096,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.41
+        ],
+        [
+          -0.13917310096,
+          0.0,
+          0.990268068742,
+          -2.12
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_kind": "box",
+      "dimensions_m": [
+        1.7168,
+        0.8692,
+        1.104
+      ]
+    },
+    {
+      "name": "Object01",
+      "uuid": "same-chair-west",
+      "category": "Chair",
+      "category_label": "Chair",
+      "source_member": "assets/01_same-chair-west.usda",
+      "source_kind": "RoomPlan parametric measurement",
+      "transform_world": [
+        [
+          6.12323399574e-17,
+          0.0,
+          1.0,
+          -0.8675
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.505638783174
+        ],
+        [
+          -1.0,
+          0.0,
+          6.12323399574e-17,
+          -2.15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_kind": "box",
+      "dimensions_m": [
+        0.6272,
+        1.07195422033,
+        0.62675
+      ]
+    },
+    {
+      "name": "Object02",
+      "uuid": "same-chair-east",
+      "category": "Chair",
+      "category_label": "Chair",
+      "source_member": "assets/02_same-chair-east.usda",
+      "source_kind": "RoomPlan parametric measurement",
+      "transform_world": [
+        [
+          0.13917310096,
+          0.0,
+          -0.990268068742,
+          0.886463206643
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.525864334501
+        ],
+        [
+          0.990268068742,
+          0.0,
+          0.13917310096,
+          -2.0423137528
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_kind": "box",
+      "dimensions_m": [
+        0.602112,
+        1.11483238914,
+        0.5954125
+      ]
+    },
+    {
+      "name": "Object03",
+      "uuid": "same-stool",
+      "category": "Chair",
+      "category_label": "Chair",
+      "source_member": "assets/03_same-stool.usda",
+      "source_kind": "RoomPlan parametric measurement",
+      "transform_world": [
+        [
+          0.857167300702,
+          0.0,
+          0.51503807491,
+          0.35
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.255964343948
+        ],
+        [
+          -0.51503807491,
+          0.0,
+          0.857167300702,
+          -1.12
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_kind": "box",
+      "dimensions_m": [
+        0.58,
+        0.518071312103,
+        0.58
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "name": "Structure01",
+      "uuid": "dev-same-color-dining-back-wall",
+      "category": "Wall",
+      "category_label": "Wall",
+      "source_member": "assets/90_back-wall.usda",
+      "source_kind": "RoomPlan parametric measurement",
+      "transform_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.4
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -4.225
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_kind": "box",
+      "dimensions_m": [
+        6.0,
+        2.8,
+        0.05
+      ]
+    },
+    {
+      "name": "Structure00",
+      "uuid": "dev-same-color-dining-floor",
+      "category": "Floor",
+      "category_label": "Floor",
+      "source_member": "assets/90_floor.usda",
+      "source_kind": "RoomPlan parametric measurement",
+      "transform_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.025
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -1.2
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_kind": "box",
+      "dimensions_m": [
+        6.0,
+        0.05,
+        6.0
+      ]
+    },
+    {
+      "name": "Structure02",
+      "uuid": "dev-same-color-dining-left-wall",
+      "category": "Wall",
+      "category_label": "Wall",
+      "source_member": "assets/90_left-wall.usda",
+      "source_kind": "RoomPlan parametric measurement",
+      "transform_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -3.025
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.4
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -1.2
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_kind": "box",
+      "dimensions_m": [
+        0.05,
+        2.8,
+        6.0
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "frame_index": 0,
+      "source": "frame_00000.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          -0.49999999999999983,
+          -0.23552167526280798,
+          0.8333843893914743,
+          -1.991858428704209
+        ],
+        [
+          0.0,
+          -0.962309403107199,
+          -0.27195700522594757,
+          1.3
+        ],
+        [
+          0.8660254037844388,
+          -0.13597850261297373,
+          0.48115470155359935,
+          -3.2499999999999996
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 2720
+    },
+    {
+      "frame_index": 1,
+      "source": "frame_00001.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          -0.27366299007208256,
+          -0.29296226583479773,
+          0.9161231787602302,
+          -2.212198979297484
+        ],
+        [
+          0.0,
+          -0.9524836286732508,
+          -0.30458978497224243,
+          1.3855050358314172
+        ],
+        [
+          0.961825643172819,
+          -0.08335495130091654,
+          0.2606595178174291,
+          -2.72942487716579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 2805
+    },
+    {
+      "frame_index": 2,
+      "source": "frame_00002.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          -0.030795058556170433,
+          -0.3322730665998445,
+          0.942680366604109,
+          -2.2989091553407413
+        ],
+        [
+          0.0,
+          -0.9431276734674138,
+          -0.33243073194267625,
+          1.4606969024216347
+        ],
+        [
+          0.9995257197133659,
+          -0.010237223856045311,
+          0.029043671930373792,
+          -2.170828634679192
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 3148
+    },
+    {
+      "frame_index": 3,
+      "source": "frame_00003.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.21393308320649734,
+          -0.34438994179533017,
+          0.9141270173777664,
+          -2.2467511308470813
+        ],
+        [
+          0.0,
+          -0.9357921805857377,
+          -0.35255211636663064,
+          1.5165063509461096
+        ],
+        [
+          0.9768483177596008,
+          0.07542256124528912,
+          -0.2001969064332382,
+          -1.6079539086250563
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 3437
+    },
+    {
+      "frame_index": 4,
+      "source": "frame_00004.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.4457383557765383,
+          -0.3250021347887591,
+          0.8340808897057752,
+          -2.0588755701166432
+        ],
+        [
+          0.0,
+          -0.9317639560969676,
+          -0.36306463628192787,
+          1.546201938253052
+        ],
+        [
+          0.8951632913550623,
+          0.16183183401691345,
+          -0.4153229337625049,
+          -1.0748017817139621
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 3689
+    },
+    {
+      "frame_index": 5,
+      "source": "frame_00005.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.6506183002042423,
+          -0.27571306985594896,
+          0.7075861294216778,
+          -1.746631308305826
+        ],
+        [
+          0.0,
+          -0.9317639560969677,
+          -0.36306463628192787,
+          1.546201938253052
+        ],
+        [
+          0.7594049166547071,
+          0.23621649652201937,
+          -0.6062226813073892,
+          -0.6035779095302429
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 3909
+    },
+    {
+      "frame_index": 6,
+      "source": "frame_00006.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.8161969123562217,
+          -0.2036953870442358,
+          0.5406762335789037,
+          -1.3288798122389776
+        ],
+        [
+          0.0,
+          -0.9357921805857378,
+          -0.35255211636663064,
+          1.5165063509461096
+        ],
+        [
+          0.5777738314082511,
+          0.2877519488230953,
+          -0.7637906884011749,
+          -0.22274710158069033
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4147
+    },
+    {
+      "frame_index": 7,
+      "source": "frame_00007.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.9324722294043558,
+          -0.12008783149878727,
+          0.3406970121905818,
+          -0.830855832230452
+        ],
+        [
+          0.0,
+          -0.9431276734674137,
+          -0.3324307319426763,
+          1.460696902421635
+        ],
+        [
+          0.36124166618715314,
+          0.30998242573710916,
+          -0.8794403642911024,
+          0.04468612763001767
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4403
+    },
+    {
+      "frame_index": 8,
+      "source": "frame_00008.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.9924205096719357,
+          -0.037430518029171723,
+          0.11704908501378014,
+          -0.2826430685288426
+        ],
+        [
+          0.0,
+          -0.9524836286732508,
+          -0.30458978497224243,
+          1.3855050358314172
+        ],
+        [
+          0.1228882906647142,
+          0.30228114964301817,
+          -0.9452642882220823,
+          0.18256717224545183
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4710
+    },
+    {
+      "frame_index": 9,
+      "source": "frame_00009.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.9924205096719358,
+          0.03342033150651145,
+          -0.1182565576384251,
+          0.2826430685288426
+        ],
+        [
+          0.0,
+          -0.9623094031071993,
+          -0.2719570052259476,
+          1.3
+        ],
+        [
+          -0.12288829066471418,
+          0.2698957097351883,
+          -0.9550155882937429,
+          0.18256717224545183
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4726
+    },
+    {
+      "frame_index": 10,
+      "source": "frame_00010.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.9324722294043557,
+          0.0861050379179142,
+          -0.35082967923883684,
+          0.830855832230452
+        ],
+        [
+          0.0,
+          -0.9711772258770337,
+          -0.23835854492295655,
+          1.214494964168583
+        ],
+        [
+          -0.3612416661871531,
+          0.22226272378188758,
+          -0.9055957929602952,
+          0.04468612763001767
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4722
+    },
+    {
+      "frame_index": 11,
+      "source": "frame_00011.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.8161969123562218,
+          0.12022537511061278,
+          -0.5651269409961645,
+          1.3288798122389769
+        ],
+        [
+          0.0,
+          -0.9781110017024113,
+          -0.20808380126455117,
+          1.1393030975783653
+        ],
+        [
+          -0.5777738314082509,
+          0.16983735610347236,
+          -0.7983311795311594,
+          -0.2227471015806901
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4719
+    },
+    {
+      "frame_index": 12,
+      "source": "frame_00012.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.6506183002042423,
+          0.1406528155251727,
+          -0.746265779011864,
+          1.746631308305826
+        ],
+        [
+          0.0,
+          -0.9826981135430056,
+          -0.18521451789483995,
+          1.0834936490538905
+        ],
+        [
+          -0.7594049166547071,
+          0.12050395480588898,
+          -0.6393613762472657,
+          -0.6035779095302429
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4722
+    },
+    {
+      "frame_index": 13,
+      "source": "frame_00013.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.44573835577653825,
+          0.15479133292945854,
+          -0.8816784909702344,
+          2.0588755701166432
+        ],
+        [
+          0.0,
+          -0.9849359323432318,
+          -0.17291966105440007,
+          1.053798061746948
+        ],
+        [
+          -0.8951632913550622,
+          0.07707692539982458,
+          -0.43902372302790393,
+          -1.0748017817139621
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4730
+    },
+    {
+      "frame_index": 14,
+      "source": "frame_00014.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          0.2139330832064977,
+          0.16891628000855102,
+          -0.9621330086104699,
+          2.2467511308470813
+        ],
+        [
+          0.0,
+          -0.9849359323432318,
+          -0.17291966105440007,
+          1.053798061746948
+        ],
+        [
+          -0.9768483177596006,
+          0.03699323623639035,
+          -0.21071038076705403,
+          -1.6079539086250554
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4726
+    },
+    {
+      "frame_index": 15,
+      "source": "frame_00015.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          -0.030795058556170235,
+          0.18512667430020394,
+          -0.9822320392000398,
+          2.2989091553407413
+        ],
+        [
+          0.0,
+          -0.9826981135430057,
+          -0.1852145178948399,
+          1.0834936490538902
+        ],
+        [
+          -0.9995257197133659,
+          -0.0057036919240244345,
+          0.03026224594959489,
+          -2.1708286346791916
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4720
+    },
+    {
+      "frame_index": 16,
+      "source": "frame_00016.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          -0.27366299007208267,
+          0.2001403359851219,
+          -0.9407722433068323,
+          2.212198979297484
+        ],
+        [
+          0.0,
+          -0.9781110017024115,
+          -0.20808380126455106,
+          1.1393030975783651
+        ],
+        [
+          -0.9618256431728192,
+          -0.05694483523962206,
+          0.2676727813482818,
+          -2.72942487716579
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 4434
+    },
+    {
+      "frame_index": 17,
+      "source": "frame_00017.json",
+      "color_size": [
+        320,
+        240
+      ],
+      "depth_size": [
+        160,
+        120
+      ],
+      "intrinsics_depth": [
+        [
+          136.0,
+          0.0,
+          79.5
+        ],
+        [
+          0.0,
+          136.0,
+          59.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "camera_to_world_cv": [
+        [
+          -0.49999999999999983,
+          0.20642455511237467,
+          -0.8410641491864091,
+          1.991858428704209
+        ],
+        [
+          0.0,
+          -0.9711772258770336,
+          -0.2383585449229565,
+          1.214494964168583
+        ],
+        [
+          -0.8660254037844387,
+          -0.1191792724614782,
+          0.4855886129385167,
+          -3.2499999999999996
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "retained_observations": 3963
+    }
+  ],
+  "ownership": {
+    "method": "unique RoomPlan OBB with finite structure exclusion",
+    "box_margin_m": 0.025,
+    "structure_tolerance_m": 0.025,
+    "ambiguous_owner": -2,
+    "environment_owner": -1,
+    "semantic_accuracy": "not measured; no pixel instance ground truth"
+  },
+  "parameters": {
+    "frame_step": 1,
+    "pixel_step": 2,
+    "min_confidence": 1,
+    "max_depth_m": 6,
+    "depth_scale": 1000,
+    "color_resampling": "Pillow bilinear to depth size"
+  },
+  "rights": {
+    "raw_and_derived_scan_assets": "Consult the input license before redistribution."
+  },
+  "edits": [],
+  "layers": [
+    {
+      "owner": -1,
+      "path": "environment.ply",
+      "observation_count": 52351,
+      "exported_point_count": 47363,
+      "positions_sha256": "89c3921c384dfe2c95ccb3925634c73fe41cb4b9e57414710504a3317c0dad6d",
+      "colors_sha256": "a2d616ccac9a44892632de16f8f925546e3ee93a22fab2a72a90e5b41a7daea1"
+    },
+    {
+      "owner": -2,
+      "path": "ambiguous.ply",
+      "observation_count": 3987,
+      "exported_point_count": 2885,
+      "positions_sha256": "0b30d4dfd960d5c980f03e3692840d75aebb6511aa46b6e0c58dd3c36e9a94b5",
+      "colors_sha256": "7489ff3e54a6343d7b6b11caf6add87779c09452b1bac5420403fe0f1a6230d3"
+    },
+    {
+      "owner": 0,
+      "path": "objects/same-table.ply",
+      "uuid": "same-table",
+      "observation_count": 5648,
+      "exported_point_count": 3946,
+      "positions_sha256": "77c1b29dc1b98227418b14ea57e1f88874d2807642e640210091ef7a36e54a94",
+      "colors_sha256": "2b9c1515efe50f984ab51414e27fc5f5a3a9049d5a660a1ddc854398e8d57425"
+    },
+    {
+      "owner": 1,
+      "path": "objects/same-chair-west.ply",
+      "uuid": "same-chair-west",
+      "observation_count": 3856,
+      "exported_point_count": 2163,
+      "positions_sha256": "a5a343f9ae590f87e4c09d0ac048f4a313439200682c7e5fdd651ec27282eb14",
+      "colors_sha256": "563fa87e896b2e59d0271ac20fb3cd9967eef481a91a24ebd822c0d92e338255"
+    },
+    {
+      "owner": 2,
+      "path": "objects/same-chair-east.ply",
+      "uuid": "same-chair-east",
+      "observation_count": 4776,
+      "exported_point_count": 2454,
+      "positions_sha256": "04dac22aa217b456d7c8779699ad4e5df8c154e05870930986f2cddb4af4ba7e",
+      "colors_sha256": "2fcb2ebe95dc5ace746a16f18c97a2a62fc4568b96905603962ca81937f13b1b"
+    },
+    {
+      "owner": 3,
+      "path": "objects/same-stool.ply",
+      "uuid": "same-stool",
+      "observation_count": 3812,
+      "exported_point_count": 1894,
+      "positions_sha256": "12ff79936db123bc9078a6f3ccce90454c4e927d4fc84e33fde7b93839a9bb73",
+      "colors_sha256": "a3d8cbd6186978ea6828054d90e67f0181bc9d75c40e1186aa0fe1721310eee4"
+    }
+  ],
+  "observations": "observations.npz",
+  "observed_ply": "observed.ply",
+  "export_voxel_size_m": 0.015
+}

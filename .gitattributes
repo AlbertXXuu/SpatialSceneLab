@@ -15,3 +15,6 @@ examples/edit-workflow/*.json -text whitespace=trailing-space,space-before-tab,c
 reports/ownership-s2a/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
 reports/ownership-s2a/*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
 examples/ownership-b1/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+examples/stool-fit/**/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+examples/stool-fit/**/*.ply -text
+reports/stool-quality/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol

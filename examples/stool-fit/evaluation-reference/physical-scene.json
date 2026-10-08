@@ -1,0 +1,1182 @@
+{
+  "schema": "spatial-scene-lab.physical-reference.v1",
+  "generator_version": "2026-10-04.1",
+  "scene_id": "dev-same-color-dining",
+  "seed": 10402,
+  "units": "m",
+  "up_axis": "Y",
+  "licence": "MIT; original AlvenX procedural geometry and generated RGB-D",
+  "config_sha256": "23a4c020407ab3065ecf6a2704948941154ad206b1296be7920064059dbf05a0",
+  "generator_sha256": "52c69193a5582e1932f10f9cc8112853094ff52410fa784d82be82d42ec086c5",
+  "objects": [
+    {
+      "id": "same-table",
+      "kind": "table",
+      "category": "Table",
+      "transform_world": [
+        [
+          0.9902680687415704,
+          0.0,
+          0.13917310096006544,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.13917310096006544,
+          0.0,
+          0.9902680687415704,
+          -2.12
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "local_bounds_m": [
+        [
+          -0.74,
+          0.0,
+          -0.46
+        ],
+        [
+          0.74,
+          0.82,
+          0.46
+        ]
+      ],
+      "physical_parameters": {
+        "id": "same-table",
+        "kind": "table",
+        "category": "Table",
+        "position_m": [
+          0.0,
+          0.0,
+          -2.12
+        ],
+        "yaw_degrees": 8,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rgb": [
+          149,
+          133,
+          110
+        ],
+        "design": {
+          "width_m": 1.48,
+          "depth_m": 0.92,
+          "height_m": 0.82
+        }
+      }
+    },
+    {
+      "id": "same-chair-west",
+      "kind": "chair",
+      "category": "Chair",
+      "transform_world": [
+        [
+          6.123233995736766e-17,
+          0.0,
+          1.0,
+          -0.85
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          6.123233995736766e-17,
+          -2.15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "local_bounds_m": [
+        [
+          -0.28,
+          0.0,
+          -0.29000000000000004
+        ],
+        [
+          0.28,
+          1.011277566348818,
+          0.255
+        ]
+      ],
+      "physical_parameters": {
+        "id": "same-chair-west",
+        "kind": "chair",
+        "category": "Chair",
+        "position_m": [
+          -0.85,
+          0.0,
+          -2.15
+        ],
+        "yaw_degrees": 90,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rgb": [
+          149,
+          133,
+          110
+        ],
+        "design": {
+          "seat_width_m": 0.56,
+          "seat_depth_m": 0.51,
+          "back_slats": 4,
+          "leg_radius_m": 0.021
+        }
+      }
+    },
+    {
+      "id": "same-chair-east",
+      "kind": "chair",
+      "category": "Chair",
+      "transform_world": [
+        [
+          0.13917310096006547,
+          0.0,
+          -0.9902680687415704,
+          0.87
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.9902680687415704,
+          0.0,
+          0.13917310096006547,
+          -2.04
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "local_bounds_m": [
+        [
+          -0.26880000000000004,
+          0.0,
+          -0.2755
+        ],
+        [
+          0.26880000000000004,
+          1.0517286690027707,
+          0.24225
+        ]
+      ],
+      "physical_parameters": {
+        "id": "same-chair-east",
+        "kind": "chair",
+        "category": "Chair",
+        "position_m": [
+          0.87,
+          0.0,
+          -2.04
+        ],
+        "yaw_degrees": -82,
+        "scale": [
+          0.96,
+          1.04,
+          0.95
+        ],
+        "rgb": [
+          149,
+          133,
+          110
+        ],
+        "design": {
+          "seat_width_m": 0.56,
+          "seat_depth_m": 0.51,
+          "back_slats": 4,
+          "leg_radius_m": 0.021
+        }
+      }
+    },
+    {
+      "id": "same-stool",
+      "kind": "stool",
+      "category": "Chair",
+      "transform_world": [
+        [
+          0.8571673007021123,
+          0.0,
+          0.5150380749100542,
+          0.35
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.5150380749100542,
+          0.0,
+          0.8571673007021123,
+          -1.12
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "local_bounds_m": [
+        [
+          -0.29,
+          -0.0030713121031247233,
+          -0.29
+        ],
+        [
+          0.29,
+          0.515,
+          0.29
+        ]
+      ],
+      "physical_parameters": {
+        "id": "same-stool",
+        "kind": "stool",
+        "category": "Chair",
+        "position_m": [
+          0.35,
+          0.0,
+          -1.12
+        ],
+        "yaw_degrees": 31,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rgb": [
+          149,
+          133,
+          110
+        ]
+      }
+    }
+  ],
+  "structures": [
+    {
+      "id": "floor",
+      "category": "Floor",
+      "center": [
+        0.0,
+        -0.025,
+        -1.2000000000000002
+      ],
+      "dimensions": [
+        6.0,
+        0.05,
+        6.0
+      ],
+      "rgb": [
+        158,
+        152,
+        139
+      ]
+    },
+    {
+      "id": "back-wall",
+      "category": "Wall",
+      "center": [
+        0.0,
+        1.4,
+        -4.2250000000000005
+      ],
+      "dimensions": [
+        6.0,
+        2.8,
+        0.05
+      ],
+      "rgb": [
+        187,
+        188,
+        183
+      ]
+    },
+    {
+      "id": "left-wall",
+      "category": "Wall",
+      "center": [
+        -3.025,
+        1.4,
+        -1.2000000000000002
+      ],
+      "dimensions": [
+        0.05,
+        2.8,
+        6.0
+      ],
+      "rgb": [
+        179,
+        184,
+        185
+      ]
+    }
+  ],
+  "true_camera_poses_arkit": [
+    [
+      [
+        -0.49999999999999983,
+        0.23552167526280798,
+        -0.8333843893914743,
+        -1.991858428704209
+      ],
+      [
+        0.0,
+        0.962309403107199,
+        0.27195700522594757,
+        1.3
+      ],
+      [
+        0.8660254037844388,
+        0.13597850261297373,
+        -0.48115470155359935,
+        -3.2499999999999996
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.27366299007208256,
+        0.29296226583479773,
+        -0.9161231787602302,
+        -2.212198979297484
+      ],
+      [
+        0.0,
+        0.9524836286732508,
+        0.30458978497224243,
+        1.3855050358314172
+      ],
+      [
+        0.961825643172819,
+        0.08335495130091654,
+        -0.2606595178174291,
+        -2.72942487716579
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.030795058556170433,
+        0.3322730665998445,
+        -0.942680366604109,
+        -2.2989091553407413
+      ],
+      [
+        0.0,
+        0.9431276734674138,
+        0.33243073194267625,
+        1.4606969024216347
+      ],
+      [
+        0.9995257197133659,
+        0.010237223856045311,
+        -0.029043671930373792,
+        -2.170828634679192
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.21393308320649734,
+        0.34438994179533017,
+        -0.9141270173777664,
+        -2.2467511308470813
+      ],
+      [
+        -0.0,
+        0.9357921805857377,
+        0.35255211636663064,
+        1.5165063509461096
+      ],
+      [
+        0.9768483177596008,
+        -0.07542256124528912,
+        0.2001969064332382,
+        -1.6079539086250563
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.4457383557765383,
+        0.3250021347887591,
+        -0.8340808897057752,
+        -2.0588755701166432
+      ],
+      [
+        -0.0,
+        0.9317639560969676,
+        0.36306463628192787,
+        1.546201938253052
+      ],
+      [
+        0.8951632913550623,
+        -0.16183183401691345,
+        0.4153229337625049,
+        -1.0748017817139621
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.6506183002042423,
+        0.27571306985594896,
+        -0.7075861294216778,
+        -1.746631308305826
+      ],
+      [
+        -0.0,
+        0.9317639560969677,
+        0.36306463628192787,
+        1.546201938253052
+      ],
+      [
+        0.7594049166547071,
+        -0.23621649652201937,
+        0.6062226813073892,
+        -0.6035779095302429
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.8161969123562217,
+        0.2036953870442358,
+        -0.5406762335789037,
+        -1.3288798122389776
+      ],
+      [
+        -0.0,
+        0.9357921805857378,
+        0.35255211636663064,
+        1.5165063509461096
+      ],
+      [
+        0.5777738314082511,
+        -0.2877519488230953,
+        0.7637906884011749,
+        -0.22274710158069033
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.9324722294043558,
+        0.12008783149878727,
+        -0.3406970121905818,
+        -0.830855832230452
+      ],
+      [
+        -0.0,
+        0.9431276734674137,
+        0.3324307319426763,
+        1.460696902421635
+      ],
+      [
+        0.36124166618715314,
+        -0.30998242573710916,
+        0.8794403642911024,
+        0.04468612763001767
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.9924205096719357,
+        0.037430518029171723,
+        -0.11704908501378014,
+        -0.2826430685288426
+      ],
+      [
+        -0.0,
+        0.9524836286732508,
+        0.30458978497224243,
+        1.3855050358314172
+      ],
+      [
+        0.1228882906647142,
+        -0.30228114964301817,
+        0.9452642882220823,
+        0.18256717224545183
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.9924205096719358,
+        -0.03342033150651145,
+        0.1182565576384251,
+        0.2826430685288426
+      ],
+      [
+        0.0,
+        0.9623094031071993,
+        0.2719570052259476,
+        1.3
+      ],
+      [
+        -0.12288829066471418,
+        -0.2698957097351883,
+        0.9550155882937429,
+        0.18256717224545183
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.9324722294043557,
+        -0.0861050379179142,
+        0.35082967923883684,
+        0.830855832230452
+      ],
+      [
+        0.0,
+        0.9711772258770337,
+        0.23835854492295655,
+        1.214494964168583
+      ],
+      [
+        -0.3612416661871531,
+        -0.22226272378188758,
+        0.9055957929602952,
+        0.04468612763001767
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.8161969123562218,
+        -0.12022537511061278,
+        0.5651269409961645,
+        1.3288798122389769
+      ],
+      [
+        0.0,
+        0.9781110017024113,
+        0.20808380126455117,
+        1.1393030975783653
+      ],
+      [
+        -0.5777738314082509,
+        -0.16983735610347236,
+        0.7983311795311594,
+        -0.2227471015806901
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.6506183002042423,
+        -0.1406528155251727,
+        0.746265779011864,
+        1.746631308305826
+      ],
+      [
+        0.0,
+        0.9826981135430056,
+        0.18521451789483995,
+        1.0834936490538905
+      ],
+      [
+        -0.7594049166547071,
+        -0.12050395480588898,
+        0.6393613762472657,
+        -0.6035779095302429
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.44573835577653825,
+        -0.15479133292945854,
+        0.8816784909702344,
+        2.0588755701166432
+      ],
+      [
+        0.0,
+        0.9849359323432318,
+        0.17291966105440007,
+        1.053798061746948
+      ],
+      [
+        -0.8951632913550622,
+        -0.07707692539982458,
+        0.43902372302790393,
+        -1.0748017817139621
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.2139330832064977,
+        -0.16891628000855102,
+        0.9621330086104699,
+        2.2467511308470813
+      ],
+      [
+        0.0,
+        0.9849359323432318,
+        0.17291966105440007,
+        1.053798061746948
+      ],
+      [
+        -0.9768483177596006,
+        -0.03699323623639035,
+        0.21071038076705403,
+        -1.6079539086250554
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.030795058556170235,
+        -0.18512667430020394,
+        0.9822320392000398,
+        2.2989091553407413
+      ],
+      [
+        0.0,
+        0.9826981135430057,
+        0.1852145178948399,
+        1.0834936490538902
+      ],
+      [
+        -0.9995257197133659,
+        0.0057036919240244345,
+        -0.03026224594959489,
+        -2.1708286346791916
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.27366299007208267,
+        -0.2001403359851219,
+        0.9407722433068323,
+        2.212198979297484
+      ],
+      [
+        0.0,
+        0.9781110017024115,
+        0.20808380126455106,
+        1.1393030975783651
+      ],
+      [
+        -0.9618256431728192,
+        0.05694483523962206,
+        -0.2676727813482818,
+        -2.72942487716579
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.49999999999999983,
+        -0.20642455511237467,
+        0.8410641491864091,
+        1.991858428704209
+      ],
+      [
+        0.0,
+        0.9711772258770336,
+        0.2383585449229565,
+        1.214494964168583
+      ],
+      [
+        -0.8660254037844387,
+        0.1191792724614782,
+        -0.4855886129385167,
+        -3.2499999999999996
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  ],
+  "depth_resolution": [
+    160,
+    120
+  ],
+  "intrinsics_depth": [
+    [
+      136.0,
+      0,
+      79.5
+    ],
+    [
+      0,
+      136.0,
+      59.5
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "sensor_parameters": {
+    "depth_noise_sigma_m": 0.002,
+    "dropout_probability": 0.015,
+    "pose_translation_sigma_m": 0.0,
+    "pose_yaw_sigma_degrees": 0.0,
+    "stripe_dropout_period_px": 0
+  },
+  "prior_perturbations": {
+    "same-table": {
+      "dimension_scale": [
+        1.16,
+        1.06,
+        1.2
+      ]
+    },
+    "same-chair-west": {
+      "dimension_scale": [
+        1.12,
+        1.06,
+        1.15
+      ]
+    },
+    "same-chair-east": {
+      "dimension_scale": [
+        1.12,
+        1.06,
+        1.15
+      ]
+    },
+    "same-stool": {}
+  },
+  "frame_statistics": [
+    {
+      "frame_index": 0,
+      "geometric_hit_pixels": 11132,
+      "valid_measurement_pixels": 10982,
+      "target_hit_pixels": 1879,
+      "target_valid_pixels": 1857,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 1,
+      "geometric_hit_pixels": 11485,
+      "valid_measurement_pixels": 11334,
+      "target_hit_pixels": 1604,
+      "target_valid_pixels": 1579,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 2,
+      "geometric_hit_pixels": 12816,
+      "valid_measurement_pixels": 12607,
+      "target_hit_pixels": 1607,
+      "target_valid_pixels": 1580,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 3,
+      "geometric_hit_pixels": 14007,
+      "valid_measurement_pixels": 13786,
+      "target_hit_pixels": 1912,
+      "target_valid_pixels": 1889,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 4,
+      "geometric_hit_pixels": 14988,
+      "valid_measurement_pixels": 14765,
+      "target_hit_pixels": 2137,
+      "target_valid_pixels": 2105,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 5,
+      "geometric_hit_pixels": 15885,
+      "valid_measurement_pixels": 15658,
+      "target_hit_pixels": 2366,
+      "target_valid_pixels": 2335,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 6,
+      "geometric_hit_pixels": 16843,
+      "valid_measurement_pixels": 16591,
+      "target_hit_pixels": 2395,
+      "target_valid_pixels": 2359,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 7,
+      "geometric_hit_pixels": 17874,
+      "valid_measurement_pixels": 17601,
+      "target_hit_pixels": 2245,
+      "target_valid_pixels": 2202,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 8,
+      "geometric_hit_pixels": 19114,
+      "valid_measurement_pixels": 18830,
+      "target_hit_pixels": 2101,
+      "target_valid_pixels": 2071,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 9,
+      "geometric_hit_pixels": 19200,
+      "valid_measurement_pixels": 18929,
+      "target_hit_pixels": 2031,
+      "target_valid_pixels": 2011,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 10,
+      "geometric_hit_pixels": 19200,
+      "valid_measurement_pixels": 18877,
+      "target_hit_pixels": 1901,
+      "target_valid_pixels": 1869,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 11,
+      "geometric_hit_pixels": 19200,
+      "valid_measurement_pixels": 18898,
+      "target_hit_pixels": 1712,
+      "target_valid_pixels": 1679,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 12,
+      "geometric_hit_pixels": 19200,
+      "valid_measurement_pixels": 18884,
+      "target_hit_pixels": 1627,
+      "target_valid_pixels": 1609,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 13,
+      "geometric_hit_pixels": 19200,
+      "valid_measurement_pixels": 18890,
+      "target_hit_pixels": 1322,
+      "target_valid_pixels": 1304,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 14,
+      "geometric_hit_pixels": 19200,
+      "valid_measurement_pixels": 18900,
+      "target_hit_pixels": 834,
+      "target_valid_pixels": 816,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 15,
+      "geometric_hit_pixels": 19200,
+      "valid_measurement_pixels": 18902,
+      "target_hit_pixels": 693,
+      "target_valid_pixels": 685,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 16,
+      "geometric_hit_pixels": 18082,
+      "valid_measurement_pixels": 17796,
+      "target_hit_pixels": 1331,
+      "target_valid_pixels": 1312,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    },
+    {
+      "frame_index": 17,
+      "geometric_hit_pixels": 16158,
+      "valid_measurement_pixels": 15917,
+      "target_hit_pixels": 1896,
+      "target_valid_pixels": 1866,
+      "actual_pose_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_yaw_error_degrees": 0.0
+    }
+  ],
+  "object_statistics": [
+    {
+      "object_id": "same-table",
+      "triangle_count": 304,
+      "physical_triangle_area_m2": 4.042100429534912,
+      "ray_hit_triangle_area_m2": 2.544586658477783,
+      "valid_ray_count": 31128
+    },
+    {
+      "object_id": "same-chair-west",
+      "triangle_count": 1308,
+      "physical_triangle_area_m2": 2.0297422409057617,
+      "ray_hit_triangle_area_m2": 1.36827552318573,
+      "valid_ray_count": 19338
+    },
+    {
+      "object_id": "same-chair-east",
+      "triangle_count": 1308,
+      "physical_triangle_area_m2": 1.9305208921432495,
+      "ray_hit_triangle_area_m2": 1.3656834363937378,
+      "valid_ray_count": 23292
+    },
+    {
+      "object_id": "same-stool",
+      "triangle_count": 448,
+      "physical_triangle_area_m2": 0.9127342700958252,
+      "ray_hit_triangle_area_m2": 0.6238167881965637,
+      "valid_ray_count": 15354
+    }
+  ],
+  "edit_tasks": [
+    {
+      "operation": "translate",
+      "object_id": "same-table",
+      "translation_m": [
+        0.28,
+        0.0,
+        0.12
+      ]
+    },
+    {
+      "operation": "rotate_y",
+      "object_id": "same-table",
+      "rotation_degrees": 18.0,
+      "pivot_world_m": [
+        0.0,
+        0.0,
+        -2.12
+      ]
+    },
+    {
+      "operation": "translate_then_rotate_y",
+      "object_id": "same-chair-west",
+      "translation_m": [
+        -0.15,
+        0.0,
+        0.1
+      ],
+      "rotation_degrees": -12.0,
+      "pivot_world_m": [
+        -0.85,
+        0.0,
+        -2.15
+      ]
+    },
+    {
+      "operation": "reopen_undo",
+      "object_id": "same-table",
+      "expected": "restore exact pre-edit mesh, object IDs, ownership and world poses"
+    }
+  ],
+  "reference_construction": "Original multi-part physical triangle geometry; first-hit CPU ray labels. Boxes are measured priors made afterwards, never reference labels.",
+  "visibility_rule": "triangle_seen means at least one valid measured ray hit the physical triangle; triangle area sums are a coarse visibility proxy, not visible surface area or an evaluation denominator.",
+  "known_limitations": [
+    "Synthetic constant diffuse materials and simple directional shading; no photorealistic sensor simulation.",
+    "Overlapping primitive parts may include hidden internal triangles; physical full-mesh area is not exposed outer surface area.",
+    "Development stress parameters are hypotheses; there are no held-out test groups or real-room labels in this suite.",
+    "Edit tasks are definitions and are not claimed as completed Blender interactions."
+  ]
+}

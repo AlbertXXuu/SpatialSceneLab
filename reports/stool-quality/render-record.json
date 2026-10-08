@@ -1,0 +1,257 @@
+{
+  "purpose": "Unretouched diagnostic visualization of the original observed stool and reconstruction candidates.",
+  "observed_prior_source": ".workspace\\experiments\\spatial-s0-20261004\\results-final\\dev-same-color-dining\\points\\scene.json",
+  "observed_prior_object": {
+    "name": "Object03",
+    "uuid": "same-stool",
+    "category": "Chair",
+    "category_label": "Chair",
+    "source_member": "assets/03_same-stool.usda",
+    "source_kind": "RoomPlan parametric measurement",
+    "transform_world": [
+      [
+        0.857167300702,
+        0.0,
+        0.51503807491,
+        0.35
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.255964343948
+      ],
+      [
+        -0.51503807491,
+        0.0,
+        0.857167300702,
+        -1.12
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "geometry_kind": "box",
+    "dimensions_m": [
+      0.58,
+      0.518071312103,
+      0.58
+    ]
+  },
+  "crop": {
+    "kind": "fixed observed-prior oriented box",
+    "extra_margin_each_side_m": 0.06,
+    "half_extents_m": [
+      0.35,
+      0.31903565605149997,
+      0.35
+    ],
+    "face_selection": "all full-surface triangles clipped exactly to the six display-box planes; no caps",
+    "caveat": "Retains all nearby floor/context in the box. Display crop only: no ownership, connected-component, or shape filtering; no hole filling."
+  },
+  "geometry_display": "Original vertices and face winding; flat per-face shading; no smoothing, subdivision, remeshing, repair or denoising.",
+  "coordinate_conversion": "(input x, input y, input z) -> (Blender x, -input z, input y)",
+  "projection": {
+    "kind": "orthographic",
+    "scale_m": 1.05,
+    "resolution": [
+      1000,
+      1000
+    ]
+  },
+  "render_settings": {
+    "engine": "Cycles",
+    "samples": 64,
+    "denoising": false,
+    "color_transform": "Standard",
+    "material_base_color_linear": [
+      0.22,
+      0.23,
+      0.24
+    ],
+    "roughness": 0.85,
+    "world_color_linear": [
+      0.68,
+      0.71,
+      0.74
+    ],
+    "world_strength": 0.65,
+    "area_lights_prior_offsets_m_energy_w_size_m": [
+      [
+        [
+          1.2,
+          1.5,
+          1.2
+        ],
+        18,
+        1.2
+      ],
+      [
+        [
+          -1.3,
+          0.7,
+          0.1
+        ],
+        7,
+        1.4
+      ],
+      [
+        [
+          0.5,
+          -0.5,
+          1.0
+        ],
+        4,
+        0.8
+      ]
+    ]
+  },
+  "views": {
+    "front": {
+      "camera_input_y_up_m": [
+        3.0774887135566,
+        1.505964343948,
+        -0.07558374322340011
+      ],
+      "target_input_y_up_m": [
+        0.35,
+        0.255964343948,
+        -1.12
+      ],
+      "offset_in_prior_axes_m": [
+        1.8,
+        1.25,
+        2.3
+      ]
+    },
+    "underside": {
+      "camera_input_y_up_m": [
+        3.0774887135566,
+        0.09596434394799999,
+        -0.07558374322340011
+      ],
+      "target_input_y_up_m": [
+        0.35,
+        0.255964343948,
+        -1.12
+      ],
+      "offset_in_prior_axes_m": [
+        1.8,
+        -0.16,
+        2.3
+      ]
+    }
+  },
+  "reference_use": "Reference geometry is used only in the clearly labeled evaluation-only reference panel, never for reconstruction or crop/camera selection.",
+  "sources": {
+    "baseline": {
+      "file": ".workspace\\experiments\\spatial-s0-20261004\\results-final\\dev-same-color-dining\\surface\\surface.ply",
+      "sha256": "e4d0a901df78b7dd0bb3bf82ff5de56ea51df3528f5f694dc7c3006cd8a824cc",
+      "label": "Original baseline / 35 mm TSDF",
+      "source_vertices": 50968,
+      "source_faces": 96518,
+      "display_vertices": 7691,
+      "display_faces": 2625,
+      "rendered_views": {
+        "front": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\baseline-front.png",
+        "underside": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\baseline-underside.png"
+      },
+      "source_reconstruction_parameters": {
+        "voxel_size_m": 0.035,
+        "sdf_truncation_m": 0.105,
+        "depth_scale": 1000,
+        "max_depth_m": 6,
+        "min_confidence": 1
+      }
+    },
+    "reference": {
+      "file": ".workspace\\experiments\\spatial-s0-20261004\\inputs\\dev-same-color-dining\\reference\\mesh.ply",
+      "sha256": "c3d454ee1892a103512ae011ff9e216b4425d055083b7cc7134b05659622c5a1",
+      "label": "Physical reference / evaluation only",
+      "source_vertices": 1790,
+      "source_faces": 3404,
+      "display_vertices": 1360,
+      "display_faces": 456,
+      "rendered_views": {
+        "front": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\reference-front.png",
+        "underside": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\reference-underside.png"
+      }
+    },
+    "recon-10mm-fixed": {
+      "file": ".workspace\\experiments\\spatial-stool-quality-20261009\\recon-10mm-fixed\\surface.ply",
+      "sha256": "82746cadb2f0dd583b539b67c3b02726e80e5ee542d5ef5609c282046f4b5df9",
+      "label": "10 mm / 105 mm truncation",
+      "source_vertices": 828413,
+      "source_faces": 1630779,
+      "display_vertices": 120611,
+      "display_faces": 40429,
+      "rendered_views": {
+        "front": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\recon-10mm-fixed-front.png",
+        "underside": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\recon-10mm-fixed-underside.png"
+      },
+      "source_reconstruction_parameters": {
+        "voxel_size_m": 0.01,
+        "sdf_truncation_m": 0.105,
+        "depth_scale": 1000,
+        "max_depth_m": 6,
+        "min_confidence": 1
+      }
+    },
+    "recon-10mm-local": {
+      "file": ".workspace\\experiments\\spatial-stool-quality-20261009\\recon-10mm-local\\surface.ply",
+      "sha256": "880b33bf4408552d1ee915472c11e82535572308999b3f6f08850ebbb424d30d",
+      "label": "10 mm / 30 mm truncation",
+      "source_vertices": 689227,
+      "source_faces": 1281324,
+      "display_vertices": 92538,
+      "display_faces": 31066,
+      "rendered_views": {
+        "front": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\recon-10mm-local-front.png",
+        "underside": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\recon-10mm-local-underside.png"
+      },
+      "source_reconstruction_parameters": {
+        "voxel_size_m": 0.01,
+        "sdf_truncation_m": 0.03,
+        "depth_scale": 1000,
+        "max_depth_m": 6,
+        "min_confidence": 1
+      }
+    },
+    "recon-5mm-local": {
+      "file": ".workspace\\experiments\\spatial-stool-quality-20261009\\recon-5mm-local\\surface.ply",
+      "sha256": "274ea1fa1b3b6f765213954e5273bcea8880d0822aeaf9d021ac7b37d2c3a07c",
+      "label": "5 mm / 15 mm truncation",
+      "source_vertices": 2879890,
+      "source_faces": 5348247,
+      "display_vertices": 411359,
+      "display_faces": 137653,
+      "rendered_views": {
+        "front": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\recon-5mm-local-front.png",
+        "underside": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\recon-5mm-local-underside.png"
+      },
+      "source_reconstruction_parameters": {
+        "voxel_size_m": 0.005,
+        "sdf_truncation_m": 0.015,
+        "depth_scale": 1000,
+        "max_depth_m": 6,
+        "min_confidence": 1
+      }
+    },
+    "fitted-stool": {
+      "file": ".workspace\\experiments\\spatial-stool-quality-20261009\\fitted-stool\\fitted_stool.ply",
+      "sha256": "cff4622beee26630db14429d9523806d0a76db495b8287ce74b377b21e87a55d",
+      "label": "Fitted / structural completion",
+      "source_vertices": 1134,
+      "source_faces": 2240,
+      "display_vertices": 6720,
+      "display_faces": 2240,
+      "rendered_views": {
+        "front": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\fitted-stool-front.png",
+        "underside": ".workspace\\audits\\spatial-stool-quality-20261009\\visuals\\fitted-stool-underside.png"
+      }
+    }
+  }
+}
