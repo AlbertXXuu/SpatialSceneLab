@@ -88,3 +88,46 @@ The automated S1 task transfers a fixed 12/8-face selection and tests preservati
 Those selections are not a claim that the object boundary was corrected. The
 diagnostic reference also has the S0 nearest-surface visibility/normal limitations;
 unreconstructed surfaces are outside the partition-error denominator.
+
+## First bounded correction and scoring
+
+Use `dev-same-color-dining`, target `same-table` (displayed as `Object00` in the
+sample). Before selecting, describe one complete observed tabletop/leg region
+that you can visually justify assigning to the table. Inspect **Unresolved (-2)**
+from multiple directions. Correct that region or stop after 20 minutes of active
+correction, retaining failure or ambiguity. Record software learning/setup and
+breaks separately. Do not inspect reference labels until correction is finished.
+Do not delete faces or change topology during this ownership task.
+
+Record actual start/end, selections, assignments, undo/redo, failed attempts and
+recoveries as they occur. The existing journal contains successful assignment
+and transform events; it cannot reconstruct those human measurements. Never
+derive user time or failed attempts from the sidecar.
+
+Save the ownership correction as `corrected.blend`, and export `corrected.glb`
+plus `corrected.identity.json`. Then move the table by `(0.25, 0, 0)` m with zero
+rotation, rotate `same-chair-west` by 15 degrees with zero translation, exercise
+GUI Undo/Redo, and save/reopen/export a separate `final` document and package.
+The original `before.blend` stays intact. There is no requirement to complete
+the whole room or fill missing observations. The current panel transfers proper
+face subsets; a request to move an entire source region is a limitation to record.
+
+After the task, map the sidecar's declared final ownership back to the original
+mesh and score it with the same S0 reference matcher:
+
+```powershell
+& $Python score_review.py --results '.local\s0-results' --suite '.local\s0-input' --published-results '.local\s0-results\development-results.json' --bundle '.local\b1-bundles\dev-same-color-dining\surface\surface-scene.json' --identity '.local\author-dining\results\corrected.identity.json' --glb '.local\author-dining\results\corrected.glb' --output '.local\author-dining-score'
+```
+
+Use the exact B1 bundle used to create the native starting scene and its source
+S0 inputs/results. A fresh reconstruction may have different face indices and
+must start its own author task; it cannot be substituted beneath the downloadable
+frozen sample. This workspace retains the original prepared input for that sample.
+
+Inspect per-object and macro IoU, target precision/recall, missed/false-positive
+area, changed face count/area, unknown area and any deterioration in other objects.
+The score uses the original geometry, so a rigid transformation does not create
+a false ownership error. This checks declared ownership and provenance, not the
+actual edited native/GLB geometry, the truth of a human-operation claim or time.
+Keep native documents and operation records for those separate checks. A worse
+or inconclusive result is still a completed observation, not an omitted attempt.
