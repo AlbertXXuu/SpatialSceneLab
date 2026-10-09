@@ -30,6 +30,19 @@ the 12-mesh GLB round trip has maximum corner error **1.1773 µm**.
 
 ![Original dining scene with the complete editable stool](examples/stool-scene/dining-repaired.png)
 
+**Real-object follow-up, 2026-10-09:** the existing tea-room table exposes a
+cross-view consistency problem. On the same 7,127 later-frame observations, a
+fixed training plane has 15.489 mm mean / 26.409 mm P95 residual. Background-only
+ICP reduces the mean to 11.787 mm but worsens P95 to 35.510 mm; only 58.117%
+fall within 10 mm, below the declared 80% support target. The CPU replay retains
+failed registrations and every original validation observation. This is a
+reproducible failure analysis; a real editable tabletop remains to be delivered.
+
+[English real-table report](reports/REAL-TABLETOP-2026-10-09.md) ·
+[中文真实桌面报告](reports/REAL-TABLETOP-2026-10-09.zh-CN.md) ·
+[Replay code](audit_real_tabletop.py) ·
+[Measured comparison](reports/real-tabletop/comparison.json)
+
 **Geometry quality, 2026-10-09:** a broken dining stool now has an observation-fitted
 editable assembly: one seat, three legs and three braces. All nine intended joints
 have solid contact. Independent distance to the exported triangles is **1.047 mm
@@ -112,10 +125,11 @@ recorded checks; whole-machine network isolation remains pending.
 [Machine results](reports/local-scan-results.json) ·
 [Input hashes](docs/tea-room-source-manifest.json)
 
-**Next stage:** inspect one sufficiently observed object from the existing real
-scan, state an appropriate structural representation, and deliver an editable
-result or an evidence-based refusal. The six synthetic transfer cases establish
-a bounded development check; they do not establish general furniture recovery.
+**Next stage:** continue the same real Table0, resolving cross-view agreement
+and table/chair boundaries before structural completion. Compare target-aware
+local alignment with the frozen background-only control on both the object and
+neighbouring geometry. The six synthetic transfer cases establish a bounded
+development check; they do not establish general furniture recovery.
 Measure actual author correction effort and keep observed geometry distinct
 from structural completion. S2a separates competing-box and outside-box
 omissions before choosing a method. The
