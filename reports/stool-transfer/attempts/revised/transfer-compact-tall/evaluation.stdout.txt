@@ -1,0 +1,42 @@
+{
+  "output": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-compact-tall\\evaluation.json",
+  "fit_status": "ok",
+  "candidate_accepted": true,
+  "engineering_acceptance": {
+    "passed": true,
+    "checks": {
+      "input_content_matches_fit_record": true,
+      "target_and_units_match": true,
+      "validation_p95_at_most_10mm": true,
+      "seven_closed_components": true,
+      "nine_solid_contacts": true,
+      "assembly_equals_components": true
+    },
+    "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+  },
+  "validation": {
+    "sample_count": 1523,
+    "finite_distance_count": 1523,
+    "mean_distance_m": 0.0010163104623634716,
+    "median_distance_m": 0.0007017850875854492,
+    "p95_distance_m": 0.003012094064615666,
+    "max_distance_m": 0.005957656539976597,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 1518,
+        "fraction": 0.9967170059093894
+      },
+      {
+        "distance_m": 0.01,
+        "count": 1523,
+        "fraction": 1.0
+      },
+      {
+        "distance_m": 0.02,
+        "count": 1523,
+        "fraction": 1.0
+      }
+    ]
+  }
+}

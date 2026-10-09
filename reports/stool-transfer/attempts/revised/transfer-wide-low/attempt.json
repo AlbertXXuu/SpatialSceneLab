@@ -1,0 +1,25 @@
+{
+  "scene_id": "transfer-wide-low",
+  "expected_class": "eligible",
+  "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-wide-low\\points",
+  "result_directory": "transfer-wide-low",
+  "input_sha256": {
+    "scene": "25e9767b65f0bf5418cf68aa5e69e7a58ae9c43822eeb6809a6dc5e2442883ec",
+    "observations": "11fc710e4080e508a5883d31145d04685a4458633b6f5664b228d339717ada44"
+  },
+  "fit_process": {
+    "returncode": 0,
+    "elapsed_seconds": 1.9849678999744356,
+    "timeout_seconds": 180,
+    "stdout": "fit.stdout.txt",
+    "stderr": "fit.stderr.txt"
+  },
+  "evaluation_process": {
+    "returncode": 0,
+    "elapsed_seconds": 1.847166300052777,
+    "timeout_seconds": 180,
+    "stdout": "evaluation.stdout.txt",
+    "stderr": "evaluation.stderr.txt"
+  },
+  "evaluation_report": "transfer-wide-low/evaluation.json"
+}

@@ -1,0 +1,3169 @@
+{
+  "schema": "alvenx.spatial.stool-scene-integration.v1",
+  "status": "passed",
+  "build_process_id": 97016,
+  "input_sha256": {
+    "archive": "393f52c7b01590c63408e35ecbfc4366533dfcf8b2d1ca9c64be2025e43ae14a",
+    "fitted": "12a1488124bafa73a2e509ef172e1fda932db2898a8e8702b3bba59a7e4a566d"
+  },
+  "before_blend_sha256": "2ce7686072c0d9e64ef6027fe6a619fd4db5f18bd7d176fe1ce892c44751968c",
+  "source_objects": {
+    "Environment + unassigned": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null,
+      "properties": {
+        "alvenx_id": "environment",
+        "alvenx_role": "environment",
+        "source_hash_scope": "initial input part lineage; edited content has an export hash",
+        "source_sha256": "4ceddf095ddcea67581670743f85af26fe47bbe54060da65b66774ac0599cfc0"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Scene Collection"
+      ],
+      "mesh_sha256": "c1bae7d14feac3184f127d4c6a8e3ac3c0d4bfcae279f8de114da59fc0963a3b",
+      "vertices": 44563,
+      "triangles": 84277,
+      "attributes": {
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "092aa92d7ec40ec38ea4ca842baa3ca431b5e6f49cabeb82303237cbc2daf47d"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "616d88af2fa0c898f4956f3353110a57f63dba102b4f4e8781649dbfe38bb4e8"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "6f0c9a217c5a56b0c886d3311d34b2d585c913ead34644079cb2ff24a7416399"
+        },
+        "Col": {
+          "domain": "POINT",
+          "type": "FLOAT_COLOR",
+          "sha256": "9fd8c88417935d92f0e29123c3b0db540314701dc2453d4b456c43850272f0d5"
+        },
+        "sharp_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "2178f9f88fa48cc0e9f4a9dea18a83027d6526b8f976572fc9fc3fe09c9ae697"
+        },
+        "ax_source_face": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "6999c4575803a45b84a84722efc8314c02cbf0228e497b3a7d56ba638858227f"
+        },
+        "ax_reviewed": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "379aef40a7e40847355b22d686dc93af8ca73a3cd75990e78dddd0cebac4604f"
+        }
+      },
+      "materials": [
+        {
+          "name": "Observed color: Environment + unassigned",
+          "diffuse_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.800000011920929,
+                  0.800000011920929,
+                  0.800000011920929,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.75,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Color Attribute",
+              "type": "VERTEX_COLOR",
+              "inputs": {},
+              "color_layer": "Col"
+            }
+          ],
+          "links": [
+            [
+              "Color Attribute",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ],
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Unresolved (-2)": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null,
+      "properties": {
+        "alvenx_id": "unresolved",
+        "alvenx_role": "observed_object_region",
+        "source_hash_scope": "initial input part lineage; edited content has an export hash",
+        "source_sha256": "bc307c653fe3cc9a8212218ead62a3f58546ecf8466015fe26533b7546dedc71"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Scene Collection"
+      ],
+      "mesh_sha256": "baac6404aa569a401e2a7436187409c9cc479bb4dbe55be6a90b1b335378da2a",
+      "vertices": 1996,
+      "triangles": 3605,
+      "attributes": {
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "1e8a0a0ad21bb64bd926405e2eda71f99f9161620b424d9e15228ec15105f8c8"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "f440a27f5246738cbc7cda64ceabbde4db87b74a522e1dd93641965024060c50"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "9feb80f98a2356562f9f1f461f2ba97d84bb4e08adc8653b142ca4e339fe1960"
+        },
+        "Col": {
+          "domain": "POINT",
+          "type": "FLOAT_COLOR",
+          "sha256": "dbf192f0f2aa20eb6e8a2c3f02aa969949f7bd3c94b9bd375bbb2f9fce2a8dc3"
+        },
+        "sharp_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "da012e46bbec37c59bbe819f22ebb504b7e0d2c6d2ee8fd3b29ba94ad4e0ea10"
+        },
+        "ax_source_face": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "11f64258b78a8358f0a777e1819768e49cadc0eb05506ea7b63b26c60368c6af"
+        },
+        "ax_reviewed": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "7c8355485c55618cfed93c13d478ece785bb4c0e5bf5566bf95c8130c0f250ef"
+        }
+      },
+      "materials": [
+        {
+          "name": "Observed color: Unresolved (-2)",
+          "diffuse_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.800000011920929,
+                  0.800000011920929,
+                  0.800000011920929,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.75,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Color Attribute",
+              "type": "VERTEX_COLOR",
+              "inputs": {},
+              "color_layer": "Col"
+            }
+          ],
+          "links": [
+            [
+              "Color Attribute",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ],
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Object00": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null,
+      "properties": {
+        "alvenx_id": "same-table",
+        "alvenx_role": "observed_object_region",
+        "source_hash_scope": "initial input part lineage; edited content has an export hash",
+        "source_sha256": "07daa97f8d9290b5716435c9121672a43064d762132b4ac51e36da4edd6f2d38"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Scene Collection"
+      ],
+      "mesh_sha256": "2fe0d53cf1b53bdae3472301f0e33948eb8ff6d0e5dc377dac1a2b70f4b75a3e",
+      "vertices": 1976,
+      "triangles": 3457,
+      "attributes": {
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "87c08fc71c77baa33534a93a41edac40e2378738271f8689eea5db452cd29fc1"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "42ea8e8fefd630a16b29829a5e8372805ab327f0aa2ec5486eb52853ba831589"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "8877dab1797945103576dc0d79aabb7ecbdb763dc6c4070e54b2525c4d49b43a"
+        },
+        "Col": {
+          "domain": "POINT",
+          "type": "FLOAT_COLOR",
+          "sha256": "7329270dbaac8622dab67750e35f2d0966bcafd4038011a106fbdfdd8c654877"
+        },
+        "sharp_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "acadcacf7554e7166a169267f2b5e50e6f55353a90da041d1e4f8c2feb5d0e76"
+        },
+        "ax_source_face": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "f30c32f25144b2ee8e93528484aabc23ccbc253256fd81cf5cb54910b7f70ca0"
+        },
+        "ax_reviewed": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "f08057cdd29c312b329833b6337309e71e3922950f8e98954e2e989eda7126ad"
+        }
+      },
+      "materials": [
+        {
+          "name": "Observed color: Object00",
+          "diffuse_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.800000011920929,
+                  0.800000011920929,
+                  0.800000011920929,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.75,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Color Attribute",
+              "type": "VERTEX_COLOR",
+              "inputs": {},
+              "color_layer": "Col"
+            }
+          ],
+          "links": [
+            [
+              "Color Attribute",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ],
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Object01": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null,
+      "properties": {
+        "alvenx_id": "same-chair-west",
+        "alvenx_role": "observed_object_region",
+        "source_hash_scope": "initial input part lineage; edited content has an export hash",
+        "source_sha256": "c95597281d2793f7fc5c9ed19a8b402064f700779e3ada4e6ed4a7716b26353b"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Scene Collection"
+      ],
+      "mesh_sha256": "3555dd917b5173114d4870696f879cab4bd9f82b385802f04a57b5830e2ba670",
+      "vertices": 939,
+      "triangles": 1797,
+      "attributes": {
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "d57b69c6e6140cc18dc15595d6488f45c205a820ffe741ba5b2fde3741fc4200"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "ecf9a3db1bc1da1506beccbff6a774bd889c55624c4900ca86f5057e48267d8b"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "8183cc8d2e358e2e23489a7e3844cd654a89a494c19c7e8f25f3774a530199ee"
+        },
+        "Col": {
+          "domain": "POINT",
+          "type": "FLOAT_COLOR",
+          "sha256": "bbf71e05a7467999d6e3f7fe649d69cdf542a296ee3e425ef0afd32bdb749204"
+        },
+        "sharp_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "941e1b6cdd3d69e266589892b537c4f253550d10fafcb8d039fc103ee55d8618"
+        },
+        "ax_source_face": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "6811c30684f431eb70d2a76454350bca95bb5872abb62838105be07dad7c21f3"
+        },
+        "ax_reviewed": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "8f03e33d6860986942c91906cd68805c1d59dfba658c4f60b0256ea11e3bfee2"
+        }
+      },
+      "materials": [
+        {
+          "name": "Observed color: Object01",
+          "diffuse_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.800000011920929,
+                  0.800000011920929,
+                  0.800000011920929,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.75,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Color Attribute",
+              "type": "VERTEX_COLOR",
+              "inputs": {},
+              "color_layer": "Col"
+            }
+          ],
+          "links": [
+            [
+              "Color Attribute",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ],
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Object02": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null,
+      "properties": {
+        "alvenx_id": "same-chair-east",
+        "alvenx_role": "observed_object_region",
+        "source_hash_scope": "initial input part lineage; edited content has an export hash",
+        "source_sha256": "71284e5c82dbe72017bdc388c292149ecd1b08201e1c9989ac2060dfe7f6627e"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Scene Collection"
+      ],
+      "mesh_sha256": "5cc2cec037f1d4a9a18a1b4cc9664d735d068a60aaefc29da4f7bcfa4862e373",
+      "vertices": 933,
+      "triangles": 1794,
+      "attributes": {
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "c76bfcc2dc1059b80809dad67aff4402335bca8df7a8a7510878244a90ab6c2a"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "3e481078bad11761633c4eb8f17959d6107cf60162411cbd5e587179c07d0ca2"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "c33818825ed4919aee589ded2f889cc9efb17f5b5c531b48a783167169fc340e"
+        },
+        "Col": {
+          "domain": "POINT",
+          "type": "FLOAT_COLOR",
+          "sha256": "03cc35231f297bd811fa5df42c856b3756332b0ffdc3c76f6ff552127e81e05a"
+        },
+        "sharp_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "e508a0fb9eabd5a0101f36fa5498fed74aec27044bcce77b2ce28b08bc231fbc"
+        },
+        "ax_source_face": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "4c3e2d09e41ba6654328a150d728dd776904579a119b25890f51bd33b9754f59"
+        },
+        "ax_reviewed": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "165ca75fca58a80c0267ba8b091fd3acffac21765032b201bfc4c29b663b7351"
+        }
+      },
+      "materials": [
+        {
+          "name": "Observed color: Object02",
+          "diffuse_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.800000011920929,
+                  0.800000011920929,
+                  0.800000011920929,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.75,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Color Attribute",
+              "type": "VERTEX_COLOR",
+              "inputs": {},
+              "color_layer": "Col"
+            }
+          ],
+          "links": [
+            [
+              "Color Attribute",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ],
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Object03": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null,
+      "properties": {
+        "alvenx_id": "same-stool",
+        "alvenx_role": "observed_object_region",
+        "source_hash_scope": "initial input part lineage; edited content has an export hash",
+        "source_sha256": "e1d73867d4cd4d2a1d7d0373809823438cfd3bebb6ec2e2428838a31c764054a"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Scene Collection"
+      ],
+      "mesh_sha256": "b569765fd92ce6e42e793aecef44249a89f651c31e8754b3fffcb9ae9a94a1ff",
+      "vertices": 871,
+      "triangles": 1588,
+      "attributes": {
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "7a9398ba39d43af20a51701a6a54c19dbc4be6d7adf05b9ff1292d0f654e2e6d"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "38074e78441661997010aa8dd68b8e3e1b6643290916e87278a652efd329fbb7"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "4f541deb7e4c64bfb0145c814031d1433150591c9890e26b2e487886dd240457"
+        },
+        "Col": {
+          "domain": "POINT",
+          "type": "FLOAT_COLOR",
+          "sha256": "938f200ca13c25b856c5728574966ba04391e0827b5c5df4b7b59269821621e6"
+        },
+        "sharp_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "64e604ad71b2a1e8cf39d221e632788df18e8f93fbb55e4731fa57e04ef13f91"
+        },
+        "ax_source_face": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "f54e1a9caa13f2cdfebcbd9f9861a98d3107947773401129ece71eff893ef129"
+        },
+        "ax_reviewed": {
+          "domain": "FACE",
+          "type": "INT",
+          "sha256": "bdab0d7e8787180b432ba3ce454042b54ca4fb76673fc63a831a6ad16d2c5888"
+        }
+      },
+      "materials": [
+        {
+          "name": "Observed color: Object03",
+          "diffuse_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.800000011920929,
+                  0.800000011920929,
+                  0.800000011920929,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.75,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Color Attribute",
+              "type": "VERTEX_COLOR",
+              "inputs": {},
+              "color_layer": "Col"
+            }
+          ],
+          "links": [
+            [
+              "Color Attribute",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ],
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Review camera": {
+      "type": "CAMERA",
+      "matrix_world": [
+        [
+          0.7071067094802856,
+          -0.3796420395374298,
+          0.5965500473976135,
+          6.0114359855651855
+        ],
+        [
+          0.7071068286895752,
+          0.3796420693397522,
+          -0.596549928188324,
+          -4.8125
+        ],
+        [
+          -5.488482912596737e-08,
+          0.8436490893363953,
+          0.5368949174880981,
+          6.6605000495910645
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null,
+      "properties": {},
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Scene Collection"
+      ]
+    },
+    "Key": {
+      "type": "LIGHT",
+      "matrix_world": [
+        [
+          0.7071068286895752,
+          -0.5773502588272095,
+          0.40824824571609497,
+          6.0114359855651855
+        ],
+        [
+          0.7071067690849304,
+          0.5773502588272095,
+          -0.40824833512306213,
+          -4.8125
+        ],
+        [
+          6.897447946130342e-08,
+          0.5773502588272095,
+          0.8164966106414795,
+          13.282499313354492
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null,
+      "properties": {},
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Scene Collection"
+      ]
+    },
+    "Fill": {
+      "type": "LIGHT",
+      "matrix_world": [
+        [
+          -0.4472135305404663,
+          0.7171371579170227,
+          -0.534522533416748,
+          -6.028563976287842
+        ],
+        [
+          -0.8944272398948669,
+          -0.3585684895515442,
+          0.26726123690605164,
+          4.21750020980835
+        ],
+        [
+          1.7198834356690895e-08,
+          0.5976143479347229,
+          0.8017836809158325,
+          10.272499084472656
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null,
+      "properties": {},
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Scene Collection"
+      ]
+    }
+  },
+  "source_face_snapshot_sha256": {
+    "ids": "2efebbbc07d9fd1fef237ef6746ce5375b346c0f556138f39c3349f8d6b45775",
+    "owners": "3584dec1d37a858fb250e3667f39bd6f7a97f416639e5762c6f53318be5207ce",
+    "corners": "029de24a7c7d1469cda539a3d53d07803b50ae608f9a3acd0daeab50b90a2a0e",
+    "colors": "8dcace741563ad9ec938e857da75106c89b66aa1a018f9dcf89e743a68b85835",
+    "materials": "d6da4712f25922cd91b45c619c7d0824b245de8cf56af51097904df354615a2a",
+    "reviewed": "96c2fc7a0468191707737630c1d170f1752db2cd7400747117bf149c4594570f"
+  },
+  "source_units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "length_unit": "METERS"
+  },
+  "original_stool_name": "Object03",
+  "original_stool_id": "same-stool",
+  "comparison_collection": "Original stool - observed comparison (hidden)",
+  "fit_root": "Fitted Stool (structural completion)",
+  "fitted_parts": {
+    "Seat": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.34948042035102844
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.1201553344726562
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.49047359824180603
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "properties": {
+        "component_parameters_json": "{\"part_id\": 0, \"name\": \"seat\", \"type\": \"capped_cylinder\", \"provenance_role\": \"fitted/structural\", \"start_m\": [0.34948042355464964, 0.4659412959655973, -1.1201553390278534], \"end_m\": [0.34948042355464964, 0.5150058967071116, -1.1201553390278534], \"radius_m\": 0.2866092102744664, \"color_rgb\": [143, 127, 104], \"editable\": true, \"vertex_count\": 162, \"face_count\": 320, \"training_closest_point_support\": 1574, \"heldout_closest_point_support\": 1537, \"center_m\": [0.34948042355464964, 0.49047359633635446, -1.1201553390278534], \"thickness_m\": 0.049064600741514315}",
+        "part_id": 0,
+        "provenance_role": "fitted/structural",
+        "source_fit_json_sha256": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+        "source_part": "seat",
+        "source_ply_sha256": "bca734ebb78ca46363bd5753a2497e46a17f5c0e9ecd13e522b42e51ae1ef499"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Repaired stool - 7 editable structural parts"
+      ],
+      "mesh_sha256": "28aba042c8291865b8c96e7df9cb788ba0042db563a1882d343a40dfaef3ced4",
+      "vertices": 162,
+      "triangles": 320,
+      "attributes": {
+        ".select_vert": {
+          "domain": "POINT",
+          "type": "BOOLEAN",
+          "sha256": "1753fc89f23aa52a53533a75db036872c81bbabb43e240d5b657da959cd826b1"
+        },
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "b4d7d9cfb757d17e49edcd72bcca78f210d412a92badd1e5c9aa52636e3365eb"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "0e53032229d5e1bbf73f03f57a1d62e9c6a30c5df1b0d527a6bb3e2286ea6195"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "de41444976d9d20f3595aaea6e971c63da74c210e0f1d673c2afadb5a6f5b102"
+        },
+        ".select_poly": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        "sharp_face": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        ".select_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "b79dba0ec8d983ae43da1fdc8cc43b5bbd0de8190f3d112d74fdd2eed44ca0cb"
+        }
+      },
+      "materials": [
+        {
+          "name": "Seat - measured training color",
+          "diffuse_color": [
+            0.2746773064136505,
+            0.21223075687885284,
+            0.1384316086769104,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.2746773064136505,
+                  0.21223075687885284,
+                  0.1384316086769104,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.800000011920929,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Leg 3": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.3538650870323181
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.9116805791854858
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.24681691825389862
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "properties": {
+        "component_parameters_json": "{\"part_id\": 3, \"name\": \"leg_3\", \"type\": \"capped_cylinder\", \"provenance_role\": \"fitted/structural\", \"start_m\": [0.35323139276105897, 0.0031602413318314285, -0.8786792923647158], \"end_m\": [0.35449876794612395, 0.49047359633635446, -0.9446819137114375], \"radius_m\": 0.023541608336555626, \"color_rgb\": [125, 111, 93], \"editable\": true, \"vertex_count\": 162, \"face_count\": 320, \"training_closest_point_support\": 72, \"heldout_closest_point_support\": 82}",
+        "part_id": 3,
+        "provenance_role": "fitted/structural",
+        "source_fit_json_sha256": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+        "source_part": "leg_3",
+        "source_ply_sha256": "e4c57ed03298bd8b2d88246c59751cb1ae3c21273632e3db4c8c6c6b4b8ffe0c"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Repaired stool - 7 editable structural parts"
+      ],
+      "mesh_sha256": "09b968a77090e59b2abee05da9071d532a33280c49f6e479196491700f416c08",
+      "vertices": 162,
+      "triangles": 320,
+      "attributes": {
+        ".select_vert": {
+          "domain": "POINT",
+          "type": "BOOLEAN",
+          "sha256": "1753fc89f23aa52a53533a75db036872c81bbabb43e240d5b657da959cd826b1"
+        },
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "682ab35244f8509399bfa3a5f1142c8fdc6e1c49cb4a21fd7d07cc9294cefb85"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "0e53032229d5e1bbf73f03f57a1d62e9c6a30c5df1b0d527a6bb3e2286ea6195"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "de41444976d9d20f3595aaea6e971c63da74c210e0f1d673c2afadb5a6f5b102"
+        },
+        ".select_poly": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        "sharp_face": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        ".select_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "b79dba0ec8d983ae43da1fdc8cc43b5bbd0de8190f3d112d74fdd2eed44ca0cb"
+        }
+      },
+      "materials": [
+        {
+          "name": "Leg 3 - measured training color",
+          "diffuse_color": [
+            0.20507873594760895,
+            0.15896083414554596,
+            0.109461709856987,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.20507873594760895,
+                  0.15896083414554596,
+                  0.109461709856987,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.800000011920929,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Leg 2": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.5282338857650757
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2270129919052124
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.24677614867687225
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "properties": {
+        "component_parameters_json": "{\"part_id\": 2, \"name\": \"leg_2\", \"type\": \"capped_cylinder\", \"provenance_role\": \"fitted/structural\", \"start_m\": [0.5550427146500267, 0.0030786979375395564, -1.2442392887886176], \"end_m\": [0.5014250019624226, 0.49047359633635446, -1.2097868156982172], \"radius_m\": 0.02374480482845852, \"color_rgb\": [125, 112, 93], \"editable\": true, \"vertex_count\": 162, \"face_count\": 320, \"training_closest_point_support\": 90, \"heldout_closest_point_support\": 82}",
+        "part_id": 2,
+        "provenance_role": "fitted/structural",
+        "source_fit_json_sha256": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+        "source_part": "leg_2",
+        "source_ply_sha256": "fb81146129c86d2d408627ed3df2eb65b4b61d6538eda4a984bc246e09cfd454"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Repaired stool - 7 editable structural parts"
+      ],
+      "mesh_sha256": "5ecaca58bd06d96104d18e6cf14ed38dd160827f0e76fc28aff0a44e8d1aaeb3",
+      "vertices": 162,
+      "triangles": 320,
+      "attributes": {
+        ".select_vert": {
+          "domain": "POINT",
+          "type": "BOOLEAN",
+          "sha256": "1753fc89f23aa52a53533a75db036872c81bbabb43e240d5b657da959cd826b1"
+        },
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "9ad6c72f53d0a3ee3086d7ebc9ef1954230f3baedd45f666fdd8b1c7467171dd"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "0e53032229d5e1bbf73f03f57a1d62e9c6a30c5df1b0d527a6bb3e2286ea6195"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "de41444976d9d20f3595aaea6e971c63da74c210e0f1d673c2afadb5a6f5b102"
+        },
+        ".select_poly": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        "sharp_face": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        ".select_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "b79dba0ec8d983ae43da1fdc8cc43b5bbd0de8190f3d112d74fdd2eed44ca0cb"
+        }
+      },
+      "materials": [
+        {
+          "name": "Leg 2 - measured training color",
+          "diffuse_color": [
+            0.20507873594760895,
+            0.16202937066555023,
+            0.109461709856987,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.20507873594760895,
+                  0.16202937066555023,
+                  0.109461709856987,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.800000011920929,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Leg 1": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.16784009337425232
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2206611633300781
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.2467433512210846
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "properties": {
+        "component_parameters_json": "{\"part_id\": 1, \"name\": \"leg_1\", \"type\": \"capped_cylinder\", \"provenance_role\": \"fitted/structural\", \"start_m\": [0.14055293308235367, 0.0030131134865839715, -1.2362241237353686], \"end_m\": [0.195127254847641, 0.49047359633635446, -1.2050981055677317], \"radius_m\": 0.023571576930309215, \"color_rgb\": [121, 109, 90], \"editable\": true, \"vertex_count\": 162, \"face_count\": 320, \"training_closest_point_support\": 84, \"heldout_closest_point_support\": 79}",
+        "part_id": 1,
+        "provenance_role": "fitted/structural",
+        "source_fit_json_sha256": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+        "source_part": "leg_1",
+        "source_ply_sha256": "3581469ab8a8c4761d73faa371f0aea23af5c3ed35670a1845ce02278afa576d"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Repaired stool - 7 editable structural parts"
+      ],
+      "mesh_sha256": "55f071a66343ac3b09860243c867939f69739b47bcef2de0f6977eef48174d41",
+      "vertices": 162,
+      "triangles": 320,
+      "attributes": {
+        ".select_vert": {
+          "domain": "POINT",
+          "type": "BOOLEAN",
+          "sha256": "1753fc89f23aa52a53533a75db036872c81bbabb43e240d5b657da959cd826b1"
+        },
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "a3bdd3d044ed26c7cecebc160ba8dfc10eb0acea421f1ffa076c26dee4b37a71"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "0e53032229d5e1bbf73f03f57a1d62e9c6a30c5df1b0d527a6bb3e2286ea6195"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "de41444976d9d20f3595aaea6e971c63da74c210e0f1d673c2afadb5a6f5b102"
+        },
+        ".select_poly": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        "sharp_face": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        ".select_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "b79dba0ec8d983ae43da1fdc8cc43b5bbd0de8190f3d112d74fdd2eed44ca0cb"
+        }
+      },
+      "materials": [
+        {
+          "name": "Leg 1 - measured training color",
+          "diffuse_color": [
+            0.19120168685913086,
+            0.15292614698410034,
+            0.10224173218011856,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.19120168685913086,
+                  0.15292614698410034,
+                  0.10224173218011856,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.800000011920929,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Brace 3-1": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.25760746002197266
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0641380548477173
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.19009020924568176
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "properties": {
+        "component_parameters_json": "{\"part_id\": 6, \"name\": \"brace_3_1\", \"type\": \"capped_cylinder\", \"provenance_role\": \"fitted/structural\", \"start_m\": [0.3537175489556847, 0.19009021207064702, -0.9039974330442654], \"end_m\": [0.16149741193191308, 0.19009021207064702, -1.2242786114853614], \"radius_m\": 0.012012308793204871, \"color_rgb\": [132, 120, 100], \"editable\": true, \"vertex_count\": 162, \"face_count\": 320, \"training_closest_point_support\": 51, \"heldout_closest_point_support\": 47}",
+        "part_id": 6,
+        "provenance_role": "fitted/structural",
+        "source_fit_json_sha256": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+        "source_part": "brace_3_1",
+        "source_ply_sha256": "409846a1b8a1b6c19acf7d0ae01643dff2e7c8e9db041767d42dbd150bc61c3a"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Repaired stool - 7 editable structural parts"
+      ],
+      "mesh_sha256": "f1002177dc4e9fec4de3a683369edf7120cbdfb4f4e5811ffd2baddb5433c82a",
+      "vertices": 162,
+      "triangles": 320,
+      "attributes": {
+        ".select_vert": {
+          "domain": "POINT",
+          "type": "BOOLEAN",
+          "sha256": "1753fc89f23aa52a53533a75db036872c81bbabb43e240d5b657da959cd826b1"
+        },
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "4e583e82835d50564290530b7fa391d445b84497e39dcbc83aed5fbbcf73ae11"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "0e53032229d5e1bbf73f03f57a1d62e9c6a30c5df1b0d527a6bb3e2286ea6195"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "de41444976d9d20f3595aaea6e971c63da74c210e0f1d673c2afadb5a6f5b102"
+        },
+        ".select_poly": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        "sharp_face": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        ".select_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "b79dba0ec8d983ae43da1fdc8cc43b5bbd0de8190f3d112d74fdd2eed44ca0cb"
+        }
+      },
+      "materials": [
+        {
+          "name": "Brace 3-1 - measured training color",
+          "diffuse_color": [
+            0.23074005544185638,
+            0.18782077729701996,
+            0.12743768095970154,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.23074005544185638,
+                  0.18782077729701996,
+                  0.12743768095970154,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.800000011920929,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Brace 2-3": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.4440786838531494
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0675177574157715
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1903696060180664
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "properties": {
+        "component_parameters_json": "{\"part_id\": 5, \"name\": \"brace_2_3\", \"type\": \"capped_cylinder\", \"provenance_role\": \"fitted/structural\", \"start_m\": [0.5344390729454749, 0.190369601481757, -1.2310002605681087], \"end_m\": [0.35371827557481583, 0.190369601481757, -0.9040352740624119], \"radius_m\": 0.011788051477535361, \"color_rgb\": [139, 126, 106], \"editable\": true, \"vertex_count\": 162, \"face_count\": 320, \"training_closest_point_support\": 30, \"heldout_closest_point_support\": 33}",
+        "part_id": 5,
+        "provenance_role": "fitted/structural",
+        "source_fit_json_sha256": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+        "source_part": "brace_2_3",
+        "source_ply_sha256": "f27db72d89d6a15df5eb6c3966bec68fa4051eaa21c122a232b1e8866206a962"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Repaired stool - 7 editable structural parts"
+      ],
+      "mesh_sha256": "585e1b3ed8ed889cdb95e60349d0a88d0afd3f42a019a3813d59353c96ac5aa5",
+      "vertices": 162,
+      "triangles": 320,
+      "attributes": {
+        ".select_vert": {
+          "domain": "POINT",
+          "type": "BOOLEAN",
+          "sha256": "1753fc89f23aa52a53533a75db036872c81bbabb43e240d5b657da959cd826b1"
+        },
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "1e2a4038d52dcf17f5b4c2b3b398ec9ba626162608b4381c3ac5ca88498de4c5"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "0e53032229d5e1bbf73f03f57a1d62e9c6a30c5df1b0d527a6bb3e2286ea6195"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "de41444976d9d20f3595aaea6e971c63da74c210e0f1d673c2afadb5a6f5b102"
+        },
+        ".select_poly": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        "sharp_face": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        ".select_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "b79dba0ec8d983ae43da1fdc8cc43b5bbd0de8190f3d112d74fdd2eed44ca0cb"
+        }
+      },
+      "materials": [
+        {
+          "name": "Brace 2-3 - measured training color",
+          "diffuse_color": [
+            0.2581828534603119,
+            0.20863686501979828,
+            0.1441284716129303,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.2581828534603119,
+                  0.20863686501979828,
+                  0.1441284716129303,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.800000011920929,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Brace 1-2": {
+      "type": "MESH",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.34798404574394226
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2276198863983154
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1905282586812973
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "Fitted Stool (structural completion)",
+      "properties": {
+        "component_parameters_json": "{\"part_id\": 4, \"name\": \"brace_1_2\", \"type\": \"capped_cylinder\", \"provenance_role\": \"fitted/structural\", \"start_m\": [0.16154645466284603, 0.1905282641165095, -1.2242506403647935], \"end_m\": [0.5344216186643728, 0.1905282641165095, -1.2309890451857315], \"radius_m\": 0.011482115358614245, \"color_rgb\": [137, 124, 105], \"editable\": true, \"vertex_count\": 162, \"face_count\": 320, \"training_closest_point_support\": 26, \"heldout_closest_point_support\": 25}",
+        "part_id": 4,
+        "provenance_role": "fitted/structural",
+        "source_fit_json_sha256": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+        "source_part": "brace_1_2",
+        "source_ply_sha256": "f8dee940a7658f6731090a3260c6ad04d33292201d4ef8916b1068c1f69febbe"
+      },
+      "hide_render": false,
+      "hide_viewport": false,
+      "hidden_in_view_layer": false,
+      "collections": [
+        "Repaired stool - 7 editable structural parts"
+      ],
+      "mesh_sha256": "91fbb36771dec39820b2d80643d4f8c0d2ee9b143531d730613d56d1ece319aa",
+      "vertices": 162,
+      "triangles": 320,
+      "attributes": {
+        ".select_vert": {
+          "domain": "POINT",
+          "type": "BOOLEAN",
+          "sha256": "1753fc89f23aa52a53533a75db036872c81bbabb43e240d5b657da959cd826b1"
+        },
+        "position": {
+          "domain": "POINT",
+          "type": "FLOAT_VECTOR",
+          "sha256": "a89d0fcbe44c216c8b2d447a4275127ffed2d011009ba8e6d15790a1d442de85"
+        },
+        ".corner_vert": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "0e53032229d5e1bbf73f03f57a1d62e9c6a30c5df1b0d527a6bb3e2286ea6195"
+        },
+        ".corner_edge": {
+          "domain": "CORNER",
+          "type": "INT",
+          "sha256": "de41444976d9d20f3595aaea6e971c63da74c210e0f1d673c2afadb5a6f5b102"
+        },
+        ".select_poly": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        "sharp_face": {
+          "domain": "FACE",
+          "type": "BOOLEAN",
+          "sha256": "ed626bfa88852efadfa74300d80dd7e3484271fa007b34076b1b81ec4fac0129"
+        },
+        ".select_edge": {
+          "domain": "EDGE",
+          "type": "BOOLEAN",
+          "sha256": "b79dba0ec8d983ae43da1fdc8cc43b5bbd0de8190f3d112d74fdd2eed44ca0cb"
+        }
+      },
+      "materials": [
+        {
+          "name": "Brace 1-2 - measured training color",
+          "diffuse_color": [
+            0.25015828013420105,
+            0.2015562504529953,
+            0.14126329123973846,
+            1.0
+          ],
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": [
+                  0.25015828013420105,
+                  0.2015562504529953,
+                  0.14126329123973846,
+                  1.0
+                ],
+                "Metallic": 0.0,
+                "Roughness": 0.800000011920929,
+                "IOR": 1.5,
+                "Alpha": 1.0,
+                "Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Weight": 0.0,
+                "Diffuse Roughness": 0.0,
+                "Subsurface Weight": 0.0,
+                "Subsurface Radius": [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ],
+                "Subsurface Scale": 0.05000000074505806,
+                "Subsurface IOR": 1.399999976158142,
+                "Subsurface Anisotropy": 0.0,
+                "Specular IOR Level": 0.5,
+                "Specular Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Anisotropic": 0.0,
+                "Anisotropic Rotation": 0.0,
+                "Tangent": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Transmission Weight": 0.0,
+                "Coat Weight": 0.0,
+                "Coat Roughness": 0.029999999329447746,
+                "Coat IOR": 1.5,
+                "Coat Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Coat Normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Sheen Weight": 0.0,
+                "Sheen Roughness": 0.5,
+                "Sheen Tint": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Color": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "Emission Strength": 0.0,
+                "Thin Film Thickness": 0.0,
+                "Thin Film IOR": 1.3300000429153442
+              },
+              "color_layer": null
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Thickness": 0.0
+              },
+              "color_layer": null
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "root_snapshot": {
+    "type": "EMPTY",
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.34948042035102844
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        1.1201553344726562
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "parent": null,
+    "properties": {
+      "assumptions_json": "[\"Operator-selected family: one horizontal circular seat, three straight splayed cylindrical legs, and three horizontal cylindrical braces joining the three leg pairs.\", \"Y is up and units are metres; the measured scene Floor upper plane defines ground height.\", \"Legs continue through any unobserved regions to meet the seat and floor. Continuation and hidden surfaces are structural completion, not observed surface identity.\", \"Leg top centre ends at the seat mid-plane. Braces end on the fitted leg axes; deliberate solid overlap creates contact while preserving seven independently editable closed components.\", \"Each brace has its own fitted horizontal elevation and radius. No equal-angle, equal-radius, equal-height, or exact rotational-symmetry prior is imposed on the legs or braces.\", \"Object ownership is the supplied prior box assignment and may contain wrong or missing observations. It is not ground-truth instance segmentation.\", \"Even frame indices alone determine initialization, sampling, parameters, and color. Odd frame indices are a validation split, not an untouched final test set.\", \"Point-to-model distances do not prove unobserved surface accuracy or establish a unique reconstruction. Structural completion cannot be scored as observed evidence.\"]",
+      "component_count": 7,
+      "contact_model": "Nine intended solid-overlap joints; seven individually closed editable shells, no destructive welding.",
+      "coordinate_conversion": "(x, y, z) -> (x, -z, y)",
+      "description": "Observation-constrained seven-cylinder model with structural continuation in unseen regions.",
+      "input_axis_units": "Y-up metres",
+      "native_axis_units": "Z-up metres",
+      "provenance_role": "fitted/structural",
+      "quality_scope": "Validation thresholds declared for one development example; not a global shape-completeness, ground-truth-accuracy, or product-quality claim",
+      "source_fit_json": "fit.json",
+      "source_fit_json_sha256": "fece1f3c7f26a41a6dcdbc3faec8ff99a19cf1a395be7f626f4c72a8e8b54520",
+      "source_observations_sha256": "4bd8e427fc273c88220fe7dcf93478f06e0164b41c5bd48d230d4df39b757c22",
+      "source_scene_sha256": "2014c2121b9042e6d4f324e619eedaff91a57f2ee1891ab35a407177468d07c5"
+    },
+    "hide_render": false,
+    "hide_viewport": false,
+    "hidden_in_view_layer": false,
+    "collections": [
+      "Repaired stool - 7 editable structural parts"
+    ]
+  },
+  "source_preservation": {
+    "Environment + unassigned": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Unresolved (-2)": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Object00": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Object01": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Object02": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Object03": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": true
+    },
+    "Review camera": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Key": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Fill": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    }
+  },
+  "placement": {
+    "operation": "append existing world-space asset; no additional registration",
+    "maximum_observed_vs_fitted_bounds_center_difference_m": 0.019054478316877344
+  },
+  "fixed_camera": {
+    "eye_blender_m": [
+      2.450000047683716,
+      -2.799999952316284,
+      2.200000047683716
+    ],
+    "target_blender_m": [
+      0.0,
+      1.850000023841858,
+      0.5199999809265137
+    ],
+    "lens_mm": 50,
+    "resolution": [
+      1400,
+      1100
+    ]
+  },
+  "scope": "Only the accepted original stool is replaced in the visible scene; table, chairs and environment retain their observed incomplete geometry.",
+  "artifacts": {
+    "repaired-dining.blend": {
+      "sha256": "27144f490ac987a6445acc46ef7ec1ceb1c89b87c8f057a057ede3f650617e2b",
+      "bytes": 3099606
+    },
+    "repaired-dining.glb": {
+      "sha256": "05623e135799b467c620d2ee5838720d8a4895a31aaaf17be411805d8c098c69",
+      "bytes": 2505508
+    },
+    "dining-before.png": {
+      "sha256": "0ac1761fc514ca4e76d435b62ab8ca83568ace9d6d785e7d93db44fd423898ca",
+      "bytes": 1728726
+    },
+    "dining-repaired.png": {
+      "sha256": "a00b6a8a467dc5c42e28629e60af24eacdd974a4639dbeba48cec9ea8b1fe1a2",
+      "bytes": 1731220
+    }
+  },
+  "fresh_process_native_reopen": true,
+  "native_source_preservation": {
+    "Environment + unassigned": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Unresolved (-2)": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Object00": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Object01": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Object02": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Object03": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": true
+    },
+    "Review camera": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Key": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    },
+    "Fill": {
+      "exact_mesh_transform_color_face_properties_preserved": true,
+      "target_hidden_comparison": false
+    }
+  },
+  "native_edit_undo_redo": {
+    "status": "passed",
+    "translation_m": [
+      0.15,
+      0.1,
+      0.0
+    ],
+    "editable_parts_moved": 7,
+    "native_undo": [
+      "FINISHED"
+    ],
+    "native_redo": [
+      "FINISHED"
+    ],
+    "saved_asset_unchanged": true,
+    "scope": "Background native Blender undo stack with explicit checkpoints; no claim of manual usability study."
+  },
+  "glb_visible_mesh_count": 12,
+  "glb_hidden_original_excluded": true,
+  "glb_geometry": {
+    "Environment + unassigned": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 84277,
+      "actual_face_instances": 84277,
+      "matched_face_instances": 84277,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 1.1772695394993197e-06,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Unresolved (-2)": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 3605,
+      "actual_face_instances": 3605,
+      "matched_face_instances": 3605,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 6.346537812553077e-07,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Object00": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 3457,
+      "actual_face_instances": 3457,
+      "matched_face_instances": 3457,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 6.758545214608626e-07,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Object01": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 1797,
+      "actual_face_instances": 1797,
+      "matched_face_instances": 1797,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 6.217249380889732e-07,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Object02": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 1794,
+      "actual_face_instances": 1794,
+      "matched_face_instances": 1794,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 6.09977622887003e-07,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Seat": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 320,
+      "actual_face_instances": 320,
+      "matched_face_instances": 320,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 0.0,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Leg 3": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 320,
+      "actual_face_instances": 320,
+      "matched_face_instances": 320,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 0.0,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Leg 2": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 320,
+      "actual_face_instances": 320,
+      "matched_face_instances": 320,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 0.0,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Leg 1": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 320,
+      "actual_face_instances": 320,
+      "matched_face_instances": 320,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 0.0,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Brace 3-1": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 320,
+      "actual_face_instances": 320,
+      "matched_face_instances": 320,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 0.0,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Brace 2-3": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 320,
+      "actual_face_instances": 320,
+      "matched_face_instances": 320,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 0.0,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    },
+    "Brace 1-2": {
+      "status": "pass",
+      "method": "one_to_one_oriented_triangle_geometry",
+      "tolerance_m": 5e-06,
+      "expected_face_instances": 320,
+      "actual_face_instances": 320,
+      "matched_face_instances": 320,
+      "missing_face_instances": 0,
+      "extra_face_instances": 0,
+      "missing_face_indices_sample": [],
+      "extra_face_indices_sample": [],
+      "maximum_matched_corner_distance_m": 0.0,
+      "winding_ambiguous_matched_faces": 0,
+      "scope": "oriented triangle geometry with multiplicity; welded vertices, seams and attributes unverified"
+    }
+  },
+  "glb_source_appearance": {
+    "status": "pass",
+    "linear_rgba_tolerance": 0.0039225686274509805,
+    "objects": [
+      {
+        "id": "environment",
+        "status": "pass",
+        "maximum_linear_rgba_difference": 8.940696716308594e-08,
+        "maximum_material_value_difference": 0.0
+      },
+      {
+        "id": "unresolved",
+        "status": "pass",
+        "maximum_linear_rgba_difference": 7.450580596923828e-08,
+        "maximum_material_value_difference": 0.0
+      },
+      {
+        "id": "same-table",
+        "status": "pass",
+        "maximum_linear_rgba_difference": 7.450580596923828e-08,
+        "maximum_material_value_difference": 0.0
+      },
+      {
+        "id": "same-chair-west",
+        "status": "pass",
+        "maximum_linear_rgba_difference": 7.450580596923828e-08,
+        "maximum_material_value_difference": 0.0
+      },
+      {
+        "id": "same-chair-east",
+        "status": "pass",
+        "maximum_linear_rgba_difference": 7.450580596923828e-08,
+        "maximum_material_value_difference": 0.0
+      }
+    ]
+  },
+  "glb_scope": "Visible oriented triangle geometry, colors and object metadata. Native custom per-face lineage remains in the .blend; glTF does not preserve arbitrary Blender mesh attributes."
+}

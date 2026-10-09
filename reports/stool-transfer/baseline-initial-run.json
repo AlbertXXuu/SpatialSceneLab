@@ -1,0 +1,172 @@
+{
+  "schema": "alvenx.stool-transfer-run.v1",
+  "suite_sha256": "1b939d2017810356b28747d1fa9c518a5763452dd77cdae4ea53cc4c712f6b30",
+  "fitter_sha256": "6c4740aca48738553be62ce48cbdc97bc4b8884204026b5f516724eeff6f219b",
+  "runner_sha256": "7c00153841969ac6d30bb0f9ee4dea62e55127453bcf8bb571eb6a6aa0d5162a",
+  "scan_pipeline_sha256": "ea80924e86748f4b6a4b37544da4dedb579a50cf1ad514c04b343b70beab4998",
+  "fit_python": "C:/ProgramData/anaconda3/python.exe",
+  "geometry_python": "D:\\.Development\\AlvenX\\.workspace\\cache\\spatial-python-312\\Scripts\\python.exe",
+  "scope": "Predeclared synthetic development transfer; not a held-out real-data study",
+  "cases": [
+    {
+      "scene_id": "transfer-compact-tall",
+      "expected_class": "eligible",
+      "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-compact-tall\\points",
+      "result_directory": "transfer-compact-tall",
+      "input_sha256": {
+        "scene": "795f44e585a8672c5c848ff446343329c3b6ee6557d9fc46d80f6b906318d381",
+        "observations": "770c249aa140acf229c2028e4b705ce8776069af158f8abe2771a853cdb7bd72"
+      },
+      "fit_process": {
+        "returncode": 0,
+        "elapsed_seconds": 1.5845790999592282,
+        "timeout_seconds": 180,
+        "stdout": "fit.stdout.txt",
+        "stderr": "fit.stderr.txt"
+      },
+      "evaluation_process": {
+        "returncode": 1,
+        "elapsed_seconds": 1.3795096999965608,
+        "timeout_seconds": 180,
+        "stdout": "evaluation.stdout.txt",
+        "stderr": "evaluation.stderr.txt"
+      },
+      "evaluation_report": "transfer-compact-tall/evaluation.json"
+    },
+    {
+      "scene_id": "transfer-wide-low",
+      "expected_class": "eligible",
+      "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-wide-low\\points",
+      "result_directory": "transfer-wide-low",
+      "input_sha256": {
+        "scene": "25e9767b65f0bf5418cf68aa5e69e7a58ae9c43822eeb6809a6dc5e2442883ec",
+        "observations": "11fc710e4080e508a5883d31145d04685a4458633b6f5664b228d339717ada44"
+      },
+      "fit_process": {
+        "returncode": 0,
+        "elapsed_seconds": 1.6692804000340402,
+        "timeout_seconds": 180,
+        "stdout": "fit.stdout.txt",
+        "stderr": "fit.stderr.txt"
+      },
+      "evaluation_process": {
+        "returncode": 1,
+        "elapsed_seconds": 1.3470741999917664,
+        "timeout_seconds": 180,
+        "stdout": "evaluation.stdout.txt",
+        "stderr": "evaluation.stderr.txt"
+      },
+      "evaluation_report": "transfer-wide-low/evaluation.json"
+    },
+    {
+      "scene_id": "transfer-partial-noisy",
+      "expected_class": "stress",
+      "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-partial-noisy\\points",
+      "result_directory": "transfer-partial-noisy",
+      "input_sha256": {
+        "scene": "9bb99158c5851a3848fc50fc23f470117c8c9cae82c72f86240ca000c063a7c0",
+        "observations": "b4aa4b9e8f369834b7bc00475d238cb39a5128a1d1747f31eaeb088a5c6acbab"
+      },
+      "fit_process": {
+        "returncode": 0,
+        "elapsed_seconds": 1.7447589000221342,
+        "timeout_seconds": 180,
+        "stdout": "fit.stdout.txt",
+        "stderr": "fit.stderr.txt"
+      },
+      "evaluation_process": {
+        "returncode": 1,
+        "elapsed_seconds": 1.4563225000165403,
+        "timeout_seconds": 180,
+        "stdout": "evaluation.stdout.txt",
+        "stderr": "evaluation.stderr.txt"
+      },
+      "evaluation_report": "transfer-partial-noisy/evaluation.json"
+    },
+    {
+      "scene_id": "transfer-four-leg",
+      "expected_class": "incompatible",
+      "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-four-leg\\points",
+      "result_directory": "transfer-four-leg",
+      "input_sha256": {
+        "scene": "2457cc3242fb96498d28d890d6f2e2a2dbb4ce84f219f8c4a4b361f0db8cc4bd",
+        "observations": "135901a6aa1cfbfed038553d139409033acb4cd1b1b2282995b54dae3a7089b5"
+      },
+      "fit_process": {
+        "returncode": 2,
+        "elapsed_seconds": 2.1005780000123195,
+        "timeout_seconds": 180,
+        "stdout": "fit.stdout.txt",
+        "stderr": "fit.stderr.txt"
+      },
+      "evaluation_process": {
+        "returncode": 1,
+        "elapsed_seconds": 1.3864116999902762,
+        "timeout_seconds": 180,
+        "stdout": "evaluation.stdout.txt",
+        "stderr": "evaluation.stderr.txt"
+      },
+      "evaluation_report": "transfer-four-leg/evaluation.json"
+    },
+    {
+      "scene_id": "transfer-elliptical-seat",
+      "expected_class": "incompatible",
+      "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\points",
+      "result_directory": "transfer-elliptical-seat",
+      "input_sha256": {
+        "scene": "a88485a743b5e197bf3d0f2db7ad087de3dcd0e8d800631ed045c9ffb3d3f7a1",
+        "observations": "aeaeb4ce55069672707cacd1b76944f6fc63997ba4cfc186afb3fd6de053617d"
+      },
+      "fit_process": {
+        "returncode": 0,
+        "elapsed_seconds": 1.9113760000327602,
+        "timeout_seconds": 180,
+        "stdout": "fit.stdout.txt",
+        "stderr": "fit.stderr.txt"
+      },
+      "evaluation_process": {
+        "returncode": 1,
+        "elapsed_seconds": 1.4841959999757819,
+        "timeout_seconds": 180,
+        "stdout": "evaluation.stdout.txt",
+        "stderr": "evaluation.stderr.txt"
+      },
+      "evaluation_report": "transfer-elliptical-seat/evaluation.json"
+    },
+    {
+      "scene_id": "transfer-upper-crop",
+      "expected_class": "insufficient-hypothesis",
+      "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-upper-crop\\points",
+      "result_directory": "transfer-upper-crop",
+      "input_sha256": {
+        "scene": "398b84f21021dae88263ef9b816015410ee8b8b80a771d6933feb76d67c85237",
+        "observations": "328533f7efe81f85622111303946c3fccf50ca49a26d393f52ce1bfe7690399a"
+      },
+      "fit_process": {
+        "returncode": 2,
+        "elapsed_seconds": 0.28253520000725985,
+        "timeout_seconds": 180,
+        "stdout": "fit.stdout.txt",
+        "stderr": "fit.stderr.txt"
+      },
+      "evaluation_process": {
+        "returncode": 1,
+        "elapsed_seconds": 1.3891240999801084,
+        "timeout_seconds": 180,
+        "stdout": "evaluation.stdout.txt",
+        "stderr": "evaluation.stderr.txt"
+      },
+      "evaluation_report": "transfer-upper-crop/evaluation.json"
+    }
+  ],
+  "status": "completed_with_execution_errors",
+  "execution_error_cases": [
+    "transfer-compact-tall",
+    "transfer-wide-low",
+    "transfer-partial-noisy",
+    "transfer-four-leg",
+    "transfer-elliptical-seat",
+    "transfer-upper-crop"
+  ],
+  "case_count": 6
+}

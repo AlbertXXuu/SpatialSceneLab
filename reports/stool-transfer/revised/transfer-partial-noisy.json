@@ -1,0 +1,999 @@
+{
+  "schema": "alvenx.stool-transfer-evaluation.v1",
+  "object_uuid": "same-stool",
+  "script_sha256": "26d5c745c96874e165f82052cfc24326a8fd72bcb2ba11aea8c1f61f41e32259",
+  "shared_evaluator_sha256": "23908278918fc516b0bde2e877ae389d23a6f2ee53123a0c579c36a9a0b092ef",
+  "open3d_version": "0.19.0",
+  "inputs": {
+    "scene": {
+      "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-partial-noisy\\points\\scene.json",
+      "sha256": "9bb99158c5851a3848fc50fc23f470117c8c9cae82c72f86240ca000c063a7c0"
+    },
+    "observations": {
+      "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-partial-noisy\\points\\observations.npz",
+      "sha256": "b4aa4b9e8f369834b7bc00475d238cb39a5128a1d1747f31eaeb088a5c6acbab"
+    }
+  },
+  "reference": {
+    "directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference",
+    "object_uuid": "same-stool",
+    "files": [
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\labels.npz",
+        "sha256": "a60b36ee942e074d840aa46dc23a4b0f6e00410934d2a38f2547552140d11714"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\physical-scene.json",
+        "sha256": "2f8c77c9830e0c016d489dd5b396b2045e4e6c89c0ec776b1754b99cf3eed57a"
+      }
+    ],
+    "frame_files": [
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00000.npz",
+        "sha256": "c03a3b5421715ba5cf2f8b104843117a48a7c37fe871f49aecea75b351a7534b"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00001.npz",
+        "sha256": "00e4fcdebb5894c7aa5e1be3e569998927eb39c864527d6231abe57c84b54f1f"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00002.npz",
+        "sha256": "1c7239213ac20b19340e397a4ad637aea95f11c491aa6e1e42b777e61ffe4103"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00003.npz",
+        "sha256": "1ee8945965c70d75127ddd916cba1a2b8fd3fb75259c27909fa82774a250d2b5"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00004.npz",
+        "sha256": "ed4c97b6f0d8535841f13924aba15853b5e8f46454817971912b45cdb44aa313"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00005.npz",
+        "sha256": "eded4fe8afa84dcfe33dd0813c71d74b89184f30aa17754b64a007451797b3fc"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00006.npz",
+        "sha256": "69064da30b6bbc33faad608ca5308e04edb14d74ff4de37146bcbeb3b9966c2e"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00007.npz",
+        "sha256": "990d2eaf30afc82a5cb66614e77737b3b4050d2ee4cfd8a697544a7586ebe0ff"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00008.npz",
+        "sha256": "a5d5f252e4866e8d9dc2d6ef1b8ea1689c1511935ad985c136c709c7040db2e3"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00009.npz",
+        "sha256": "f7380a24b208fa278215f8d42e9d8116f17d7993d213d04e18870ad5d2165826"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00010.npz",
+        "sha256": "9f8180b9a1a744f981cc31ecfbed248477d3973290afb18eb9130ebaadc06265"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00011.npz",
+        "sha256": "4198b0fb2617714ba09588eef5aefbe6552d11c6dc8446b2ca6fd4cf902c95af"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00012.npz",
+        "sha256": "2c75e4e40e40255f68ad22ffdcb07a0a56908dd8ef8a6a5cd8902a62d3a9d98c"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00013.npz",
+        "sha256": "2007739b1ef6632ef62f433ae0040a4dfba279ee10bd49d231b5cd2fc87b70bd"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00014.npz",
+        "sha256": "a1d5da5a6be729c993ada050163e85b54aeba34a14c31b5c7493c5501e3f5055"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00015.npz",
+        "sha256": "4691f56ac44607a0a4b5994b925f63a7ad506516dbdecfca1e6f88e5bfd5d259"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00016.npz",
+        "sha256": "f0f7d2ec9639bf66866f9e3c7ca3d6380f112a8600ccba39a12cbdaaf4237afa"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-partial-noisy\\reference\\frame_labels\\frame_00017.npz",
+        "sha256": "85367475f265e3ddedd6875ca7eb80c7ab087469295553108f409a17a0b5b023"
+      }
+    ],
+    "frames": [
+      {
+        "frame_index": 0,
+        "valid_target_ray_hits": 719
+      },
+      {
+        "frame_index": 1,
+        "valid_target_ray_hits": 772
+      },
+      {
+        "frame_index": 2,
+        "valid_target_ray_hits": 773
+      },
+      {
+        "frame_index": 3,
+        "valid_target_ray_hits": 764
+      },
+      {
+        "frame_index": 4,
+        "valid_target_ray_hits": 778
+      },
+      {
+        "frame_index": 5,
+        "valid_target_ray_hits": 805
+      },
+      {
+        "frame_index": 6,
+        "valid_target_ray_hits": 771
+      },
+      {
+        "frame_index": 7,
+        "valid_target_ray_hits": 781
+      },
+      {
+        "frame_index": 8,
+        "valid_target_ray_hits": 773
+      },
+      {
+        "frame_index": 9,
+        "valid_target_ray_hits": 750
+      },
+      {
+        "frame_index": 10,
+        "valid_target_ray_hits": 773
+      },
+      {
+        "frame_index": 11,
+        "valid_target_ray_hits": 728
+      },
+      {
+        "frame_index": 12,
+        "valid_target_ray_hits": 685
+      },
+      {
+        "frame_index": 13,
+        "valid_target_ray_hits": 688
+      },
+      {
+        "frame_index": 14,
+        "valid_target_ray_hits": 721
+      },
+      {
+        "frame_index": 15,
+        "valid_target_ray_hits": 750
+      },
+      {
+        "frame_index": 16,
+        "valid_target_ray_hits": 750
+      },
+      {
+        "frame_index": 17,
+        "valid_target_ray_hits": 760
+      }
+    ],
+    "valid_target_ray_hits": 13541,
+    "primitive_count": 7,
+    "primitives": [
+      {
+        "id": "seat",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 0,
+        "global_triangle_index_last": 63,
+        "world_bounds_m": [
+          [
+            -0.1794777363538742,
+            0.49000000953674316,
+            -2.279477834701538
+          ],
+          [
+            0.37947773933410645,
+            0.5379999876022339,
+            -1.7205222845077515
+          ]
+        ]
+      },
+      {
+        "id": "leg_1",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 64,
+        "global_triangle_index_last": 127,
+        "world_bounds_m": [
+          [
+            0.2426593005657196,
+            -1.5800565961399116e-05,
+            -2.0994441509246826
+          ],
+          [
+            0.34500330686569214,
+            0.49281126260757446,
+            -2.034038782119751
+          ]
+        ]
+      },
+      {
+        "id": "leg_2",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 128,
+        "global_triangle_index_last": 191,
+        "world_bounds_m": [
+          [
+            0.03221166506409645,
+            7.071209438436199e-06,
+            -1.8509997129440308
+          ],
+          [
+            0.08955664932727814,
+            0.4927883744239807,
+            -1.7465331554412842
+          ]
+        ]
+      },
+      {
+        "id": "leg_3",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 192,
+        "global_triangle_index_last": 255,
+        "world_bounds_m": [
+          [
+            -0.10021530091762543,
+            7.071209438436199e-06,
+            -2.1770663261413574
+          ],
+          [
+            -0.00921562872827053,
+            0.4927883744239807,
+            -2.0919179916381836
+          ]
+        ]
+      },
+      {
+        "id": "brace_1_2",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 256,
+        "global_triangle_index_last": 319,
+        "world_bounds_m": [
+          [
+            0.05085485801100731,
+            0.19300000369548798,
+            -2.0762739181518555
+          ],
+          [
+            0.3077082633972168,
+            0.21699999272823334,
+            -1.7858891487121582
+          ]
+        ]
+      },
+      {
+        "id": "brace_2_3",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 320,
+        "global_triangle_index_last": 383,
+        "world_bounds_m": [
+          [
+            -0.06990934163331985,
+            0.19300000369548798,
+            -2.1417436599731445
+          ],
+          [
+            0.07125759869813919,
+            0.21699999272823334,
+            -1.7898551225662231
+          ]
+        ]
+      },
+      {
+        "id": "brace_3_1",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 384,
+        "global_triangle_index_last": 447,
+        "world_bounds_m": [
+          [
+            -0.06085282936692238,
+            0.19300000369548798,
+            -2.149616241455078
+          ],
+          [
+            0.30094146728515625,
+            0.21699999272823334,
+            -2.056621789932251
+          ]
+        ]
+      }
+    ],
+    "ray_to_mesh_consistency": {
+      "sample_count": 13541,
+      "finite_distance_count": 13541,
+      "mean_distance_m": 9.874298972923212e-07,
+      "median_distance_m": 6.006850128414953e-08,
+      "p95_distance_m": 6.8005642788193654e-06,
+      "max_distance_m": 6.696951459161937e-05,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 13541,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 13541,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 13541,
+          "fraction": 1.0
+        }
+      ]
+    }
+  },
+  "fit_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted",
+  "fit_status": "ok",
+  "errors": [],
+  "frozen_files": {
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted\\fit.json": "bea249d866cd36b83be60602f392b33cb6aabb979579655620c9831972b750a8",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted\\fitted_stool.ply": "3339b30c4a1cafbef8131fe1a2677c5fd4fc298d46fce6dce20bcf98ebc1225a",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted\\seat.ply": "37406925fab6cfda951cecb21da973fa9a629c7791b92e7a030ad8c17da57edf",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted\\leg_1.ply": "5b1dd09101596ca29c0cc95d91b7f146f4941961d3e07a750f72d5bdda66ba0d",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted\\leg_2.ply": "274db52fc7282024977ae43c9f41f10323efd029679c0c0becd18bcac5071d07",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted\\leg_3.ply": "dc4f3aeeb9599257539f3201ed0112bbf6558381cf4b84f519c3929a19ae6a9e",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted\\brace_1_2.ply": "a8964b1950aa1cc41ae43fd00e37b7b15330802c207187c50d80699a0d195f85",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted\\brace_2_3.ply": "b2203f0ddd73ec9c9a1aff418ac3110832e5912c880be3179b8b621f86cf3e3d",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\fitted\\brace_3_1.ply": "2f7c68c7b1b8ca0cdbd378d138c44b829cd277392a0d5540a3c52c26431a658b"
+  },
+  "declared_fitter_sha256": "8a854bd4c33818277a5a4524dc6f79f67e52d3b31c7f7d608b1388c144d91f3a",
+  "fitter_quality_gate_passed": true,
+  "engineering_acceptance": {
+    "passed": true,
+    "checks": {
+      "input_content_matches_fit_record": true,
+      "target_and_units_match": true,
+      "validation_p95_at_most_10mm": true,
+      "seven_closed_components": true,
+      "nine_solid_contacts": true,
+      "assembly_equals_components": true
+    },
+    "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+  },
+  "candidate_accepted": true,
+  "thresholds_m": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "valid_reference_ray_hit_recall": {
+    "sample_count": 13541,
+    "finite_distance_count": 13541,
+    "mean_distance_m": 0.000722840588658157,
+    "median_distance_m": 0.00011617809650488198,
+    "p95_distance_m": 0.003137406660243869,
+    "max_distance_m": 0.006846415810286999,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 13531,
+        "fraction": 0.999261502104719
+      },
+      {
+        "distance_m": 0.01,
+        "count": 13541,
+        "fraction": 1.0
+      },
+      {
+        "distance_m": 0.02,
+        "count": 13541,
+        "fraction": 1.0
+      }
+    ]
+  },
+  "per_reference_primitive_ray_hit_recall": [
+    {
+      "id": "seat",
+      "sample_count": 8818,
+      "finite_distance_count": 8818,
+      "mean_distance_m": 0.0005593805920819409,
+      "median_distance_m": 4.875674858340062e-05,
+      "p95_distance_m": 0.0031662408960983156,
+      "max_distance_m": 0.006846415810286999,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 8816,
+          "fraction": 0.9997731911998186
+        },
+        {
+          "distance_m": 0.01,
+          "count": 8818,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 8818,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "leg_1",
+      "sample_count": 1059,
+      "finite_distance_count": 1059,
+      "mean_distance_m": 0.0013896312927351244,
+      "median_distance_m": 0.0013038066681474447,
+      "p95_distance_m": 0.003118956414982674,
+      "max_distance_m": 0.006018301472067833,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1055,
+          "fraction": 0.996222851746931
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1059,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1059,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "leg_2",
+      "sample_count": 1786,
+      "finite_distance_count": 1786,
+      "mean_distance_m": 0.0003890113491015583,
+      "median_distance_m": 0.000379401259124279,
+      "p95_distance_m": 0.0007763975736452267,
+      "max_distance_m": 0.0015963983023539186,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1786,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1786,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1786,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "leg_3",
+      "sample_count": 779,
+      "finite_distance_count": 779,
+      "mean_distance_m": 0.00117698504913312,
+      "median_distance_m": 0.0010696988319978118,
+      "p95_distance_m": 0.0032176224282011363,
+      "max_distance_m": 0.005039924290031195,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 778,
+          "fraction": 0.9987163029525032
+        },
+        {
+          "distance_m": 0.01,
+          "count": 779,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 779,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "brace_1_2",
+      "sample_count": 421,
+      "finite_distance_count": 421,
+      "mean_distance_m": 0.0016232062396764834,
+      "median_distance_m": 0.0015988147351890802,
+      "p95_distance_m": 0.0027665456291288137,
+      "max_distance_m": 0.00315536605194211,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 421,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 421,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 421,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "brace_2_3",
+      "sample_count": 268,
+      "finite_distance_count": 268,
+      "mean_distance_m": 0.000660294895335788,
+      "median_distance_m": 0.0004214241780573502,
+      "p95_distance_m": 0.002111658779904245,
+      "max_distance_m": 0.003696237225085497,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 268,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 268,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 268,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "brace_3_1",
+      "sample_count": 410,
+      "finite_distance_count": 410,
+      "mean_distance_m": 0.002223834949783362,
+      "median_distance_m": 0.0023774110013619065,
+      "p95_distance_m": 0.0036478437250480043,
+      "max_distance_m": 0.006147750653326511,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 407,
+          "fraction": 0.9926829268292683
+        },
+        {
+          "distance_m": 0.01,
+          "count": 410,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 410,
+          "fraction": 1.0
+        }
+      ]
+    }
+  ],
+  "observed_primitive_balanced_recall": {
+    "observed_primitive_count": 7,
+    "total_primitive_count": 7,
+    "unobserved_primitive_ids": [],
+    "within": [
+      {
+        "distance_m": 0.005,
+        "fraction": 0.9981993246755031
+      },
+      {
+        "distance_m": 0.01,
+        "fraction": 1.0
+      },
+      {
+        "distance_m": 0.02,
+        "fraction": 1.0
+      }
+    ]
+  },
+  "source_mesh_area_samples_to_physical_target": {
+    "sample_count": 100000,
+    "finite_distance_count": 100000,
+    "mean_distance_m": 0.0013898407659833055,
+    "median_distance_m": 0.0007722377777099609,
+    "p95_distance_m": 0.005713989050127562,
+    "max_distance_m": 0.023997068405151367,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 93483,
+        "fraction": 0.93483
+      },
+      {
+        "distance_m": 0.01,
+        "count": 98892,
+        "fraction": 0.98892
+      },
+      {
+        "distance_m": 0.02,
+        "count": 99355,
+        "fraction": 0.99355
+      }
+    ]
+  },
+  "source_area_sampling": {
+    "sample_count_per_nonempty_mesh": 100000,
+    "seed": 20261009,
+    "method": "uniform barycentric point after triangle selection proportional to area"
+  },
+  "observed_point_mesh_distance": {
+    "training_even": {
+      "sample_count": 1650,
+      "finite_distance_count": 1650,
+      "mean_distance_m": 0.00240962620548828,
+      "median_distance_m": 0.001677516964264214,
+      "p95_distance_m": 0.0072130374377593395,
+      "max_distance_m": 0.014772385358810425,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1447,
+          "fraction": 0.876969696969697
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1624,
+          "fraction": 0.9842424242424243
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1650,
+          "fraction": 1.0
+        }
+      ]
+    },
+    "validation_odd": {
+      "sample_count": 1689,
+      "finite_distance_count": 1689,
+      "mean_distance_m": 0.0024410564783172344,
+      "median_distance_m": 0.0017941596452146769,
+      "p95_distance_m": 0.007182062789797781,
+      "max_distance_m": 0.014486267231404781,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1485,
+          "fraction": 0.8792184724689165
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1667,
+          "fraction": 0.9869745411486086
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1689,
+          "fraction": 1.0
+        }
+      ]
+    }
+  },
+  "assembly_topology": {
+    "vertices": 1134,
+    "triangles": 2240,
+    "connected_triangle_components": 7,
+    "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+    "boundary_edges": 0,
+    "boundary_edge_length_m": 0.0,
+    "nonmanifold_edges": 0,
+    "mesh_triangle_area_m2": 0.8397922264781007,
+    "largest_component_area_fraction": 0.664280614921401,
+    "largest_components": [
+      {
+        "triangles": 320,
+        "area_m2": 0.5578576966110852
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.0747566829606509
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.06819055355171472
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.06595348786404134
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.02806622307248608
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.023771454673547437
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.02119612774457502
+      }
+    ]
+  },
+  "structure": {
+    "components": [
+      {
+        "id": "seat",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.5578576966110852,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.5578576966110852
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          2.921364573877564e-10,
+          4.591003537717466e-10
+        ]
+      },
+      {
+        "id": "leg_1",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.06819055355171472,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.06819055355171472
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          5.217956033323698e-10,
+          3.894054336726259e-10
+        ]
+      },
+      {
+        "id": "leg_2",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.06595348786404134,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.06595348786404134
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          1.970125408130219e-10,
+          6.155483938969225e-10
+        ]
+      },
+      {
+        "id": "leg_3",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.0747566829606509,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.0747566829606509
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          2.1243611779296182e-10,
+          4.132866266219629e-10
+        ]
+      },
+      {
+        "id": "brace_1_2",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.02119612774457502,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.02119612774457502
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          7.711378630252669e-10,
+          6.715722332005469e-10
+        ]
+      },
+      {
+        "id": "brace_2_3",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.02806622307248608,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.02806622307248608
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          4.09870201174013e-10,
+          3.9175448554250453e-10
+        ]
+      },
+      {
+        "id": "brace_3_1",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.02377145467354744,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.02377145467354744
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          6.430353612730307e-10,
+          5.777768368996869e-10
+        ]
+      }
+    ],
+    "exact_seven_named_components": true,
+    "all_seven_closed": true,
+    "assembly_equals_component_files": true,
+    "joints": [
+      {
+        "source": "leg_1",
+        "endpoint": "end_m",
+        "target": "seat",
+        "signed_target_face_plane_distance_m": -0.023638240850262893,
+        "endpoint_to_actual_source_vertex_m": 3.894054336726259e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "leg_2",
+        "endpoint": "end_m",
+        "target": "seat",
+        "signed_target_face_plane_distance_m": -0.023638240850262893,
+        "endpoint_to_actual_source_vertex_m": 6.155483938969225e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "leg_3",
+        "endpoint": "end_m",
+        "target": "seat",
+        "signed_target_face_plane_distance_m": -0.023638240850262893,
+        "endpoint_to_actual_source_vertex_m": 4.132866266219629e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_1_2",
+        "endpoint": "start_m",
+        "target": "leg_1",
+        "signed_target_face_plane_distance_m": -0.020241024692843945,
+        "endpoint_to_actual_source_vertex_m": 7.711378630252669e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_1_2",
+        "endpoint": "end_m",
+        "target": "leg_2",
+        "signed_target_face_plane_distance_m": -0.019598344164602155,
+        "endpoint_to_actual_source_vertex_m": 6.715722332005469e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_2_3",
+        "endpoint": "start_m",
+        "target": "leg_2",
+        "signed_target_face_plane_distance_m": -0.01959834416060191,
+        "endpoint_to_actual_source_vertex_m": 4.09870201174013e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_2_3",
+        "endpoint": "end_m",
+        "target": "leg_3",
+        "signed_target_face_plane_distance_m": -0.02211806385706283,
+        "endpoint_to_actual_source_vertex_m": 3.9175448554250453e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_3_1",
+        "endpoint": "start_m",
+        "target": "leg_3",
+        "signed_target_face_plane_distance_m": -0.02211806385792192,
+        "endpoint_to_actual_source_vertex_m": 6.430353612730307e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_3_1",
+        "endpoint": "end_m",
+        "target": "leg_1",
+        "signed_target_face_plane_distance_m": -0.02024102468846878,
+        "endpoint_to_actual_source_vertex_m": 5.777768368996869e-10,
+        "positive_solid_contact": true
+      }
+    ],
+    "all_nine_positive_solid_contacts": true
+  },
+  "limitations": [
+    "Ray recall counts captured valid rays, including repeated observations; it is not full or visible surface-area completeness.",
+    "Unobserved physical components have null recall and are listed, never silently treated as perfect or removed from the total primitive count.",
+    "Reverse accuracy samples all fitted primitive shells, including internal overlap faces, against authored reference shells; it is not exposed-union accuracy.",
+    "Odd frames are a validation split; references are evaluation-only. This evaluator does not establish what files an upstream fitter read.",
+    "Engineering pass is a bounded geometry criterion, not automatic family identification. Manifest labels must separately identify incompatible and insufficient cases and count any accepted negative as a failure.",
+    "A missing fit remains an unaccepted row; its absence alone does not prove the fitter explicitly refused the input. Consult the retained attempt log.",
+    "Joint proof checks actual closed convex source and target triangles and cap-center identity; overlapping editable solids are not a welded union."
+  ]
+}

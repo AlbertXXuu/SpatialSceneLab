@@ -1,0 +1,1345 @@
+{
+  "schema": "alvenx.spatial.observation-constrained-stool-fit.v1",
+  "object_uuid": "same-stool",
+  "provenance_role": "fitted/structural",
+  "units": "m",
+  "up_axis": "Y",
+  "input_files": {
+    "scene": {
+      "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-four-leg\\points\\scene.json",
+      "sha256": "2457cc3242fb96498d28d890d6f2e2a2dbb4ce84f219f8c4a4b361f0db8cc4bd"
+    },
+    "observations": {
+      "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-four-leg\\points\\observations.npz",
+      "sha256": "135901a6aa1cfbfed038553d139409033acb4cd1b1b2282995b54dae3a7089b5"
+    },
+    "fitter": {
+      "path": "D:\\.Development\\AlvenX\\projects\\SpatialSceneLab\\fit_stool.py",
+      "sha256": "8a854bd4c33818277a5a4524dc6f79f67e52d3b31c7f7d608b1388c144d91f3a"
+    }
+  },
+  "read_scope": "Only the two specified input files; target box, Floor, ownership, XYZ, RGB, frame_index. No reference/fixture read.",
+  "assumptions": [
+    "Operator-selected family: one horizontal circular seat, three straight splayed cylindrical legs, and three horizontal cylindrical braces joining the three leg pairs.",
+    "Y is up and units are metres; the measured scene Floor upper plane defines ground height.",
+    "Legs continue through any unobserved regions to meet the seat and floor. Continuation and hidden surfaces are structural completion, not observed surface identity.",
+    "Leg top centre ends at the seat mid-plane. Braces end on the fitted leg axes; deliberate solid overlap creates contact while preserving seven independently editable closed components.",
+    "Each brace has its own fitted horizontal elevation and radius. No equal-angle, equal-radius, equal-height, or exact rotational-symmetry prior is imposed on the legs or braces.",
+    "Object ownership is the supplied prior box assignment and may contain wrong or missing observations. It is not ground-truth instance segmentation.",
+    "Even frame indices alone determine initialization, sampling, parameters, and color. Odd frame indices are a validation split, not an untouched final test set.",
+    "Point-to-model distances do not prove unobserved surface accuracy or establish a unique reconstruction. Structural completion cannot be scored as observed evidence."
+  ],
+  "source_owner_index": 0,
+  "source_observation_count": 4228,
+  "training_frames": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "heldout_frames": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17
+  ],
+  "split_role": "Even frames train; odd frames validate on the same development example. This is not an untouched final test set.",
+  "optimizer": {
+    "method": "SciPy bounded trust-region least_squares; soft_l1 robust loss",
+    "robust_scale_m": 0.004,
+    "training_sample_count": 1139,
+    "sampling": "deterministic frame x 12-height strata, max 36 points per stratum",
+    "weighting": "equal mix of inverse height-band and initial closest-part frequency; fixed weights",
+    "seat_initialization": {
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 9,
+      "njev": 9,
+      "cost": 0.001505879188409281,
+      "optimality": 4.039905875174915e-07,
+      "active_mask": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "seat_band_boundary_y_m": 0.4478419807936343,
+    "multistart": [
+      {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 20,
+        "njev": 18,
+        "cost": 0.07550587116946993,
+        "optimality": 3.3886015261452372e-06,
+        "active_mask": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 28,
+        "njev": 22,
+        "cost": 0.07346352265985115,
+        "optimality": 4.4591814317802744e-05,
+        "active_mask": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 27,
+        "njev": 18,
+        "cost": 0.07346182455245277,
+        "optimality": 0.00017642176456082747,
+        "active_mask": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "selected_run": 2,
+    "selected": {
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 27,
+      "njev": 18,
+      "cost": 0.07346182455245277,
+      "optimality": 0.00017642176456082747,
+      "active_mask": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "initial_parameters": {
+      "seat_center_x": -0.20021105737981174,
+      "seat_center_z": -1.9002937296127276,
+      "seat_top_y": 0.5149915485422621,
+      "seat_thickness": 0.04877905218435269,
+      "seat_radius": 0.29623436792233493,
+      "leg_1_foot_x": -0.31778930729648,
+      "leg_1_foot_z": -2.107111820668607,
+      "leg_1_top_x": -0.2907013408003228,
+      "leg_1_top_z": -2.079352497011254,
+      "leg_1_radius": 0.02106877278633506,
+      "leg_2_foot_x": 0.013949945195122816,
+      "leg_2_foot_z": -2.01113218727018,
+      "leg_2_top_x": 0.00906866580602354,
+      "leg_2_top_z": -1.9676859060932665,
+      "leg_2_radius": 0.020689042452939177,
+      "leg_3_foot_x": -0.2134684754814026,
+      "leg_3_foot_z": -1.7146509731007602,
+      "leg_3_top_x": -0.29069508077379813,
+      "leg_3_top_z": -1.7894040041955654,
+      "leg_3_radius": 0.03862436614066966,
+      "brace_1_height": 0.19231265474763765,
+      "brace_1_radius": 0.012874788713556554,
+      "brace_2_height": 0.19231265474763765,
+      "brace_2_radius": 0.012874788713556554,
+      "brace_3_height": 0.19231265474763765,
+      "brace_3_radius": 0.012874788713556554
+    },
+    "parameters": {
+      "seat_center_x": -0.2009987059077296,
+      "seat_center_z": -1.90103142482406,
+      "seat_top_y": 0.514052919923284,
+      "seat_thickness": 0.13132928802088664,
+      "seat_radius": 0.2967568363760414,
+      "leg_1_foot_x": -0.3154466502542119,
+      "leg_1_foot_z": -2.1163374441401634,
+      "leg_1_top_x": -0.29194074593778546,
+      "leg_1_top_z": -2.0679997719641574,
+      "leg_1_radius": 0.023668070111862914,
+      "leg_2_foot_x": 0.016386380599218646,
+      "leg_2_foot_z": -2.0131202020220176,
+      "leg_2_top_x": -0.028596965989121984,
+      "leg_2_top_z": -1.9898605493152508,
+      "leg_2_radius": 0.023188359474633723,
+      "leg_3_foot_x": -0.01998256245948804,
+      "leg_3_foot_z": -1.5677002855900146,
+      "leg_3_top_x": -0.5707996357785438,
+      "leg_3_top_z": -1.9871240595779391,
+      "leg_3_radius": 0.06179898582486637,
+      "brace_1_height": 0.18987137671735702,
+      "brace_1_radius": 0.01150863353710325,
+      "brace_2_height": 0.15663365029257487,
+      "brace_2_radius": 0.04119932221060424,
+      "brace_3_height": 0.22774675879695125,
+      "brace_3_radius": 0.041199243581326504
+    },
+    "bounds": {
+      "seat_center_x": {
+        "lower": -0.35450000000000004,
+        "upper": -0.04550000000000001
+      },
+      "seat_center_z": {
+        "lower": -2.0545,
+        "upper": -1.7454999999999998
+      },
+      "seat_top_y": {
+        "lower": 0.34145624141915,
+        "upper": 0.6041148886646499
+      },
+      "seat_thickness": {
+        "lower": 0.013132932362275,
+        "upper": 0.13132932362275
+      },
+      "seat_radius": {
+        "lower": 0.1236,
+        "upper": 0.4326
+      },
+      "leg_1_foot_x": {
+        "lower": -0.6326,
+        "upper": 0.23259999999999997
+      },
+      "leg_1_foot_z": {
+        "lower": -2.3326,
+        "upper": -1.4674
+      },
+      "leg_1_top_x": {
+        "lower": -0.5708,
+        "upper": 0.17079999999999995
+      },
+      "leg_1_top_z": {
+        "lower": -2.2708,
+        "upper": -1.5292
+      },
+      "leg_1_radius": {
+        "lower": 0.005149915485422622,
+        "upper": 0.061798985825071456
+      },
+      "leg_2_foot_x": {
+        "lower": -0.6326,
+        "upper": 0.23259999999999997
+      },
+      "leg_2_foot_z": {
+        "lower": -2.3326,
+        "upper": -1.4674
+      },
+      "leg_2_top_x": {
+        "lower": -0.5708,
+        "upper": 0.17079999999999995
+      },
+      "leg_2_top_z": {
+        "lower": -2.2708,
+        "upper": -1.5292
+      },
+      "leg_2_radius": {
+        "lower": 0.005149915485422622,
+        "upper": 0.061798985825071456
+      },
+      "leg_3_foot_x": {
+        "lower": -0.6326,
+        "upper": 0.23259999999999997
+      },
+      "leg_3_foot_z": {
+        "lower": -2.3326,
+        "upper": -1.4674
+      },
+      "leg_3_top_x": {
+        "lower": -0.5708,
+        "upper": 0.17079999999999995
+      },
+      "leg_3_top_z": {
+        "lower": -2.2708,
+        "upper": -1.5292
+      },
+      "leg_3_radius": {
+        "lower": 0.005149915485422622,
+        "upper": 0.061798985825071456
+      },
+      "brace_1_height": {
+        "lower": 0.061798985825071456,
+        "upper": 0.38624366140669664
+      },
+      "brace_1_radius": {
+        "lower": 0.003862436614066966,
+        "upper": 0.041199323883380976
+      },
+      "brace_2_height": {
+        "lower": 0.061798985825071456,
+        "upper": 0.38624366140669664
+      },
+      "brace_2_radius": {
+        "lower": 0.003862436614066966,
+        "upper": 0.041199323883380976
+      },
+      "brace_3_height": {
+        "lower": 0.061798985825071456,
+        "upper": 0.38624366140669664
+      },
+      "brace_3_radius": {
+        "lower": 0.003862436614066966,
+        "upper": 0.041199323883380976
+      }
+    },
+    "training_sample_index_sha256": "b41e1c58482895ea454bb33efbb772194b4166ef8cde52d1b3219a3e0eae80b2"
+  },
+  "editable_components": [
+    {
+      "part_id": 0,
+      "name": "seat",
+      "type": "capped_cylinder",
+      "provenance_role": "fitted/structural",
+      "start_m": [
+        -0.2009987059077296,
+        0.38272363190239733,
+        -1.90103142482406
+      ],
+      "end_m": [
+        -0.2009987059077296,
+        0.514052919923284,
+        -1.90103142482406
+      ],
+      "radius_m": 0.2967568363760414,
+      "color_rgb": [
+        143,
+        127,
+        104
+      ],
+      "editable": true,
+      "vertex_count": 162,
+      "face_count": 320,
+      "training_closest_point_support": 1442,
+      "heldout_closest_point_support": 1440,
+      "center_m": [
+        -0.2009987059077296,
+        0.44838827591284064,
+        -1.90103142482406
+      ],
+      "thickness_m": 0.13132928802088664
+    },
+    {
+      "part_id": 1,
+      "name": "leg_1",
+      "type": "capped_cylinder",
+      "provenance_role": "fitted/structural",
+      "start_m": [
+        -0.3154466502542119,
+        0.0028346773353341848,
+        -2.1163374441401634
+      ],
+      "end_m": [
+        -0.29194074593778546,
+        0.44838827591284064,
+        -2.0679997719641574
+      ],
+      "radius_m": 0.023668070111862914,
+      "color_rgb": [
+        123,
+        110,
+        92
+      ],
+      "editable": true,
+      "vertex_count": 162,
+      "face_count": 320,
+      "training_closest_point_support": 119,
+      "heldout_closest_point_support": 111
+    },
+    {
+      "part_id": 2,
+      "name": "leg_2",
+      "type": "capped_cylinder",
+      "provenance_role": "fitted/structural",
+      "start_m": [
+        0.016386380599218646,
+        0.0026174374236690545,
+        -2.0131202020220176
+      ],
+      "end_m": [
+        -0.028596965989121984,
+        0.44838827591284064,
+        -1.9898605493152508
+      ],
+      "radius_m": 0.023188359474633723,
+      "color_rgb": [
+        127,
+        114,
+        96
+      ],
+      "editable": true,
+      "vertex_count": 162,
+      "face_count": 320,
+      "training_closest_point_support": 127,
+      "heldout_closest_point_support": 132
+    },
+    {
+      "part_id": 3,
+      "name": "leg_3",
+      "type": "capped_cylinder",
+      "provenance_role": "fitted/structural",
+      "start_m": [
+        -0.01998256245948804,
+        0.05368704447822532,
+        -1.5677002855900146
+      ],
+      "end_m": [
+        -0.5707996357785438,
+        0.44838827591284064,
+        -1.9871240595779391
+      ],
+      "radius_m": 0.06179898582486637,
+      "color_rgb": [
+        126,
+        113,
+        95
+      ],
+      "editable": true,
+      "vertex_count": 162,
+      "face_count": 320,
+      "training_closest_point_support": 277,
+      "heldout_closest_point_support": 253
+    },
+    {
+      "part_id": 4,
+      "name": "brace_1_2",
+      "type": "capped_cylinder",
+      "provenance_role": "fitted/structural",
+      "start_m": [
+        -0.30557922516019315,
+        0.18987137671735702,
+        -2.0960460163782177
+      ],
+      "end_m": [
+        -0.0025096711923896925,
+        0.18987137671735702,
+        -2.003349572766172
+      ],
+      "radius_m": 0.01150863353710325,
+      "color_rgb": [
+        138,
+        125,
+        105
+      ],
+      "editable": true,
+      "vertex_count": 162,
+      "face_count": 320,
+      "training_closest_point_support": 30,
+      "heldout_closest_point_support": 34
+    },
+    {
+      "part_id": 5,
+      "name": "brace_2_3",
+      "type": "capped_cylinder",
+      "provenance_role": "fitted/structural",
+      "start_m": [
+        0.0008443933593468879,
+        0.15663365029257487,
+        -2.0050838674006597
+      ],
+      "end_m": [
+        -0.16364755158730634,
+        0.1566336502925749,
+        -1.6770950644534155
+      ],
+      "radius_m": 0.04119932221060424,
+      "color_rgb": [
+        132,
+        119,
+        101
+      ],
+      "editable": true,
+      "vertex_count": 162,
+      "face_count": 320,
+      "training_closest_point_support": 88,
+      "heldout_closest_point_support": 74
+    },
+    {
+      "part_id": 6,
+      "name": "brace_3_1",
+      "type": "capped_cylinder",
+      "provenance_role": "fitted/structural",
+      "start_m": [
+        -0.26288796732816744,
+        0.22774675879695125,
+        -1.7526624201480208
+      ],
+      "end_m": [
+        -0.30358104781418266,
+        0.22774675879695122,
+        -2.091936953387032
+      ],
+      "radius_m": 0.041199243581326504,
+      "color_rgb": [
+        137,
+        124,
+        104
+      ],
+      "editable": true,
+      "vertex_count": 162,
+      "face_count": 320,
+      "training_closest_point_support": 57,
+      "heldout_closest_point_support": 44
+    }
+  ],
+  "contact_checks": {
+    "all_nine_intended_joints_in_solid_contact": false,
+    "joints": [
+      {
+        "parts": [
+          "seat",
+          "leg_1"
+        ],
+        "joint_axis_inside_target_depth_m": 0.06566464401044331,
+        "contact": true
+      },
+      {
+        "parts": [
+          "seat",
+          "leg_2"
+        ],
+        "joint_axis_inside_target_depth_m": 0.06566464401044331,
+        "contact": true
+      },
+      {
+        "parts": [
+          "seat",
+          "leg_3"
+        ],
+        "joint_axis_inside_target_depth_m": -0.08293339195777238,
+        "contact": false
+      },
+      {
+        "parts": [
+          "brace_1_2",
+          "leg_1"
+        ],
+        "joint_axis_inside_target_depth_m": 0.02366807011186266,
+        "contact": true
+      },
+      {
+        "parts": [
+          "brace_1_2",
+          "leg_2"
+        ],
+        "joint_axis_inside_target_depth_m": 0.023188359474633498,
+        "contact": true
+      },
+      {
+        "parts": [
+          "brace_2_3",
+          "leg_2"
+        ],
+        "joint_axis_inside_target_depth_m": 0.023188359474633387,
+        "contact": true
+      },
+      {
+        "parts": [
+          "brace_2_3",
+          "leg_3"
+        ],
+        "joint_axis_inside_target_depth_m": 0.06179898582486626,
+        "contact": true
+      },
+      {
+        "parts": [
+          "brace_3_1",
+          "leg_3"
+        ],
+        "joint_axis_inside_target_depth_m": 0.06179898582486632,
+        "contact": true
+      },
+      {
+        "parts": [
+          "brace_3_1",
+          "leg_1"
+        ],
+        "joint_axis_inside_target_depth_m": 0.023668070111862522,
+        "contact": true
+      }
+    ],
+    "mesh_topology": "7 closed separately indexed component shells; union has solid contact; no destructive welding",
+    "floor_y_m": 0.0
+  },
+  "distance_definition": "absolute min capped-cylinder signed-distance residual; exact outside the solids and on each exposed primitive surface; overlap-interior residual is not exact union-boundary Euclidean distance",
+  "training_observation_error": {
+    "point_count_weighted": {
+      "count": 2140,
+      "mean_m": 0.009491606859819295,
+      "rmse_m": 0.025614887307609108,
+      "p50_m": 0.0013487347485921387,
+      "p95_m": 0.052380135281290374,
+      "within_10mm_fraction": 0.8238317757009346
+    },
+    "part_balanced_mean_m": 0.013750806056709263,
+    "height_balanced_mean_m": 0.022854897557193513,
+    "per_closest_part": {
+      "seat": {
+        "count": 1442,
+        "mean_m": 0.002814504202542004,
+        "rmse_m": 0.009345070529615331,
+        "p50_m": 0.001094789836390886,
+        "p95_m": 0.0052718386773409915,
+        "within_10mm_fraction": 0.9646324549237171
+      },
+      "leg_1": {
+        "count": 119,
+        "mean_m": 0.0038651088186990945,
+        "rmse_m": 0.008146978105948634,
+        "p50_m": 0.0013153851061739157,
+        "p95_m": 0.019423863838461848,
+        "within_10mm_fraction": 0.8823529411764706
+      },
+      "leg_2": {
+        "count": 127,
+        "mean_m": 0.0033412928465708577,
+        "rmse_m": 0.007510671739143472,
+        "p50_m": 0.001023657540291198,
+        "p95_m": 0.016903116993418496,
+        "within_10mm_fraction": 0.905511811023622
+      },
+      "leg_3": {
+        "count": 277,
+        "mean_m": 0.04544063631891391,
+        "rmse_m": 0.06513318767716557,
+        "p50_m": 0.028599322570554447,
+        "p95_m": 0.15421511640317986,
+        "within_10mm_fraction": 0.2490974729241877
+      },
+      "brace_1_2": {
+        "count": 30,
+        "mean_m": 0.0010862758526119754,
+        "rmse_m": 0.0014261047533026233,
+        "p50_m": 0.0008143427085083518,
+        "p95_m": 0.002788493223003122,
+        "within_10mm_fraction": 1.0
+      },
+      "brace_2_3": {
+        "count": 88,
+        "mean_m": 0.015685192087283237,
+        "rmse_m": 0.020613030650934755,
+        "p50_m": 0.01177069062751039,
+        "p95_m": 0.04627913559498929,
+        "within_10mm_fraction": 0.3977272727272727
+      },
+      "brace_3_1": {
+        "count": 57,
+        "mean_m": 0.024022632270343753,
+        "rmse_m": 0.02977436396081265,
+        "p50_m": 0.02125621124290384,
+        "p95_m": 0.049903795435429145,
+        "within_10mm_fraction": 0.3157894736842105
+      }
+    },
+    "height_bands": {
+      "0": {
+        "count": 24,
+        "mean_m": 0.049417571438220294,
+        "rmse_m": 0.08713360870990919,
+        "p50_m": 0.01861002624876363,
+        "p95_m": 0.19229751202578874,
+        "within_10mm_fraction": 0.4583333333333333
+      },
+      "1": {
+        "count": 67,
+        "mean_m": 0.03764816279537118,
+        "rmse_m": 0.07399149713404211,
+        "p50_m": 0.0014968092306582546,
+        "p95_m": 0.16603887053610708,
+        "within_10mm_fraction": 0.6567164179104478
+      },
+      "2": {
+        "count": 75,
+        "mean_m": 0.029784441754771886,
+        "rmse_m": 0.055733053669237295,
+        "p50_m": 0.0048119162195059476,
+        "p95_m": 0.12951906099166258,
+        "within_10mm_fraction": 0.5733333333333334
+      },
+      "3": {
+        "count": 64,
+        "mean_m": 0.03137859569460321,
+        "rmse_m": 0.048026939011314905,
+        "p50_m": 0.013710395816485685,
+        "p95_m": 0.09884633620933427,
+        "within_10mm_fraction": 0.4375
+      },
+      "4": {
+        "count": 237,
+        "mean_m": 0.01738181119989003,
+        "rmse_m": 0.024776786490108223,
+        "p50_m": 0.010387264590680234,
+        "p95_m": 0.0511868589798344,
+        "within_10mm_fraction": 0.4810126582278481
+      },
+      "5": {
+        "count": 74,
+        "mean_m": 0.022099971839364605,
+        "rmse_m": 0.030817630177511646,
+        "p50_m": 0.017669487186942986,
+        "p95_m": 0.06724828979257627,
+        "within_10mm_fraction": 0.4189189189189189
+      },
+      "6": {
+        "count": 73,
+        "mean_m": 0.02698284042219734,
+        "rmse_m": 0.04156474638714564,
+        "p50_m": 0.007485504450646122,
+        "p95_m": 0.08899271644301517,
+        "within_10mm_fraction": 0.5205479452054794
+      },
+      "7": {
+        "count": 64,
+        "mean_m": 0.025626910817991434,
+        "rmse_m": 0.03869663289277303,
+        "p50_m": 0.00570093746656793,
+        "p95_m": 0.07658759195277651,
+        "within_10mm_fraction": 0.546875
+      },
+      "8": {
+        "count": 50,
+        "mean_m": 0.009298345289600073,
+        "rmse_m": 0.014408471870731807,
+        "p50_m": 0.005018770687087948,
+        "p95_m": 0.035329150188419506,
+        "within_10mm_fraction": 0.7
+      },
+      "9": {
+        "count": 36,
+        "mean_m": 0.020437243342598586,
+        "rmse_m": 0.023805003353454805,
+        "p50_m": 0.017807272721389933,
+        "p95_m": 0.04144021084395155,
+        "within_10mm_fraction": 0.25
+      },
+      "10": {
+        "count": 45,
+        "mean_m": 0.0029532784715391312,
+        "rmse_m": 0.007573952137334857,
+        "p50_m": 0.0016543635624228226,
+        "p95_m": 0.005306191934264036,
+        "within_10mm_fraction": 0.9777777777777777
+      },
+      "11": {
+        "count": 1331,
+        "mean_m": 0.0012495976201743412,
+        "rmse_m": 0.0016005208847107827,
+        "p50_m": 0.0010437472047347685,
+        "p95_m": 0.003171380119451034,
+        "within_10mm_fraction": 1.0
+      }
+    },
+    "per_frame": {
+      "0": {
+        "count": 245,
+        "mean_m": 0.01005771161756463,
+        "rmse_m": 0.028997401775245634,
+        "p50_m": 0.0013623946724882208,
+        "p95_m": 0.051286774517324385,
+        "within_10mm_fraction": 0.8326530612244898,
+        "supported_points_within_15mm_by_part": {
+          "seat": 157,
+          "leg_1": 25,
+          "leg_2": 10,
+          "leg_3": 7,
+          "brace_1_2": 2,
+          "brace_2_3": 4,
+          "brace_3_1": 3
+        }
+      },
+      "2": {
+        "count": 239,
+        "mean_m": 0.008762394119421764,
+        "rmse_m": 0.025426441232751906,
+        "p50_m": 0.0014419911465496371,
+        "p95_m": 0.049525933128631405,
+        "within_10mm_fraction": 0.8577405857740585,
+        "supported_points_within_15mm_by_part": {
+          "seat": 165,
+          "leg_1": 16,
+          "leg_2": 7,
+          "leg_3": 9,
+          "brace_1_2": 3,
+          "brace_2_3": 7,
+          "brace_3_1": 3
+        }
+      },
+      "4": {
+        "count": 237,
+        "mean_m": 0.008320357163366297,
+        "rmse_m": 0.024939890168139318,
+        "p50_m": 0.0013397735882091366,
+        "p95_m": 0.049149330727846725,
+        "within_10mm_fraction": 0.8607594936708861,
+        "supported_points_within_15mm_by_part": {
+          "seat": 173,
+          "leg_1": 14,
+          "leg_2": 3,
+          "leg_3": 7,
+          "brace_1_2": 3,
+          "brace_2_3": 7,
+          "brace_3_1": 1
+        }
+      },
+      "6": {
+        "count": 248,
+        "mean_m": 0.008271864167338019,
+        "rmse_m": 0.023044567444027723,
+        "p50_m": 0.0012908197102386998,
+        "p95_m": 0.049654759730111984,
+        "within_10mm_fraction": 0.8467741935483871,
+        "supported_points_within_15mm_by_part": {
+          "seat": 175,
+          "leg_1": 10,
+          "leg_2": 2,
+          "leg_3": 16,
+          "brace_1_2": 6,
+          "brace_2_3": 5,
+          "brace_3_1": 2
+        }
+      },
+      "8": {
+        "count": 236,
+        "mean_m": 0.009577074840854384,
+        "rmse_m": 0.025476398395131584,
+        "p50_m": 0.0012931538168099426,
+        "p95_m": 0.05507404208871283,
+        "within_10mm_fraction": 0.8220338983050848,
+        "supported_points_within_15mm_by_part": {
+          "seat": 162,
+          "leg_1": 6,
+          "leg_2": 9,
+          "leg_3": 14,
+          "brace_1_2": 4,
+          "brace_2_3": 3,
+          "brace_3_1": 1
+        }
+      },
+      "10": {
+        "count": 244,
+        "mean_m": 0.010834795354347565,
+        "rmse_m": 0.027529225009194143,
+        "p50_m": 0.0013784378550351917,
+        "p95_m": 0.05441075007749295,
+        "within_10mm_fraction": 0.7909836065573771,
+        "supported_points_within_15mm_by_part": {
+          "seat": 154,
+          "leg_1": 6,
+          "leg_2": 13,
+          "leg_3": 14,
+          "brace_1_2": 4,
+          "brace_2_3": 5,
+          "brace_3_1": 2
+        }
+      },
+      "12": {
+        "count": 237,
+        "mean_m": 0.012580630486644788,
+        "rmse_m": 0.031391618170544255,
+        "p50_m": 0.0013812876946607267,
+        "p95_m": 0.07462779566419928,
+        "within_10mm_fraction": 0.759493670886076,
+        "supported_points_within_15mm_by_part": {
+          "seat": 133,
+          "leg_1": 13,
+          "leg_2": 21,
+          "leg_3": 9,
+          "brace_1_2": 4,
+          "brace_2_3": 7,
+          "brace_3_1": 3
+        }
+      },
+      "14": {
+        "count": 217,
+        "mean_m": 0.009124562079429046,
+        "rmse_m": 0.020608154631389243,
+        "p50_m": 0.0013844050591368395,
+        "p95_m": 0.04553034120980571,
+        "within_10mm_fraction": 0.7926267281105991,
+        "supported_points_within_15mm_by_part": {
+          "seat": 133,
+          "leg_1": 2,
+          "leg_2": 26,
+          "leg_3": 5,
+          "brace_1_2": 0,
+          "brace_2_3": 7,
+          "brace_3_1": 4
+        }
+      },
+      "16": {
+        "count": 237,
+        "mean_m": 0.007868443259397284,
+        "rmse_m": 0.020609465095661222,
+        "p50_m": 0.001267856820689084,
+        "p95_m": 0.04761325621018007,
+        "within_10mm_fraction": 0.8481012658227848,
+        "supported_points_within_15mm_by_part": {
+          "seat": 142,
+          "leg_1": 16,
+          "leg_2": 28,
+          "leg_3": 4,
+          "brace_1_2": 4,
+          "brace_2_3": 7,
+          "brace_3_1": 3
+        }
+      }
+    }
+  },
+  "heldout_observation_error": {
+    "point_count_weighted": {
+      "count": 2088,
+      "mean_m": 0.009063230845049943,
+      "rmse_m": 0.025081705977316897,
+      "p50_m": 0.0013182935695823517,
+      "p95_m": 0.05039092130457663,
+      "within_10mm_fraction": 0.8290229885057471
+    },
+    "part_balanced_mean_m": 0.014261146988436696,
+    "height_balanced_mean_m": 0.023952422405371303,
+    "per_closest_part": {
+      "seat": {
+        "count": 1440,
+        "mean_m": 0.002834018570005632,
+        "rmse_m": 0.009710243931591643,
+        "p50_m": 0.0010707751677445643,
+        "p95_m": 0.005297381991170088,
+        "within_10mm_fraction": 0.9618055555555556
+      },
+      "leg_1": {
+        "count": 111,
+        "mean_m": 0.003189597697643508,
+        "rmse_m": 0.0053183923518908115,
+        "p50_m": 0.001767876522734902,
+        "p95_m": 0.013015439329147616,
+        "within_10mm_fraction": 0.9009009009009009
+      },
+      "leg_2": {
+        "count": 132,
+        "mean_m": 0.0047069923430290385,
+        "rmse_m": 0.009982812896859919,
+        "p50_m": 0.0012847015496153021,
+        "p95_m": 0.021030657615963025,
+        "within_10mm_fraction": 0.8484848484848485
+      },
+      "leg_3": {
+        "count": 253,
+        "mean_m": 0.04505046647744666,
+        "rmse_m": 0.06531571152020449,
+        "p50_m": 0.027032798620441972,
+        "p95_m": 0.14916538613052152,
+        "within_10mm_fraction": 0.24110671936758893
+      },
+      "brace_1_2": {
+        "count": 34,
+        "mean_m": 0.0010422452339749584,
+        "rmse_m": 0.0013059051326396248,
+        "p50_m": 0.0007511505421420178,
+        "p95_m": 0.0027592564246378317,
+        "within_10mm_fraction": 1.0
+      },
+      "brace_2_3": {
+        "count": 74,
+        "mean_m": 0.018075313164088117,
+        "rmse_m": 0.02370627462241987,
+        "p50_m": 0.014745173419872304,
+        "p95_m": 0.05173982411019624,
+        "within_10mm_fraction": 0.33783783783783783
+      },
+      "brace_3_1": {
+        "count": 44,
+        "mean_m": 0.024929395432868963,
+        "rmse_m": 0.030337031184286493,
+        "p50_m": 0.02943540649253794,
+        "p95_m": 0.047907605515476154,
+        "within_10mm_fraction": 0.3181818181818182
+      }
+    },
+    "height_bands": {
+      "0": {
+        "count": 15,
+        "mean_m": 0.0647529903131547,
+        "rmse_m": 0.10444012305704328,
+        "p50_m": 0.027871586287029543,
+        "p95_m": 0.20029526134663,
+        "within_10mm_fraction": 0.4
+      },
+      "1": {
+        "count": 64,
+        "mean_m": 0.0364683114140111,
+        "rmse_m": 0.07251003883290126,
+        "p50_m": 0.003071009370076717,
+        "p95_m": 0.17008935051414198,
+        "within_10mm_fraction": 0.65625
+      },
+      "2": {
+        "count": 67,
+        "mean_m": 0.0339466769577768,
+        "rmse_m": 0.06063327551438351,
+        "p50_m": 0.002657534268933604,
+        "p95_m": 0.13970754600293445,
+        "within_10mm_fraction": 0.5223880597014925
+      },
+      "3": {
+        "count": 64,
+        "mean_m": 0.026266532317678334,
+        "rmse_m": 0.04295499409136621,
+        "p50_m": 0.012246257408995358,
+        "p95_m": 0.09192191840227386,
+        "within_10mm_fraction": 0.46875
+      },
+      "4": {
+        "count": 216,
+        "mean_m": 0.017556791456936092,
+        "rmse_m": 0.0248157408169688,
+        "p50_m": 0.010918279257231277,
+        "p95_m": 0.04863889643150879,
+        "within_10mm_fraction": 0.48148148148148145
+      },
+      "5": {
+        "count": 76,
+        "mean_m": 0.018177993181104288,
+        "rmse_m": 0.026301572542035394,
+        "p50_m": 0.01183373214382881,
+        "p95_m": 0.0549885922967749,
+        "within_10mm_fraction": 0.4473684210526316
+      },
+      "6": {
+        "count": 73,
+        "mean_m": 0.02942241419007502,
+        "rmse_m": 0.04550446021128005,
+        "p50_m": 0.00496748810050944,
+        "p95_m": 0.08917707128370346,
+        "within_10mm_fraction": 0.547945205479452
+      },
+      "7": {
+        "count": 57,
+        "mean_m": 0.024195770753178622,
+        "rmse_m": 0.03614064278907865,
+        "p50_m": 0.009567808209244168,
+        "p95_m": 0.06764676951270455,
+        "within_10mm_fraction": 0.5087719298245614
+      },
+      "8": {
+        "count": 54,
+        "mean_m": 0.011197908483182617,
+        "rmse_m": 0.016381994469960734,
+        "p50_m": 0.0064037923471095826,
+        "p95_m": 0.0357348240979518,
+        "within_10mm_fraction": 0.6296296296296297
+      },
+      "9": {
+        "count": 29,
+        "mean_m": 0.020261658256640083,
+        "rmse_m": 0.023310974461502,
+        "p50_m": 0.01884526476430204,
+        "p95_m": 0.04155751257144791,
+        "within_10mm_fraction": 0.20689655172413793
+      },
+      "10": {
+        "count": 43,
+        "mean_m": 0.003979704434491321,
+        "rmse_m": 0.010192391117938276,
+        "p50_m": 0.002071778011548453,
+        "p95_m": 0.006569425097535237,
+        "within_10mm_fraction": 0.9534883720930233
+      },
+      "11": {
+        "count": 1330,
+        "mean_m": 0.0012023171062266627,
+        "rmse_m": 0.001529174813401524,
+        "p50_m": 0.001025486710245077,
+        "p95_m": 0.0031466288702639037,
+        "within_10mm_fraction": 1.0
+      }
+    },
+    "per_frame": {
+      "1": {
+        "count": 206,
+        "mean_m": 0.008447565828150273,
+        "rmse_m": 0.030182115085742253,
+        "p50_m": 0.0013133207937797153,
+        "p95_m": 0.04119376385322796,
+        "within_10mm_fraction": 0.9077669902912622,
+        "supported_points_within_15mm_by_part": {
+          "seat": 163,
+          "leg_1": 20,
+          "leg_2": 1,
+          "leg_3": 3,
+          "brace_1_2": 0,
+          "brace_2_3": 0,
+          "brace_3_1": 3
+        }
+      },
+      "3": {
+        "count": 241,
+        "mean_m": 0.008476027237573252,
+        "rmse_m": 0.02534035570251685,
+        "p50_m": 0.0012991580811582137,
+        "p95_m": 0.0393095271789145,
+        "within_10mm_fraction": 0.8506224066390041,
+        "supported_points_within_15mm_by_part": {
+          "seat": 170,
+          "leg_1": 16,
+          "leg_2": 2,
+          "leg_3": 12,
+          "brace_1_2": 4,
+          "brace_2_3": 3,
+          "brace_3_1": 2
+        }
+      },
+      "5": {
+        "count": 235,
+        "mean_m": 0.00854250626598876,
+        "rmse_m": 0.025149488585438286,
+        "p50_m": 0.0013086268143330804,
+        "p95_m": 0.046245184174083895,
+        "within_10mm_fraction": 0.8425531914893617,
+        "supported_points_within_15mm_by_part": {
+          "seat": 175,
+          "leg_1": 10,
+          "leg_2": 3,
+          "leg_3": 9,
+          "brace_1_2": 2,
+          "brace_2_3": 6,
+          "brace_3_1": 1
+        }
+      },
+      "7": {
+        "count": 231,
+        "mean_m": 0.0105908830283331,
+        "rmse_m": 0.030130015684060454,
+        "p50_m": 0.0012470272278179984,
+        "p95_m": 0.06721277650887186,
+        "within_10mm_fraction": 0.8268398268398268,
+        "supported_points_within_15mm_by_part": {
+          "seat": 169,
+          "leg_1": 2,
+          "leg_2": 5,
+          "leg_3": 11,
+          "brace_1_2": 7,
+          "brace_2_3": 2,
+          "brace_3_1": 0
+        }
+      },
+      "9": {
+        "count": 244,
+        "mean_m": 0.010129933046193638,
+        "rmse_m": 0.02555824632890449,
+        "p50_m": 0.0014245767018620514,
+        "p95_m": 0.054043532564487,
+        "within_10mm_fraction": 0.8073770491803278,
+        "supported_points_within_15mm_by_part": {
+          "seat": 157,
+          "leg_1": 7,
+          "leg_2": 14,
+          "leg_3": 16,
+          "brace_1_2": 4,
+          "brace_2_3": 5,
+          "brace_3_1": 1
+        }
+      },
+      "11": {
+        "count": 239,
+        "mean_m": 0.009191947654794795,
+        "rmse_m": 0.02234916248118746,
+        "p50_m": 0.0013752085220373918,
+        "p95_m": 0.04790909214187026,
+        "within_10mm_fraction": 0.7949790794979079,
+        "supported_points_within_15mm_by_part": {
+          "seat": 140,
+          "leg_1": 11,
+          "leg_2": 19,
+          "leg_3": 17,
+          "brace_1_2": 5,
+          "brace_2_3": 4,
+          "brace_3_1": 1
+        }
+      },
+      "13": {
+        "count": 222,
+        "mean_m": 0.009284830422179449,
+        "rmse_m": 0.023583782922840305,
+        "p50_m": 0.0013830380235161348,
+        "p95_m": 0.04429995311418698,
+        "within_10mm_fraction": 0.7972972972972973,
+        "supported_points_within_15mm_by_part": {
+          "seat": 134,
+          "leg_1": 8,
+          "leg_2": 22,
+          "leg_3": 12,
+          "brace_1_2": 3,
+          "brace_2_3": 6,
+          "brace_3_1": 4
+        }
+      },
+      "15": {
+        "count": 236,
+        "mean_m": 0.010555890467823311,
+        "rmse_m": 0.025157132142732054,
+        "p50_m": 0.0014163485818028954,
+        "p95_m": 0.0562855698187532,
+        "within_10mm_fraction": 0.7711864406779662,
+        "supported_points_within_15mm_by_part": {
+          "seat": 135,
+          "leg_1": 16,
+          "leg_2": 25,
+          "leg_3": 7,
+          "brace_1_2": 3,
+          "brace_2_3": 7,
+          "brace_3_1": 1
+        }
+      },
+      "17": {
+        "count": 234,
+        "mean_m": 0.006265471242138989,
+        "rmse_m": 0.01617090731162422,
+        "p50_m": 0.0011382948655344304,
+        "p95_m": 0.038378540844240173,
+        "within_10mm_fraction": 0.8717948717948718,
+        "supported_points_within_15mm_by_part": {
+          "seat": 149,
+          "leg_1": 17,
+          "leg_2": 25,
+          "leg_3": 1,
+          "brace_1_2": 6,
+          "brace_2_3": 5,
+          "brace_3_1": 3
+        }
+      }
+    }
+  },
+  "correctness_tests": {
+    "status": "not_requested"
+  },
+  "quality_gate": {
+    "passed": false,
+    "criteria": "optimizer success; all nine contacts; odd-frame validation equal-part and equal-height mean <15mm and residual P95 <=10mm; each part >=5 training closest-point supports",
+    "validation_tail": {
+      "p95_m": 0.05039092130457663,
+      "limit_m": 0.01,
+      "passed": false,
+      "distance": "implicit capped-cylinder residual; independent evaluator separately measures actual output triangles"
+    },
+    "interpretation": "Bounded development acceptance. A low observation residual does not prove unseen shape correctness or identify the correct family."
+  },
+  "elapsed_seconds": 2.05000638961792,
+  "outputs": {
+    "assembly_ply": "fitted_stool.ply",
+    "editable_parts": [
+      "seat.ply",
+      "leg_1.ply",
+      "leg_2.ply",
+      "leg_3.ply",
+      "brace_1_2.ply",
+      "brace_2_3.ply",
+      "brace_3_1.ply"
+    ]
+  }
+}

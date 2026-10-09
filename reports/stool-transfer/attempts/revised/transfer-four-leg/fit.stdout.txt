@@ -1,0 +1,70 @@
+{
+  "output": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-four-leg\\fitted",
+  "quality_gate": {
+    "passed": false,
+    "criteria": "optimizer success; all nine contacts; odd-frame validation equal-part and equal-height mean <15mm and residual P95 <=10mm; each part >=5 training closest-point supports",
+    "validation_tail": {
+      "p95_m": 0.05039092130457663,
+      "limit_m": 0.01,
+      "passed": false,
+      "distance": "implicit capped-cylinder residual; independent evaluator separately measures actual output triangles"
+    },
+    "interpretation": "Bounded development acceptance. A low observation residual does not prove unseen shape correctness or identify the correct family."
+  },
+  "optimizer": {
+    "success": true,
+    "status": 2,
+    "message": "`ftol` termination condition is satisfied.",
+    "nfev": 27,
+    "njev": 18,
+    "cost": 0.07346182455245277,
+    "optimality": 0.00017642176456082747,
+    "active_mask": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "train": {
+    "count": 2140,
+    "mean_m": 0.009491606859819295,
+    "rmse_m": 0.025614887307609108,
+    "p50_m": 0.0013487347485921387,
+    "p95_m": 0.052380135281290374,
+    "within_10mm_fraction": 0.8238317757009346
+  },
+  "heldout": {
+    "count": 2088,
+    "mean_m": 0.009063230845049943,
+    "rmse_m": 0.025081705977316897,
+    "p50_m": 0.0013182935695823517,
+    "p95_m": 0.05039092130457663,
+    "within_10mm_fraction": 0.8290229885057471
+  },
+  "heldout_part_balanced_mean_m": 0.014261146988436696,
+  "heldout_height_balanced_mean_m": 0.023952422405371303,
+  "elapsed_seconds": 2.05000638961792
+}

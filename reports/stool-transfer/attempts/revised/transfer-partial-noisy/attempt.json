@@ -1,0 +1,25 @@
+{
+  "scene_id": "transfer-partial-noisy",
+  "expected_class": "stress",
+  "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-partial-noisy\\points",
+  "result_directory": "transfer-partial-noisy",
+  "input_sha256": {
+    "scene": "9bb99158c5851a3848fc50fc23f470117c8c9cae82c72f86240ca000c063a7c0",
+    "observations": "b4aa4b9e8f369834b7bc00475d238cb39a5128a1d1747f31eaeb088a5c6acbab"
+  },
+  "fit_process": {
+    "returncode": 0,
+    "elapsed_seconds": 1.7388333000126295,
+    "timeout_seconds": 180,
+    "stdout": "fit.stdout.txt",
+    "stderr": "fit.stderr.txt"
+  },
+  "evaluation_process": {
+    "returncode": 0,
+    "elapsed_seconds": 1.635855000000447,
+    "timeout_seconds": 180,
+    "stdout": "evaluation.stdout.txt",
+    "stderr": "evaluation.stderr.txt"
+  },
+  "evaluation_report": "transfer-partial-noisy/evaluation.json"
+}

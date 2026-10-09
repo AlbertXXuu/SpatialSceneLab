@@ -1,0 +1,136 @@
+{
+  "schema": "spatial-scene-lab.stool-transfer-suite.v1",
+  "config_sha256": "e5f8dc213117ce2bb492958b2a68cd52f3a91c6a6c25c0ac61ff224a508873f1",
+  "generator_sha256": "e6fb8d5209d780377ff39ef31a317a33bccdd34d0daad31f3f7161081558d119",
+  "shared_geometry_sensor_helper_sha256": "52c69193a5582e1932f10f9cc8112853094ff52410fa784d82be82d42ec086c5",
+  "units": "m",
+  "up_axis": "Y",
+  "depth_resolution": [
+    160,
+    120
+  ],
+  "split": "predeclared development transfer cases; not a held-out real-data study",
+  "parameter_basis": "Physical shape, sensor and visibility hypotheses fixed before fitter runs. The operator selects the circular three-leg family; incompatible cases probe refusal rather than automatic family discovery.",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "open3d": "0.19.0"
+  },
+  "scenes": [
+    {
+      "scene_id": "transfer-compact-tall",
+      "scan": "transfer-compact-tall/scan",
+      "reference_dir": "transfer-compact-tall/reference",
+      "target_id": "same-stool",
+      "expected_class": "eligible",
+      "expected": "accepted accurate seven-part candidate",
+      "frames": 18,
+      "target_valid_rays": 12603,
+      "primitive_valid_rays": {
+        "seat": 6939,
+        "leg_1": 1337,
+        "leg_2": 1738,
+        "leg_3": 1526,
+        "brace_1_2": 386,
+        "brace_2_3": 341,
+        "brace_3_1": 336
+      }
+    },
+    {
+      "scene_id": "transfer-wide-low",
+      "scan": "transfer-wide-low/scan",
+      "reference_dir": "transfer-wide-low/reference",
+      "target_id": "same-stool",
+      "expected_class": "eligible",
+      "expected": "accepted accurate seven-part candidate",
+      "frames": 18,
+      "target_valid_rays": 18947,
+      "primitive_valid_rays": {
+        "seat": 14417,
+        "leg_1": 1186,
+        "leg_2": 1025,
+        "leg_3": 734,
+        "brace_1_2": 549,
+        "brace_2_3": 559,
+        "brace_3_1": 477
+      }
+    },
+    {
+      "scene_id": "transfer-partial-noisy",
+      "scan": "transfer-partial-noisy/scan",
+      "reference_dir": "transfer-partial-noisy/reference",
+      "target_id": "same-stool",
+      "expected_class": "stress",
+      "expected": "measure accuracy and refusal; acceptance is conditional on independent geometry checks",
+      "frames": 18,
+      "target_valid_rays": 13541,
+      "primitive_valid_rays": {
+        "seat": 8818,
+        "leg_1": 1059,
+        "leg_2": 1786,
+        "leg_3": 779,
+        "brace_1_2": 421,
+        "brace_2_3": 268,
+        "brace_3_1": 410
+      }
+    },
+    {
+      "scene_id": "transfer-four-leg",
+      "scan": "transfer-four-leg/scan",
+      "reference_dir": "transfer-four-leg/reference",
+      "target_id": "same-stool",
+      "expected_class": "incompatible",
+      "expected": "refusal or unaccepted candidate; four legs and four braces contradict selected family",
+      "frames": 18,
+      "target_valid_rays": 17075,
+      "primitive_valid_rays": {
+        "seat": 10949,
+        "leg_1": 1071,
+        "leg_2": 1459,
+        "leg_3": 1279,
+        "leg_4": 962,
+        "brace_1_2": 386,
+        "brace_2_3": 324,
+        "brace_3_4": 360,
+        "brace_4_1": 285
+      }
+    },
+    {
+      "scene_id": "transfer-elliptical-seat",
+      "scan": "transfer-elliptical-seat/scan",
+      "reference_dir": "transfer-elliptical-seat/reference",
+      "target_id": "same-stool",
+      "expected_class": "incompatible",
+      "expected": "refusal or unaccepted candidate; elliptical seat contradicts selected circular family",
+      "frames": 18,
+      "target_valid_rays": 15794,
+      "primitive_valid_rays": {
+        "seat": 10855,
+        "leg_1": 1286,
+        "leg_2": 1440,
+        "leg_3": 967,
+        "brace_1_2": 415,
+        "brace_2_3": 443,
+        "brace_3_1": 388
+      }
+    },
+    {
+      "scene_id": "transfer-upper-crop",
+      "scan": "transfer-upper-crop/scan",
+      "reference_dir": "transfer-upper-crop/reference",
+      "target_id": "same-stool",
+      "expected_class": "insufficient-hypothesis",
+      "expected": "confirm lower-leg visibility loss from independent reference first; then require refusal or unaccepted candidate if support is absent",
+      "frames": 18,
+      "target_valid_rays": 6771,
+      "primitive_valid_rays": {
+        "seat": 6771,
+        "leg_1": 0,
+        "leg_2": 0,
+        "leg_3": 0,
+        "brace_1_2": 0,
+        "brace_2_3": 0,
+        "brace_3_1": 0
+      }
+    }
+  ]
+}

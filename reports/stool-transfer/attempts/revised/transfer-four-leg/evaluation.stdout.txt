@@ -1,0 +1,42 @@
+{
+  "output": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-four-leg\\evaluation.json",
+  "fit_status": "ok",
+  "candidate_accepted": false,
+  "engineering_acceptance": {
+    "passed": false,
+    "checks": {
+      "input_content_matches_fit_record": true,
+      "target_and_units_match": true,
+      "validation_p95_at_most_10mm": false,
+      "seven_closed_components": true,
+      "nine_solid_contacts": false,
+      "assembly_equals_components": true
+    },
+    "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+  },
+  "validation": {
+    "sample_count": 2088,
+    "finite_distance_count": 2088,
+    "mean_distance_m": 0.008495087322635689,
+    "median_distance_m": 0.0012871026992797852,
+    "p95_distance_m": 0.05040143653750417,
+    "max_distance_m": 0.20270918309688568,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 1708,
+        "fraction": 0.8180076628352491
+      },
+      {
+        "distance_m": 0.01,
+        "count": 1778,
+        "fraction": 0.8515325670498084
+      },
+      {
+        "distance_m": 0.02,
+        "count": 1866,
+        "fraction": 0.8936781609195402
+      }
+    ]
+  }
+}
