@@ -1,0 +1,42 @@
+{
+  "output": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-partial-noisy\\evaluation.json",
+  "fit_status": "ok",
+  "candidate_accepted": true,
+  "engineering_acceptance": {
+    "passed": true,
+    "checks": {
+      "input_content_matches_fit_record": true,
+      "target_and_units_match": true,
+      "validation_p95_at_most_10mm": true,
+      "seven_closed_components": true,
+      "nine_solid_contacts": true,
+      "assembly_equals_components": true
+    },
+    "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+  },
+  "validation": {
+    "sample_count": 1689,
+    "finite_distance_count": 1689,
+    "mean_distance_m": 0.0024410564783172344,
+    "median_distance_m": 0.0017941596452146769,
+    "p95_distance_m": 0.007182062789797781,
+    "max_distance_m": 0.014486267231404781,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 1485,
+        "fraction": 0.8792184724689165
+      },
+      {
+        "distance_m": 0.01,
+        "count": 1667,
+        "fraction": 0.9869745411486086
+      },
+      {
+        "distance_m": 0.02,
+        "count": 1689,
+        "fraction": 1.0
+      }
+    ]
+  }
+}

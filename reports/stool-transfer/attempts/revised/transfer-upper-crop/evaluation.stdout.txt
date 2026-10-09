@@ -1,0 +1,42 @@
+{
+  "output": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-upper-crop\\evaluation.json",
+  "fit_status": "missing",
+  "candidate_accepted": false,
+  "engineering_acceptance": {
+    "passed": false,
+    "checks": {
+      "input_content_matches_fit_record": false,
+      "target_and_units_match": false,
+      "validation_p95_at_most_10mm": false,
+      "seven_closed_components": false,
+      "nine_solid_contacts": false,
+      "assembly_equals_components": false
+    },
+    "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+  },
+  "validation": {
+    "sample_count": 812,
+    "finite_distance_count": 0,
+    "mean_distance_m": null,
+    "median_distance_m": null,
+    "p95_distance_m": null,
+    "max_distance_m": null,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 0,
+        "fraction": 0.0
+      },
+      {
+        "distance_m": 0.01,
+        "count": 0,
+        "fraction": 0.0
+      },
+      {
+        "distance_m": 0.02,
+        "count": 0,
+        "fraction": 0.0
+      }
+    ]
+  }
+}

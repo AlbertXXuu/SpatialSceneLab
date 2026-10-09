@@ -1,0 +1,25 @@
+{
+  "scene_id": "transfer-upper-crop",
+  "expected_class": "insufficient-hypothesis",
+  "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-upper-crop\\points",
+  "result_directory": "transfer-upper-crop",
+  "input_sha256": {
+    "scene": "398b84f21021dae88263ef9b816015410ee8b8b80a771d6933feb76d67c85237",
+    "observations": "328533f7efe81f85622111303946c3fccf50ca49a26d393f52ce1bfe7690399a"
+  },
+  "fit_process": {
+    "returncode": 2,
+    "elapsed_seconds": 0.3258538999943994,
+    "timeout_seconds": 180,
+    "stdout": "fit.stdout.txt",
+    "stderr": "fit.stderr.txt"
+  },
+  "evaluation_process": {
+    "returncode": 0,
+    "elapsed_seconds": 1.3213393000187352,
+    "timeout_seconds": 180,
+    "stdout": "evaluation.stdout.txt",
+    "stderr": "evaluation.stderr.txt"
+  },
+  "evaluation_report": "transfer-upper-crop/evaluation.json"
+}

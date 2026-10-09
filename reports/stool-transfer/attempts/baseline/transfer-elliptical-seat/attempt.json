@@ -1,0 +1,25 @@
+{
+  "scene_id": "transfer-elliptical-seat",
+  "expected_class": "incompatible",
+  "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\points",
+  "result_directory": "transfer-elliptical-seat",
+  "input_sha256": {
+    "scene": "a88485a743b5e197bf3d0f2db7ad087de3dcd0e8d800631ed045c9ffb3d3f7a1",
+    "observations": "aeaeb4ce55069672707cacd1b76944f6fc63997ba4cfc186afb3fd6de053617d"
+  },
+  "fit_process": {
+    "returncode": 0,
+    "elapsed_seconds": 1.9113760000327602,
+    "timeout_seconds": 180,
+    "stdout": "fit.stdout.txt",
+    "stderr": "fit.stderr.txt"
+  },
+  "evaluation_process": {
+    "returncode": 1,
+    "elapsed_seconds": 1.4841959999757819,
+    "timeout_seconds": 180,
+    "stdout": "evaluation.stdout.txt",
+    "stderr": "evaluation.stderr.txt"
+  },
+  "evaluation_report": "transfer-elliptical-seat/evaluation.json"
+}

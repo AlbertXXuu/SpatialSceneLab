@@ -1,0 +1,624 @@
+{
+  "schema": "alvenx.stool-transfer-summary.v1",
+  "date": "2026-10-09",
+  "scope": "Six frozen synthetic development transfer cases; after using the ellipse failure for repair these are regression cases, not untouched holdout evidence.",
+  "config_sha256": "e5f8dc213117ce2bb492958b2a68cd52f3a91c6a6c25c0ac61ff224a508873f1",
+  "generator_sha256": "e6fb8d5209d780377ff39ef31a317a33bccdd34d0daad31f3f7161081558d119",
+  "baseline_fitter_sha256": "6c4740aca48738553be62ce48cbdc97bc4b8884204026b5f516724eeff6f219b",
+  "revised_fitter_sha256": "8a854bd4c33818277a5a4524dc6f79f67e52d3b31c7f7d608b1388c144d91f3a",
+  "same_input_all_cases": true,
+  "identical_geometry_files": 40,
+  "counts": {
+    "cases": 6,
+    "revised_accepted_candidates": 3,
+    "eligible_accepted": 2,
+    "stress_accepted": 1,
+    "negative_cases_unaccepted": 3,
+    "baseline_false_acceptances": 1,
+    "revised_false_acceptances_on_these_cases": 0
+  },
+  "evaluation_repair": "The initial evaluator expected an older reference metadata schema. All six initial calls failed; original logs are retained. Corrected evaluation-v2 was rerun over unchanged baseline fits and references.",
+  "change": "Add predeclared 10mm validation-tail limit to runtime implicit-residual gate. No initialization, optimization or output geometry changes. Independent evaluation uses actual output triangles.",
+  "cases": [
+    {
+      "scene_id": "transfer-compact-tall",
+      "expected_class": "eligible",
+      "baseline_fitter_gate": true,
+      "revised_fitter_gate": true,
+      "baseline_candidate_accepted": true,
+      "revised_candidate_accepted": true,
+      "independent_engineering_acceptance": {
+        "passed": true,
+        "checks": {
+          "input_content_matches_fit_record": true,
+          "target_and_units_match": true,
+          "validation_p95_at_most_10mm": true,
+          "seven_closed_components": true,
+          "nine_solid_contacts": true,
+          "assembly_equals_components": true
+        },
+        "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+      },
+      "fit_status": "ok",
+      "validation_triangle_distance": {
+        "sample_count": 1523,
+        "finite_distance_count": 1523,
+        "mean_distance_m": 0.0010163104623634716,
+        "median_distance_m": 0.0007017850875854492,
+        "p95_distance_m": 0.003012094064615666,
+        "max_distance_m": 0.005957656539976597,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 1518,
+            "fraction": 0.9967170059093894
+          },
+          {
+            "distance_m": 0.01,
+            "count": 1523,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.02,
+            "count": 1523,
+            "fraction": 1.0
+          }
+        ]
+      },
+      "valid_reference_rays": 12603,
+      "primitive_reference_rays": {
+        "seat": 6939,
+        "leg_1": 1337,
+        "leg_2": 1738,
+        "leg_3": 1526,
+        "brace_1_2": 386,
+        "brace_2_3": 341,
+        "brace_3_1": 336
+      },
+      "reference_ray_recall_at_10mm": 1.0,
+      "reverse_area_distance": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.0012177069327558997,
+        "median_distance_m": 0.0002899134997278452,
+        "p95_distance_m": 0.0029625296592712402,
+        "max_distance_m": 0.02249962091445923,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 98380,
+            "fraction": 0.9838
+          },
+          {
+            "distance_m": 0.01,
+            "count": 98670,
+            "fraction": 0.9867
+          },
+          {
+            "distance_m": 0.02,
+            "count": 99381,
+            "fraction": 0.99381
+          }
+        ]
+      },
+      "same_input_sha256": {
+        "scene": "795f44e585a8672c5c848ff446343329c3b6ee6557d9fc46d80f6b906318d381",
+        "observations": "770c249aa140acf229c2028e4b705ce8776069af158f8abe2771a853cdb7bd72"
+      },
+      "identical_output_mesh_sha256": {
+        "brace_1_2.ply": "93d8229cde3c0cdb5dec476c7b861a934bc7de86b1f5314a1264ee53c4efa767",
+        "brace_2_3.ply": "d7c81245a10288c0cb63c077aeba2146de4b442ae2dec7d3442706deaaef39c8",
+        "brace_3_1.ply": "6aeca3373e0af9041827d6936d4ffc080249547d5e2e0389678c03399ff40c76",
+        "fitted_stool.ply": "9011161c0f7ea00bdd1c86c5dc2cc31d4971cc591730ed51b7a71d051ec0cf53",
+        "leg_1.ply": "52d3ce8b2ebc63428442e8b9d33a84bb39a98f4fd75843da56a86f6cb7b9676d",
+        "leg_2.ply": "7747a3cf2689a0c819854e10fa61331f908b963d838fd4bac39ac046d54805a4",
+        "leg_3.ply": "cc03bcc04ed2318ab04de13ab771d8e38f43b38ea2117cb48bc9c8743ee1d29a",
+        "seat.ply": "46e66d9c89e71a7eed46261abc64d6ae3b850851a1113906d19af9449c550ddb"
+      },
+      "reports": {
+        "baseline": "baseline/transfer-compact-tall.json",
+        "revised": "revised/transfer-compact-tall.json"
+      }
+    },
+    {
+      "scene_id": "transfer-wide-low",
+      "expected_class": "eligible",
+      "baseline_fitter_gate": true,
+      "revised_fitter_gate": true,
+      "baseline_candidate_accepted": true,
+      "revised_candidate_accepted": true,
+      "independent_engineering_acceptance": {
+        "passed": true,
+        "checks": {
+          "input_content_matches_fit_record": true,
+          "target_and_units_match": true,
+          "validation_p95_at_most_10mm": true,
+          "seven_closed_components": true,
+          "nine_solid_contacts": true,
+          "assembly_equals_components": true
+        },
+        "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+      },
+      "fit_status": "ok",
+      "validation_triangle_distance": {
+        "sample_count": 2338,
+        "finite_distance_count": 2338,
+        "mean_distance_m": 0.0009866279089891373,
+        "median_distance_m": 0.0006606579117942601,
+        "p95_distance_m": 0.0031353842816315594,
+        "max_distance_m": 0.007829162292182446,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 2326,
+            "fraction": 0.9948674080410608
+          },
+          {
+            "distance_m": 0.01,
+            "count": 2338,
+            "fraction": 1.0
+          },
+          {
+            "distance_m": 0.02,
+            "count": 2338,
+            "fraction": 1.0
+          }
+        ]
+      },
+      "valid_reference_rays": 18947,
+      "primitive_reference_rays": {
+        "seat": 14417,
+        "leg_1": 1186,
+        "leg_2": 1025,
+        "leg_3": 734,
+        "brace_1_2": 549,
+        "brace_2_3": 559,
+        "brace_3_1": 477
+      },
+      "reference_ray_recall_at_10mm": 1.0,
+      "reverse_area_distance": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.000906310940945184,
+        "median_distance_m": 0.00043964576616417617,
+        "p95_distance_m": 0.002040341077372426,
+        "max_distance_m": 0.029996812343597412,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 98464,
+            "fraction": 0.98464
+          },
+          {
+            "distance_m": 0.01,
+            "count": 98672,
+            "fraction": 0.98672
+          },
+          {
+            "distance_m": 0.02,
+            "count": 99089,
+            "fraction": 0.99089
+          }
+        ]
+      },
+      "same_input_sha256": {
+        "scene": "25e9767b65f0bf5418cf68aa5e69e7a58ae9c43822eeb6809a6dc5e2442883ec",
+        "observations": "11fc710e4080e508a5883d31145d04685a4458633b6f5664b228d339717ada44"
+      },
+      "identical_output_mesh_sha256": {
+        "brace_1_2.ply": "c5f2d78fae9bc9a3f8975020f3dd21d6991eaa5eeb60c7fd2e280eec048c920a",
+        "brace_2_3.ply": "1966b49d3baefd425b53f85a05304c73f5fe2995d91c3899b83fe5889b11b6df",
+        "brace_3_1.ply": "fc1428665ce3e17e38fa11d5f3ee80e32781d128360347b330c5bc996d6f95b8",
+        "fitted_stool.ply": "0d7eb9bf63433f3b85138f74f18a9da359421e839a2b3d62225cb26068bd02f6",
+        "leg_1.ply": "7fd48cfec9c695e48d03ae5b4d9a54ba61463dfc458773baff4e19acff7da211",
+        "leg_2.ply": "3e1ab36d75d84fc9c3f13720e8197531f926906824048d7558da1e713bcd08b0",
+        "leg_3.ply": "f755499b5bda5c61d5d74dc21cf75de1dd966faeda475e108a214f62b0e4029b",
+        "seat.ply": "359216c5d1de1102458d9606ac03a864c9f0dbb33b1d12c4c180d1f7a839c3ce"
+      },
+      "reports": {
+        "baseline": "baseline/transfer-wide-low.json",
+        "revised": "revised/transfer-wide-low.json"
+      }
+    },
+    {
+      "scene_id": "transfer-partial-noisy",
+      "expected_class": "stress",
+      "baseline_fitter_gate": true,
+      "revised_fitter_gate": true,
+      "baseline_candidate_accepted": true,
+      "revised_candidate_accepted": true,
+      "independent_engineering_acceptance": {
+        "passed": true,
+        "checks": {
+          "input_content_matches_fit_record": true,
+          "target_and_units_match": true,
+          "validation_p95_at_most_10mm": true,
+          "seven_closed_components": true,
+          "nine_solid_contacts": true,
+          "assembly_equals_components": true
+        },
+        "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+      },
+      "fit_status": "ok",
+      "validation_triangle_distance": {
+        "sample_count": 1689,
+        "finite_distance_count": 1689,
+        "mean_distance_m": 0.0024410564783172344,
+        "median_distance_m": 0.0017941596452146769,
+        "p95_distance_m": 0.007182062789797781,
+        "max_distance_m": 0.014486267231404781,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 1485,
+            "fraction": 0.8792184724689165
+          },
+          {
+            "distance_m": 0.01,
+            "count": 1667,
+            "fraction": 0.9869745411486086
+          },
+          {
+            "distance_m": 0.02,
+            "count": 1689,
+            "fraction": 1.0
+          }
+        ]
+      },
+      "valid_reference_rays": 13541,
+      "primitive_reference_rays": {
+        "seat": 8818,
+        "leg_1": 1059,
+        "leg_2": 1786,
+        "leg_3": 779,
+        "brace_1_2": 421,
+        "brace_2_3": 268,
+        "brace_3_1": 410
+      },
+      "reference_ray_recall_at_10mm": 1.0,
+      "reverse_area_distance": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.0013898407659833055,
+        "median_distance_m": 0.0007722377777099609,
+        "p95_distance_m": 0.005713989050127562,
+        "max_distance_m": 0.023997068405151367,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 93483,
+            "fraction": 0.93483
+          },
+          {
+            "distance_m": 0.01,
+            "count": 98892,
+            "fraction": 0.98892
+          },
+          {
+            "distance_m": 0.02,
+            "count": 99355,
+            "fraction": 0.99355
+          }
+        ]
+      },
+      "same_input_sha256": {
+        "scene": "9bb99158c5851a3848fc50fc23f470117c8c9cae82c72f86240ca000c063a7c0",
+        "observations": "b4aa4b9e8f369834b7bc00475d238cb39a5128a1d1747f31eaeb088a5c6acbab"
+      },
+      "identical_output_mesh_sha256": {
+        "brace_1_2.ply": "a8964b1950aa1cc41ae43fd00e37b7b15330802c207187c50d80699a0d195f85",
+        "brace_2_3.ply": "b2203f0ddd73ec9c9a1aff418ac3110832e5912c880be3179b8b621f86cf3e3d",
+        "brace_3_1.ply": "2f7c68c7b1b8ca0cdbd378d138c44b829cd277392a0d5540a3c52c26431a658b",
+        "fitted_stool.ply": "3339b30c4a1cafbef8131fe1a2677c5fd4fc298d46fce6dce20bcf98ebc1225a",
+        "leg_1.ply": "5b1dd09101596ca29c0cc95d91b7f146f4941961d3e07a750f72d5bdda66ba0d",
+        "leg_2.ply": "274db52fc7282024977ae43c9f41f10323efd029679c0c0becd18bcac5071d07",
+        "leg_3.ply": "dc4f3aeeb9599257539f3201ed0112bbf6558381cf4b84f519c3929a19ae6a9e",
+        "seat.ply": "37406925fab6cfda951cecb21da973fa9a629c7791b92e7a030ad8c17da57edf"
+      },
+      "reports": {
+        "baseline": "baseline/transfer-partial-noisy.json",
+        "revised": "revised/transfer-partial-noisy.json"
+      }
+    },
+    {
+      "scene_id": "transfer-four-leg",
+      "expected_class": "incompatible",
+      "baseline_fitter_gate": false,
+      "revised_fitter_gate": false,
+      "baseline_candidate_accepted": false,
+      "revised_candidate_accepted": false,
+      "independent_engineering_acceptance": {
+        "passed": false,
+        "checks": {
+          "input_content_matches_fit_record": true,
+          "target_and_units_match": true,
+          "validation_p95_at_most_10mm": false,
+          "seven_closed_components": true,
+          "nine_solid_contacts": false,
+          "assembly_equals_components": true
+        },
+        "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+      },
+      "fit_status": "ok",
+      "validation_triangle_distance": {
+        "sample_count": 2088,
+        "finite_distance_count": 2088,
+        "mean_distance_m": 0.008495087322635689,
+        "median_distance_m": 0.0012871026992797852,
+        "p95_distance_m": 0.05040143653750417,
+        "max_distance_m": 0.20270918309688568,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 1708,
+            "fraction": 0.8180076628352491
+          },
+          {
+            "distance_m": 0.01,
+            "count": 1778,
+            "fraction": 0.8515325670498084
+          },
+          {
+            "distance_m": 0.02,
+            "count": 1866,
+            "fraction": 0.8936781609195402
+          }
+        ]
+      },
+      "valid_reference_rays": 17075,
+      "primitive_reference_rays": {
+        "seat": 10949,
+        "leg_1": 1071,
+        "leg_2": 1459,
+        "leg_3": 1279,
+        "leg_4": 962,
+        "brace_1_2": 386,
+        "brace_2_3": 324,
+        "brace_3_4": 360,
+        "brace_4_1": 285
+      },
+      "reference_ray_recall_at_10mm": 0.8433967789165446,
+      "reverse_area_distance": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.036418622932872076,
+        "median_distance_m": 0.0258199330419302,
+        "p95_distance_m": 0.09837040528655044,
+        "max_distance_m": 0.1586027443408966,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 38757,
+            "fraction": 0.38757
+          },
+          {
+            "distance_m": 0.01,
+            "count": 41726,
+            "fraction": 0.41726
+          },
+          {
+            "distance_m": 0.02,
+            "count": 47025,
+            "fraction": 0.47025
+          }
+        ]
+      },
+      "same_input_sha256": {
+        "scene": "2457cc3242fb96498d28d890d6f2e2a2dbb4ce84f219f8c4a4b361f0db8cc4bd",
+        "observations": "135901a6aa1cfbfed038553d139409033acb4cd1b1b2282995b54dae3a7089b5"
+      },
+      "identical_output_mesh_sha256": {
+        "brace_1_2.ply": "6dd95f4aa95b472fa2e8e571be1b7d3dffad3bc70ec1fcfae3665b13fec98eeb",
+        "brace_2_3.ply": "c99e070e890f88a84acee93b2e7f86ec9a48ffa3618c0c35bad872e84652919d",
+        "brace_3_1.ply": "35453da7fd23390de797542129af90a4355106c362be2ed69ffdb92f705b9f0e",
+        "fitted_stool.ply": "825a364579033e1021e22eaf35b887236794a4125641f73cb47ad7ca3abb796b",
+        "leg_1.ply": "7dd1cb6abf07a56109be7fcea4632ab54c7e1a15902ac2d68cd6239f426ea3d6",
+        "leg_2.ply": "dce8a28ab280c5d2fe3a2e66ceec37f19783f7dd2da0e5693e9b2266f5ae9de7",
+        "leg_3.ply": "f2eb141d6dd4323d9f18f5fa75f1ed0e67e531a8f0c9469e352d7c33f223c0e3",
+        "seat.ply": "9757c476ef23142d4be7c4fe59e3090a7fcb75d23877ef997e989c0994380a46"
+      },
+      "reports": {
+        "baseline": "baseline/transfer-four-leg.json",
+        "revised": "revised/transfer-four-leg.json"
+      }
+    },
+    {
+      "scene_id": "transfer-elliptical-seat",
+      "expected_class": "incompatible",
+      "baseline_fitter_gate": true,
+      "revised_fitter_gate": false,
+      "baseline_candidate_accepted": false,
+      "revised_candidate_accepted": false,
+      "independent_engineering_acceptance": {
+        "passed": false,
+        "checks": {
+          "input_content_matches_fit_record": true,
+          "target_and_units_match": true,
+          "validation_p95_at_most_10mm": false,
+          "seven_closed_components": true,
+          "nine_solid_contacts": true,
+          "assembly_equals_components": true
+        },
+        "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+      },
+      "fit_status": "ok",
+      "validation_triangle_distance": {
+        "sample_count": 1945,
+        "finite_distance_count": 1945,
+        "mean_distance_m": 0.002273508397499233,
+        "median_distance_m": 0.0008635570993646979,
+        "p95_distance_m": 0.012247455120086669,
+        "max_distance_m": 0.02205049991607666,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 1723,
+            "fraction": 0.8858611825192803
+          },
+          {
+            "distance_m": 0.01,
+            "count": 1818,
+            "fraction": 0.9347043701799486
+          },
+          {
+            "distance_m": 0.02,
+            "count": 1926,
+            "fraction": 0.9902313624678664
+          }
+        ]
+      },
+      "valid_reference_rays": 15794,
+      "primitive_reference_rays": {
+        "seat": 10855,
+        "leg_1": 1286,
+        "leg_2": 1440,
+        "leg_3": 967,
+        "brace_1_2": 415,
+        "brace_2_3": 443,
+        "brace_3_1": 388
+      },
+      "reference_ray_recall_at_10mm": 0.9379511206787388,
+      "reverse_area_distance": {
+        "sample_count": 100000,
+        "finite_distance_count": 100000,
+        "mean_distance_m": 0.10446904266108349,
+        "median_distance_m": 0.01381813082844019,
+        "p95_distance_m": 0.39267732203006744,
+        "max_distance_m": 0.46293213963508606,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 47673,
+            "fraction": 0.47673
+          },
+          {
+            "distance_m": 0.01,
+            "count": 49112,
+            "fraction": 0.49112
+          },
+          {
+            "distance_m": 0.02,
+            "count": 51376,
+            "fraction": 0.51376
+          }
+        ]
+      },
+      "same_input_sha256": {
+        "scene": "a88485a743b5e197bf3d0f2db7ad087de3dcd0e8d800631ed045c9ffb3d3f7a1",
+        "observations": "aeaeb4ce55069672707cacd1b76944f6fc63997ba4cfc186afb3fd6de053617d"
+      },
+      "identical_output_mesh_sha256": {
+        "brace_1_2.ply": "fa6ddcaf0eca1f46ee2f789ec42f05aeef7223b7adf18dfceacf00a3b0527f10",
+        "brace_2_3.ply": "3fc104163662e863670cec53920e6f38fdeba42686f0d178b71b802875437436",
+        "brace_3_1.ply": "c754bd2df64ed4813ee9e89759f164af2e8dc19e3ce243a094f46afe2ee928ae",
+        "fitted_stool.ply": "98a94364509abe9e612df04788e3976286fe5f8a425f9c20007f228703b4692b",
+        "leg_1.ply": "27b0f6784afab7a6ee82c63b6cf36c945429204c3ae5cda3600dc5a4a061b05a",
+        "leg_2.ply": "5242494e6c8fcad0d24a6e9457ae27dc4ad4a7db1e344749ff53464cbfaf5c9d",
+        "leg_3.ply": "078a1bb8cd072d9a095722da8cd137d6c3161b74d7e835485b0841d960f5010b",
+        "seat.ply": "2de5575007f9b7c4f51955b8a1a57588ae3efb837aa19562519b5af2fbc17381"
+      },
+      "reports": {
+        "baseline": "baseline/transfer-elliptical-seat.json",
+        "revised": "revised/transfer-elliptical-seat.json"
+      }
+    },
+    {
+      "scene_id": "transfer-upper-crop",
+      "expected_class": "insufficient-hypothesis",
+      "baseline_fitter_gate": false,
+      "revised_fitter_gate": false,
+      "baseline_candidate_accepted": false,
+      "revised_candidate_accepted": false,
+      "independent_engineering_acceptance": {
+        "passed": false,
+        "checks": {
+          "input_content_matches_fit_record": false,
+          "target_and_units_match": false,
+          "validation_p95_at_most_10mm": false,
+          "seven_closed_components": false,
+          "nine_solid_contacts": false,
+          "assembly_equals_components": false
+        },
+        "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+      },
+      "fit_status": "missing",
+      "validation_triangle_distance": {
+        "sample_count": 812,
+        "finite_distance_count": 0,
+        "mean_distance_m": null,
+        "median_distance_m": null,
+        "p95_distance_m": null,
+        "max_distance_m": null,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 0,
+            "fraction": 0.0
+          },
+          {
+            "distance_m": 0.01,
+            "count": 0,
+            "fraction": 0.0
+          },
+          {
+            "distance_m": 0.02,
+            "count": 0,
+            "fraction": 0.0
+          }
+        ]
+      },
+      "valid_reference_rays": 6771,
+      "primitive_reference_rays": {
+        "seat": 6771,
+        "leg_1": 0,
+        "leg_2": 0,
+        "leg_3": 0,
+        "brace_1_2": 0,
+        "brace_2_3": 0,
+        "brace_3_1": 0
+      },
+      "reference_ray_recall_at_10mm": 0.0,
+      "reverse_area_distance": {
+        "sample_count": 0,
+        "finite_distance_count": 0,
+        "mean_distance_m": null,
+        "median_distance_m": null,
+        "p95_distance_m": null,
+        "max_distance_m": null,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 0,
+            "fraction": null
+          },
+          {
+            "distance_m": 0.01,
+            "count": 0,
+            "fraction": null
+          },
+          {
+            "distance_m": 0.02,
+            "count": 0,
+            "fraction": null
+          }
+        ]
+      },
+      "same_input_sha256": {
+        "scene": "398b84f21021dae88263ef9b816015410ee8b8b80a771d6933feb76d67c85237",
+        "observations": "328533f7efe81f85622111303946c3fccf50ca49a26d393f52ce1bfe7690399a"
+      },
+      "identical_output_mesh_sha256": {},
+      "reports": {
+        "baseline": "baseline/transfer-upper-crop.json",
+        "revised": "revised/transfer-upper-crop.json"
+      }
+    }
+  ],
+  "scene_evidence": "../../examples/stool-scene/scene-integration.json",
+  "limits": [
+    "Manually selected circular three-leg family; near-correct object box and exact sensor poses.",
+    "Geometric contact does not establish mechanical strength or physical simulation readiness.",
+    "Low observed residual cannot prove unseen surface accuracy or general rejection reliability.",
+    "Three accepted candidates are not six successful reconstructions."
+  ]
+}

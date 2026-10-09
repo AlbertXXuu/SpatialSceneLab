@@ -1,0 +1,25 @@
+{
+  "scene_id": "transfer-four-leg",
+  "expected_class": "incompatible",
+  "points_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-four-leg\\points",
+  "result_directory": "transfer-four-leg",
+  "input_sha256": {
+    "scene": "2457cc3242fb96498d28d890d6f2e2a2dbb4ce84f219f8c4a4b361f0db8cc4bd",
+    "observations": "135901a6aa1cfbfed038553d139409033acb4cd1b1b2282995b54dae3a7089b5"
+  },
+  "fit_process": {
+    "returncode": 2,
+    "elapsed_seconds": 2.1005780000123195,
+    "timeout_seconds": 180,
+    "stdout": "fit.stdout.txt",
+    "stderr": "fit.stderr.txt"
+  },
+  "evaluation_process": {
+    "returncode": 1,
+    "elapsed_seconds": 1.3864116999902762,
+    "timeout_seconds": 180,
+    "stdout": "evaluation.stdout.txt",
+    "stderr": "evaluation.stderr.txt"
+  },
+  "evaluation_report": "transfer-four-leg/evaluation.json"
+}

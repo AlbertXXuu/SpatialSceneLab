@@ -1,0 +1,999 @@
+{
+  "schema": "alvenx.stool-transfer-evaluation.v1",
+  "object_uuid": "same-stool",
+  "script_sha256": "26d5c745c96874e165f82052cfc24326a8fd72bcb2ba11aea8c1f61f41e32259",
+  "shared_evaluator_sha256": "23908278918fc516b0bde2e877ae389d23a6f2ee53123a0c579c36a9a0b092ef",
+  "open3d_version": "0.19.0",
+  "inputs": {
+    "scene": {
+      "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\points\\scene.json",
+      "sha256": "a88485a743b5e197bf3d0f2db7ad087de3dcd0e8d800631ed045c9ffb3d3f7a1"
+    },
+    "observations": {
+      "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\points\\observations.npz",
+      "sha256": "aeaeb4ce55069672707cacd1b76944f6fc63997ba4cfc186afb3fd6de053617d"
+    }
+  },
+  "reference": {
+    "directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference",
+    "object_uuid": "same-stool",
+    "files": [
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\labels.npz",
+        "sha256": "772b429df695227e117e8e469da8ccc403ddbce39105cc3eb5be73b617c5f9af"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\physical-scene.json",
+        "sha256": "b7bb839a8342d0c5e1eab75273ffdd3d54eef5fc3da8694399512a9af631ba34"
+      }
+    ],
+    "frame_files": [
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00000.npz",
+        "sha256": "7e0b21fb8fea3a778235e38aacec086e7c2b0f08697118688887b50f96e32f25"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00001.npz",
+        "sha256": "5f77fc340869dd7b91d93bace94c3e326a639008953d59aa403a8442e3b1e400"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00002.npz",
+        "sha256": "8ef64ac8bc6c8ae8bb1800c183d18ca26434e1a5d0ef1a1380ea3d06dc519785"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00003.npz",
+        "sha256": "02e525b2a0fd1398093c47c2bf4a2d9ea7975656b03b3353467324038750cad8"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00004.npz",
+        "sha256": "1ad525cbd7050860a49b5166c643432badc5cb4a7b1a83b42ce3c4102b4f8e5d"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00005.npz",
+        "sha256": "099f97816507c8c98835220b54881eb764b66fd5d862e8ba7a0dc0ddde725eeb"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00006.npz",
+        "sha256": "448d78ea619b2b56269e6c62c3fe5d406a0a01690c4e3cd73a76029f91a172d6"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00007.npz",
+        "sha256": "117623c427c832e2fcf6d8e8b1318bdad8265cb11160b231959f00c0b10abb49"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00008.npz",
+        "sha256": "685860c0aab89cbc9ffed9b80617d50196a80d7eb09d7c9eef5245c064086af7"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00009.npz",
+        "sha256": "6b55a5b87c0658da334fa4e80648a9d7fe6fb0e4732e5390026243a00d948cfb"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00010.npz",
+        "sha256": "eaa98ed9c6dab0586d8b9a5e0ec3c52168b7e8451b09aa090b922c8e0907072b"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00011.npz",
+        "sha256": "341851cbc217711b5aae5a78f55b5f99913800277baebca0867cea54407ee60a"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00012.npz",
+        "sha256": "120388b451b252f8fe9182e27e11740bcd894498abff843ec8f8535d7b7b0047"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00013.npz",
+        "sha256": "76ccfe74706d01c2338b732fce3e9a8020e2009ed08b0e68f3697ee8a31c9dcd"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00014.npz",
+        "sha256": "57ecf37a209f5b82ddcc1e38e05c3d4de55cd3cdd0f4c996ace26a81bd161976"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00015.npz",
+        "sha256": "851fc3e1c3dbf084790d99c75b10c34dfaaedcb3858d5322c813bbc0efd192fd"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00016.npz",
+        "sha256": "b244851030ece20d300591ec09b13c1b0205fe9b97bb6fc2122511b26bd2c499"
+      },
+      {
+        "path": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\cases\\transfer-elliptical-seat\\reference\\frame_labels\\frame_00017.npz",
+        "sha256": "7e818e33527f1049d26416e26d147fc91aaf2cc14d52c4847029d2319e049a4f"
+      }
+    ],
+    "frames": [
+      {
+        "frame_index": 0,
+        "valid_target_ray_hits": 856
+      },
+      {
+        "frame_index": 1,
+        "valid_target_ray_hits": 857
+      },
+      {
+        "frame_index": 2,
+        "valid_target_ray_hits": 875
+      },
+      {
+        "frame_index": 3,
+        "valid_target_ray_hits": 862
+      },
+      {
+        "frame_index": 4,
+        "valid_target_ray_hits": 918
+      },
+      {
+        "frame_index": 5,
+        "valid_target_ray_hits": 938
+      },
+      {
+        "frame_index": 6,
+        "valid_target_ray_hits": 968
+      },
+      {
+        "frame_index": 7,
+        "valid_target_ray_hits": 927
+      },
+      {
+        "frame_index": 8,
+        "valid_target_ray_hits": 944
+      },
+      {
+        "frame_index": 9,
+        "valid_target_ray_hits": 950
+      },
+      {
+        "frame_index": 10,
+        "valid_target_ray_hits": 916
+      },
+      {
+        "frame_index": 11,
+        "valid_target_ray_hits": 869
+      },
+      {
+        "frame_index": 12,
+        "valid_target_ray_hits": 809
+      },
+      {
+        "frame_index": 13,
+        "valid_target_ray_hits": 787
+      },
+      {
+        "frame_index": 14,
+        "valid_target_ray_hits": 779
+      },
+      {
+        "frame_index": 15,
+        "valid_target_ray_hits": 808
+      },
+      {
+        "frame_index": 16,
+        "valid_target_ray_hits": 822
+      },
+      {
+        "frame_index": 17,
+        "valid_target_ray_hits": 909
+      }
+    ],
+    "valid_target_ray_hits": 15794,
+    "primitive_count": 7,
+    "primitives": [
+      {
+        "id": "seat",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 0,
+        "global_triangle_index_last": 63,
+        "world_bounds_m": [
+          [
+            -0.0882597342133522,
+            0.4650000035762787,
+            -2.487589120864868
+          ],
+          [
+            0.6882597208023071,
+            0.5149999856948853,
+            -2.012410879135132
+          ]
+        ]
+      },
+      {
+        "id": "leg_1",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 64,
+        "global_triangle_index_last": 127,
+        "world_bounds_m": [
+          [
+            0.44842198491096497,
+            -2.0083098206669092e-05,
+            -2.221240282058716
+          ],
+          [
+            0.5532259941101074,
+            0.4680913984775543,
+            -2.155963659286499
+          ]
+        ]
+      },
+      {
+        "id": "leg_2",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 128,
+        "global_triangle_index_last": 191,
+        "world_bounds_m": [
+          [
+            0.10069312900304794,
+            4.9256786951445974e-06,
+            -2.151054620742798
+          ],
+          [
+            0.19213831424713135,
+            0.46806639432907104,
+            -2.0625061988830566
+          ]
+        ]
+      },
+      {
+        "id": "leg_3",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 192,
+        "global_triangle_index_last": 255,
+        "world_bounds_m": [
+          [
+            0.22213642299175262,
+            4.9256786951445974e-06,
+            -2.5075366497039795
+          ],
+          [
+            0.28338414430618286,
+            0.46806639432907104,
+            -2.4016988277435303
+          ]
+        ]
+      },
+      {
+        "id": "brace_1_2",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 256,
+        "global_triangle_index_last": 319,
+        "world_bounds_m": [
+          [
+            0.1395331174135208,
+            0.17800000309944153,
+            -2.198621988296509
+          ],
+          [
+            0.5089932680130005,
+            0.20200000703334808,
+            -2.091187000274658
+          ]
+        ]
+      },
+      {
+        "id": "brace_2_3",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 320,
+        "global_triangle_index_last": 383,
+        "world_bounds_m": [
+          [
+            0.13075686991214752,
+            0.17800000309944153,
+            -2.4636993408203125
+          ],
+          [
+            0.26294925808906555,
+            0.20200000703334808,
+            -2.0993709564208984
+          ]
+        ]
+      },
+      {
+        "id": "brace_3_1",
+        "reference_triangles": 64,
+        "global_triangle_index_first": 384,
+        "global_triangle_index_last": 447,
+        "world_bounds_m": [
+          [
+            0.2426973581314087,
+            0.17800000309944153,
+            -2.4683749675750732
+          ],
+          [
+            0.5150701403617859,
+            0.20200000703334808,
+            -2.178745746612549
+          ]
+        ]
+      }
+    ],
+    "ray_to_mesh_consistency": {
+      "sample_count": 15794,
+      "finite_distance_count": 15794,
+      "mean_distance_m": 8.404846585467839e-07,
+      "median_distance_m": 5.960464477539063e-08,
+      "p95_distance_m": 5.3921892003927374e-06,
+      "max_distance_m": 5.864056583959609e-05,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 15794,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 15794,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 15794,
+          "fraction": 1.0
+        }
+      ]
+    }
+  },
+  "fit_directory": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted",
+  "fit_status": "ok",
+  "errors": [],
+  "frozen_files": {
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted\\fit.json": "587079985877352d10ade61d8da63eca4f3f42eacc630b93b67ea8930791340b",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted\\fitted_stool.ply": "98a94364509abe9e612df04788e3976286fe5f8a425f9c20007f228703b4692b",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted\\seat.ply": "2de5575007f9b7c4f51955b8a1a57588ae3efb837aa19562519b5af2fbc17381",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted\\leg_1.ply": "27b0f6784afab7a6ee82c63b6cf36c945429204c3ae5cda3600dc5a4a061b05a",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted\\leg_2.ply": "5242494e6c8fcad0d24a6e9457ae27dc4ad4a7db1e344749ff53464cbfaf5c9d",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted\\leg_3.ply": "078a1bb8cd072d9a095722da8cd137d6c3161b74d7e835485b0841d960f5010b",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted\\brace_1_2.ply": "fa6ddcaf0eca1f46ee2f789ec42f05aeef7223b7adf18dfceacf00a3b0527f10",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted\\brace_2_3.ply": "3fc104163662e863670cec53920e6f38fdeba42686f0d178b71b802875437436",
+    "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\baseline\\transfer-elliptical-seat\\fitted\\brace_3_1.ply": "c754bd2df64ed4813ee9e89759f164af2e8dc19e3ce243a094f46afe2ee928ae"
+  },
+  "declared_fitter_sha256": "6c4740aca48738553be62ce48cbdc97bc4b8884204026b5f516724eeff6f219b",
+  "fitter_quality_gate_passed": true,
+  "engineering_acceptance": {
+    "passed": false,
+    "checks": {
+      "input_content_matches_fit_record": true,
+      "target_and_units_match": true,
+      "validation_p95_at_most_10mm": false,
+      "seven_closed_components": true,
+      "nine_solid_contacts": true,
+      "assembly_equals_components": true
+    },
+    "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+  },
+  "candidate_accepted": false,
+  "thresholds_m": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "valid_reference_ray_hit_recall": {
+    "sample_count": 15794,
+    "finite_distance_count": 15794,
+    "mean_distance_m": 0.0018498525211447783,
+    "median_distance_m": 0.0005548598128370941,
+    "p95_distance_m": 0.012441042065620415,
+    "max_distance_m": 0.022627025842666626,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 14138,
+        "fraction": 0.8951500569836647
+      },
+      {
+        "distance_m": 0.01,
+        "count": 14814,
+        "fraction": 0.9379511206787388
+      },
+      {
+        "distance_m": 0.02,
+        "count": 15630,
+        "fraction": 0.9896163099911359
+      }
+    ]
+  },
+  "per_reference_primitive_ray_hit_recall": [
+    {
+      "id": "seat",
+      "sample_count": 10855,
+      "finite_distance_count": 10855,
+      "mean_distance_m": 0.0025718790529714055,
+      "median_distance_m": 0.0005549192428588867,
+      "p95_distance_m": 0.015326300263404837,
+      "max_distance_m": 0.022627025842666626,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 9199,
+          "fraction": 0.8474435743896822
+        },
+        {
+          "distance_m": 0.01,
+          "count": 9875,
+          "fraction": 0.9097190234914786
+        },
+        {
+          "distance_m": 0.02,
+          "count": 10691,
+          "fraction": 0.9848917549516352
+        }
+      ]
+    },
+    {
+      "id": "leg_1",
+      "sample_count": 1286,
+      "finite_distance_count": 1286,
+      "mean_distance_m": 0.0002681036105900833,
+      "median_distance_m": 0.00022410038945963606,
+      "p95_distance_m": 0.0006520404276670888,
+      "max_distance_m": 0.0009994839783757925,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1286,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1286,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1286,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "leg_2",
+      "sample_count": 1440,
+      "finite_distance_count": 1440,
+      "mean_distance_m": 0.00024988785184808145,
+      "median_distance_m": 0.00021886212198296562,
+      "p95_distance_m": 0.0005887322477065027,
+      "max_distance_m": 0.0008389235590584576,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1440,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1440,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1440,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "leg_3",
+      "sample_count": 967,
+      "finite_distance_count": 967,
+      "mean_distance_m": 0.0003415312598177139,
+      "median_distance_m": 0.00033483837614767253,
+      "p95_distance_m": 0.0006782340235076843,
+      "max_distance_m": 0.0009487792267464101,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 967,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 967,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 967,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "brace_1_2",
+      "sample_count": 415,
+      "finite_distance_count": 415,
+      "mean_distance_m": 0.00019415599538617068,
+      "median_distance_m": 0.00015899095160420984,
+      "p95_distance_m": 0.0004552148253424092,
+      "max_distance_m": 0.0006158283213153481,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 415,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 415,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 415,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "brace_2_3",
+      "sample_count": 443,
+      "finite_distance_count": 443,
+      "mean_distance_m": 0.00022259816411838228,
+      "median_distance_m": 0.00016787914501037449,
+      "p95_distance_m": 0.0005648090853355825,
+      "max_distance_m": 0.0007350369123741984,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 443,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 443,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 443,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "id": "brace_3_1",
+      "sample_count": 388,
+      "finite_distance_count": 388,
+      "mean_distance_m": 0.000218446897016766,
+      "median_distance_m": 0.00016972189769148827,
+      "p95_distance_m": 0.0005536919779842719,
+      "max_distance_m": 0.000802818569354713,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 388,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.01,
+          "count": 388,
+          "fraction": 1.0
+        },
+        {
+          "distance_m": 0.02,
+          "count": 388,
+          "fraction": 1.0
+        }
+      ]
+    }
+  ],
+  "observed_primitive_balanced_recall": {
+    "observed_primitive_count": 7,
+    "total_primitive_count": 7,
+    "unobserved_primitive_ids": [],
+    "within": [
+      {
+        "distance_m": 0.005,
+        "fraction": 0.9782062249128118
+      },
+      {
+        "distance_m": 0.01,
+        "fraction": 0.9871027176416397
+      },
+      {
+        "distance_m": 0.02,
+        "fraction": 0.997841679278805
+      }
+    ]
+  },
+  "source_mesh_area_samples_to_physical_target": {
+    "sample_count": 100000,
+    "finite_distance_count": 100000,
+    "mean_distance_m": 0.10446904266108349,
+    "median_distance_m": 0.01381813082844019,
+    "p95_distance_m": 0.39267732203006744,
+    "max_distance_m": 0.46293213963508606,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 47673,
+        "fraction": 0.47673
+      },
+      {
+        "distance_m": 0.01,
+        "count": 49112,
+        "fraction": 0.49112
+      },
+      {
+        "distance_m": 0.02,
+        "count": 51376,
+        "fraction": 0.51376
+      }
+    ]
+  },
+  "source_area_sampling": {
+    "sample_count_per_nonempty_mesh": 100000,
+    "seed": 20261009,
+    "method": "uniform barycentric point after triangle selection proportional to area"
+  },
+  "observed_point_mesh_distance": {
+    "training_even": {
+      "sample_count": 1939,
+      "finite_distance_count": 1939,
+      "mean_distance_m": 0.002188817272972681,
+      "median_distance_m": 0.0008045434951782227,
+      "p95_distance_m": 0.012236070632934557,
+      "max_distance_m": 0.02254888415336609,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1721,
+          "fraction": 0.887570912841671
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1820,
+          "fraction": 0.9386281588447654
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1919,
+          "fraction": 0.9896854048478597
+        }
+      ]
+    },
+    "validation_odd": {
+      "sample_count": 1945,
+      "finite_distance_count": 1945,
+      "mean_distance_m": 0.002273508397499233,
+      "median_distance_m": 0.0008635570993646979,
+      "p95_distance_m": 0.012247455120086669,
+      "max_distance_m": 0.02205049991607666,
+      "within": [
+        {
+          "distance_m": 0.005,
+          "count": 1723,
+          "fraction": 0.8858611825192803
+        },
+        {
+          "distance_m": 0.01,
+          "count": 1818,
+          "fraction": 0.9347043701799486
+        },
+        {
+          "distance_m": 0.02,
+          "count": 1926,
+          "fraction": 0.9902313624678664
+        }
+      ]
+    }
+  },
+  "assembly_topology": {
+    "vertices": 1134,
+    "triangles": 2240,
+    "connected_triangle_components": 7,
+    "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+    "boundary_edges": 0,
+    "boundary_edge_length_m": 0.0,
+    "nonmanifold_edges": 0,
+    "mesh_triangle_area_m2": 1.826938649924676,
+    "largest_component_area_fraction": 0.8272578679277869,
+    "largest_components": [
+      {
+        "triangles": 320,
+        "area_m2": 1.511349372371557
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.07742782514393406
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.07705915602149073
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.0769313464742678
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.028236472170344192
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.028016676614368147
+      },
+      {
+        "triangles": 320,
+        "area_m2": 0.027917801128714302
+      }
+    ]
+  },
+  "structure": {
+    "components": [
+      {
+        "id": "seat",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 1.511349372371557,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 1.511349372371557
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          5.814933615467398e-10,
+          5.643921907040544e-10
+        ]
+      },
+      {
+        "id": "leg_1",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.0769313464742678,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.0769313464742678
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          6.593996680639018e-10,
+          5.055535541507455e-10
+        ]
+      },
+      {
+        "id": "leg_2",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.07742782514393406,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.07742782514393406
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          5.347930781343219e-10,
+          6.489339964750769e-10
+        ]
+      },
+      {
+        "id": "leg_3",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.07705915602149073,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.07705915602149073
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          2.104222889028736e-10,
+          5.27878866557993e-10
+        ]
+      },
+      {
+        "id": "brace_1_2",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.027917801128714302,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.027917801128714302
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          5.720238539789358e-10,
+          4.33039740697962e-10
+        ]
+      },
+      {
+        "id": "brace_2_3",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.028236472170344192,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.028236472170344192
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          3.802068009173805e-10,
+          6.308347969610693e-10
+        ]
+      },
+      {
+        "id": "brace_3_1",
+        "status": "ok",
+        "topology": {
+          "vertices": 162,
+          "triangles": 320,
+          "connected_triangle_components": 1,
+          "component_method": "Open3D cluster_connected_triangles; original vertex indices, no welding",
+          "boundary_edges": 0,
+          "boundary_edge_length_m": 0.0,
+          "nonmanifold_edges": 0,
+          "mesh_triangle_area_m2": 0.028016676614368147,
+          "largest_component_area_fraction": 1.0,
+          "largest_components": [
+            {
+              "triangles": 320,
+              "area_m2": 0.028016676614368147
+            }
+          ]
+        },
+        "watertight": true,
+        "outward_convex": true,
+        "record_endpoint_to_vertex_errors_m": [
+          5.798122408827976e-10,
+          6.190732140765018e-10
+        ]
+      }
+    ],
+    "exact_seven_named_components": true,
+    "all_seven_closed": true,
+    "assembly_equals_component_files": true,
+    "joints": [
+      {
+        "source": "leg_1",
+        "endpoint": "end_m",
+        "target": "seat",
+        "signed_target_face_plane_distance_m": -0.02263837546668751,
+        "endpoint_to_actual_source_vertex_m": 5.055535541507455e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "leg_2",
+        "endpoint": "end_m",
+        "target": "seat",
+        "signed_target_face_plane_distance_m": -0.02263837546668751,
+        "endpoint_to_actual_source_vertex_m": 6.489339964750769e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "leg_3",
+        "endpoint": "end_m",
+        "target": "seat",
+        "signed_target_face_plane_distance_m": -0.02263837546668751,
+        "endpoint_to_actual_source_vertex_m": 5.27878866557993e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_1_2",
+        "endpoint": "start_m",
+        "target": "leg_1",
+        "signed_target_face_plane_distance_m": -0.02368665071532572,
+        "endpoint_to_actual_source_vertex_m": 5.720238539789358e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_1_2",
+        "endpoint": "end_m",
+        "target": "leg_2",
+        "signed_target_face_plane_distance_m": -0.023833799251626875,
+        "endpoint_to_actual_source_vertex_m": 4.33039740697962e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_2_3",
+        "endpoint": "start_m",
+        "target": "leg_2",
+        "signed_target_face_plane_distance_m": -0.023833799251518073,
+        "endpoint_to_actual_source_vertex_m": 3.802068009173805e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_2_3",
+        "endpoint": "end_m",
+        "target": "leg_3",
+        "signed_target_face_plane_distance_m": -0.023729341091119016,
+        "endpoint_to_actual_source_vertex_m": 6.308347969610693e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_3_1",
+        "endpoint": "start_m",
+        "target": "leg_3",
+        "signed_target_face_plane_distance_m": -0.02372934109114322,
+        "endpoint_to_actual_source_vertex_m": 5.798122408827976e-10,
+        "positive_solid_contact": true
+      },
+      {
+        "source": "brace_3_1",
+        "endpoint": "end_m",
+        "target": "leg_1",
+        "signed_target_face_plane_distance_m": -0.023686650715147195,
+        "endpoint_to_actual_source_vertex_m": 6.190732140765018e-10,
+        "positive_solid_contact": true
+      }
+    ],
+    "all_nine_positive_solid_contacts": true
+  },
+  "limitations": [
+    "Ray recall counts captured valid rays, including repeated observations; it is not full or visible surface-area completeness.",
+    "Unobserved physical components have null recall and are listed, never silently treated as perfect or removed from the total primitive count.",
+    "Reverse accuracy samples all fitted primitive shells, including internal overlap faces, against authored reference shells; it is not exposed-union accuracy.",
+    "Odd frames are a validation split; references are evaluation-only. This evaluator does not establish what files an upstream fitter read.",
+    "Engineering pass is a bounded geometry criterion, not automatic family identification. Manifest labels must separately identify incompatible and insufficient cases and count any accepted negative as a failure.",
+    "A missing fit remains an unaccepted row; its absence alone does not prove the fitter explicitly refused the input. Consult the retained attempt log.",
+    "Joint proof checks actual closed convex source and target triangles and cap-center identity; overlapping editable solids are not a welded union."
+  ]
+}

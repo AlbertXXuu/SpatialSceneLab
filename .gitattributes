@@ -18,3 +18,8 @@ examples/ownership-b1/*.json -text whitespace=trailing-space,space-before-tab,cr
 examples/stool-fit/**/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
 examples/stool-fit/**/*.ply -text
 reports/stool-quality/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+examples/stool-scene/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+examples/stool-transfer/**/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+reports/stool-transfer/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+fixtures/stool-transfer-cases.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+fixtures/make_stool_cases.py -text whitespace=trailing-space,space-before-tab,cr-at-eol

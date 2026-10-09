@@ -12,6 +12,24 @@ a prepared scanner capture on Windows, keeps meter units and object UUIDs,
 edits selected observations and fused surface regions, and checks their world
 geometry after saving and reopening.
 
+**Scene integration and transfer, 2026-10-09:** the completed stool now sits in
+the original dining scene with seven editable parts and a retained observed
+comparison layer. Six new synthetic development cases expose and fix an
+acceptance defect: an elliptical-seat candidate passed the old mean-error gate
+but fails the new validation-tail check. The two compatible cases and one
+limited-view/noise case remain accepted, with independent triangle P95 of
+**3.012 / 3.135 / 7.182 mm**. All 40 candidate PLY files are identical between
+the original and revised decisions. Nine original scene objects are preserved;
+the 12-mesh GLB round trip has maximum corner error **1.1773 µm**.
+
+[Open the editable dining scene](examples/stool-scene/repaired-dining.blend) ·
+[GLB](examples/stool-scene/repaired-dining.glb) ·
+[Use and reproduce / 使用与复现](examples/stool-scene/README.md) ·
+[English transfer report](reports/STOOL-TRANSFER-2026-10-09.md) ·
+[中文迁移与场景报告](reports/STOOL-TRANSFER-2026-10-09.zh-CN.md)
+
+![Original dining scene with the complete editable stool](examples/stool-scene/dining-repaired.png)
+
 **Geometry quality, 2026-10-09:** a broken dining stool now has an observation-fitted
 editable assembly: one seat, three legs and three braces. All nine intended joints
 have solid contact. Independent distance to the exported triangles is **1.047 mm
@@ -94,10 +112,12 @@ recorded checks; whole-machine network isolation remains pending.
 [Machine results](reports/local-scan-results.json) ·
 [Input hashes](docs/tea-room-source-manifest.json)
 
-**Next stage:** expand the verified geometry-quality result beyond this one stool,
-starting with a changed shape and an incompatible-family rejection. Separately
-measure actual author correction effort; source-preserving edits alone do not
-measure geometry completeness. S2a separates competing-box and outside-box
+**Next stage:** inspect one sufficiently observed object from the existing real
+scan, state an appropriate structural representation, and deliver an editable
+result or an evidence-based refusal. The six synthetic transfer cases establish
+a bounded development check; they do not establish general furniture recovery.
+Measure actual author correction effort and keep observed geometry distinct
+from structural completion. S2a separates competing-box and outside-box
 omissions before choosing a method. The
 [English evaluation protocol](docs/NEXT-STAGE-PROTOCOL.md) and
 [中文评测协议](docs/NEXT-STAGE-PROTOCOL.zh-CN.md) specify independent scenes,

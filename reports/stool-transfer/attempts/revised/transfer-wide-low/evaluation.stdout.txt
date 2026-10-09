@@ -1,0 +1,42 @@
+{
+  "output": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-wide-low\\evaluation.json",
+  "fit_status": "ok",
+  "candidate_accepted": true,
+  "engineering_acceptance": {
+    "passed": true,
+    "checks": {
+      "input_content_matches_fit_record": true,
+      "target_and_units_match": true,
+      "validation_p95_at_most_10mm": true,
+      "seven_closed_components": true,
+      "nine_solid_contacts": true,
+      "assembly_equals_components": true
+    },
+    "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+  },
+  "validation": {
+    "sample_count": 2338,
+    "finite_distance_count": 2338,
+    "mean_distance_m": 0.0009866279089891373,
+    "median_distance_m": 0.0006606579117942601,
+    "p95_distance_m": 0.0031353842816315594,
+    "max_distance_m": 0.007829162292182446,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 2326,
+        "fraction": 0.9948674080410608
+      },
+      {
+        "distance_m": 0.01,
+        "count": 2338,
+        "fraction": 1.0
+      },
+      {
+        "distance_m": 0.02,
+        "count": 2338,
+        "fraction": 1.0
+      }
+    ]
+  }
+}

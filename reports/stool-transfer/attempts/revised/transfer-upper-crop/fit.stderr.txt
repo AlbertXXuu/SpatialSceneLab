@@ -1,0 +1,3 @@
+usage: fit_stool.py [-h] --scene SCENE --observations OBSERVATIONS
+                    --output OUTPUT [--object-uuid OBJECT_UUID] [--self-test]
+fit_stool.py: error: Insufficient upper-height separation to initialize the seat band

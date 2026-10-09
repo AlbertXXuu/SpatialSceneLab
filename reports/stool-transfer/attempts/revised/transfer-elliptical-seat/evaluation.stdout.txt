@@ -1,0 +1,42 @@
+{
+  "output": "D:\\.Development\\AlvenX\\.workspace\\experiments\\spatial-stool-transfer-20261009\\revised-gate\\transfer-elliptical-seat\\evaluation.json",
+  "fit_status": "ok",
+  "candidate_accepted": false,
+  "engineering_acceptance": {
+    "passed": false,
+    "checks": {
+      "input_content_matches_fit_record": true,
+      "target_and_units_match": true,
+      "validation_p95_at_most_10mm": false,
+      "seven_closed_components": true,
+      "nine_solid_contacts": true,
+      "assembly_equals_components": true
+    },
+    "criteria": "Validation triangle P95 <=10mm; seven closed named components; nine positive solid contacts; exact assembly and matching input identities."
+  },
+  "validation": {
+    "sample_count": 1945,
+    "finite_distance_count": 1945,
+    "mean_distance_m": 0.002273508397499233,
+    "median_distance_m": 0.0008635570993646979,
+    "p95_distance_m": 0.012247455120086669,
+    "max_distance_m": 0.02205049991607666,
+    "within": [
+      {
+        "distance_m": 0.005,
+        "count": 1723,
+        "fraction": 0.8858611825192803
+      },
+      {
+        "distance_m": 0.01,
+        "count": 1818,
+        "fraction": 0.9347043701799486
+      },
+      {
+        "distance_m": 0.02,
+        "count": 1926,
+        "fraction": 0.9902313624678664
+      }
+    ]
+  }
+}

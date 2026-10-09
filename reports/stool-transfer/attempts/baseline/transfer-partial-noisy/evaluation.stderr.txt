@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.Development\AlvenX\projects\SpatialSceneLab\evaluate_stool_transfer.py", line 313, in <module>
+    main()
+  File "D:\.Development\AlvenX\projects\SpatialSceneLab\evaluate_stool_transfer.py", line 304, in main
+    report = evaluate(args.reference, args.scene, args.observations, args.fit_dir, args.object_uuid)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.Development\AlvenX\projects\SpatialSceneLab\evaluate_stool_transfer.py", line 190, in evaluate
+    physical_scene, points, point_parts, parts, provenance = load_reference(reference, object_uuid)
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.Development\AlvenX\projects\SpatialSceneLab\evaluate_stool_transfer.py", line 96, in load_reference
+    expected = next(item["valid_ray_count"] for item in metadata["object_statistics"]
+                                                        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'object_statistics'

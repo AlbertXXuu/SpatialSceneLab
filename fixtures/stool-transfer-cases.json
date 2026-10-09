@@ -1,0 +1,52 @@
+{
+  "schema": "spatial-scene-lab.stool-transfer-cases.v1",
+  "version": "2026-10-09.1",
+  "licence": "MIT; original AlvenX procedural geometry and generated RGB-D",
+  "split": "predeclared development transfer cases; not a held-out real-data study",
+  "parameter_basis": "Physical shape, sensor and visibility hypotheses fixed before fitter runs. The operator selects the circular three-leg family; incompatible cases probe refusal rather than automatic family discovery.",
+  "room": {"floor_y": 0.0, "bounds_x_m": [-3.0, 3.0], "bounds_z_m": [-4.2, 1.8], "wall_height_m": 2.8},
+  "defaults": {
+    "resolution": [160, 120], "maximum_depth_m": 6.0,
+    "trajectory": {"frames": 18, "radius_m": 1.8, "arc_degrees": 240, "height_m": 1.1, "height_amplitude_m": 0.2},
+    "sensor": {"depth_noise_sigma_m": 0.002, "dropout_probability": 0.015, "pose_translation_sigma_m": 0.0, "pose_yaw_sigma_degrees": 0.0, "stripe_dropout_period_px": 0},
+    "prior": {"dimension_scale": [1.03, 1.02, 1.03]},
+    "rgb": [149, 133, 110]
+  },
+  "cases": [
+    {
+      "id": "transfer-compact-tall", "seed": 10901, "class": "eligible", "expected": "accepted accurate seven-part candidate",
+      "position_m": [-0.35, 0.0, -2.15], "yaw_degrees": 67,
+      "design": {"legs": 3, "seat_radius_m": 0.245, "seat_bottom_m": 0.55, "seat_thickness_m": 0.045, "foot_radius_m": 0.22, "top_radius_m": 0.16, "leg_radius_m": 0.022, "brace_height_m": 0.235, "brace_radius_m": 0.011}
+    },
+    {
+      "id": "transfer-wide-low", "seed": 10902, "class": "eligible", "expected": "accepted accurate seven-part candidate",
+      "position_m": [0.55, 0.0, -1.8], "yaw_degrees": -43,
+      "design": {"legs": 3, "seat_radius_m": 0.335, "seat_bottom_m": 0.4, "seat_thickness_m": 0.06, "foot_radius_m": 0.285, "top_radius_m": 0.21, "leg_radius_m": 0.025, "brace_height_m": 0.16, "brace_radius_m": 0.014}
+    },
+    {
+      "id": "transfer-partial-noisy", "seed": 10903, "class": "stress", "expected": "measure accuracy and refusal; acceptance is conditional on independent geometry checks",
+      "position_m": [0.1, 0.0, -2.0], "yaw_degrees": 19,
+      "design": {"legs": 3, "seat_radius_m": 0.28, "seat_bottom_m": 0.49, "seat_thickness_m": 0.048, "foot_radius_m": 0.235, "top_radius_m": 0.175, "leg_radius_m": 0.023, "brace_height_m": 0.205, "brace_radius_m": 0.012},
+      "trajectory": {"arc_degrees": 75},
+      "sensor": {"depth_noise_sigma_m": 0.006, "dropout_probability": 0.08}
+    },
+    {
+      "id": "transfer-four-leg", "seed": 10904, "class": "incompatible", "expected": "refusal or unaccepted candidate; four legs and four braces contradict selected family",
+      "position_m": [-0.2, 0.0, -1.9], "yaw_degrees": 28,
+      "design": {"legs": 4, "seat_radius_m": 0.30, "seat_bottom_m": 0.465, "seat_thickness_m": 0.05, "foot_radius_m": 0.245, "top_radius_m": 0.19, "leg_radius_m": 0.024, "brace_height_m": 0.19, "brace_radius_m": 0.012}
+    },
+    {
+      "id": "transfer-elliptical-seat", "seed": 10905, "class": "incompatible", "expected": "refusal or unaccepted candidate; elliptical seat contradicts selected circular family",
+      "position_m": [0.3, 0.0, -2.25], "yaw_degrees": -17,
+      "design": {"legs": 3, "seat_radius_m": 0.29, "seat_axes_scale": [1.4, 0.75], "seat_bottom_m": 0.465, "seat_thickness_m": 0.05, "foot_radius_m": 0.24, "top_radius_m": 0.18, "leg_radius_m": 0.024, "brace_height_m": 0.19, "brace_radius_m": 0.012}
+    },
+    {
+      "id": "transfer-upper-crop", "seed": 10906, "class": "insufficient-hypothesis", "expected": "confirm lower-leg visibility loss from independent reference first; then require refusal or unaccepted candidate if support is absent",
+      "position_m": [0.0, 0.0, -2.0], "yaw_degrees": 31,
+      "design": {"legs": 3, "seat_radius_m": 0.29, "seat_bottom_m": 0.465, "seat_thickness_m": 0.05, "foot_radius_m": 0.24, "top_radius_m": 0.18, "leg_radius_m": 0.024, "brace_height_m": 0.19, "brace_radius_m": 0.012},
+      "trajectory": {"arc_degrees": 24, "height_amplitude_m": 0.0},
+      "sensor": {"keep_depth_rows": [0, 48]},
+      "crop_basis": "Retain sensor rows 0 through 47, not instance labels or geometry height; post-generation visibility determines which structural evidence actually remains."
+    }
+  ]
+}

@@ -27,7 +27,7 @@ jobs:
       - name: Check units, frames, identity, source hash and edits
         run: python -B -m unittest discover -s tests -v
       - name: Compile optional native Blender entry points
-        run: python -m py_compile blender_edit.py blender_scene.py verify_blender_edit.py blender_edit_controls.py blender_stool.py render_stool_quality.py
+        run: python -m py_compile blender_edit.py blender_scene.py verify_blender_edit.py blender_edit_controls.py blender_stool.py render_stool_quality.py blender_stool_scene.py
       - name: Read back published controlled exports
         run: |
           python -B scene_lab.py verify fixtures/three-objects.json examples/three-objects-before.glb

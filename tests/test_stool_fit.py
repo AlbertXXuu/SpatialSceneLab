@@ -187,6 +187,23 @@ class CylinderAndContactTests(unittest.TestCase):
 
 @unittest.skipUnless(SCIPY_AVAILABLE, "optional SciPy fitting dependency is absent")
 class FittingControlTests(unittest.TestCase):
+    def test_elliptical_counterexample_is_rejected_despite_small_balanced_means(self):
+        project = Path(__file__).resolve().parents[1]
+        source = project / "examples/stool-transfer/elliptical-input"
+        with tempfile.TemporaryDirectory(prefix="AlvenX-stool-tail-regression-") as folder:
+            output = Path(folder) / "candidate"
+            result = subprocess.run([sys.executable, "-B", str(project / "fit_stool.py"),
+                "--scene", str(source / "scene.json"), "--observations", str(source / "observations.npz"),
+                "--output", str(output)], capture_output=True, text=True, timeout=45)
+            self.assertEqual(result.returncode, 2, result.stderr)
+            record = json.loads((output / "fit.json").read_text(encoding="utf-8"))
+            self.assertLess(record["heldout_observation_error"]["part_balanced_mean_m"], .015)
+            self.assertLess(record["heldout_observation_error"]["height_balanced_mean_m"], .015)
+            self.assertTrue(record["contact_checks"]["all_nine_intended_joints_in_solid_contact"])
+            self.assertFalse(record["quality_gate"]["passed"])
+            self.assertFalse(record["quality_gate"]["validation_tail"]["passed"])
+            self.assertGreater(record["quality_gate"]["validation_tail"]["p95_m"], .010)
+
     def test_changed_observations_change_fit_under_same_prior(self):
         result = self_test()
         np.testing.assert_allclose(result["observed_parameter_shift"], [.03, -.02, .012], atol=.0015)
