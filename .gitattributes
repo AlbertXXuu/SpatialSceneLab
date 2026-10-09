@@ -23,3 +23,4 @@ examples/stool-transfer/**/*.json -text whitespace=trailing-space,space-before-t
 reports/stool-transfer/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 fixtures/stool-transfer-cases.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
 fixtures/make_stool_cases.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+reports/real-tabletop/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
