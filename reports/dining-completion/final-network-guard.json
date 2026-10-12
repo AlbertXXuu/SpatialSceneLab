@@ -1,0 +1,6 @@
+{
+  "guard": "socket.socket.connect/connect_ex and socket.create_connection denied before fitter import",
+  "outbound_attempt_count": 0,
+  "fitter_exit_code": 0,
+  "passed": true
+}

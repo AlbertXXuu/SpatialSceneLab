@@ -1,0 +1,276 @@
+{
+  "passed": true,
+  "component_count": 30,
+  "records": [
+    {
+      "uuid": "same-table",
+      "part": "top",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.16121348770339933
+    },
+    {
+      "uuid": "same-table",
+      "part": "leg_1",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.00317013311550307
+    },
+    {
+      "uuid": "same-table",
+      "part": "leg_2",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0021601265829114874
+    },
+    {
+      "uuid": "same-table",
+      "part": "leg_3",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0020875871244978887
+    },
+    {
+      "uuid": "same-table",
+      "part": "leg_4",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.005174531677252204
+    },
+    {
+      "uuid": "same-table",
+      "part": "cross_rail_1",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0011071117787180976
+    },
+    {
+      "uuid": "same-table",
+      "part": "cross_rail_2",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0013712852757496578
+    },
+    {
+      "uuid": "same-table",
+      "part": "center_rail",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0018526192516914951
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "seat",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.024358803244013585
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "leg_1",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0006135269218558036
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "leg_2",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.000652350766851122
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "leg_3",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0006235299976391163
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "leg_4",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0018622406846576182
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "seat_cushion",
+      "vertices": 3074,
+      "triangles": 6144,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.01089059399261897
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "back",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.005026512161265578
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "back_cushion",
+      "vertices": 3074,
+      "triangles": 6144,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0032495535683702143
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "back_post_1",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.000803836702994269
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "back_post_2",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0007062921561398836
+    },
+    {
+      "uuid": "same-chair-west",
+      "part": "back_rail",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0008820439308454645
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "seat",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.02238679426547396
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "leg_1",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0005657617480498982
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "leg_2",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0006573724331688652
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "leg_3",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0005868217383897883
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "leg_4",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0021162381866875633
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "seat_cushion",
+      "vertices": 3074,
+      "triangles": 6144,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.010823652228667983
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "back",
+      "vertices": 8,
+      "triangles": 12,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.005425097702533722
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "back_cushion",
+      "vertices": 3074,
+      "triangles": 6144,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.002998273446188568
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "back_post_1",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0006776483377974418
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "back_post_2",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0007759213529211467
+    },
+    {
+      "uuid": "same-chair-east",
+      "part": "back_rail",
+      "vertices": 162,
+      "triangles": 320,
+      "watertight": true,
+      "orientable": true,
+      "positive_volume_m3": 0.0008342970213528949
+    }
+  ]
+}

@@ -6,6 +6,29 @@
 
 # SpatialSceneLab
 
+**Complete editable dining scene, 2026-10-13:** the accepted stool, table and two
+chairs now have four independently selectable roots and 37 editable parts.
+All original odd-frame owner observations are retained: actual triangle P95 is
+**3.692 / 5.668 / 7.570 mm** for table / west / east. After the user identified
+a chair/table collision, final native and GLB layouts pass all **507**
+cross-furniture part separation checks with minimum certified gap **5.549958 mm**.
+All 17 preexisting objects are preserved; edit/undo/redo, fresh native reopening
+and the 38-mesh GLB round trip pass. This is a controlled synthetic development
+result. Independent reference checks retain the table's reverse-area P95
+regression, **17.933 → 48.378 mm**, separately from its improved observation fit.
+
+[Open the complete editable scene](examples/dining-complete/native/complete-dining.blend) ·
+[GLB](examples/dining-complete/native/complete-dining.glb) ·
+[Open, edit and reproduce / 打开、编辑与复现](examples/dining-complete/README.md) ·
+[English measured report](reports/DINING-COMPLETION-2026-10-13.md) ·
+[中文实测报告](reports/DINING-COMPLETION-2026-10-13.zh-CN.md)
+
+![Complete authored dining layout with retained observed environment](examples/dining-complete/native/dining-complete.png)
+
+本阶段把外观改善推进为可复现的工程交付：原观测形状门槛、来源保留、可编辑家具、
+跨家具实体间隙和原生／GLB 一致性都有实测记录。拟合误差保持原观测坐标，椅子
+摆放平移单独记录；隐藏形状的参考误差仍在报告中完整保留。
+
 Local RGB-D experiments for traceable measured surfaces, object-region editing
 and native Blender/GLB export validation. The current CPU workflow reconstructs
 a prepared scanner capture on Windows, keeps meter units and object UUIDs,

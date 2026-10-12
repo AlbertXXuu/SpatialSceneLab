@@ -1,0 +1,36 @@
+ply
+format ascii 1.0
+comment provenance fitted_structural_not_observed_identity
+comment seven editable closed parts with intentional joint overlap
+element vertex 8
+property float x
+property float y
+property float z
+property uchar red
+property uchar green
+property uchar blue
+property int part_id
+element face 12
+property list uchar int vertex_indices
+property int part_id
+end_header
+-0.796895654 0.701621689 -2.472255529 143 127 104 0
+-0.668819266 0.701621689 -1.561311174 143 127 104 0
+-0.796895654 0.820037054 -2.472255529 143 127 104 0
+-0.668819266 0.820037054 -1.561311174 143 127 104 0
+0.668653021 0.701621689 -2.678307831 143 127 104 0
+0.796729410 0.701621689 -1.767363475 143 127 104 0
+0.668653021 0.820037054 -2.678307831 143 127 104 0
+0.796729410 0.820037054 -1.767363475 143 127 104 0
+3 0 1 3 0
+3 0 3 2 0
+3 4 6 7 0
+3 4 7 5 0
+3 0 4 5 0
+3 0 5 1 0
+3 2 3 7 0
+3 2 7 6 0
+3 0 2 6 0
+3 0 6 4 0
+3 1 5 7 0
+3 1 7 3 0

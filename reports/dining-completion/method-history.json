@@ -1,0 +1,202 @@
+{
+  "fixed_gate": {
+    "actual_triangle_p95_limit_m": 0.01,
+    "within_10mm_minimum_fraction": 0.95,
+    "all_owner_odd_observations_retained": true
+  },
+  "parameter_sources": "Even-frame point geometry, RGB, candidate/owner records, upright boxes and measured Floor only. No construction/reference reads.",
+  "attempts": [
+    {
+      "artifact": "attempt-01-rectangular/fit.json",
+      "method": "Rectangular slab control; chair curved surface mismatch violates fixed P95 gate.",
+      "fit_code_sha256": "1786e2900e06ac2d2d9f73f81bcaf2ced3d07cbb3cb789deff5b2f0e34c08467",
+      "analytic_validation": {
+        "same-table": {
+          "count": 2840,
+          "mean_m": 0.0009673764637705839,
+          "rmse_m": 0.0016481976199818685,
+          "p50_m": 0.0004726621132847067,
+          "p95_m": 0.0036930193460386453,
+          "within_10mm_fraction": 0.9989436619718309
+        },
+        "same-chair-west": {
+          "count": 1848,
+          "mean_m": 0.0073887539630800615,
+          "rmse_m": 0.010531322697762973,
+          "p50_m": 0.004735514065093097,
+          "p95_m": 0.02192546212762275,
+          "within_10mm_fraction": 0.7196969696969697
+        },
+        "same-chair-east": {
+          "count": 2451,
+          "mean_m": 0.007217557841470122,
+          "rmse_m": 0.010304143576224787,
+          "p50_m": 0.004723832264134614,
+          "p95_m": 0.019939249605401395,
+          "within_10mm_fraction": 0.7082823337413301
+        }
+      },
+      "analytic_gate_passed": false
+    },
+    {
+      "artifact": "attempt-02-domed/fit.json",
+      "method": "Single separable domed slab; chair surface errors show exposed planar base requires separate cap.",
+      "fit_code_sha256": "1786e2900e06ac2d2d9f73f81bcaf2ced3d07cbb3cb789deff5b2f0e34c08467",
+      "analytic_validation": {
+        "same-table": {
+          "count": 2840,
+          "mean_m": 0.0009673764637705839,
+          "rmse_m": 0.0016481976199818685,
+          "p50_m": 0.0004726621132847067,
+          "p95_m": 0.0036930193460386453,
+          "within_10mm_fraction": 0.9989436619718309
+        },
+        "same-chair-west": {
+          "count": 1848,
+          "mean_m": 0.0030478189794900545,
+          "rmse_m": 0.00483093707248325,
+          "p50_m": 0.0018956454964315602,
+          "p95_m": 0.011620286205665716,
+          "within_10mm_fraction": 0.9383116883116883
+        },
+        "same-chair-east": {
+          "count": 2451,
+          "mean_m": 0.0029593244444597005,
+          "rmse_m": 0.005023147348325979,
+          "p50_m": 0.0017437026078719955,
+          "p95_m": 0.011764180710470869,
+          "within_10mm_fraction": 0.9428804569563444
+        }
+      },
+      "analytic_gate_passed": false
+    },
+    {
+      "artifact": "attempt-03-cushioned/fit.json",
+      "method": "Rectangular bases plus convex half-ellipsoid caps; competing candidate table geometry corrupts east cap.",
+      "fit_code_sha256": "8a4b519d3ac1c7eef72ed0cec935ca33962c149deef19b7f69759d27bc490c2a",
+      "analytic_validation": {
+        "same-table": {
+          "count": 2840,
+          "mean_m": 0.0009673764637705839,
+          "rmse_m": 0.0016481976199818685,
+          "p50_m": 0.0004726621132847067,
+          "p95_m": 0.0036930193460386453,
+          "within_10mm_fraction": 0.9989436619718309
+        },
+        "same-chair-west": {
+          "count": 1848,
+          "mean_m": 0.001883201099133051,
+          "rmse_m": 0.0027234968243692583,
+          "p50_m": 0.0013287602295887716,
+          "p95_m": 0.005697599322204409,
+          "within_10mm_fraction": 0.9891774891774892
+        },
+        "same-chair-east": {
+          "count": 2451,
+          "mean_m": 0.0029093507157341653,
+          "rmse_m": 0.005792128277330505,
+          "p50_m": 0.0013695062111545274,
+          "p95_m": 0.010966652691841395,
+          "within_10mm_fraction": 0.941656466748266
+        }
+      },
+      "analytic_gate_passed": false
+    },
+    {
+      "artifact": "attempt-04-separated-caps/fit.json",
+      "method": "Separate planar/curved fitting threshold; east contamination remains in candidate cap pool.",
+      "fit_code_sha256": "431d16c151e768232c0a64eea67423821cb23c41f09e5e3755264e10f087a414",
+      "analytic_validation": {
+        "same-table": {
+          "count": 2840,
+          "mean_m": 0.0009673764637705839,
+          "rmse_m": 0.0016481976199818685,
+          "p50_m": 0.0004726621132847067,
+          "p95_m": 0.0036930193460386453,
+          "within_10mm_fraction": 0.9989436619718309
+        },
+        "same-chair-west": {
+          "count": 1848,
+          "mean_m": 0.0018669651898774698,
+          "rmse_m": 0.0027811850831598517,
+          "p50_m": 0.0012546141128944631,
+          "p95_m": 0.0056919602535052865,
+          "within_10mm_fraction": 0.9853896103896104
+        },
+        "same-chair-east": {
+          "count": 2451,
+          "mean_m": 0.0028596963177994436,
+          "rmse_m": 0.005678197941256196,
+          "p50_m": 0.0013111941883751767,
+          "p95_m": 0.011666409570096225,
+          "within_10mm_fraction": 0.9396164830681355
+        }
+      },
+      "analytic_gate_passed": false
+    },
+    {
+      "artifact": "attempt-05-owned-cap-selection/fit.json",
+      "method": "Owned-even seat cap pool removes competing table observations; independent triangles pass fixed gate.",
+      "fit_code_sha256": "1915772099dc2479a07283d0ccb7d75c89fa56edd1b2f40016a718bef6e4e772",
+      "analytic_validation": {
+        "same-table": {
+          "count": 2840,
+          "mean_m": 0.0009673764637705839,
+          "rmse_m": 0.0016481976199818685,
+          "p50_m": 0.0004726621132847067,
+          "p95_m": 0.0036930193460386453,
+          "within_10mm_fraction": 0.9989436619718309
+        },
+        "same-chair-west": {
+          "count": 1848,
+          "mean_m": 0.001871723211280746,
+          "rmse_m": 0.0027972520328845025,
+          "p50_m": 0.0012506978057560915,
+          "p95_m": 0.005724742858734105,
+          "within_10mm_fraction": 0.9853896103896104
+        },
+        "same-chair-east": {
+          "count": 2451,
+          "mean_m": 0.0020818424124210066,
+          "rmse_m": 0.0033421067127617715,
+          "p50_m": 0.0012534143053981508,
+          "p95_m": 0.007785850318838318,
+          "within_10mm_fraction": 0.9689922480620154
+        }
+      },
+      "analytic_gate_passed": true
+    },
+    {
+      "artifact": "final-frozen/fit.json",
+      "method": "Same frozen parameters and exact exported meshes; outbound Python guard denies network; source metadata final.",
+      "fit_code_sha256": "6b9411efb2786a3090c55bebf1cca6f6c24814bc4279e5daac27f626ee25904e",
+      "analytic_validation": {
+        "same-table": {
+          "count": 2840,
+          "mean_m": 0.0009673764637705839,
+          "rmse_m": 0.0016481976199818685,
+          "p50_m": 0.0004726621132847067,
+          "p95_m": 0.0036930193460386453,
+          "within_10mm_fraction": 0.9989436619718309
+        },
+        "same-chair-west": {
+          "count": 1848,
+          "mean_m": 0.001871723211280746,
+          "rmse_m": 0.0027972520328845025,
+          "p50_m": 0.0012506978057560915,
+          "p95_m": 0.005724742858734105,
+          "within_10mm_fraction": 0.9853896103896104
+        },
+        "same-chair-east": {
+          "count": 2451,
+          "mean_m": 0.0020818424124210066,
+          "rmse_m": 0.0033421067127617715,
+          "p50_m": 0.0012534143053981508,
+          "p95_m": 0.007785850318838318,
+          "within_10mm_fraction": 0.9689922480620154
+        }
+      },
+      "analytic_gate_passed": true
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "evaluation_sha256": "1f3aaf0b6a9b28f22e37a4bb7a0bd21568622fcb63c0a24c07ec7eef9c3e851c",
+  "layout_sha256": "0ddbf52fa39f65014bb199e819f3cc63a60adc1f06cf726fcfc6f94060685345",
+  "fit_json_sha256": "1cb164fbe6272e48ca41507fd71e037aa70956131630d589e039c56d16c099a1",
+  "evaluation_status": "passed",
+  "layout_status": "passed",
+  "all_per_object_geometry_reference_baseline_metrics_exactly_unchanged": true,
+  "all_original_authored_layout_pairs_and_minimality_certificates_exactly_unchanged": true,
+  "minimum_certified_clearance_m": 0.005550033614910244,
+  "pair_count": 507,
+  "layout_transform_sha256": "3255dcef3f40995ea019b7d9d75f9365c0da154774ccc70f026eb8f3926e1420",
+  "evaluation_script_sha256": "fcbdc7d7bece459275827897e0966e03a87dc5dfb668520d75f3b16ac26084f8",
+  "layout_script_sha256": "84d1f6225bbdd782fe5a63e48674d5e1e02961c662000fd1b67fa9eab3489478",
+  "observation_metrics": [
+    {
+      "uuid": "same-table",
+      "validation": {
+        "sample_count": 2840,
+        "finite_distance_count": 2840,
+        "mean_distance_m": 0.0009698980457122795,
+        "median_distance_m": 0.00047560631355736405,
+        "p95_distance_m": 0.003692236833740021,
+        "max_distance_m": 0.012434308417141438,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 2775,
+            "fraction": 0.977112676056338
+          },
+          {
+            "distance_m": 0.01,
+            "count": 2837,
+            "fraction": 0.9989436619718309
+          },
+          {
+            "distance_m": 0.02,
+            "count": 2840,
+            "fraction": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "same-chair-west",
+      "validation": {
+        "sample_count": 1848,
+        "finite_distance_count": 1848,
+        "mean_distance_m": 0.0018629864277812966,
+        "median_distance_m": 0.0012525974307209253,
+        "p95_distance_m": 0.005667565972544252,
+        "max_distance_m": 0.014160633087158203,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 1734,
+            "fraction": 0.9383116883116883
+          },
+          {
+            "distance_m": 0.01,
+            "count": 1822,
+            "fraction": 0.9859307359307359
+          },
+          {
+            "distance_m": 0.02,
+            "count": 1848,
+            "fraction": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uuid": "same-chair-east",
+      "validation": {
+        "sample_count": 2451,
+        "finite_distance_count": 2451,
+        "mean_distance_m": 0.0020492956494451973,
+        "median_distance_m": 0.001246099011041224,
+        "p95_distance_m": 0.007570153102278709,
+        "max_distance_m": 0.016061346977949142,
+        "within": [
+          {
+            "distance_m": 0.005,
+            "count": 2234,
+            "fraction": 0.9114647082823337
+          },
+          {
+            "distance_m": 0.01,
+            "count": 2380,
+            "fraction": 0.971032231742146
+          },
+          {
+            "distance_m": 0.02,
+            "count": 2451,
+            "fraction": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

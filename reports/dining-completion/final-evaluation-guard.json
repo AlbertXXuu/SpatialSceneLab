@@ -1,0 +1,8 @@
+{
+  "guard": "Python socket connect/connect_ex/sendto/create_connection/getaddrinfo denied before independent evaluator import; explicit portable reference permitted only in this evaluation",
+  "evaluator_sha256_before": "fcbdc7d7bece459275827897e0966e03a87dc5dfb668520d75f3b16ac26084f8",
+  "evaluator_sha256_after": "fcbdc7d7bece459275827897e0966e03a87dc5dfb668520d75f3b16ac26084f8",
+  "outbound_attempt_count": 0,
+  "evaluator_exit_code": 0,
+  "passed": true
+}

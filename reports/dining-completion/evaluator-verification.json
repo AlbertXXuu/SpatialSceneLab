@@ -1,0 +1,23 @@
+{
+  "schema": "alvenx.spatial.dining-evaluator-verification.v1",
+  "evaluator_sha256": "da6991b22d7e3fcb496c80f62f2dfc69cb459df19ce9a9f0e0c6f7ae6fee9782",
+  "regression_tests_sha256": "0e512357055e8453b86c8f1e04b81cd3c80852ec5b682534ad2f3891511152cd",
+  "command": "python -B -m unittest discover -s tests -p test_dining_evaluation.py -v",
+  "result": {
+    "tests_run": 20,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "geometry_runtime": {
+    "open3d": "0.19.0",
+    "numpy": "2.3.5"
+  },
+  "reference_reextraction": {
+    "labels.npz": "byte-identical",
+    "rays.npz": "byte-identical",
+    "reference.json": "byte-identical",
+    "pack_total_bytes": 396659
+  },
+  "temporary_directories": "All AlvenX-dining-evaluation system temporary directories used by regressions and re-extraction removed by TemporaryDirectory cleanup."
+}
