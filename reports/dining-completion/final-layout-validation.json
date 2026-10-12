@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "portable_input_hashes_verified": 40,
+  "all_actual_vertex_certificates_verified": 507,
+  "minimum_clearance_and_pair": [
+    0.005550033614910244,
+    [
+      "same-table/leg_1",
+      "same-chair-west/seat"
+    ]
+  ],
+  "evaluator_lf_and_sha_verified": true,
+  "layout_sha256": "0ddbf52fa39f65014bb199e819f3cc63a60adc1f06cf726fcfc6f94060685345",
+  "fit_json_sha256": "1cb164fbe6272e48ca41507fd71e037aa70956131630d589e039c56d16c099a1"
+}

@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "scope": "Exact decoded RGBA equality to the four previously visually reviewed native-layout renders; PNG metadata/bytes checked separately.",
+  "renders": [
+    {
+      "name": "dining-before.png",
+      "resolution": [
+        1500,
+        1100
+      ],
+      "pixels_identical": true,
+      "reviewed_png_sha256": "0ded2f272487bb661f798819fedbb3b1b61a1489c68fff6340d48a5b069acfac",
+      "final_png_sha256": "0944d9f91565f5395a1fbfd58bb467f18e15dda3282735f122a7da7909dec629",
+      "rgba_pixel_sha256": "50f296e09680aafd2c8e3f466f9c755676fc92dd2412a9f2e493698a5b877f8a",
+      "metadata_differences": {
+        "Date": {
+          "reviewed_render": "2026/10/13 02:02:04",
+          "final_render": "2026/10/13 02:23:02"
+        },
+        "RenderTime": {
+          "reviewed_render": "00:01.95",
+          "final_render": "00:01.70"
+        }
+      }
+    },
+    {
+      "name": "dining-complete.png",
+      "resolution": [
+        1500,
+        1100
+      ],
+      "pixels_identical": true,
+      "reviewed_png_sha256": "6fd852c8ebeff8274d6426b85e649ea542308b465dd0e3341c87653385381003",
+      "final_png_sha256": "af4a3c5b2006eeeb52af5d352374cdb042eb8e09e5dfa7f7cd46a8764b3f0664",
+      "rgba_pixel_sha256": "eb5b5b129a204921828222c3574fb30b092eea7e570e9ffdd24d8212814a7d82",
+      "metadata_differences": {
+        "Date": {
+          "reviewed_render": "2026/10/13 02:02:05",
+          "final_render": "2026/10/13 02:23:03"
+        },
+        "RenderTime": {
+          "reviewed_render": "00:00.78",
+          "final_render": "00:00.75"
+        }
+      }
+    },
+    {
+      "name": "dining-front.png",
+      "resolution": [
+        1500,
+        1050
+      ],
+      "pixels_identical": true,
+      "reviewed_png_sha256": "ce0ad362f3d723c06e91e6c2e6f9a4c9c073a957e733c802f756f89292198dde",
+      "final_png_sha256": "8ed9dd4e298ba9e4e0fd1957a056ccb71b106a5877f069f0c2627747f4f16536",
+      "rgba_pixel_sha256": "44be8ea44d48f1f4017ed6c06d666bb779531cde8538664d5d5ff0f449b0209d",
+      "metadata_differences": {
+        "Date": {
+          "reviewed_render": "2026/10/13 02:02:06",
+          "final_render": "2026/10/13 02:23:04"
+        },
+        "RenderTime": {
+          "reviewed_render": "00:00.78",
+          "final_render": "00:00.72"
+        }
+      }
+    },
+    {
+      "name": "dining-underside.png",
+      "resolution": [
+        1500,
+        1050
+      ],
+      "pixels_identical": true,
+      "reviewed_png_sha256": "f9bf9e7ad61c6288a78cb2138f6d2b160d88e0cf623588c35357447f1175e56e",
+      "final_png_sha256": "a450adaaded6a71cdc69ef84d44f960a6b9442d6ee48e10fc53472d102e9d91c",
+      "rgba_pixel_sha256": "1396d62c4caf23d8142d204bd099398070e322a5d12bfd344c0ff9db2d736cba",
+      "metadata_differences": {
+        "Date": {
+          "reviewed_render": "2026/10/13 02:02:07",
+          "final_render": "2026/10/13 02:23:05"
+        },
+        "RenderTime": {
+          "reviewed_render": "00:00.73",
+          "final_render": "00:00.69"
+        }
+      }
+    }
+  ]
+}

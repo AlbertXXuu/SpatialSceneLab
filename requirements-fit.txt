@@ -1,3 +1,3 @@
-# Optional observation-constrained stool prototype; verified together locally.
+# Optional observation-constrained stool and dining fits; verified together locally.
 numpy==2.1.3
 scipy==1.15.3

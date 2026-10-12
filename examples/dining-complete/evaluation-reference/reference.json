@@ -1,0 +1,853 @@
+{
+  "schema": "alvenx.spatial.dining-reference.v1",
+  "units": "m",
+  "up_axis": "Y",
+  "scope": "Evaluation-only extraction of original target geometry and all measurement-valid captured rays; no construction parameters.",
+  "depth_resolution": [
+    160,
+    120
+  ],
+  "intrinsics_depth": [
+    [
+      136.0,
+      0.0,
+      79.5
+    ],
+    [
+      0.0,
+      136.0,
+      59.5
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "ray_reconstruction_precision_bound_m": 0.0002,
+  "true_camera_poses_arkit": [
+    [
+      [
+        -0.49999999999999983,
+        0.23552167526280798,
+        -0.8333843893914743,
+        -1.991858428704209
+      ],
+      [
+        0.0,
+        0.962309403107199,
+        0.27195700522594757,
+        1.3
+      ],
+      [
+        0.8660254037844388,
+        0.13597850261297373,
+        -0.48115470155359935,
+        -3.2499999999999996
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.27366299007208256,
+        0.29296226583479773,
+        -0.9161231787602302,
+        -2.212198979297484
+      ],
+      [
+        0.0,
+        0.9524836286732508,
+        0.30458978497224243,
+        1.3855050358314172
+      ],
+      [
+        0.961825643172819,
+        0.08335495130091654,
+        -0.2606595178174291,
+        -2.72942487716579
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.030795058556170433,
+        0.3322730665998445,
+        -0.942680366604109,
+        -2.2989091553407413
+      ],
+      [
+        0.0,
+        0.9431276734674138,
+        0.33243073194267625,
+        1.4606969024216347
+      ],
+      [
+        0.9995257197133659,
+        0.010237223856045311,
+        -0.029043671930373792,
+        -2.170828634679192
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.21393308320649734,
+        0.34438994179533017,
+        -0.9141270173777664,
+        -2.2467511308470813
+      ],
+      [
+        -0.0,
+        0.9357921805857377,
+        0.35255211636663064,
+        1.5165063509461096
+      ],
+      [
+        0.9768483177596008,
+        -0.07542256124528912,
+        0.2001969064332382,
+        -1.6079539086250563
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.4457383557765383,
+        0.3250021347887591,
+        -0.8340808897057752,
+        -2.0588755701166432
+      ],
+      [
+        -0.0,
+        0.9317639560969676,
+        0.36306463628192787,
+        1.546201938253052
+      ],
+      [
+        0.8951632913550623,
+        -0.16183183401691345,
+        0.4153229337625049,
+        -1.0748017817139621
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.6506183002042423,
+        0.27571306985594896,
+        -0.7075861294216778,
+        -1.746631308305826
+      ],
+      [
+        -0.0,
+        0.9317639560969677,
+        0.36306463628192787,
+        1.546201938253052
+      ],
+      [
+        0.7594049166547071,
+        -0.23621649652201937,
+        0.6062226813073892,
+        -0.6035779095302429
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.8161969123562217,
+        0.2036953870442358,
+        -0.5406762335789037,
+        -1.3288798122389776
+      ],
+      [
+        -0.0,
+        0.9357921805857378,
+        0.35255211636663064,
+        1.5165063509461096
+      ],
+      [
+        0.5777738314082511,
+        -0.2877519488230953,
+        0.7637906884011749,
+        -0.22274710158069033
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.9324722294043558,
+        0.12008783149878727,
+        -0.3406970121905818,
+        -0.830855832230452
+      ],
+      [
+        -0.0,
+        0.9431276734674137,
+        0.3324307319426763,
+        1.460696902421635
+      ],
+      [
+        0.36124166618715314,
+        -0.30998242573710916,
+        0.8794403642911024,
+        0.04468612763001767
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.9924205096719357,
+        0.037430518029171723,
+        -0.11704908501378014,
+        -0.2826430685288426
+      ],
+      [
+        -0.0,
+        0.9524836286732508,
+        0.30458978497224243,
+        1.3855050358314172
+      ],
+      [
+        0.1228882906647142,
+        -0.30228114964301817,
+        0.9452642882220823,
+        0.18256717224545183
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.9924205096719358,
+        -0.03342033150651145,
+        0.1182565576384251,
+        0.2826430685288426
+      ],
+      [
+        0.0,
+        0.9623094031071993,
+        0.2719570052259476,
+        1.3
+      ],
+      [
+        -0.12288829066471418,
+        -0.2698957097351883,
+        0.9550155882937429,
+        0.18256717224545183
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.9324722294043557,
+        -0.0861050379179142,
+        0.35082967923883684,
+        0.830855832230452
+      ],
+      [
+        0.0,
+        0.9711772258770337,
+        0.23835854492295655,
+        1.214494964168583
+      ],
+      [
+        -0.3612416661871531,
+        -0.22226272378188758,
+        0.9055957929602952,
+        0.04468612763001767
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.8161969123562218,
+        -0.12022537511061278,
+        0.5651269409961645,
+        1.3288798122389769
+      ],
+      [
+        0.0,
+        0.9781110017024113,
+        0.20808380126455117,
+        1.1393030975783653
+      ],
+      [
+        -0.5777738314082509,
+        -0.16983735610347236,
+        0.7983311795311594,
+        -0.2227471015806901
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.6506183002042423,
+        -0.1406528155251727,
+        0.746265779011864,
+        1.746631308305826
+      ],
+      [
+        0.0,
+        0.9826981135430056,
+        0.18521451789483995,
+        1.0834936490538905
+      ],
+      [
+        -0.7594049166547071,
+        -0.12050395480588898,
+        0.6393613762472657,
+        -0.6035779095302429
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.44573835577653825,
+        -0.15479133292945854,
+        0.8816784909702344,
+        2.0588755701166432
+      ],
+      [
+        0.0,
+        0.9849359323432318,
+        0.17291966105440007,
+        1.053798061746948
+      ],
+      [
+        -0.8951632913550622,
+        -0.07707692539982458,
+        0.43902372302790393,
+        -1.0748017817139621
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        0.2139330832064977,
+        -0.16891628000855102,
+        0.9621330086104699,
+        2.2467511308470813
+      ],
+      [
+        0.0,
+        0.9849359323432318,
+        0.17291966105440007,
+        1.053798061746948
+      ],
+      [
+        -0.9768483177596006,
+        -0.03699323623639035,
+        0.21071038076705403,
+        -1.6079539086250554
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.030795058556170235,
+        -0.18512667430020394,
+        0.9822320392000398,
+        2.2989091553407413
+      ],
+      [
+        0.0,
+        0.9826981135430057,
+        0.1852145178948399,
+        1.0834936490538902
+      ],
+      [
+        -0.9995257197133659,
+        0.0057036919240244345,
+        -0.03026224594959489,
+        -2.1708286346791916
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.27366299007208267,
+        -0.2001403359851219,
+        0.9407722433068323,
+        2.212198979297484
+      ],
+      [
+        0.0,
+        0.9781110017024115,
+        0.20808380126455106,
+        1.1393030975783651
+      ],
+      [
+        -0.9618256431728192,
+        0.05694483523962206,
+        -0.2676727813482818,
+        -2.72942487716579
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -0.49999999999999983,
+        -0.20642455511237467,
+        0.8410641491864091,
+        1.991858428704209
+      ],
+      [
+        0.0,
+        0.9711772258770336,
+        0.2383585449229565,
+        1.214494964168583
+      ],
+      [
+        -0.8660254037844387,
+        0.1191792724614782,
+        -0.4855886129385167,
+        -3.2499999999999996
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  ],
+  "objects": [
+    {
+      "uuid": "same-table",
+      "owner_index": 0,
+      "parts": [
+        "same-table/physical_component_00",
+        "same-table/physical_component_01",
+        "same-table/physical_component_02",
+        "same-table/physical_component_03",
+        "same-table/physical_component_04",
+        "same-table/physical_component_05",
+        "same-table/physical_component_06",
+        "same-table/physical_component_07"
+      ],
+      "valid_ray_count": 31128
+    },
+    {
+      "uuid": "same-chair-west",
+      "owner_index": 1,
+      "parts": [
+        "same-chair-west/physical_component_00",
+        "same-chair-west/physical_component_01",
+        "same-chair-west/physical_component_02",
+        "same-chair-west/physical_component_03",
+        "same-chair-west/physical_component_04",
+        "same-chair-west/physical_component_05",
+        "same-chair-west/physical_component_06",
+        "same-chair-west/physical_component_07",
+        "same-chair-west/physical_component_08",
+        "same-chair-west/physical_component_09",
+        "same-chair-west/physical_component_10",
+        "same-chair-west/physical_component_11",
+        "same-chair-west/physical_component_12"
+      ],
+      "valid_ray_count": 19338
+    },
+    {
+      "uuid": "same-chair-east",
+      "owner_index": 2,
+      "parts": [
+        "same-chair-east/physical_component_00",
+        "same-chair-east/physical_component_01",
+        "same-chair-east/physical_component_02",
+        "same-chair-east/physical_component_03",
+        "same-chair-east/physical_component_04",
+        "same-chair-east/physical_component_05",
+        "same-chair-east/physical_component_06",
+        "same-chair-east/physical_component_07",
+        "same-chair-east/physical_component_08",
+        "same-chair-east/physical_component_09",
+        "same-chair-east/physical_component_10",
+        "same-chair-east/physical_component_11",
+        "same-chair-east/physical_component_12"
+      ],
+      "valid_ray_count": 23292
+    }
+  ],
+  "parts": [
+    {
+      "id": "same-table/physical_component_00",
+      "owner_index": 0,
+      "part_index": 0,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-table/physical_component_01",
+      "owner_index": 0,
+      "part_index": 1,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-table/physical_component_02",
+      "owner_index": 0,
+      "part_index": 2,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-table/physical_component_03",
+      "owner_index": 0,
+      "part_index": 3,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-table/physical_component_04",
+      "owner_index": 0,
+      "part_index": 4,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-table/physical_component_05",
+      "owner_index": 0,
+      "part_index": 5,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-table/physical_component_06",
+      "owner_index": 0,
+      "part_index": 6,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-table/physical_component_07",
+      "owner_index": 0,
+      "part_index": 7,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-west/physical_component_00",
+      "owner_index": 1,
+      "part_index": 8,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-west/physical_component_01",
+      "owner_index": 1,
+      "part_index": 9,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-west/physical_component_02",
+      "owner_index": 1,
+      "part_index": 10,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-west/physical_component_03",
+      "owner_index": 1,
+      "part_index": 11,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-west/physical_component_04",
+      "owner_index": 1,
+      "part_index": 12,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-west/physical_component_05",
+      "owner_index": 1,
+      "part_index": 13,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-west/physical_component_06",
+      "owner_index": 1,
+      "part_index": 14,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-west/physical_component_07",
+      "owner_index": 1,
+      "part_index": 15,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-west/physical_component_08",
+      "owner_index": 1,
+      "part_index": 16,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-west/physical_component_09",
+      "owner_index": 1,
+      "part_index": 17,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-west/physical_component_10",
+      "owner_index": 1,
+      "part_index": 18,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-west/physical_component_11",
+      "owner_index": 1,
+      "part_index": 19,
+      "triangle_count": 432
+    },
+    {
+      "id": "same-chair-west/physical_component_12",
+      "owner_index": 1,
+      "part_index": 20,
+      "triangle_count": 432
+    },
+    {
+      "id": "same-chair-east/physical_component_00",
+      "owner_index": 2,
+      "part_index": 21,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-east/physical_component_01",
+      "owner_index": 2,
+      "part_index": 22,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-east/physical_component_02",
+      "owner_index": 2,
+      "part_index": 23,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-east/physical_component_03",
+      "owner_index": 2,
+      "part_index": 24,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-east/physical_component_04",
+      "owner_index": 2,
+      "part_index": 25,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-east/physical_component_05",
+      "owner_index": 2,
+      "part_index": 26,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-east/physical_component_06",
+      "owner_index": 2,
+      "part_index": 27,
+      "triangle_count": 64
+    },
+    {
+      "id": "same-chair-east/physical_component_07",
+      "owner_index": 2,
+      "part_index": 28,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-east/physical_component_08",
+      "owner_index": 2,
+      "part_index": 29,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-east/physical_component_09",
+      "owner_index": 2,
+      "part_index": 30,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-east/physical_component_10",
+      "owner_index": 2,
+      "part_index": 31,
+      "triangle_count": 12
+    },
+    {
+      "id": "same-chair-east/physical_component_11",
+      "owner_index": 2,
+      "part_index": 32,
+      "triangle_count": 432
+    },
+    {
+      "id": "same-chair-east/physical_component_12",
+      "owner_index": 2,
+      "part_index": 33,
+      "triangle_count": 432
+    }
+  ],
+  "source_files": [
+    {
+      "path": "physical-scene.json",
+      "sha256": "c20cd3e2813a0284520ce5a34699ec4b67b57086b911e7481145dc6bfaf8c6a7"
+    },
+    {
+      "path": "labels.npz",
+      "sha256": "9e9a4e604b301a0de07330dbaee3a1524e22c7f1c9cb375211f6fc7adc362aec"
+    },
+    {
+      "path": "frame_labels/frame_00000.npz",
+      "sha256": "e86345b3b9f0b297048967e2712c59f8bc8cd66fb242f7eed8b9b0a6b27895d5"
+    },
+    {
+      "path": "frame_labels/frame_00001.npz",
+      "sha256": "d861c0aa59b3fe6d434cf1d63ea24d68084ed3947fda3de577493ce25656cf40"
+    },
+    {
+      "path": "frame_labels/frame_00002.npz",
+      "sha256": "dc3b1f6699a8cf34c1125bdcf863bff08f00580eab171874b90432830fe0f407"
+    },
+    {
+      "path": "frame_labels/frame_00003.npz",
+      "sha256": "4c35772866818e7da44086e9941fd0e74df703abddc736c715381e171ee97ea6"
+    },
+    {
+      "path": "frame_labels/frame_00004.npz",
+      "sha256": "01c33e6d13130699f5df73e30a0f20f898da32e827ecc588a5d1729a888bc85c"
+    },
+    {
+      "path": "frame_labels/frame_00005.npz",
+      "sha256": "9757f28d1288b9372863029eb2ddab57fed3ee89cd76045a5e0d3c2ee813f1f1"
+    },
+    {
+      "path": "frame_labels/frame_00006.npz",
+      "sha256": "5583c7e62fcae57e2cc9a353b55046ed6eed724c9c6ac4fdd5945b38067ef232"
+    },
+    {
+      "path": "frame_labels/frame_00007.npz",
+      "sha256": "a741eed03d0d67c33707a4fb5b4ff9eaf6dbef93832ed206f403a0c7b4c75ff6"
+    },
+    {
+      "path": "frame_labels/frame_00008.npz",
+      "sha256": "5b9d652b832ad54eb6ee4715276d491942e05cae816f99cf3a14e2c13b72841d"
+    },
+    {
+      "path": "frame_labels/frame_00009.npz",
+      "sha256": "e8907084bb8a092c59332f415ae350bfd26ee62bcf873bf7ffea29773546f947"
+    },
+    {
+      "path": "frame_labels/frame_00010.npz",
+      "sha256": "41ec30b3fec2f90c8abb62a337e3248868fee81443528e66b352a0dcec133238"
+    },
+    {
+      "path": "frame_labels/frame_00011.npz",
+      "sha256": "d7d350e09a6fa363b1b59abda09aa3b05265766e78078c878f0cfa9c8d52b65e"
+    },
+    {
+      "path": "frame_labels/frame_00012.npz",
+      "sha256": "b0bf4f979ee4dccafb40009a9be11c1c1f486b263485a61f2b17f8d8ed4fc649"
+    },
+    {
+      "path": "frame_labels/frame_00013.npz",
+      "sha256": "0f9d94b454810325a127051b2eb38b49cb8c002bf5a234c64956f2097f557619"
+    },
+    {
+      "path": "frame_labels/frame_00014.npz",
+      "sha256": "15a5270cf40bc1b929cdaf740d17249b8ef48242e58fa71f4c2d8bbb7f168cc9"
+    },
+    {
+      "path": "frame_labels/frame_00015.npz",
+      "sha256": "1543b2be7e91332224669c899e162b1a713b7c759d1f821c5230c5538fc6a5d5"
+    },
+    {
+      "path": "frame_labels/frame_00016.npz",
+      "sha256": "d7a4037361a8f8d79ef64812fead07742c09282ae96dc0719daa49fa0cb398d8"
+    },
+    {
+      "path": "frame_labels/frame_00017.npz",
+      "sha256": "baa9dba56620e6bb7cc8940caa3cb52380303ffabe07a3ff59e41689b2cae00e"
+    }
+  ],
+  "files": [
+    {
+      "path": "labels.npz",
+      "sha256": "5ac4deba58a605a163dac660ca4635612b96730c14db9c66b29407a504197abf"
+    },
+    {
+      "path": "rays.npz",
+      "sha256": "f6d698a2383145e95807f77eedd43c46c33b530549219fb26e6fe1b53ac3e258"
+    }
+  ]
+}

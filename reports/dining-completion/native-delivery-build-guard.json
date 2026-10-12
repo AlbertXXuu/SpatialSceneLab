@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "guard": "CPython audit-hook outbound socket and DNS denial",
+  "dns_block_probe_passed": true,
+  "runtime_denied_network_events": [],
+  "script": "blender_dining_scene.py",
+  "elapsed_seconds": 7.150043300003745,
+  "failure": null,
+  "scope": "Python network operations; not OS isolation of native code or child processes"
+}

@@ -27,7 +27,7 @@ jobs:
       - name: Check units, frames, identity, source hash and edits
         run: python -B -m unittest discover -s tests -v
       - name: Compile optional native Blender entry points
-        run: python -m py_compile blender_edit.py blender_scene.py verify_blender_edit.py blender_edit_controls.py blender_stool.py render_stool_quality.py blender_stool_scene.py
+        run: python -m py_compile blender_edit.py blender_scene.py verify_blender_edit.py blender_edit_controls.py blender_stool.py render_stool_quality.py blender_stool_scene.py blender_dining_scene.py
       - name: Read back published controlled exports
         run: |
           python -B scene_lab.py verify fixtures/three-objects.json examples/three-objects-before.glb
@@ -47,6 +47,8 @@ jobs:
         run: python -m pip install -r requirements-fit.txt
       - name: Check malformed inputs, missing-leg rejection and observation sensitivity
         run: python -B -m unittest discover -s tests -p test_stool_fit.py -v
+      - name: Check dining fit input boundaries and structural exports
+        run: python -B -m unittest discover -s tests -p test_dining_fit.py -v
       - name: Replay the bundled observations under Python outbound network guard
         run: python offline_run.py --script fit_stool.py --report .local/stool-fit-guard.json -- --scene examples/stool-fit/input/scene.json --observations examples/stool-fit/input/observations.npz --output .local/stool-fit --self-test
 

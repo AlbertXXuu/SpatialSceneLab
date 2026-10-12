@@ -1,0 +1,7 @@
+{
+  "status": "archived",
+  "path": "examples/dining-complete/method-controls.zip",
+  "bytes": 2211736,
+  "sha256": "61806a6090b6410e10fe42ac8d7bbc3477606332160cda0d5ca9cb8b3d08d268",
+  "scope": "Historical failed fit parameters/PLYs and two captured observation-only evaluations; old paths/hashes retained as provenance. Current independent evaluator can reevaluate the saved geometry with explicit paths."
+}

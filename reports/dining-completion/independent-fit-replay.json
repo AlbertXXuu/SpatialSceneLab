@@ -1,0 +1,174 @@
+{
+  "status": "passed",
+  "fit_json_sha256": "1cb164fbe6272e48ca41507fd71e037aa70956131630d589e039c56d16c099a1",
+  "component_and_assembly_mesh_count": 33,
+  "checks": [
+    {
+      "name": "same-chair-east-back.ply",
+      "sha256": "994d3fa46ebe7ab8b988a2c55bf2b6c67a7c09acee96230a80c42e07c03f71f2",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-back_cushion.ply",
+      "sha256": "83aef1481f3bbf9cad0254a80ef6dc3d6965476fe40d867ee91a7c41c429e635",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-back_post_1.ply",
+      "sha256": "0cf0e7ea5aefa9725048a8d30ca35a7885096c91168d267c4b61dcb1802a1fe8",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-back_post_2.ply",
+      "sha256": "c25e17ccd11cac36ee5a745038b44f2454f89f3d850d62fcad5125fa90162147",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-back_rail.ply",
+      "sha256": "2a67f2285e544f86eec8408cbb8c38a1f573c940c59d87e1225329fe7a17ffa0",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-leg_1.ply",
+      "sha256": "fbf7558ebdd93db96f5e656ebd10b7fa915fd6b03ed0d801f5063cb5d0d0a958",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-leg_2.ply",
+      "sha256": "7d1c20953d51ec22794c69045df4666739c40229671d53f35cd66f898eda3312",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-leg_3.ply",
+      "sha256": "6f3cc6b6024265a8869e237dac0cc262a3e77d8e0c36d30e959f02d0112b9c0c",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-leg_4.ply",
+      "sha256": "4c2fac0335f4ce799a860421712daa6d326365fcec20d7e454d34498966e7ab3",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-seat.ply",
+      "sha256": "4434fb35d0165eb9410359cd4311f131c22bd59acea54ad8a85a460b023459ec",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east-seat_cushion.ply",
+      "sha256": "b4647d37704a5b586c1b69c74157c1227b10ede3ff34b7a768d7d193bd736e26",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-east.ply",
+      "sha256": "46cdcb8bc4f675d4498b270d2ffe494d78b611cc6bcb88c335611479524cc563",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-back.ply",
+      "sha256": "63cdb3ea1f5010b77313bc45a8aad1a3af1aedd650f770767b9671724cd97a88",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-back_cushion.ply",
+      "sha256": "9af8f118cd3f573c2164dfae88bf33259fd3540db28a4bf197f2a5b494130558",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-back_post_1.ply",
+      "sha256": "748a72076eec98aeb038933a5ad159e95fde8938fab77c910a40ecfc6d2ea9fe",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-back_post_2.ply",
+      "sha256": "abb777e4f3721adc7d1952c792e927a7c55443389208914f003ebcd571c6434f",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-back_rail.ply",
+      "sha256": "700ce275a36e9a64d3932a3d00ffb1356783257187f5a944d3bed825e22db932",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-leg_1.ply",
+      "sha256": "77a62042b517288dbc245ea15e6f8cd000ba057ea88d13ffbd3582ed24d4a970",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-leg_2.ply",
+      "sha256": "31b2fd6fa3a4b4039b0dfe7f95cdcd0a5d71f7d509c0da0d4d4be7dbbf51dfa9",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-leg_3.ply",
+      "sha256": "b96a7f7465b9b99b151fdc060a55c803e8327b647679cee61367c4db4cab6046",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-leg_4.ply",
+      "sha256": "24abb7d98739a77555f18bcf8e1453a348d267e2d2e8384b0db85ae7033c4a9d",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-seat.ply",
+      "sha256": "cb1ef7c57bec737293aefee87cf406004e15578b5e74a8696f1c9ee8c6505985",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west-seat_cushion.ply",
+      "sha256": "ab33d6dc02db6c62dbeb2cc42dde7a3232904225d7c42a016fd29aa9d0755882",
+      "byte_identical": true
+    },
+    {
+      "name": "same-chair-west.ply",
+      "sha256": "231f729fcdbb4e5cc39267574b68226143ca86ceabf4d728278e79bc747abc5a",
+      "byte_identical": true
+    },
+    {
+      "name": "same-table-center_rail.ply",
+      "sha256": "bca45c0c23aeaec518e53b42b8a21547713678d729ace85e222ea4a11512cf16",
+      "byte_identical": true
+    },
+    {
+      "name": "same-table-cross_rail_1.ply",
+      "sha256": "f4460a93af508565c6ba4de170cb046c32f75c8ea550ccbeea1495c7a22df866",
+      "byte_identical": true
+    },
+    {
+      "name": "same-table-cross_rail_2.ply",
+      "sha256": "a9e3020a6c57a4f4f3853a3e56694c2c866050b9e8d6c643560bbab4bdfdceba",
+      "byte_identical": true
+    },
+    {
+      "name": "same-table-leg_1.ply",
+      "sha256": "92e556d018fb9d1196d3a2af18ce32b8989f659a1535626aecd0f8f21674f996",
+      "byte_identical": true
+    },
+    {
+      "name": "same-table-leg_2.ply",
+      "sha256": "97be4ebeddecaca7aa25187f60e6e1111d7748bb40d89990ccd0e1523b461511",
+      "byte_identical": true
+    },
+    {
+      "name": "same-table-leg_3.ply",
+      "sha256": "a8ad8fca13206cfe01cfb1b4e90baa69371a111f7f8d64ead240e2d21372fccd",
+      "byte_identical": true
+    },
+    {
+      "name": "same-table-leg_4.ply",
+      "sha256": "4c48164a5c611decfb8f8b695c77adbeec8fa656086d653e9ca1808e4fdc3e2e",
+      "byte_identical": true
+    },
+    {
+      "name": "same-table-top.ply",
+      "sha256": "9b6543b467110f9c1b2635833b17c275e314e7c0ded93b7674b2d7d1e6a42e0f",
+      "byte_identical": true
+    },
+    {
+      "name": "same-table.ply",
+      "sha256": "1d06311ed57f42c498a28945eb36dc13214af24dc412a9feffe346750d694214",
+      "byte_identical": true
+    }
+  ],
+  "temporary_path": "D:\\.Development\\AlvenX\\.workspace\\tmp\\AlvenX-dining-replay-qqr81aow",
+  "cleanup": "standard-library TemporaryDirectory context; task-owned path verified under workspace tmp"
+}
