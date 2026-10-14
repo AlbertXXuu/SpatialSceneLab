@@ -29,3 +29,4 @@ examples/dining-complete/*.json -text whitespace=trailing-space,space-before-tab
 examples/dining-complete/**/*.ply -text
 examples/dining-complete/**/*.npz -text
 reports/dining-completion/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+reports/real-tearoom/*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol

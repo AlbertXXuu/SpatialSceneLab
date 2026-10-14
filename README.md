@@ -6,6 +6,15 @@
 
 # SpatialSceneLab
 
+**Real tea-room, 2026-10-15:** a locally reproducible 12-root, 82-part editable
+structural scene now accompanies the real Table0 investigation. Disjoint target
+support improves **22.990% -> 83.390%**, but chair/background controls reject the
+whole-frame correction. Original observed geometry and captured cameras are
+retained; unseen geometry is explicitly authored. Scan-derived native assets
+remain local under the source terms. [Run, open and edit / 复现、打开与编辑](examples/real-tearoom-local/README.md) ·
+[English report](reports/REAL-TEAROOM-2026-10-15.md) ·
+[中文实测报告](reports/REAL-TEAROOM-2026-10-15.zh-CN.md).
+
 **Complete editable dining scene, 2026-10-13:** the accepted stool, table and two
 chairs now have four independently selectable roots and 37 editable parts.
 All original odd-frame owner observations are retained: actual triangle P95 is

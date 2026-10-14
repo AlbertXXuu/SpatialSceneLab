@@ -1,0 +1,135 @@
+{
+  "schema": "alvenx.spatial.real-tearoom-structural-summary.v1",
+  "status": "authored_completion",
+  "source_sha256": {
+    "scene": "466a68d7e135f26cdc217aef98c5511368ce877a3e1d5cf08051bcd22262d092",
+    "observations": "27af461b66b63afadd9799e97a17633d4191856b9daa9dde73a66ca41977fc5e",
+    "builder": "e85aa0dd0237a1a2edb1e5435c42f9334c4b708ea55d145ec8518e75fe15f558"
+  },
+  "helper_sha256": {
+    "audit_real_tabletop.py": "ce1304cdec923938154d64daa6f108e42b696fdc510d3f8aef54fecc0e9d69f4",
+    "fit_stool.py": "8a854bd4c33818277a5a4524dc6f79f67e52d3b31c7f7d608b1388c144d91f3a"
+  },
+  "object_roots": 12,
+  "closed_components": 82,
+  "component_triangles": 984,
+  "camera_frames": 62,
+  "observed_reconstruction_accepted": false,
+  "tabletop_validation": {
+    "count": 7127,
+    "mean_m": 0.015489117500687873,
+    "p95_m": 0.026409175151733626,
+    "within10mm": 0.22758523923109303
+  },
+  "tabletop_support_gate_passed": false,
+  "layout_before_unexpected_intersections": 0,
+  "layout_after_unexpected_intersections": 0,
+  "layout_after_unexpected_clearance_failures": 0,
+  "layout_after_passed": true,
+  "cross_object_pairs": 3075,
+  "contact_graphs_connected": true,
+  "same_object_contact_pairs": 129,
+  "maximum_authored_root_translation_m": 0.0,
+  "floor_support_parts": 24,
+  "maximum_absolute_floor_gap_m": 0.001000000000000112,
+  "all_floor_support_passed": true,
+  "observation_diagnostics": [
+    {
+      "name": "Chair0",
+      "candidate_validation_points": 5155,
+      "mean_m": 0.12479278410327883,
+      "p95_m": 0.32878607789578174,
+      "within10mm": 0.08593598448108633,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Chair1",
+      "candidate_validation_points": 2224,
+      "mean_m": 0.14412755356514748,
+      "p95_m": 0.194538256573433,
+      "within10mm": 0.05845323741007194,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Chair2",
+      "candidate_validation_points": 1807,
+      "mean_m": 0.04578062679247646,
+      "p95_m": 0.1430147697577722,
+      "within10mm": 0.22136137244050913,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Chair3",
+      "candidate_validation_points": 4746,
+      "mean_m": 0.14195416085387172,
+      "p95_m": 0.18898582396050842,
+      "within10mm": 0.08301727770754319,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Dishwasher0",
+      "candidate_validation_points": 1839,
+      "mean_m": 0.01342037518911867,
+      "p95_m": 0.03977540813795545,
+      "within10mm": 0.567699836867863,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Sink0",
+      "candidate_validation_points": 319,
+      "mean_m": 0.04552473988208731,
+      "p95_m": 0.11729914937893975,
+      "within10mm": 0.15673981191222572,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Sofa0",
+      "candidate_validation_points": 36762,
+      "mean_m": 0.10693466485073387,
+      "p95_m": 0.31220157165556706,
+      "within10mm": 0.09390131113649965,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Storage0",
+      "candidate_validation_points": 3164,
+      "mean_m": 0.014091835443212174,
+      "p95_m": 0.059868444441183555,
+      "within10mm": 0.5176991150442478,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Storage1",
+      "candidate_validation_points": 1357,
+      "mean_m": 0.01942268037235663,
+      "p95_m": 0.04952447036593247,
+      "within10mm": 0.46720707442888726,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Storage2",
+      "candidate_validation_points": 4854,
+      "mean_m": 0.013913164858859042,
+      "p95_m": 0.04655868786945347,
+      "within10mm": 0.561392665842604,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Storage3",
+      "candidate_validation_points": 8226,
+      "mean_m": 0.014839105546821343,
+      "p95_m": 0.026002963085034612,
+      "within10mm": 0.31060053488937517,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    },
+    {
+      "name": "Table0",
+      "candidate_validation_points": 8183,
+      "mean_m": 0.031749199864531806,
+      "p95_m": 0.158259342971107,
+      "within10mm": 0.21617988512770378,
+      "interpretation": "Candidate-box diagnostic, not instance ground truth or observed reconstruction acceptance."
+    }
+  ],
+  "limits": "Prior-driven authored completion; only tabletop plane fitted. Category labels and unseen geometry are not ground truth. All scan-derived assets local only."
+}
