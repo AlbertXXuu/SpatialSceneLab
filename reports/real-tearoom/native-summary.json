@@ -1,0 +1,62 @@
+{
+  "schema": "alvenx.spatial.real-tearoom-native-summary.v1",
+  "status": "passed",
+  "observed_reconstruction_accepted": false,
+  "source_assets_local_only": true,
+  "captured_world_frame_changed": false,
+  "captured_camera_transforms_retained": 62,
+  "object_roots": 12,
+  "authored_closed_components": 82,
+  "observed_comparison_meshes": 12,
+  "measured_envelope_meshes": 14,
+  "captured_cameras": 62,
+  "glb_meshes": 96,
+  "all_roots_edit_undo_redo_passed": true,
+  "maximum_edit_affine_vertex_error_m": 2.883933341024658e-07,
+  "glb_maximum_oriented_corner_error_m": 7.101834504727274e-07,
+  "fresh_process_reopen": true,
+  "native_geometry": {
+    "passed": true,
+    "verified_non_nested_component_pairs": 3040,
+    "minimum_actual_projection_gap_m": 0.005930784186848115,
+    "maximum_actual_absolute_floor_gap_m": 0.0010003017750519483,
+    "closed_components": 82,
+    "connected_object_assemblies": 12,
+    "same_object_contact_pairs": 129
+  },
+  "after_undo_geometry": {
+    "passed": true,
+    "verified_non_nested_component_pairs": 3040,
+    "minimum_actual_projection_gap_m": 0.005930784186848115,
+    "maximum_actual_absolute_floor_gap_m": 0.0010003017750519483,
+    "closed_components": 82,
+    "connected_object_assemblies": 12,
+    "same_object_contact_pairs": 129
+  },
+  "glb_geometry": {
+    "passed": true,
+    "verified_non_nested_component_pairs": 3040,
+    "minimum_actual_projection_gap_m": 0.0059308690936501485,
+    "maximum_actual_absolute_floor_gap_m": 0.0010002972309146596,
+    "closed_components": 82,
+    "connected_object_assemblies": 12,
+    "same_object_contact_pairs": 129
+  },
+  "build_seconds": 17.279125928878784,
+  "reopen_seconds": 21.956779718399048,
+  "input_sha256": {
+    "scene": "466a68d7e135f26cdc217aef98c5511368ce877a3e1d5cf08051bcd22262d092",
+    "surface": "ad8ef623bb735d907b5829d026b7a91e23380a8b07577977fe6740798313583b",
+    "structural": "423eafcc6012c02f72cd5916c53b206968035c794d9da42d6f622908ab33ad17",
+    "native_builder": "b659a320ea3d8fe42be5f721710bb3fd0e01d7b695a67c9c8245e507c1994f67"
+  },
+  "artifact_sha256": {
+    "complete-tea-room.blend": "f6ab56819558bec1c5bf65c76b75c4ae93d9af201b6c258cc42ff34f1ff10345",
+    "complete-tea-room.glb": "6bc3c7fa8b58cc5ed49a478c7eecc0d9e05db30e3563edcceb159e9186316558",
+    "tea-room-before.png": "ba4a00b3326684f71574ac3fa9a7a1574211276a2c3f2b09b350d4884fab5114",
+    "tea-room-complete.png": "8df0ec6bbf5976aa65a57070ac8dbf7ff00457edd10ac5066aa2002bf06de8c4",
+    "tea-room-table-before.png": "f67cdc84eef44d2c649fa5ea1152f54fb0d927822c4ec0b4a7a65ca456907468",
+    "tea-room-table-complete.png": "14eab87c0f60e2e1c0a9fe081a840c1a75fdf05920b6f01195ddd07d934dd8a7"
+  },
+  "limits": "Prior-driven authored scene; raw observation layer/cameras retained unchanged. No independent unseen-geometry accuracy claim or automatic CAD regeneration. All scan-derived assets stay local."
+}

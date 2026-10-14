@@ -1,0 +1,158 @@
+{
+  "schema": "alvenx.real-tearoom-replay-summary.v1",
+  "completed": true,
+  "alignment_gate_passed": false,
+  "native_authoring_passed": true,
+  "exit_code": 2,
+  "source": {
+    "schema": "alvenx.tea-room-source-check.v1",
+    "passed": true,
+    "upstream": {
+      "repo": "LiteReality/example-scans",
+      "commit": "3f2ca5d618fe86b264716200baea19ae0aea0d49",
+      "tree": "3f2ca5d618fe86b264716200baea19ae0aea0d49"
+    },
+    "files": 253,
+    "bytes": 10518452,
+    "manifest_sha256": "800b5937d24ae83826e6ee389fa2550af6c7fcdc749922511d6eb6987396dc75"
+  },
+  "source_code_sha256": {
+    "reproduce_real_tearoom.py": "bd07dab06a27cfcbafa8c5f087e9e9f74f1e83d4ecf2588d73e94dafccdb2c38",
+    "scan_pipeline.py": "ea80924e86748f4b6a4b37544da4dedb579a50cf1ad514c04b343b70beab4998",
+    "reconstruct_mesh.py": "7684e01880b93f5d4153b5acbac9a912f6f5e011a8b8bbb234fe2bf461e04391",
+    "audit_real_tabletop.py": "ce1304cdec923938154d64daa6f108e42b696fdc510d3f8aef54fecc0e9d69f4",
+    "audit_real_table_alignment.py": "25c5473f80a7c9a12935611d1820676081ccaec0a3b93763c00346768794df8b",
+    "build_real_tearoom.py": "e85aa0dd0237a1a2edb1e5435c42f9334c4b708ea55d145ec8518e75fe15f558",
+    "blender_real_tearoom_scene.py": "b659a320ea3d8fe42be5f721710bb3fd0e01d7b695a67c9c8245e507c1994f67",
+    "offline_run.py": "3df7486e386d02ad2cb4bb9d988e1406227a8bad7b78e90a7721c0f047752b68",
+    "fit_stool.py": "8a854bd4c33818277a5a4524dc6f79f67e52d3b31c7f7d608b1388c144d91f3a",
+    "geometry_compare.py": "375b5c5b5b3ded5fe82dd1737a6a08406a351288b27511c7ac8989f698e39bc0",
+    "blender_scene.py": "aa3c3e481a3fbf96d3ccdf0e14aab247c75c928e1b3e99710347cb59aee391df",
+    "blender_stool_scene.py": "6464a3305a6330cd1099441b0613a7393ddd50a5b221770d4deee1d0fb96e200"
+  },
+  "stages": [
+    {
+      "name": "points",
+      "exit_code": 0,
+      "elapsed_seconds": 3.9657185999967624,
+      "log": "points.log",
+      "log_sha256": "6ba0c4590167cf0541f4522cdd7bcb850b055d9cb8b8cfd7ef02e10209abf7a3"
+    },
+    {
+      "name": "surface",
+      "exit_code": 0,
+      "elapsed_seconds": 3.759573100003763,
+      "log": "surface.log",
+      "log_sha256": "2a2284bf426b99caaac4930b22331311ccb365f5613ecbbe2cf3aa92a2a31969"
+    },
+    {
+      "name": "baseline",
+      "exit_code": 0,
+      "elapsed_seconds": 3.7030411000014283,
+      "log": "baseline.log",
+      "log_sha256": "594a15198dcc43989f96e15f74061c1a1d4ef499cbb26ce387b8eb8270642ce4"
+    },
+    {
+      "name": "freeze-alignment",
+      "exit_code": 0,
+      "elapsed_seconds": 0.510278699992341,
+      "log": "freeze-alignment.log",
+      "log_sha256": "3b2c8a98cef3edc963f7e45410c78c4800ab47d40691ab03bcdf00a395ede9a3"
+    },
+    {
+      "name": "alignment",
+      "exit_code": 2,
+      "elapsed_seconds": 3.723938700000872,
+      "log": "alignment.log",
+      "log_sha256": "833ae445194ef918f201a8957e46100e79b095de24da5cbc69a3bf062c52b724"
+    },
+    {
+      "name": "structural",
+      "exit_code": 0,
+      "elapsed_seconds": 2.6216430999920703,
+      "log": "structural.log",
+      "log_sha256": "1e3e37c09102608e34cfbc07514705e78f0e634f6439f68e321af38f3976d8c3"
+    },
+    {
+      "name": "native-build",
+      "exit_code": 0,
+      "elapsed_seconds": 18.30510499999218,
+      "log": "native-build.log",
+      "log_sha256": "1ff71911cd34f289f6603da84d04c3002fbaec57c4f4f8bc9ceaaa62845b95d1"
+    },
+    {
+      "name": "native-reopen",
+      "exit_code": 0,
+      "elapsed_seconds": 22.703171100001782,
+      "log": "native-reopen.log",
+      "log_sha256": "486e9e2ba76445ce5e961dd53b32da0d4ffb7c7d508cdb015072f17cd0bebb43"
+    }
+  ],
+  "guards": [
+    {
+      "stage": "points",
+      "runtime_outbound_events": 0,
+      "probe_blocked": true,
+      "exit_code": 0,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    {
+      "stage": "surface",
+      "runtime_outbound_events": 0,
+      "probe_blocked": true,
+      "exit_code": 0,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    {
+      "stage": "baseline",
+      "runtime_outbound_events": 0,
+      "probe_blocked": true,
+      "exit_code": 0,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    {
+      "stage": "freeze-alignment",
+      "runtime_outbound_events": 0,
+      "probe_blocked": true,
+      "exit_code": 0,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    {
+      "stage": "alignment",
+      "runtime_outbound_events": 0,
+      "probe_blocked": true,
+      "exit_code": 2,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    {
+      "stage": "structural",
+      "runtime_outbound_events": 0,
+      "probe_blocked": true,
+      "exit_code": 0,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    {
+      "stage": "native-build",
+      "runtime_outbound_events": 0,
+      "probe_blocked": true,
+      "exit_code": 0,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    },
+    {
+      "stage": "native-reopen",
+      "runtime_outbound_events": 0,
+      "probe_blocked": true,
+      "exit_code": 0,
+      "scope": "Python network operations; not OS isolation of native code or child processes"
+    }
+  ],
+  "failure": null,
+  "public_evidence_sha256": {
+    "alignment-summary.json": "d29b4490f298054dc063fb0535968c111016594319f81147fcf3758f3d606dd4",
+    "native-summary.json": "a72b4c10797e931bad671e936f68fced7726f01fa4ba3a490eb1535663bee787",
+    "structural-summary.json": "d795998b6d09834d999ac2ea8921668ab468b8ac8393d3bbf0c006345a845796"
+  },
+  "local_replay_receipt_sha256": "3809ecf6a051e2c5e269dcfd568ae13f1b9889c5193a29d039fe17ab022726f4",
+  "scan_derived_assets_local_only": true,
+  "limits": "Complete labelled structural authoring, rejected measured alignment. Python network guard, not OS-level isolation. Development capture; no physical truth or generalization claim."
+}
