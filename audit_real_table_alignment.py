@@ -12,6 +12,7 @@ import copy
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import sys
 import time
 
@@ -53,12 +54,15 @@ def write_json(path, value):
         stream.write("\n")
 
 
-def fingerprints(scene_path, observations_path):
-    return {"source_scene_sha256": sha256(scene_path),
+def fingerprints(scene_path, observations_path, method="normal_translation"):
+    result = {"source_scene_sha256": sha256(scene_path),
             "source_observations_sha256": sha256(observations_path),
             "code_sha256": sha256(__file__),
             "baseline_code_sha256": sha256(baseline.__file__),
             "shared_helpers_sha256": sha256(Path(__file__).with_name("fit_stool.py"))}
+    if method == "balanced_pose":
+        result["balanced_pose_code_sha256"] = sha256(Path(__file__).with_name("balanced_table_pose.py"))
+    return result
 
 
 def partition(valid, candidates, target_index):
@@ -71,30 +75,50 @@ def partition(valid, candidates, target_index):
     return estimate, score
 
 
-def protocol_value(scene_path, observations_path, object_uuid, background_path):
-    before = fingerprints(scene_path, observations_path)
+def protocol_value(scene_path, observations_path, object_uuid, background_path, method="normal_translation"):
+    if method not in ("normal_translation", "balanced_pose"):
+        raise ValueError("Unknown alignment method")
+    before = fingerprints(scene_path, observations_path, method)
     loaded = baseline.load_inputs(scene_path, observations_path, object_uuid)
     _, index, _, frames, candidates, local, _, train, valid = loaded
     coefficients, bounds = baseline.fit_plane(local, frames, train)
     estimate, score = partition(valid, candidates, index)
-    if fingerprints(scene_path, observations_path) != before:
+    if fingerprints(scene_path, observations_path, method) != before:
         raise ValueError("Source or input changed while freezing protocol")
     return {"schema": "alvenx.real-table-alignment-protocol.v1", "target": object_uuid,
-            **before, "parameters": PARAMETERS, "baseline_parameters": baseline.PARAMETERS,
+            **before, "method": method, "parameters": PARAMETERS, "baseline_parameters": baseline.PARAMETERS,
+            "method_parameters": method_parameters(method),
             "background_record_sha256": sha256(background_path),
             "training_plane_coefficients": coefficients.tolist(),
             "training_inlier_bounds_local": bounds,
             "counts": {"training": int(train.sum()), "original_validation": int(valid.sum()),
                        "estimation_candidates": int(estimate.sum()), "disjoint_score": int(score.sum())},
             "gate": "Target support AND every required neighbour/background consistency control. Missing or failed controls fail closed.",
-            "limitations": LIMITATIONS}
+              "limitations": method_limitations(method)}
 
 
-def freeze(scene_path, observations_path, object_uuid, background_path, output):
+def method_parameters(method):
+    if method == "balanced_pose":
+        from balanced_table_pose import PARAMETERS as balanced_parameters
+        return copy.deepcopy(balanced_parameters)
+    return {"estimated_degrees_of_freedom": ["plane_normal_translation"]}
+
+
+def method_limitations(method):
+    if method != "balanced_pose":
+        return LIMITATIONS
+    return [line for line in LIMITATIONS if not line.startswith(("Only plane-normal", "Plane tilt"))] + [
+        "Small rigid motion is constrained jointly by training surfaces, not identified by a single plane.",
+        "Full rank and a better residual do not identify the physical cause or establish a true camera pose.",
+        "Low-count per-frame controls remain unverified; a group aggregate does not replace their evidence.",
+    ]
+
+
+def freeze(scene_path, observations_path, object_uuid, background_path, output, method="normal_translation"):
     output = validate_output(output, [scene_path, observations_path, background_path])
     if output.exists():
         raise ValueError("Protocol must be a new file")
-    value = protocol_value(scene_path, observations_path, object_uuid, background_path)
+    value = protocol_value(scene_path, observations_path, object_uuid, background_path, method)
     output.parent.mkdir(parents=True, exist_ok=True)
     write_json(output, value)
     return value
@@ -253,17 +277,22 @@ def consistency_controls(scene, points, frames, candidates, target_index, aligne
     return records, o3d.__version__
 
 
-def evaluate(scene_path, observations_path, object_uuid, background_path, protocol_path, output):
+def evaluate(scene_path, observations_path, object_uuid, background_path, protocol_path, output, method=None):
     output = validate_output(output, [scene_path, observations_path, background_path, protocol_path])
     if output.exists():
         raise ValueError("Evaluation output must be a new directory")
     protocol = json.loads(Path(protocol_path).read_text(encoding="utf-8"))
-    if protocol != protocol_value(scene_path, observations_path, object_uuid, background_path):
+    method = protocol.get("method", "normal_translation") if method is None else method
+    if protocol != protocol_value(scene_path, observations_path, object_uuid, background_path, method):
         raise ValueError("Frozen protocol, inputs or code changed; do not tune against scores")
     started = time.perf_counter()
     scene, index, points, frames, candidates, local, _, train, valid = baseline.load_inputs(scene_path, observations_path, object_uuid)
     coefficients = np.array(protocol["training_plane_coefficients"])
     transforms, records, estimate, score = estimate_transforms(scene, index, frames, candidates, local, train, valid, coefficients)
+    if method == "balanced_pose":
+        from balanced_table_pose import estimate_transforms as estimate_balanced
+        transforms, records = estimate_balanced(scene, index, points, frames, candidates, local,
+                                                coefficients, estimate, records)
     prior_transforms = background_transforms(background_path, protocol)
     expected_frames = {f["frame_index"] for f in scene["frames"] if f["frame_index"] > baseline.PARAMETERS["training_frame_max"]}
     if set(prior_transforms) != expected_frames:
@@ -277,17 +306,18 @@ def evaluate(scene_path, observations_path, object_uuid, background_path, protoc
     for name, mask in (("disjoint_score", score), ("all_original_validation", valid)):
         comparisons[name] = {"baseline": baseline.summarize(local[mask], frames[mask], coefficients),
                              "background_icp": baseline.summarize(bg_local[mask], frames[mask], coefficients),
-                             "normal_translation": baseline.summarize(aligned_local[mask], frames[mask], coefficients)}
+                             method: baseline.summarize(aligned_local[mask], frames[mask], coefficients)}
     controls, version = consistency_controls(scene, points, frames, candidates, index, aligned)
-    score_stats = comparisons["disjoint_score"]["normal_translation"]
-    original_stats = comparisons["all_original_validation"]["normal_translation"]
+    score_stats = comparisons["disjoint_score"][method]
+    original_stats = comparisons["all_original_validation"][method]
     original_target_passed = (original_stats["within10mm"] >= PARAMETERS["minimum_target_score_support"] and
                              len(original_stats["frames"]) >= PARAMETERS["minimum_validation_frames"])
     disjoint_target_passed = (score_stats["within10mm"] >= PARAMETERS["minimum_target_score_support"] and
                      len(score_stats["frames"]) >= PARAMETERS["minimum_validation_frames"])
     target_passed = original_target_passed and disjoint_target_passed
     controls_passed = bool(controls) and all(row["passed"] for row in controls)
-    report = {"schema": "alvenx.real-table-alignment.v1", **fingerprints(scene_path, observations_path),
+    report = {"schema": "alvenx.real-table-alignment.v1", **fingerprints(scene_path, observations_path, method),
+              "method": method, "method_parameters": method_parameters(method),
               "protocol_sha256": sha256(protocol_path), "parameters": PARAMETERS,
               "training_plane_coefficients": coefficients.tolist(),
               "target": object_uuid, "target_support_gate_passed": target_passed,
@@ -295,15 +325,16 @@ def evaluate(scene_path, observations_path, object_uuid, background_path, protoc
               "disjoint_target_support_gate_passed": disjoint_target_passed,
               "neighbour_background_gate_passed": controls_passed, "passed": target_passed and controls_passed,
               "counts": protocol["counts"], "comparisons": comparisons, "frames": records,
-              "controls": controls, "estimated_degrees_of_freedom": ["plane_normal_translation"],
+              "controls": controls, "estimated_degrees_of_freedom": (["rotation_x", "rotation_y", "rotation_z",
+                  "translation_x", "translation_y", "translation_z"] if method == "balanced_pose" else ["plane_normal_translation"]),
               "single_plane_unobservable_degrees_of_freedom": ["tangent_translation_1", "tangent_translation_2", "normal_axis_yaw"],
-              "deliberately_unestimated_degrees_of_freedom": ["tilt_rotation_1", "tilt_rotation_2"],
+              "deliberately_unestimated_degrees_of_freedom": ([] if method == "balanced_pose" else ["tilt_rotation_1", "tilt_rotation_2"]),
               "estimation_scoring_overlap": int(np.sum(estimate & score)),
-              "validation_denominator_unchanged": int(valid.sum()) == comparisons["all_original_validation"]["normal_translation"]["count"],
+              "validation_denominator_unchanged": int(valid.sum()) == comparisons["all_original_validation"][method]["count"],
               "numpy_version": np.__version__, "open3d_version": version,
               "python_version": sys.version.split()[0], "runtime_seconds": time.perf_counter() - started,
-              "limitations": LIMITATIONS}
-    current = fingerprints(scene_path, observations_path)
+            "limitations": method_limitations(method)}
+    current = fingerprints(scene_path, observations_path, method)
     if (current != {k: protocol[k] for k in current} or
             sha256(background_path) != protocol["background_record_sha256"] or
             json.loads(Path(protocol_path).read_text(encoding="utf-8")) != protocol):
@@ -312,14 +343,46 @@ def evaluate(scene_path, observations_path, object_uuid, background_path, protoc
     with np.load(observations_path, allow_pickle=False) as data:
         arrays = {key: data[key] for key in data.files}
     arrays["points"] = aligned
-    np.savez_compressed(output / "observations.npz", **arrays)
+    np.savez_compressed(output / "candidate-observations.npz", **arrays)
     corrected_scene = copy.deepcopy(scene)
+    # These diagnostic exports provide NPZ observations, not the original PLY
+    # layers. Their paths and coordinate hashes would be stale after a motion.
+    for key in ("layers", "observed_ply", "export_voxel_size_m"):
+        corrected_scene.pop(key, None)
     for frame in corrected_scene["frames"]:
         if frame["frame_index"] in transforms and "camera_to_world_cv" in frame:
-            frame["camera_to_world_cv"] = (transforms[frame["frame_index"]] @ np.asarray(frame["camera_to_world_cv"])).tolist()
-    corrected_scene["alignment_control"] = {"schema": report["schema"], "passed": report["passed"],
-                                           "protocol_sha256": report["protocol_sha256"], "is_camera_pose_estimate": False}
-    write_json(output / "scene.json", corrected_scene)
+            motion = transforms[frame["frame_index"]]
+            if np.array_equal(motion, np.eye(4)):
+                continue
+            raw_camera = np.asarray(frame["camera_to_world_cv"])
+            camera = np.eye(4)
+            camera[:3, :3] = motion[:3, :3] @ raw_camera[:3, :3]
+            camera[:3, 3] = motion[:3, :3] @ raw_camera[:3, 3] + motion[:3, 3]
+            frame["camera_to_world_cv"] = camera.tolist()
+    corrected_scene["observation_schema"] = corrected_scene.get("schema")
+    corrected_scene["schema"] = "alvenx.real-table-alignment-candidate.v1"
+    corrected_scene["observations"] = "candidate-observations.npz"
+    control = {"schema": report["schema"], "passed": report["passed"], "method": method,
+               "protocol_sha256": report["protocol_sha256"], "is_camera_pose_estimate": False}
+    corrected_scene["alignment_control"] = {**control, "disposition": "diagnostic_candidate"}
+    write_json(output / "candidate-scene.json", corrected_scene)
+    canonical_scene = copy.deepcopy(corrected_scene if report["passed"] else scene)
+    for key in ("layers", "observed_ply", "export_voxel_size_m"):
+        canonical_scene.pop(key, None)
+    canonical_scene.pop("observation_schema", None)
+    canonical_scene["schema"] = scene.get("schema", "spatial-scene-lab.observations.v1")
+    canonical_scene["observations"] = "observations.npz"
+    disposition = "accepted" if report["passed"] else "identity_fallback"
+    canonical_scene["alignment_control"] = {**control, "disposition": disposition}
+    shutil.copyfile(output / "candidate-observations.npz" if report["passed"] else observations_path,
+                    output / "observations.npz")
+    write_json(output / "scene.json", canonical_scene)
+    report["export"] = {"canonical_disposition": disposition, "candidate_adopted": report["passed"],
+                        "canonical_observations_sha256": sha256(output / "observations.npz"),
+                        "candidate_observations_sha256": sha256(output / "candidate-observations.npz"),
+                        "candidate_scene_schema": corrected_scene["schema"]}
+    for record in records:
+        record["canonical_transform_applied"] = bool(report["passed"] and record["transform_applied"])
     write_json(output / "alignment.json", report)
     write_json(output / "summary.json", public_summary(report))
     return report
@@ -331,7 +394,8 @@ def public_summary(report):
               if key not in ("training_plane_coefficients", "frames")}
     result["schema"] = "alvenx.real-table-alignment-summary.v1"
     result["frames"] = [{key: copy.deepcopy(value) for key, value in row.items()
-                         if key not in ("estimated_transform", "applied_transform", "support_extent_xz_m")}
+                         if key not in ("estimated_transform", "applied_transform", "support_extent_xz_m",
+                                        "delta_rotation_radians", "delta_translation_m")}
                         for row in report["frames"]]
     result["full_denominator_includes_estimation_samples"] = True
     return result
@@ -346,16 +410,20 @@ def main():
     parser.add_argument("--freeze-protocol", type=Path)
     parser.add_argument("--protocol", type=Path)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--method", choices=("normal_translation", "balanced_pose"),
+                        help="Freeze a method; evaluation defaults to the method recorded in its protocol")
     args = parser.parse_args()
     if args.freeze_protocol:
         if args.protocol or args.output:
             parser.error("Freeze protocol in a separate invocation before evaluation")
-        report = freeze(args.scene, args.observations, args.object, args.background_record, args.freeze_protocol)
+        report = freeze(args.scene, args.observations, args.object, args.background_record, args.freeze_protocol,
+                        args.method or "normal_translation")
         print(json.dumps({"frozen": True, "counts": report["counts"]}))
         return 0
     if not args.protocol or not args.output:
         parser.error("Evaluation requires --protocol and --output")
-    report = evaluate(args.scene, args.observations, args.object, args.background_record, args.protocol, args.output)
+    report = evaluate(args.scene, args.observations, args.object, args.background_record, args.protocol, args.output,
+                      args.method)
     print(json.dumps({key: report[key] for key in ("passed", "target_support_gate_passed", "neighbour_background_gate_passed", "counts")}))
     return 0 if report["passed"] else 2
 

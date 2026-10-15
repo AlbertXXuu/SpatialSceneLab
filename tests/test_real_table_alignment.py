@@ -179,12 +179,74 @@ class AlignmentTests(unittest.TestCase):
             np.testing.assert_array_equal(data["frame_index"], self.arrays["frame_index"])
             np.testing.assert_array_equal(data["candidates"], self.arrays["candidates"])
             np.testing.assert_array_equal(data["colors"], self.arrays["colors"])
-            np.testing.assert_allclose(data["points"][:, 1], .32, atol=1e-12)
+            np.testing.assert_array_equal(data["points"], self.arrays["points"])
+        self.assertEqual((self.root/"out"/"observations.npz").read_bytes(), self.points_path.read_bytes())
+        canonical = json.loads((self.root/"out"/"scene.json").read_text())
+        self.assertEqual(canonical["frames"], self.scene["frames"])
+        self.assertEqual(canonical["observations"], "observations.npz")
+        self.assertEqual(canonical["alignment_control"]["disposition"], "identity_fallback")
+        self.assertFalse(report["export"]["candidate_adopted"])
+        self.assertTrue(all(not row["canonical_transform_applied"] for row in report["frames"]))
+        with np.load(self.root/"out"/"candidate-observations.npz") as candidate:
+            np.testing.assert_allclose(candidate["points"][:, 1], .32, atol=1e-12)
+        candidate_scene = json.loads((self.root/"out"/"candidate-scene.json").read_text())
+        self.assertEqual(candidate_scene["schema"], "alvenx.real-table-alignment-candidate.v1")
+        self.assertEqual(candidate_scene["observations"], "candidate-observations.npz")
+        self.assertEqual(candidate_scene["alignment_control"]["disposition"], "diagnostic_candidate")
+        self.assertNotEqual(candidate_scene["frames"], self.scene["frames"])
+        from scan_pipeline import load_observations
+        with self.assertRaises(ValueError):
+            load_observations(self.root/"out"/"candidate-scene.json")
         public = json.loads((self.root/"out"/"summary.json").read_text())
         self.assertNotIn("training_plane_coefficients", public)
         self.assertTrue(all("estimated_transform" not in row and "applied_transform" not in row for row in public["frames"]))
         with self.assertRaises(ValueError):
             audit.evaluate(self.scene_path, self.points_path, "test-table", self.background_path, self.protocol_path, self.root/"out")
+
+    def test_accepted_candidate_requires_complete_gate_and_preserves_ray_contract(self):
+        # Scanner rounded homogeneous rows must not scale a new translation.
+        for frame in self.scene["frames"]:
+            frame["camera_to_world_cv"][3][3] = .99999994
+        self.scene.update(layers=[{"path": "not-exported.ply", "positions_sha256": "old"}],
+                          observed_ply="observed.ply", export_voxel_size_m=.015)
+        self.save()
+        self.freeze()
+        with mock.patch.object(audit, "consistency_controls", return_value=([{"name": "background", "passed": True}], "mock")):
+            report = audit.evaluate(self.scene_path, self.points_path, "test-table", self.background_path,
+                                    self.protocol_path, self.root/"accepted")
+        self.assertTrue(report["passed"])
+        self.assertEqual(report["export"]["canonical_disposition"], "accepted")
+        canonical = json.loads((self.root/"accepted"/"scene.json").read_text())
+        self.assertEqual(canonical["observations"], "observations.npz")
+        for name in ("scene.json", "candidate-scene.json"):
+            written = json.loads((self.root/"accepted"/name).read_text())
+            self.assertNotIn("layers", written)
+            self.assertNotIn("observed_ply", written)
+        with np.load(self.root/"accepted"/"observations.npz") as data:
+            corrected = data["points"]
+        for original, changed in zip(self.scene["frames"], canonical["frames"]):
+            ids = self.arrays["frame_index"] == original["frame_index"]
+            before = audit.baseline.local_points(self.arrays["points"][ids], np.array(original["camera_to_world_cv"]))
+            after = audit.baseline.local_points(corrected[ids], np.array(changed["camera_to_world_cv"]))
+            np.testing.assert_allclose(after, before, atol=1e-12)
+
+    def test_method_mismatch_fails_before_any_output(self):
+        self.freeze()
+        with self.assertRaises(ValueError):
+            audit.evaluate(self.scene_path, self.points_path, "test-table", self.background_path,
+                           self.protocol_path, self.root/"wrong", "unknown")
+        self.assertFalse((self.root/"wrong").exists())
+
+    def test_rejected_frame_keeps_rounded_original_camera_record_exactly(self):
+        self.scene["frames"][-1]["camera_to_world_cv"][3][3] = .99999994
+        self.arrays["points"][self.arrays["frame_index"] == 35, 1] += .06
+        self.save()
+        self.freeze()
+        with mock.patch.object(audit, "consistency_controls", return_value=([{"name": "background", "passed": False}], "mock")):
+            audit.evaluate(self.scene_path, self.points_path, "test-table", self.background_path,
+                           self.protocol_path, self.root/"rounded")
+        candidate = json.loads((self.root/"rounded/candidate-scene.json").read_text())
+        self.assertEqual(candidate["frames"][-1], self.scene["frames"][-1])
 
     def test_missing_background_frame_and_malformed_data_fail_before_output(self):
         data = json.loads(self.background_path.read_text())

@@ -1,0 +1,142 @@
+{
+  "schema": "alvenx.table0-diagnosis-replay.v1",
+  "completed": true,
+  "source": {
+    "schema": "alvenx.tea-room-source-check.v1",
+    "passed": true,
+    "upstream": {
+      "repo": "LiteReality/example-scans",
+      "commit": "3f2ca5d618fe86b264716200baea19ae0aea0d49",
+      "tree": "3f2ca5d618fe86b264716200baea19ae0aea0d49"
+    },
+    "files": 253,
+    "bytes": 10518452,
+    "manifest_sha256": "800b5937d24ae83826e6ee389fa2550af6c7fcdc749922511d6eb6987396dc75"
+  },
+  "source_code_sha256": {
+    "reproduce_table0_diagnosis.py": "f5ac44d4e149d33eeb9c2ad773eabf47c7412497101bf7eadc4b416f37e3c7e2",
+    "reproduce_real_tearoom.py": "bd07dab06a27cfcbafa8c5f087e9e9f74f1e83d4ecf2588d73e94dafccdb2c38",
+    "scan_pipeline.py": "ea80924e86748f4b6a4b37544da4dedb579a50cf1ad514c04b343b70beab4998",
+    "audit_real_tabletop.py": "ce1304cdec923938154d64daa6f108e42b696fdc510d3f8aef54fecc0e9d69f4",
+    "audit_real_table_alignment.py": "ea2593c063e8cd1bd4f1e2c2ab01cc09d557a814223b3d2d93f6359b0b0a34e0",
+    "balanced_table_pose.py": "3a06f007e7287f308a00393fdc6a97e70703d9a3010825996152bca0085a10d6",
+    "audit_table0_inputs.py": "98a5b38ca94ac69b3ba39ba2921439e4b5dbfc747f558fcd87fa04986ee9496b",
+    "diagnose_table0.py": "1f34088430dffdf994cd0e06f2b6b89f8d600f76ebec1b80a66236f3e62c1bef",
+    "reconstruct_mesh.py": "72562aa44d26c3460d7ad583d5c9b3f0db41ab526e9b263838b30d5042b738c1",
+    "offline_run.py": "3df7486e386d02ad2cb4bb9d988e1406227a8bad7b78e90a7721c0f047752b68",
+    "fit_stool.py": "8a854bd4c33818277a5a4524dc6f79f67e52d3b31c7f7d608b1388c144d91f3a"
+  },
+  "stages": [
+    {
+      "name": "points",
+      "exit_code": 0,
+      "elapsed_seconds": 7.310665700002573,
+      "log": "points.log",
+      "log_sha256": "819d3ee21b891ca5158c29e0e46a7abb8ca7528c0fb9ebe8db933bca201d34f9"
+    },
+    {
+      "name": "input-contract",
+      "exit_code": 0,
+      "elapsed_seconds": 6.181302900004084,
+      "log": "input-contract.log",
+      "log_sha256": "e0a2ba2117bce1e7df5e22bac50bc7a6ff8b4f786155446fecc1e6b80f93a266"
+    },
+    {
+      "name": "residual-diagnosis",
+      "exit_code": 0,
+      "elapsed_seconds": 2.9384278999932576,
+      "log": "residual-diagnosis.log",
+      "log_sha256": "372f6ee1e8d0b959a38a3528b9f7738e6213fe027ed26503f19bfd06554ac28b"
+    },
+    {
+      "name": "baseline",
+      "exit_code": 0,
+      "elapsed_seconds": 7.717854000002262,
+      "log": "baseline.log",
+      "log_sha256": "ad6af17054aeb0e7ca76786161965deabf4d22784fff008b0826dadfe294b1f4"
+    },
+    {
+      "name": "freeze-normal_translation",
+      "exit_code": 0,
+      "elapsed_seconds": 0.9605527000021539,
+      "log": "freeze-normal_translation.log",
+      "log_sha256": "38f5a49d811f54f5793729222c5a6da5169afbee8aad1cb194d174155a7a1f95"
+    },
+    {
+      "name": "normal_translation",
+      "exit_code": 2,
+      "elapsed_seconds": 7.73292439999932,
+      "log": "normal_translation.log",
+      "log_sha256": "c94c500659fef3d37f5f96a2f25d6cf6e2fd4319de6e1b84d1b7876c99bbc1e0"
+    },
+    {
+      "name": "freeze-balanced_pose",
+      "exit_code": 0,
+      "elapsed_seconds": 0.9804870000007213,
+      "log": "freeze-balanced_pose.log",
+      "log_sha256": "86816ef46695015a2114e1582876fee5d2cdbc4bcf48b74b402022d07c048c44"
+    },
+    {
+      "name": "balanced_pose",
+      "exit_code": 2,
+      "elapsed_seconds": 8.284781800000928,
+      "log": "balanced_pose.log",
+      "log_sha256": "2a91280b99ab7e175f7f9a711d8ecea538cef16898f2d8c1ac687ffc743bddce"
+    },
+    {
+      "name": "original-surface",
+      "exit_code": 0,
+      "elapsed_seconds": 8.215109700002358,
+      "log": "original-surface.log",
+      "log_sha256": "9a38ba5387de7bfc7f05ebd46694e52436a6534d3ae847b3e7567c465c8f290c"
+    },
+    {
+      "name": "fallback-surface",
+      "exit_code": 0,
+      "elapsed_seconds": 8.139916500003892,
+      "log": "fallback-surface.log",
+      "log_sha256": "683dce3c281a0a1c2b144f77d1b65d2e3535eda423363cc24d851e38fa1a195a"
+    },
+    {
+      "name": "refuse-candidate-surface",
+      "exit_code": 1,
+      "elapsed_seconds": 3.4394238000022597,
+      "log": "refuse-candidate-surface.log",
+      "log_sha256": "0dda164e75995cb4c2573623f77993140d053f46d410444ef27bb1ffd78a684b"
+    }
+  ],
+  "runtime": "Prepared local input and CPU dependencies; no acquisition or installation",
+  "failure": null,
+  "exports": {
+    "normal_translation": {
+      "canonical_original_bundle_unchanged": true,
+      "candidate_camera_space_max_component_error_m": 1.1102230246251565e-15,
+      "candidate_changed_camera_count": 4,
+      "source_point_count": 639790,
+      "candidate_adopted": false,
+      "candidate_diagnostic_schema": "alvenx.real-table-alignment-candidate.v1"
+    },
+    "balanced_pose": {
+      "canonical_original_bundle_unchanged": true,
+      "candidate_camera_space_max_component_error_m": 1.7763568394002505e-15,
+      "candidate_changed_camera_count": 4,
+      "source_point_count": 639790,
+      "candidate_adopted": false,
+      "candidate_diagnostic_schema": "alvenx.real-table-alignment-candidate.v1"
+    }
+  },
+  "surface_contract": {
+    "original_and_fallback_mesh_bytes_equal": true,
+    "all_part_hashes_equal": true,
+    "part_count": 12,
+    "camera_metadata_equal": true,
+    "diagnostic_candidate_rejected_before_output": true
+  },
+  "offline_guards": {
+    "count": 11,
+    "blocked_probes": 11,
+    "runtime_outbound_events": 0,
+    "scope": "CPython socket/DNS; not OS/native subprocess isolation"
+  },
+  "alignment_gate_passed": false
+}

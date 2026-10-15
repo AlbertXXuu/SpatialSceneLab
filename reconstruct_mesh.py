@@ -49,6 +49,13 @@ def reconstruct(scene_path, output_path, voxel_size=0.035, truncation=0.105,
     scene = json.loads(scene_path.read_text(encoding="utf-8"))
     if scene.get("schema") != "spatial-scene-lab.observations.v1" or scene.get("units") != "m" or scene.get("up_axis") != "Y":
         raise ValueError("input must be metre / Y-up observations")
+    if "alignment_control" in scene:
+        control = scene["alignment_control"]
+        if not isinstance(control, dict) or not (
+            control.get("passed") is True or
+            (control.get("passed") is False and control.get("disposition") == "identity_fallback")
+        ):
+            raise ValueError("alignment correction was not accepted; use original observations or an identity_fallback output")
     if not np.isfinite([voxel_size, truncation]).all() or voxel_size <= 0 or truncation < voxel_size:
         raise ValueError("positive voxel size and truncation >= voxel size required")
     source = Path(scene["source"]).resolve()
@@ -61,6 +68,23 @@ def reconstruct(scene_path, output_path, voxel_size=0.035, truncation=0.105,
         member = (source / name).resolve()
         if source not in member.parents or sha256(member) != expected:
             raise ValueError(f"input file changed or escaped scan directory: {name}")
+    # This integrator consumes captured RGB-D and its raw camera poses. Check
+    # every frame before writing or integrating so surface geometry and the
+    # exported camera metadata cannot silently describe different transforms.
+    prepared_frames = []
+    for metadata in scene["frames"]:
+        frame_path = (source / metadata["source"]).resolve()
+        if source not in frame_path.parents:
+            raise ValueError("frame path must stay inside the input scan")
+        frame = load_frame(frame_path)
+        try:
+            recorded_pose = np.asarray(metadata.get("camera_to_world_cv"), dtype=float)
+        except (TypeError, ValueError) as error:
+            raise ValueError("camera metadata must match the raw captured camera pose") from error
+        if (recorded_pose.shape != (4, 4) or not np.isfinite(recorded_pose).all() or
+                not np.allclose(recorded_pose, frame["camera_to_world_cv"], atol=1e-9, rtol=0)):
+            raise ValueError("camera metadata differs from the raw captured camera pose; derived poses are unsupported by this RGB-D integrator")
+        prepared_frames.append((metadata, frame))
     output = Path(output_path).resolve()
     if source == output or source in output.parents:
         raise ValueError("output must be outside input scan directory")
@@ -71,11 +95,7 @@ def reconstruct(scene_path, output_path, voxel_size=0.035, truncation=0.105,
     )
     frame_records = []
     params = scene["parameters"]
-    for metadata in scene["frames"]:
-        frame_path = (source / metadata["source"]).resolve()
-        if source not in frame_path.parents:
-            raise ValueError("frame path must stay inside the input scan")
-        frame = load_frame(frame_path)
+    for metadata, frame in prepared_frames:
         depth = frame["depth_mm"].copy()
         valid = ((depth > 0) & (depth != 65535)
                  & (depth <= params["max_depth_m"] * 1000)
