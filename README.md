@@ -6,6 +6,16 @@
 
 # SpatialSceneLab
 
+**Table0 diagnosis and joint-surface control, 2026-10-15:** on the same3,558
+scoring observations excluded from estimation, mean residual improves **15.393→8.799mm** and
+P95 **26.303→25.471mm**. Available Chair3/background controls pass, but target
+support75.295% remains below80% and missing neighbour evidence keeps the overall
+gate rejected. The reproducible CPU workflow distinguishes view-dependent table
+layers from grazing/depth-boundary tails and fixes rejected-result adoption and
+mesh/camera metadata inconsistencies. [Run locally / 本地复现](examples/real-tearoom-local/TABLE0-DIAGNOSIS.md) ·
+[English report](reports/TABLE0-ERROR-2026-10-15.md) ·
+[中文报告](reports/TABLE0-ERROR-2026-10-15.zh-CN.md).
+
 **Real tea-room, 2026-10-15:** a locally reproducible 12-root, 82-part editable
 structural scene now accompanies the real Table0 investigation. Disjoint target
 support improves **22.990% -> 83.390%**, but chair/background controls reject the
