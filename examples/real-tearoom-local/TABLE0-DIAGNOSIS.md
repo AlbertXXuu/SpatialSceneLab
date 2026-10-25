@@ -1,5 +1,9 @@
 # Table0 diagnosis replay / 误差诊断复现
 
+Follow-up: [2026-10-25 RGB geometry cross-check](TABLE0-RGB.md) compares these
+frozen candidates against original-image correspondences. Its result is
+inconclusive and does not alter the geometry gate below.
+
 This CPU-only stage diagnoses the existing scan and measures a bounded candidate.
 It reuses the input and environment documented in [README](README.md). Prepare
 `requirements-local.txt` dependencies beforehand; execution performs no downloads,

@@ -6,6 +6,16 @@
 
 # SpatialSceneLab
 
+**RGB cross-check, 2026-10-25:** 15 fixed original-image pairs yield 385
+descriptor-selected correspondences; only two pairs meet the declared count and
+coverage thresholds. Frozen geometric candidates show mixed epipolar changes;
+the evidence is **inconclusive** and the previous geometry rejection remains.
+The CPU diagnostic retains every pair, detects degenerate cases and reproduces
+its numeric results without a model or service.
+[Run locally / 本地复现](examples/real-tearoom-local/TABLE0-RGB.md) ·
+[English report](reports/TABLE0-RGB-2026-10-25.md) ·
+[中文报告](reports/TABLE0-RGB-2026-10-25.zh-CN.md).
+
 **Table0 diagnosis and joint-surface control, 2026-10-15:** on the same3,558
 scoring observations excluded from estimation, mean residual improves **15.393→8.799mm** and
 P95 **26.303→25.471mm**. Available Chair3/background controls pass, but target
