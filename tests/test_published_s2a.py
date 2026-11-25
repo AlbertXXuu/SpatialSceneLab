@@ -48,7 +48,9 @@ class PublishedS2a(unittest.TestCase):
                 data = z.read(name)
                 self.assertEqual(digest(data), expected['sha256'], name)
                 self.assertEqual(len(data), expected['bytes'], name)
-            self.assertEqual(z.read('blender_edit.py'), (ROOT / 'blender_edit.py').read_bytes())
+            # Bind this original task to its measured panel, not later maintenance.
+            editing = json.loads((REPORT / 'edit-suite-results.json').read_text())
+            self.assertEqual(digest(z.read('blender_edit.py')), editing['code_sha256']['blender_edit.py'])
             source = json.loads(z.read('surface/surface-scene.json'))
             self.assertEqual(source['triangles'], 96518)
             self.assertEqual(source['partition']['unresolved_triangles'], 3605)
@@ -56,7 +58,6 @@ class PublishedS2a(unittest.TestCase):
                 self.assertEqual(digest(z.read('surface/' + part['path'])), part['sha256'])
                 for index in part['source_indices'].values():
                     self.assertEqual(digest(z.read('surface/' + index['path'])), index['sha256'])
-            editing = json.loads((REPORT / 'edit-suite-results.json').read_text())
             dining = next(t for t in editing['tasks'] if t['scene_id'] == manifest['scene_id'])
             self.assertEqual(digest(z.read('before.blend')), dining['assets']['before.blend']['sha256'])
 

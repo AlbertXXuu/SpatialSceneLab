@@ -1,0 +1,56 @@
+{
+  "schema": "alvenx.spatial.destination-selector.public-summary.v1",
+  "experiment_date": "2026-10-25",
+  "fixture_scope": "Controlled synthetic scenes and desktop editor acceptance",
+  "implementation_sha256": "1b44f52f9a65289fe35529b3572801b4667f0b56fd4cf98c86e742173dcf4e46",
+  "verification_script_sha256": "4871d7298fa14423aaabdb13c151f95274c43e751866723c87b34c308babef1d",
+  "historical_native_modes": [
+    {
+      "mode": "exercise",
+      "passed_checks": 42,
+      "status": "pass",
+      "blender_version": "5.1.2",
+      "original_report_sha256": "1288a0e25f2717423c3b5b04bdf37e44c9020d049e3ed1960d1880d56d7d1754"
+    },
+    {
+      "mode": "reopen",
+      "passed_checks": 13,
+      "status": "pass",
+      "blender_version": "5.1.2",
+      "original_report_sha256": "d6c215d0bbcb2fbe797654fa97188d214d325cc0fd6e268298dedea6ac7fa6a7"
+    },
+    {
+      "mode": "legacy-prepare",
+      "passed_checks": 6,
+      "status": "pass",
+      "blender_version": "5.1.2",
+      "original_report_sha256": "019d4e1fa80febf51b35d35051c4cda6e6a6d31bdc00764aaedca5a8bcc621e3"
+    },
+    {
+      "mode": "legacy-reopen",
+      "passed_checks": 11,
+      "status": "pass",
+      "blender_version": "5.1.2",
+      "original_report_sha256": "80d45ed85a86a65db8ceefd07c72f5b258807f1383a78a344bdb28631eef521d"
+    }
+  ],
+  "original_gui_validation_sha256": "b6f530584e82022a060a950cd9f23e67ecf23da9ee52ebdc9c8a0500260c719e",
+  "historical_gui": {
+    "normal_viewport_observations": 18,
+    "selection_id_agreement": true,
+    "gui_save_as_and_same_process_revert_passed": true
+  },
+  "historical_partition_regression": {
+    "source_faces_preserved": 96518,
+    "fixed_reassigned_faces": 12,
+    "native_reopen_max_transform_error": 0.0,
+    "glb_roundtrip_max_vertex_error_m": 1.2839233249906101e-06,
+    "glb_roundtrip_vertex_tolerance_m": 5e-05
+  },
+  "public_checkout_python_tests": {
+    "date": "2026-11-25",
+    "edit_suite": 8,
+    "published_s1": 4,
+    "published_s2a": 3
+  }
+}
