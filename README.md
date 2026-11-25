@@ -6,6 +6,17 @@
 
 # SpatialSceneLab
 
+**Editable dining showcase / 可编辑餐厅示例 · 2026-11-25.** The showcase builder places
+three finished Poly Haven models at the dining scene's four furniture identities,
+packs their textures, and saves a native scene with four independently editable roots.
+The new scene includes a clean presentation stage and preserves the original
+observations and fitted furniture in the comparison collections.
+[Open the Blender scene / 打开场景](examples/dining-showcase/dining-showcase.blend) ·
+[Build and verify / 构建与核验](examples/dining-showcase/README.md).
+
+本地收尾场景用现成家具完成摆放、编辑和保存流程。展示家具的外形与材质来自
+CC0 资产库。下列拟合和真实茶室记录保留为冻结研究证据。
+
 **RGB cross-check, 2026-10-25:** 15 fixed original-image pairs yield 385
 descriptor-selected correspondences; only two pairs meet the declared count and
 coverage thresholds. Frozen geometric candidates show mixed epipolar changes;

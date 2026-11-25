@@ -1,0 +1,45 @@
+{
+  "hide_environment": true,
+  "assets": {
+    "same-table": {
+      "blend": "sources/wooden_table_02/wooden_table_02_1k.blend",
+      "title": "Wooden Table 02",
+      "source_url": "https://polyhaven.com/a/wooden_table_02",
+      "license": "CC0-1.0",
+      "object_names": [
+        "wooden_table_02"
+      ],
+      "yaw_deg": 0
+    },
+    "same-chair-west": {
+      "blend": "sources/dining_chair_02/dining_chair_02_1k.blend",
+      "title": "Dining Chair 02",
+      "source_url": "https://polyhaven.com/a/dining_chair_02",
+      "license": "CC0-1.0",
+      "object_names": [
+        "dining_chair_02"
+      ],
+      "yaw_deg": 90
+    },
+    "same-chair-east": {
+      "blend": "sources/dining_chair_02/dining_chair_02_1k.blend",
+      "title": "Dining Chair 02",
+      "source_url": "https://polyhaven.com/a/dining_chair_02",
+      "license": "CC0-1.0",
+      "object_names": [
+        "dining_chair_02"
+      ],
+      "yaw_deg": -90
+    },
+    "same-stool": {
+      "blend": "sources/wooden_stool_01/wooden_stool_01_1k.blend",
+      "title": "Wooden Stool 01",
+      "source_url": "https://polyhaven.com/a/wooden_stool_01",
+      "license": "CC0-1.0",
+      "object_names": [
+        "wooden_stool_01"
+      ],
+      "yaw_deg": 12
+    }
+  }
+}

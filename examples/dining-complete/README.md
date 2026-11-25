@@ -1,5 +1,12 @@
 # Complete editable dining scene / 完整可编辑餐桌场景
 
+The follow-up [editable dining showcase](../dining-showcase/README.md) uses this
+synthetic scene as its layout and adds finished library furniture.
+
+后续[可编辑餐厅展示](../dining-showcase/README.md)沿用本合成场景的摆放布局，并接入成品家具资产。
+
+## Frozen fitted dining scene / 冻结拟合场景
+
 This delivery restores the table and two chairs in the existing public dining
 development capture and retains the accepted seven-part stool. The four furniture
 objects remain independently selectable. Original observed fragments remain

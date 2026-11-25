@@ -1,0 +1,122 @@
+{
+  "retrieved": "2026-11-25",
+  "provider": "Poly Haven",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "assets": [
+    {
+      "id": "wooden_table_02",
+      "title": "Wooden Table 02",
+      "author": "Serhii Khromov",
+      "asset_page": "https://polyhaven.com/a/wooden_table_02",
+      "api": "https://api.polyhaven.com/files/wooden_table_02",
+      "blend": "sources/wooden_table_02/wooden_table_02_1k.blend",
+      "files": [
+        {
+          "path": "sources/wooden_table_02/wooden_table_02_1k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/wooden_table_02/wooden_table_02_1k.blend",
+          "size": 137139,
+          "sha256": "a449fb6f61d76bba9d7f45e2dfc1fa154f5795aa49484f1d6ec1667fe240dab7"
+        },
+        {
+          "path": "sources/wooden_table_02/textures/wooden_table_02_nor_gl_1k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_table_02/wooden_table_02_nor_gl_1k.exr",
+          "size": 1219046,
+          "sha256": "2b31851b6735db2df61c57076c4dea3f43daf73d1828d762dd792d85ea52efb8"
+        },
+        {
+          "path": "sources/wooden_table_02/textures/wooden_table_02_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_table_02/wooden_table_02_diff_1k.jpg",
+          "size": 178379,
+          "sha256": "2334ac3e23d69222322515d9bad066b4e90d7d81989fe231b8fb12f39179ad9e"
+        },
+        {
+          "path": "sources/wooden_table_02/textures/wooden_table_02_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_table_02/wooden_table_02_rough_1k.jpg",
+          "size": 183748,
+          "sha256": "57de446aa8804fd2ea1308bf2a082edcb9ae2a657470cf5e6997952b6b79f686"
+        },
+        {
+          "path": "sources/wooden_table_02/textures/wooden_table_02_metal_1k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_table_02/wooden_table_02_metal_1k.exr",
+          "size": 4784,
+          "sha256": "70a893aa3d6f05c3b3773fd67285b3c8984de35e362996eee558e8571a0356f3"
+        }
+      ]
+    },
+    {
+      "id": "dining_chair_02",
+      "title": "Dining Chair 02",
+      "author": "James Ray Cock",
+      "asset_page": "https://polyhaven.com/a/dining_chair_02",
+      "api": "https://api.polyhaven.com/files/dining_chair_02",
+      "blend": "sources/dining_chair_02/dining_chair_02_1k.blend",
+      "files": [
+        {
+          "path": "sources/dining_chair_02/dining_chair_02_1k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/dining_chair_02/dining_chair_02_1k.blend",
+          "size": 798152,
+          "sha256": "c2adfe127ac2e87bbdd920f80b766c7946f1188c175e57e3e5d777d77810b548"
+        },
+        {
+          "path": "sources/dining_chair_02/textures/dining_chair_02_nor_gl_1k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/dining_chair_02/dining_chair_02_nor_gl_1k.exr",
+          "size": 1186823,
+          "sha256": "4d4aa16630ddc0c8afa79a7534519bb40632ad0d914a49bbeff503bce3c6925c"
+        },
+        {
+          "path": "sources/dining_chair_02/textures/dining_chair_02_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/dining_chair_02/dining_chair_02_rough_1k.jpg",
+          "size": 137184,
+          "sha256": "0a502d3a2bbd0767d3111b95605a99ab2ed63e5ed42e092a511fecd6e9574c78"
+        },
+        {
+          "path": "sources/dining_chair_02/textures/dining_chair_02_metal_1k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/dining_chair_02/dining_chair_02_metal_1k.exr",
+          "size": 9410,
+          "sha256": "6f3bc566d28dbcb58da43739fcc33fe96bc02d65c829e4cb6c1ae4298b9a3719"
+        },
+        {
+          "path": "sources/dining_chair_02/textures/dining_chair_02_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/dining_chair_02/dining_chair_02_diff_1k.jpg",
+          "size": 91518,
+          "sha256": "343990f764790da1149485a422dee2bc6797945a6af06a37d02d7a7de041acf5"
+        }
+      ]
+    },
+    {
+      "id": "wooden_stool_01",
+      "title": "Wooden Stool 01",
+      "author": "Kuutti Siitonen",
+      "asset_page": "https://polyhaven.com/a/wooden_stool_01",
+      "api": "https://api.polyhaven.com/files/wooden_stool_01",
+      "blend": "sources/wooden_stool_01/wooden_stool_01_1k.blend",
+      "files": [
+        {
+          "path": "sources/wooden_stool_01/wooden_stool_01_1k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/wooden_stool_01/wooden_stool_01_1k.blend",
+          "size": 395772,
+          "sha256": "f0d5d053565b79fdc6cc5c949ea2a944c8c84adcb2e4f730b2be8118d7b78c53"
+        },
+        {
+          "path": "sources/wooden_stool_01/textures/wooden_stool_01_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_stool_01/wooden_stool_01_diff_1k.jpg",
+          "size": 233863,
+          "sha256": "cb5c7ec2e27f5ad2ced7791da5e2cc9f1d03ab2c6ffbb63df8256dc271869206"
+        },
+        {
+          "path": "sources/wooden_stool_01/textures/wooden_stool_01_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_stool_01/wooden_stool_01_rough_1k.jpg",
+          "size": 203406,
+          "sha256": "23b43e05961731de864e4902a14c614b33d804fd91821c284fa90a8d2ca23fe1"
+        },
+        {
+          "path": "sources/wooden_stool_01/textures/wooden_stool_01_nor_gl_1k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_stool_01/wooden_stool_01_nor_gl_1k.exr",
+          "size": 1983051,
+          "sha256": "b96e7bf72f029447481092852d778ea09dcddc5c5ec07bddbb66e407051627ed"
+        }
+      ]
+    }
+  ]
+}
