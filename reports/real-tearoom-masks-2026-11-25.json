@@ -1,0 +1,918 @@
+{
+  "schema": "alvenx.furniture-mask-feasibility.v1",
+  "method": {
+    "model": "TorchVision Mask R-CNN ResNet-50 FPN COCO_V1",
+    "torch": "2.5.1+cu118",
+    "torchvision": "0.20.1+cu118",
+    "weights_url": "https://download.pytorch.org/models/maskrcnn_resnet50_fpn_coco-bf2d0c1e.pth",
+    "weights_sha256": "bf2d0c1efbc936eeee2bc95a48e80ebc86b891f61b0106485937fc29f9315fc0",
+    "device": "cuda",
+    "original_frame_count": 62,
+    "sample_rule": "original numeric frame index modulo 4 equals 0",
+    "detection_score_threshold": 0.5,
+    "mask_threshold_after_depth_resize": 0.5,
+    "min_depth_confidence": 1,
+    "max_depth_m": 6,
+    "box_margin_m": 0,
+    "proxy": "valid registered depth points inside exactly one RoomPlan object box",
+    "limit": "Coarse box agreement measures feasibility; it supplies no ground-truth masks or reconstruction score."
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "valid_depth_points": 42229,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 1291,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 701,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 1291,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 701,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 4,
+      "valid_depth_points": 41305,
+      "classes": {
+        "Chair": {
+          "instances": 1,
+          "mask_depth_points": 161,
+          "exclusive_class_box_depth_points": 1431,
+          "mask_and_exclusive_class_box": 158,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 3
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 5080,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 606,
+          "mask_union_overlap": 158,
+          "best_instance_overlap": 158
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 825,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 5080,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 8,
+      "valid_depth_points": 42856,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 12,
+      "valid_depth_points": 43040,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 1102,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 2132,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 1102,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 2132,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 16,
+      "valid_depth_points": 43504,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 2754,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 1286,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 2754,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 1286,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 20,
+      "valid_depth_points": 44315,
+      "classes": {
+        "Chair": {
+          "instances": 1,
+          "mask_depth_points": 10627,
+          "exclusive_class_box_depth_points": 3013,
+          "mask_and_exclusive_class_box": 2852,
+          "mask_in_other_exclusive_box": 134,
+          "mask_in_multiple_boxes": 89,
+          "mask_outside_all_boxes": 7552
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 876,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 3013,
+          "mask_union_overlap": 2852,
+          "best_instance_overlap": 2852
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 876,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 24,
+      "valid_depth_points": 42706,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 28,
+      "valid_depth_points": 44643,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 32,
+      "valid_depth_points": 37443,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 36,
+      "valid_depth_points": 37575,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 40,
+      "valid_depth_points": 40547,
+      "classes": {
+        "Chair": {
+          "instances": 1,
+          "mask_depth_points": 6356,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 6288,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 68
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 44,
+      "valid_depth_points": 42826,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 4715,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 4715,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 48,
+      "valid_depth_points": 41684,
+      "classes": {
+        "Chair": {
+          "instances": 1,
+          "mask_depth_points": 2921,
+          "exclusive_class_box_depth_points": 5106,
+          "mask_and_exclusive_class_box": 2357,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 564
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 2606,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 3962,
+          "mask_union_overlap": 2357,
+          "best_instance_overlap": 2357
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 1144,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 2606,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 52,
+      "valid_depth_points": 41532,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 90,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 90,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 56,
+      "valid_depth_points": 39699,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 595,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 1380,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 582,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 13,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 1380,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    },
+    {
+      "frame": 60,
+      "valid_depth_points": 41565,
+      "classes": {
+        "Chair": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 1410,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        },
+        "Table": {
+          "instances": 0,
+          "mask_depth_points": 0,
+          "exclusive_class_box_depth_points": 0,
+          "mask_and_exclusive_class_box": 0,
+          "mask_in_other_exclusive_box": 0,
+          "mask_in_multiple_boxes": 0,
+          "mask_outside_all_boxes": 0
+        }
+      },
+      "objects": {
+        "Chair0": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 1410,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair1": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair2": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Chair3": {
+          "category": "Chair",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        },
+        "Table0": {
+          "category": "Table",
+          "exclusive_box_depth_points": 0,
+          "mask_union_overlap": 0,
+          "best_instance_overlap": 0
+        }
+      }
+    }
+  ]
+}

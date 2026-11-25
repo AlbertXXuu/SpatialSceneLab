@@ -1,0 +1,90 @@
+{
+  "blender_version": "5.1.2",
+  "scene_sha256": "a5f7a0607b6e2dc89a33c0e7662a59ac73478f39b7872472da8e26e2e4376d2f",
+  "manifest_sha256": "f4a8deb3f6ced43aa50a1b82a7dcf7f674f047f70cdebe5723baa1030d63c95b",
+  "preview_sha256": "f5b219c18dd05eaa74f1de35e7a237d3b0907e6cab9de962b4a618e83fe18dd1",
+  "preview_rgba_pixels_match_reopen_render": true,
+  "fresh_process_native_reopen": true,
+  "roots": {
+    "same-table": {
+      "root": "Showcase Table",
+      "location_m": [
+        -8.312200225191191e-05,
+        2.11980938911438,
+        0.0
+      ],
+      "mesh_parts": 1,
+      "triangles": 196,
+      "materials": [
+        "wooden_table_02"
+      ],
+      "packed_images": [
+        "wooden_table_02_diff.png",
+        "wooden_table_02_metal.png",
+        "wooden_table_02_nor_gl.png",
+        "wooden_table_02_rough.png"
+      ],
+      "asset_sha256": "a449fb6f61d76bba9d7f45e2dfc1fa154f5795aa49484f1d6ec1667fe240dab7"
+    },
+    "same-chair-west": {
+      "root": "Showcase Chair West",
+      "location_m": [
+        -0.9624537229537964,
+        2.1499381065368652,
+        0.0
+      ],
+      "mesh_parts": 1,
+      "triangles": 22013,
+      "materials": [
+        "dining_chair_02"
+      ],
+      "packed_images": [
+        "dining_chair_02_diff.png.001",
+        "dining_chair_02_metal.png",
+        "dining_chair_02_nor_gl.png.001",
+        "dining_chair_02_rough.png.001"
+      ],
+      "asset_sha256": "c2adfe127ac2e87bbdd920f80b766c7946f1188c175e57e3e5d777d77810b548"
+    },
+    "same-chair-east": {
+      "root": "Showcase Chair East",
+      "location_m": [
+        0.978227436542511,
+        2.054810047149658,
+        0.0
+      ],
+      "mesh_parts": 1,
+      "triangles": 22013,
+      "materials": [
+        "dining_chair_02"
+      ],
+      "packed_images": [
+        "dining_chair_02_diff.png.001",
+        "dining_chair_02_metal.png",
+        "dining_chair_02_nor_gl.png.001",
+        "dining_chair_02_rough.png.001"
+      ],
+      "asset_sha256": "c2adfe127ac2e87bbdd920f80b766c7946f1188c175e57e3e5d777d77810b548"
+    },
+    "same-stool": {
+      "root": "Showcase Stool",
+      "location_m": [
+        0.34948042035102844,
+        1.1201553344726562,
+        0.0
+      ],
+      "mesh_parts": 1,
+      "triangles": 10946,
+      "materials": [
+        "wooden_stool_01"
+      ],
+      "packed_images": [
+        "wooden_stool_01_diff.png",
+        "wooden_stool_01_nor_gl.png",
+        "wooden_stool_01_rough.png"
+      ],
+      "asset_sha256": "f0d5d053565b79fdc6cc5c949ea2a944c8c84adcb2e4f730b2be8118d7b78c53"
+    }
+  },
+  "passed": true
+}

@@ -39,15 +39,24 @@ def digest(path):
     return result.hexdigest()
 
 
-def managed_meshes():
-    return [obj for obj in bpy.context.scene.objects if obj.type == "MESH" and "alvenx_id" in obj]
+def managed_meshes(scene=None):
+    scene = bpy.context.scene if scene is None else scene
+    return [obj for obj in scene.objects if obj.type == "MESH" and "alvenx_id" in obj]
 
 
-def object_by_id(identity):
-    matches = [obj for obj in managed_meshes() if obj["alvenx_id"] == identity]
+def object_by_id(identity, scene=None):
+    matches = [obj for obj in managed_meshes(scene) if obj["alvenx_id"] == identity]
     if len(matches) != 1:
         raise ValueError(f"requires one observed region with identity {identity!r}")
     return matches[0]
+
+
+def validate_region_identities(scene):
+    identities = [obj["alvenx_id"] for obj in managed_meshes(scene)]
+    if any(not isinstance(value, str) or not value for value in identities):
+        raise ValueError("observed region identities must be nonempty strings")
+    if len(set(identities)) != len(identities):
+        raise ValueError("duplicate observed object identity; resolve it before assigning faces")
 
 
 def append_journal(event):
@@ -169,10 +178,11 @@ def import_surface(scene_path):
 
 
 def reassign_selected(context, target_id):
+    validate_region_identities(context.scene)
     source = context.edit_object if context.mode == "EDIT_MESH" else context.active_object
     if source is None or source.type != "MESH" or "alvenx_id" not in source:
         raise ValueError("select an imported source mesh")
-    target = object_by_id(target_id)
+    target = object_by_id(target_id, context.scene)
     if source == target:
         raise ValueError("source and destination must be different regions")
     if context.mode == "EDIT_MESH" and len(context.objects_in_mode) != 1:
@@ -368,9 +378,84 @@ def export_package(path):
     return sidecar
 
 
-def target_items(_self, _context):
-    return [(obj["alvenx_id"], f'{obj.name} · {obj["alvenx_id"]}', "Observed surface region")
-            for obj in managed_meshes()]
+# Blender borrows dynamic Enum strings rather than copying them. Keep every
+# returned tuple alive, including earlier names/scenes, without caching RNA
+# objects that become invalid after Undo. The actual selection is a saved ID;
+# menu numbers are derived from the frozen source registry, never object order.
+_TARGET_ITEM_CACHE = {}
+_TARGET_UNSET = "__ALVENX_SELECT_DESTINATION__"
+_TARGET_ID_KEY = "ax_target_id"
+
+
+def target_registry(scene):
+    try:
+        sources = json.loads(scene.get("ax_sources", "[]"))
+        identities = [source["id"] for source in sources]
+        if (not identities or any(not isinstance(value, str) or not value or value == _TARGET_UNSET
+                                  for value in identities) or len(set(identities)) != len(identities)):
+            raise ValueError("invalid identities")
+    except (ValueError, TypeError, KeyError) as error:
+        raise ValueError("Destination requires a valid frozen source registry") from error
+    return {identity: index + 1 for index, identity in enumerate(identities)}
+
+
+def selected_target(scene):
+    identity = scene.get(_TARGET_ID_KEY, "")
+    if not isinstance(identity, str):
+        raise ValueError("Saved destination identity must be a string; choose again")
+    if not identity:
+        raise ValueError("Choose a destination; older documents require reselection")
+    validate_region_identities(scene)
+    if identity not in target_registry(scene):
+        raise ValueError(f"Destination is not in the source registry: {identity}")
+    object_by_id(identity, scene)  # Reject missing or ambiguous targets before editing.
+    return identity
+
+
+def _target_item(identity, label, number):
+    key = (identity, label, number)
+    if key not in _TARGET_ITEM_CACHE:
+        _TARGET_ITEM_CACHE[key] = (identity, label, "Observed surface region", 0, number)
+    return _TARGET_ITEM_CACHE[key]
+
+
+def target_items(scene, _context):
+    try:
+        registry = target_registry(scene)
+    except ValueError:
+        return [_target_item(_TARGET_UNSET, "Invalid source registry", 0)]
+    selected = scene.get(_TARGET_ID_KEY, "")
+    try:
+        selected_target(scene)
+        label = "Choose destination"
+    except ValueError:
+        label = f"Unavailable · {selected}" if selected else "Choose destination"
+    items = [_target_item(_TARGET_UNSET, label, 0)]
+    meshes = managed_meshes(scene)
+    for identity, number in registry.items():
+        matches = [obj for obj in meshes if obj["alvenx_id"] == identity]
+        if len(matches) == 1:
+            items.append(_target_item(identity, f"{matches[0].name} · {identity}", number))
+    return items
+
+
+def get_target(scene):
+    try:
+        return target_registry(scene)[selected_target(scene)]
+    except ValueError:
+        return 0
+
+
+def set_target(scene, number):
+    if number == 0:
+        scene[_TARGET_ID_KEY] = ""
+        return
+    registry = target_registry(scene)
+    identity = next((key for key, value in registry.items() if value == number), None)
+    if identity is None:
+        raise ValueError("Destination is no longer available; choose again")
+    object_by_id(identity, scene)
+    scene[_TARGET_ID_KEY] = identity
 
 
 class AX_OT_import(bpy.types.Operator, ImportHelper):
@@ -398,7 +483,7 @@ class AX_OT_reassign(bpy.types.Operator):
 
     def execute(self, context):
         try:
-            ids = reassign_selected(context, self.target_id or context.scene.ax_target)
+            ids = reassign_selected(context, self.target_id or selected_target(context.scene))
         except (ValueError, KeyError) as error:
             self.report({"ERROR"}, str(error))
             return {"CANCELLED"}
@@ -461,7 +546,13 @@ class AX_PT_review(bpy.types.Panel):
         box = layout.box()
         box.label(text="Review selected faces")
         box.prop(context.scene, "ax_target", text="Destination")
-        box.operator("alvenx.reassign_faces")
+        row = box.row()
+        try:
+            selected_target(context.scene)
+        except ValueError as error:
+            row.enabled = False
+            box.label(text=str(error), icon="ERROR")
+        row.operator("alvenx.reassign_faces")
         box = layout.box()
         box.label(text="Rigid edit · world Z-up")
         box.prop(context.scene, "ax_translation", text="Metres")
@@ -481,7 +572,8 @@ CLASSES = (AX_OT_import, AX_OT_reassign, AX_OT_transform, AX_OT_export, AX_PT_re
 def register():
     for cls in CLASSES:
         bpy.utils.register_class(cls)
-    bpy.types.Scene.ax_target = EnumProperty(name="Destination", items=target_items)
+    bpy.types.Scene.ax_target = EnumProperty(name="Destination", items=target_items,
+                                            get=get_target, set=set_target, options=set())
     bpy.types.Scene.ax_translation = FloatVectorProperty(name="Translation", size=3, subtype="TRANSLATION", default=(.2, 0, 0))
     bpy.types.Scene.ax_rotation = FloatProperty(name="World Z rotation", subtype="NONE", default=15)
 

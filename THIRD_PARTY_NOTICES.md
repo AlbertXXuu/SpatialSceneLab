@@ -13,6 +13,11 @@ derived from them.
 - The copied AlvenX wordmark is the unchanged owner-controlled canonical asset
   from `foundation/brand/assets/alvenx-wordmark.svg`. The MIT grant for code does
   not grant ownership of or an unrestricted trademark license to this mark.
+- The [dining showcase](examples/dining-showcase/README.md) uses Poly Haven's [Wooden Table 02](https://polyhaven.com/a/wooden_table_02)
+  by Serhii Khromov, [Dining Chair 02](https://polyhaven.com/a/dining_chair_02) by James Ray Cock,
+  and [Wooden Stool 01](https://polyhaven.com/a/wooden_stool_01) by Kuutti Siitonen.
+  The native geometry and textures retain [Poly Haven's CC0 terms](https://polyhaven.com/license).
+  The [asset manifest](examples/dining-showcase/asset-sources.json) records download URLs and SHA-256 for each input.
 - The local RGB-D experiment uses the `tea_room` scan from
   [LiteReality/example-scans, commit
   `3f2ca5d618fe86b264716200baea19ae0aea0d49`](https://github.com/LiteReality/example-scans/tree/3f2ca5d618fe86b264716200baea19ae0aea0d49/tea_room).

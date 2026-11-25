@@ -1,0 +1,1462 @@
+{
+  "schema": "spatial-scene-lab.heldout-surface.v1",
+  "scope": "Same-capture unused sensor depth, fixed captured poses; no independent physical surface or semantic labels.",
+  "source_inventory": {
+    "schema": "alvenx.tea-room-source-check.v1",
+    "passed": true,
+    "upstream": {
+      "repo": "LiteReality/example-scans",
+      "commit": "3f2ca5d618fe86b264716200baea19ae0aea0d49",
+      "tree": "3f2ca5d618fe86b264716200baea19ae0aea0d49"
+    },
+    "files": 253,
+    "bytes": 10518452,
+    "manifest_sha256": "800b5937d24ae83826e6ee389fa2550af6c7fcdc749922511d6eb6987396dc75"
+  },
+  "observations_sha256": "26fe79c9ff2b23a343decccde479bc13bafcf8dce29e266d4e3ef8cf7f19e697",
+  "evaluation_code_sha256": "fe0be9df3f60c186a2620c85ef07ad49736b1b16f3be6f11084c12eb08857ddf",
+  "open3d_version": "0.19.0",
+  "fusion_frame_indices": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60
+  ],
+  "heldout_frame_indices": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    51,
+    53,
+    55,
+    57,
+    59,
+    61
+  ],
+  "max_depth_m": 6.0,
+  "minimum_sensor_confidence": 1,
+  "method": "First positive ray hit versus measured axial depth. Missing hits stay in the support denominator; error quantiles use rays hit by both meshes.",
+  "strict_spatial_groups": "Measured depth point inside exactly one unexpanded RoomPlan object box. Overlaps are excluded from object/category groups and retained in scene totals.",
+  "roomplan_membership_counts": {
+    "none": 1050487,
+    "one": 210969,
+    "competing": 16271
+  },
+  "meshes": {
+    "baseline": {
+      "parameters": {
+        "voxel_size_m": 0.035,
+        "sdf_truncation_m": 0.105,
+        "depth_scale": 1000,
+        "max_depth_m": 6.0,
+        "min_confidence": 1
+      },
+      "vertices": 75862,
+      "triangles": 139754,
+      "mesh_sha256": "0292a5324a1b3e4112507a2b03f72b21ed2b7284aa0cb82ddf2ef9dcb0fac601",
+      "surface_manifest_sha256": "8650c1ad2f3ff40119f8efccc03a5c7e9bec63c3517be179c827147261ef759c",
+      "fusion_elapsed_seconds": 1.1706544999979087
+    },
+    "candidate": {
+      "parameters": {
+        "voxel_size_m": 0.02,
+        "sdf_truncation_m": 0.06,
+        "depth_scale": 1000,
+        "max_depth_m": 6.0,
+        "min_confidence": 1
+      },
+      "vertices": 252434,
+      "triangles": 460474,
+      "mesh_sha256": "12d35480cf98925abd8fcd437ef9d8a538ed484951a79b43421fd4f38090fee6",
+      "surface_manifest_sha256": "49c927ab25ebfa91712c6472992770175a9793b50d20df12492a466e1be0030f",
+      "fusion_elapsed_seconds": 1.8881141999954707
+    }
+  },
+  "scene": {
+    "valid_depth_rays": 1277727,
+    "common_hit_rays": 1176512,
+    "baseline": {
+      "hits": 1194349,
+      "misses": 83378,
+      "hit_percent": 93.47450589993011,
+      "within_10mm": 494142,
+      "within_10mm_percent_of_valid": 38.67351946072987,
+      "within_20mm": 787029,
+      "within_20mm_percent_of_valid": 61.5960216853835,
+      "common_hit_absolute_error_p50_mm": 12.658985137939393,
+      "common_hit_absolute_error_p95_mm": 71.53768124580377
+    },
+    "candidate": {
+      "hits": 1189292,
+      "misses": 88435,
+      "hit_percent": 93.07872495454819,
+      "within_10mm": 504864,
+      "within_10mm_percent_of_valid": 39.512665851156,
+      "within_20mm": 797683,
+      "within_20mm_percent_of_valid": 62.4298461251895,
+      "common_hit_absolute_error_p50_mm": 12.343536376953178,
+      "common_hit_absolute_error_p95_mm": 81.2577668190003
+    }
+  },
+  "by_roomplan_category": {
+    "Chair": {
+      "valid_depth_rays": 35331,
+      "common_hit_rays": 34196,
+      "baseline": {
+        "hits": 34711,
+        "misses": 620,
+        "hit_percent": 98.24516713367863,
+        "within_10mm": 9859,
+        "within_10mm_percent_of_valid": 27.90467295010048,
+        "within_20mm": 16763,
+        "within_20mm_percent_of_valid": 47.44558602926608,
+        "common_hit_absolute_error_p50_mm": 20.828967094421394,
+        "common_hit_absolute_error_p95_mm": 215.02534914016724
+      },
+      "candidate": {
+        "hits": 34506,
+        "misses": 825,
+        "hit_percent": 97.66494013755626,
+        "within_10mm": 10093,
+        "within_10mm_percent_of_valid": 28.56698083835725,
+        "within_20mm": 16752,
+        "within_20mm_percent_of_valid": 47.41445189776683,
+        "common_hit_absolute_error_p50_mm": 20.968534946441576,
+        "common_hit_absolute_error_p95_mm": 268.65665102005016
+      }
+    },
+    "Dishwasher": {
+      "valid_depth_rays": 1479,
+      "common_hit_rays": 1311,
+      "baseline": {
+        "hits": 1356,
+        "misses": 123,
+        "hit_percent": 91.68356997971603,
+        "within_10mm": 88,
+        "within_10mm_percent_of_valid": 5.949966193373902,
+        "within_20mm": 288,
+        "within_20mm_percent_of_valid": 19.472616632860042,
+        "common_hit_absolute_error_p50_mm": 42.647186279296974,
+        "common_hit_absolute_error_p95_mm": 174.90653038024905
+      },
+      "candidate": {
+        "hits": 1341,
+        "misses": 138,
+        "hit_percent": 90.66937119675457,
+        "within_10mm": 93,
+        "within_10mm_percent_of_valid": 6.288032454361055,
+        "within_20mm": 212,
+        "within_20mm_percent_of_valid": 14.334009465855308,
+        "common_hit_absolute_error_p50_mm": 43.11687278747556,
+        "common_hit_absolute_error_p95_mm": 177.43300533294692
+      }
+    },
+    "Sink": {
+      "valid_depth_rays": 0,
+      "common_hit_rays": 0,
+      "baseline": {
+        "hits": 0,
+        "misses": 0,
+        "hit_percent": null,
+        "within_10mm": 0,
+        "within_10mm_percent_of_valid": null,
+        "within_20mm": 0,
+        "within_20mm_percent_of_valid": null,
+        "common_hit_absolute_error_p50_mm": null,
+        "common_hit_absolute_error_p95_mm": null
+      },
+      "candidate": {
+        "hits": 0,
+        "misses": 0,
+        "hit_percent": null,
+        "within_10mm": 0,
+        "within_10mm_percent_of_valid": null,
+        "within_20mm": 0,
+        "within_20mm_percent_of_valid": null,
+        "common_hit_absolute_error_p50_mm": null,
+        "common_hit_absolute_error_p95_mm": null
+      }
+    },
+    "Sofa": {
+      "valid_depth_rays": 83170,
+      "common_hit_rays": 81889,
+      "baseline": {
+        "hits": 82251,
+        "misses": 919,
+        "hit_percent": 98.89503426716364,
+        "within_10mm": 36253,
+        "within_10mm_percent_of_valid": 43.58903450763496,
+        "within_20mm": 65178,
+        "within_20mm_percent_of_valid": 78.36719971143441,
+        "common_hit_absolute_error_p50_mm": 11.202399253845252,
+        "common_hit_absolute_error_p95_mm": 44.24715614318851
+      },
+      "candidate": {
+        "hits": 82475,
+        "misses": 695,
+        "hit_percent": 99.16436214981364,
+        "within_10mm": 38043,
+        "within_10mm_percent_of_valid": 45.74125285559697,
+        "within_20mm": 68206,
+        "within_20mm_percent_of_valid": 82.00793555368523,
+        "common_hit_absolute_error_p50_mm": 10.782480239868164,
+        "common_hit_absolute_error_p95_mm": 39.618359375
+      }
+    },
+    "Storage": {
+      "valid_depth_rays": 77824,
+      "common_hit_rays": 74514,
+      "baseline": {
+        "hits": 76235,
+        "misses": 1589,
+        "hit_percent": 97.95821340460526,
+        "within_10mm": 29479,
+        "within_10mm_percent_of_valid": 37.879060444078945,
+        "within_20mm": 48860,
+        "within_20mm_percent_of_valid": 62.78268914473684,
+        "common_hit_absolute_error_p50_mm": 14.044213771820079,
+        "common_hit_absolute_error_p95_mm": 69.70730237960784
+      },
+      "candidate": {
+        "hits": 74978,
+        "misses": 2846,
+        "hit_percent": 96.34303042763158,
+        "within_10mm": 29858,
+        "within_10mm_percent_of_valid": 38.366056743421055,
+        "within_20mm": 49485,
+        "within_20mm_percent_of_valid": 63.585783305921055,
+        "common_hit_absolute_error_p50_mm": 13.393743515014656,
+        "common_hit_absolute_error_p95_mm": 67.51784224510182
+      }
+    },
+    "Table": {
+      "valid_depth_rays": 13165,
+      "common_hit_rays": 12670,
+      "baseline": {
+        "hits": 12848,
+        "misses": 317,
+        "hit_percent": 97.59210026585643,
+        "within_10mm": 3698,
+        "within_10mm_percent_of_valid": 28.089631598936574,
+        "within_20mm": 7784,
+        "within_20mm_percent_of_valid": 59.12647170527915,
+        "common_hit_absolute_error_p50_mm": 16.759513378143353,
+        "common_hit_absolute_error_p95_mm": 167.2712910175321
+      },
+      "candidate": {
+        "hits": 12810,
+        "misses": 355,
+        "hit_percent": 97.3034561336878,
+        "within_10mm": 3974,
+        "within_10mm_percent_of_valid": 30.186099506266615,
+        "within_20mm": 8070,
+        "within_20mm_percent_of_valid": 61.29889859475883,
+        "common_hit_absolute_error_p50_mm": 15.845465421676641,
+        "common_hit_absolute_error_p95_mm": 202.43089354038202
+      }
+    }
+  },
+  "by_roomplan_object": {
+    "Chair0": {
+      "valid_depth_rays": 12218,
+      "common_hit_rays": 11549,
+      "baseline": {
+        "hits": 11895,
+        "misses": 323,
+        "hit_percent": 97.35635946963497,
+        "within_10mm": 1860,
+        "within_10mm_percent_of_valid": 15.223440825012277,
+        "within_20mm": 3852,
+        "within_20mm_percent_of_valid": 31.527254869864134,
+        "common_hit_absolute_error_p50_mm": 30.575822830200217,
+        "common_hit_absolute_error_p95_mm": 233.47684078216548
+      },
+      "candidate": {
+        "hits": 11694,
+        "misses": 524,
+        "hit_percent": 95.71124570306105,
+        "within_10mm": 1693,
+        "within_10mm_percent_of_valid": 13.85660500900311,
+        "within_20mm": 3798,
+        "within_20mm_percent_of_valid": 31.08528400720249,
+        "common_hit_absolute_error_p50_mm": 30.901544570922646,
+        "common_hit_absolute_error_p95_mm": 269.63076744079603
+      }
+    },
+    "Chair1": {
+      "valid_depth_rays": 1597,
+      "common_hit_rays": 1487,
+      "baseline": {
+        "hits": 1529,
+        "misses": 68,
+        "hit_percent": 95.74201628052599,
+        "within_10mm": 368,
+        "within_10mm_percent_of_valid": 23.043206011271135,
+        "within_20mm": 877,
+        "within_20mm_percent_of_valid": 54.915466499686914,
+        "common_hit_absolute_error_p50_mm": 16.814479827880866,
+        "common_hit_absolute_error_p95_mm": 234.425802564621
+      },
+      "candidate": {
+        "hits": 1525,
+        "misses": 72,
+        "hit_percent": 95.4915466499687,
+        "within_10mm": 354,
+        "within_10mm_percent_of_valid": 22.1665623043206,
+        "within_20mm": 859,
+        "within_20mm_percent_of_valid": 53.788353162179085,
+        "common_hit_absolute_error_p50_mm": 17.847976684570277,
+        "common_hit_absolute_error_p95_mm": 229.59709453582778
+      }
+    },
+    "Chair2": {
+      "valid_depth_rays": 11693,
+      "common_hit_rays": 11531,
+      "baseline": {
+        "hits": 11594,
+        "misses": 99,
+        "hit_percent": 99.15333960489181,
+        "within_10mm": 1503,
+        "within_10mm_percent_of_valid": 12.853844180278799,
+        "within_20mm": 3371,
+        "within_20mm_percent_of_valid": 28.829214059693832,
+        "common_hit_absolute_error_p50_mm": 38.0252723693848,
+        "common_hit_absolute_error_p95_mm": 258.9162540435792
+      },
+      "candidate": {
+        "hits": 11604,
+        "misses": 89,
+        "hit_percent": 99.23886085692294,
+        "within_10mm": 1672,
+        "within_10mm_percent_of_valid": 14.299153339604892,
+        "within_20mm": 3346,
+        "within_20mm_percent_of_valid": 28.615410929616008,
+        "common_hit_absolute_error_p50_mm": 38.39666557312027,
+        "common_hit_absolute_error_p95_mm": 309.0199680328369
+      }
+    },
+    "Chair3": {
+      "valid_depth_rays": 9823,
+      "common_hit_rays": 9629,
+      "baseline": {
+        "hits": 9693,
+        "misses": 130,
+        "hit_percent": 98.67657538430215,
+        "within_10mm": 6128,
+        "within_10mm_percent_of_valid": 62.38420034612644,
+        "within_20mm": 8663,
+        "within_20mm_percent_of_valid": 88.19098035223455,
+        "common_hit_absolute_error_p50_mm": 7.706899642944354,
+        "common_hit_absolute_error_p95_mm": 43.16049842834475
+      },
+      "candidate": {
+        "hits": 9683,
+        "misses": 140,
+        "hit_percent": 98.57477349078692,
+        "within_10mm": 6374,
+        "within_10mm_percent_of_valid": 64.88852692660083,
+        "within_20mm": 8749,
+        "within_20mm_percent_of_valid": 89.06647663646544,
+        "common_hit_absolute_error_p50_mm": 7.321049690246495,
+        "common_hit_absolute_error_p95_mm": 42.17947235107413
+      }
+    },
+    "Dishwasher0": {
+      "valid_depth_rays": 1479,
+      "common_hit_rays": 1311,
+      "baseline": {
+        "hits": 1356,
+        "misses": 123,
+        "hit_percent": 91.68356997971603,
+        "within_10mm": 88,
+        "within_10mm_percent_of_valid": 5.949966193373902,
+        "within_20mm": 288,
+        "within_20mm_percent_of_valid": 19.472616632860042,
+        "common_hit_absolute_error_p50_mm": 42.647186279296974,
+        "common_hit_absolute_error_p95_mm": 174.90653038024905
+      },
+      "candidate": {
+        "hits": 1341,
+        "misses": 138,
+        "hit_percent": 90.66937119675457,
+        "within_10mm": 93,
+        "within_10mm_percent_of_valid": 6.288032454361055,
+        "within_20mm": 212,
+        "within_20mm_percent_of_valid": 14.334009465855308,
+        "common_hit_absolute_error_p50_mm": 43.11687278747556,
+        "common_hit_absolute_error_p95_mm": 177.43300533294692
+      }
+    },
+    "Sink0": {
+      "valid_depth_rays": 0,
+      "common_hit_rays": 0,
+      "baseline": {
+        "hits": 0,
+        "misses": 0,
+        "hit_percent": null,
+        "within_10mm": 0,
+        "within_10mm_percent_of_valid": null,
+        "within_20mm": 0,
+        "within_20mm_percent_of_valid": null,
+        "common_hit_absolute_error_p50_mm": null,
+        "common_hit_absolute_error_p95_mm": null
+      },
+      "candidate": {
+        "hits": 0,
+        "misses": 0,
+        "hit_percent": null,
+        "within_10mm": 0,
+        "within_10mm_percent_of_valid": null,
+        "within_20mm": 0,
+        "within_20mm_percent_of_valid": null,
+        "common_hit_absolute_error_p50_mm": null,
+        "common_hit_absolute_error_p95_mm": null
+      }
+    },
+    "Sofa0": {
+      "valid_depth_rays": 83170,
+      "common_hit_rays": 81889,
+      "baseline": {
+        "hits": 82251,
+        "misses": 919,
+        "hit_percent": 98.89503426716364,
+        "within_10mm": 36253,
+        "within_10mm_percent_of_valid": 43.58903450763496,
+        "within_20mm": 65178,
+        "within_20mm_percent_of_valid": 78.36719971143441,
+        "common_hit_absolute_error_p50_mm": 11.202399253845252,
+        "common_hit_absolute_error_p95_mm": 44.24715614318851
+      },
+      "candidate": {
+        "hits": 82475,
+        "misses": 695,
+        "hit_percent": 99.16436214981364,
+        "within_10mm": 38043,
+        "within_10mm_percent_of_valid": 45.74125285559697,
+        "within_20mm": 68206,
+        "within_20mm_percent_of_valid": 82.00793555368523,
+        "common_hit_absolute_error_p50_mm": 10.782480239868164,
+        "common_hit_absolute_error_p95_mm": 39.618359375
+      }
+    },
+    "Storage0": {
+      "valid_depth_rays": 25407,
+      "common_hit_rays": 24783,
+      "baseline": {
+        "hits": 25131,
+        "misses": 276,
+        "hit_percent": 98.9136852048648,
+        "within_10mm": 10900,
+        "within_10mm_percent_of_valid": 42.9015625614988,
+        "within_20mm": 20326,
+        "within_20mm_percent_of_valid": 80.00157436926831,
+        "common_hit_absolute_error_p50_mm": 12.126785278320229,
+        "common_hit_absolute_error_p95_mm": 27.59556169509878
+      },
+      "candidate": {
+        "hits": 24920,
+        "misses": 487,
+        "hit_percent": 98.08320541583028,
+        "within_10mm": 10931,
+        "within_10mm_percent_of_valid": 43.02357617979297,
+        "within_20mm": 20359,
+        "within_20mm_percent_of_valid": 80.13145983390405,
+        "common_hit_absolute_error_p50_mm": 11.572033882141008,
+        "common_hit_absolute_error_p95_mm": 27.737197017669562
+      }
+    },
+    "Storage1": {
+      "valid_depth_rays": 21625,
+      "common_hit_rays": 21078,
+      "baseline": {
+        "hits": 21420,
+        "misses": 205,
+        "hit_percent": 99.05202312138728,
+        "within_10mm": 11266,
+        "within_10mm_percent_of_valid": 52.097109826589595,
+        "within_20mm": 16253,
+        "within_20mm_percent_of_valid": 75.15838150289018,
+        "common_hit_absolute_error_p50_mm": 9.157812595367464,
+        "common_hit_absolute_error_p95_mm": 76.59988460540772
+      },
+      "candidate": {
+        "hits": 21169,
+        "misses": 456,
+        "hit_percent": 97.89132947976879,
+        "within_10mm": 11679,
+        "within_10mm_percent_of_valid": 54.00693641618497,
+        "within_20mm": 16721,
+        "within_20mm_percent_of_valid": 77.32254335260116,
+        "common_hit_absolute_error_p50_mm": 8.813384056091333,
+        "common_hit_absolute_error_p95_mm": 76.93104395866396
+      }
+    },
+    "Storage2": {
+      "valid_depth_rays": 14535,
+      "common_hit_rays": 13039,
+      "baseline": {
+        "hits": 13682,
+        "misses": 853,
+        "hit_percent": 94.13140694874441,
+        "within_10mm": 6409,
+        "within_10mm_percent_of_valid": 44.09356725146199,
+        "within_20mm": 8755,
+        "within_20mm_percent_of_valid": 60.23391812865497,
+        "common_hit_absolute_error_p50_mm": 10.37602996826159,
+        "common_hit_absolute_error_p95_mm": 129.15773344039866
+      },
+      "candidate": {
+        "hits": 13136,
+        "misses": 1399,
+        "hit_percent": 90.374957000344,
+        "within_10mm": 6372,
+        "within_10mm_percent_of_valid": 43.8390092879257,
+        "within_20mm": 8770,
+        "within_20mm_percent_of_valid": 60.337117303061575,
+        "common_hit_absolute_error_p50_mm": 10.383438110351584,
+        "common_hit_absolute_error_p95_mm": 126.23134136199923
+      }
+    },
+    "Storage3": {
+      "valid_depth_rays": 16257,
+      "common_hit_rays": 15614,
+      "baseline": {
+        "hits": 16002,
+        "misses": 255,
+        "hit_percent": 98.43144491603617,
+        "within_10mm": 904,
+        "within_10mm_percent_of_valid": 5.560681552561974,
+        "within_20mm": 3526,
+        "within_20mm_percent_of_valid": 21.689118533554776,
+        "common_hit_absolute_error_p50_mm": 27.21201992034905,
+        "common_hit_absolute_error_p95_mm": 81.82063779830929
+      },
+      "candidate": {
+        "hits": 15753,
+        "misses": 504,
+        "hit_percent": 96.89979701051854,
+        "within_10mm": 876,
+        "within_10mm_percent_of_valid": 5.388448053146337,
+        "within_20mm": 3635,
+        "within_20mm_percent_of_valid": 22.359598941994218,
+        "common_hit_absolute_error_p50_mm": 26.941407203674327,
+        "common_hit_absolute_error_p95_mm": 82.61643447875942
+      }
+    },
+    "Table0": {
+      "valid_depth_rays": 13165,
+      "common_hit_rays": 12670,
+      "baseline": {
+        "hits": 12848,
+        "misses": 317,
+        "hit_percent": 97.59210026585643,
+        "within_10mm": 3698,
+        "within_10mm_percent_of_valid": 28.089631598936574,
+        "within_20mm": 7784,
+        "within_20mm_percent_of_valid": 59.12647170527915,
+        "common_hit_absolute_error_p50_mm": 16.759513378143353,
+        "common_hit_absolute_error_p95_mm": 167.2712910175321
+      },
+      "candidate": {
+        "hits": 12810,
+        "misses": 355,
+        "hit_percent": 97.3034561336878,
+        "within_10mm": 3974,
+        "within_10mm_percent_of_valid": 30.186099506266615,
+        "within_20mm": 8070,
+        "within_20mm_percent_of_valid": 61.29889859475883,
+        "common_hit_absolute_error_p50_mm": 15.845465421676641,
+        "common_hit_absolute_error_p95_mm": 202.43089354038202
+      }
+    }
+  },
+  "by_frame": [
+    {
+      "frame_index": 1,
+      "valid_depth_rays": 39847,
+      "common_hit_rays": 34184,
+      "baseline": {
+        "hits": 35235,
+        "misses": 4612,
+        "hit_percent": 88.42572841117274,
+        "within_10mm": 1407,
+        "within_10mm_percent_of_valid": 3.531006098326097,
+        "within_20mm": 4523,
+        "within_20mm_percent_of_valid": 11.350917258513816,
+        "common_hit_absolute_error_p50_mm": 37.80529403686516,
+        "common_hit_absolute_error_p95_mm": 100.28057718276989
+      },
+      "candidate": {
+        "hits": 34794,
+        "misses": 5053,
+        "hit_percent": 87.3189951564735,
+        "within_10mm": 1087,
+        "within_10mm_percent_of_valid": 2.727934348884483,
+        "within_20mm": 3707,
+        "within_20mm_percent_of_valid": 9.3030842974377,
+        "common_hit_absolute_error_p50_mm": 40.546531677246094,
+        "common_hit_absolute_error_p95_mm": 142.04564380645746
+      }
+    },
+    {
+      "frame_index": 3,
+      "valid_depth_rays": 40948,
+      "common_hit_rays": 38815,
+      "baseline": {
+        "hits": 40189,
+        "misses": 759,
+        "hit_percent": 98.14642961805217,
+        "within_10mm": 9015,
+        "within_10mm_percent_of_valid": 22.01572726384683,
+        "within_20mm": 20678,
+        "within_20mm_percent_of_valid": 50.498192829930645,
+        "common_hit_absolute_error_p50_mm": 18.816506385803233,
+        "common_hit_absolute_error_p95_mm": 101.29744629859917
+      },
+      "candidate": {
+        "hits": 39062,
+        "misses": 1886,
+        "hit_percent": 95.39415844485688,
+        "within_10mm": 9358,
+        "within_10mm_percent_of_valid": 22.85337501221061,
+        "within_20mm": 20661,
+        "within_20mm_percent_of_valid": 50.45667676076976,
+        "common_hit_absolute_error_p50_mm": 18.59761524200443,
+        "common_hit_absolute_error_p95_mm": 171.60338983535775
+      }
+    },
+    {
+      "frame_index": 5,
+      "valid_depth_rays": 40635,
+      "common_hit_rays": 38645,
+      "baseline": {
+        "hits": 38711,
+        "misses": 1924,
+        "hit_percent": 95.26516549772364,
+        "within_10mm": 14411,
+        "within_10mm_percent_of_valid": 35.4645010458964,
+        "within_20mm": 25161,
+        "within_20mm_percent_of_valid": 61.91952750092285,
+        "common_hit_absolute_error_p50_mm": 13.946407318115028,
+        "common_hit_absolute_error_p95_mm": 221.42394943237207
+      },
+      "candidate": {
+        "hits": 38943,
+        "misses": 1692,
+        "hit_percent": 95.8361018826135,
+        "within_10mm": 13495,
+        "within_10mm_percent_of_valid": 33.21028669865879,
+        "within_20mm": 24573,
+        "within_20mm_percent_of_valid": 60.47249907715024,
+        "common_hit_absolute_error_p50_mm": 14.422668457031218,
+        "common_hit_absolute_error_p95_mm": 196.1298896789526
+      }
+    },
+    {
+      "frame_index": 7,
+      "valid_depth_rays": 42968,
+      "common_hit_rays": 35531,
+      "baseline": {
+        "hits": 36393,
+        "misses": 6575,
+        "hit_percent": 84.69791472723888,
+        "within_10mm": 14077,
+        "within_10mm_percent_of_valid": 32.761590020480355,
+        "within_20mm": 24660,
+        "within_20mm_percent_of_valid": 57.391547197914726,
+        "common_hit_absolute_error_p50_mm": 13.330711364746062,
+        "common_hit_absolute_error_p95_mm": 79.18073177337648
+      },
+      "candidate": {
+        "hits": 36363,
+        "misses": 6605,
+        "hit_percent": 84.62809532675479,
+        "within_10mm": 14635,
+        "within_10mm_percent_of_valid": 34.060230869484265,
+        "within_20mm": 24791,
+        "within_20mm_percent_of_valid": 57.69642524669521,
+        "common_hit_absolute_error_p50_mm": 12.813078880310025,
+        "common_hit_absolute_error_p95_mm": 79.91303396224981
+      }
+    },
+    {
+      "frame_index": 9,
+      "valid_depth_rays": 40998,
+      "common_hit_rays": 37367,
+      "baseline": {
+        "hits": 38432,
+        "misses": 2566,
+        "hit_percent": 93.74115810527343,
+        "within_10mm": 14101,
+        "within_10mm_percent_of_valid": 34.39436070052198,
+        "within_20mm": 23951,
+        "within_20mm_percent_of_valid": 58.41992292306942,
+        "common_hit_absolute_error_p50_mm": 14.638698577880804,
+        "common_hit_absolute_error_p95_mm": 88.78603887557975
+      },
+      "candidate": {
+        "hits": 38076,
+        "misses": 2922,
+        "hit_percent": 92.87282306453973,
+        "within_10mm": 14329,
+        "within_10mm_percent_of_valid": 34.950485389531195,
+        "within_20mm": 23865,
+        "within_20mm_percent_of_valid": 58.210156593004534,
+        "common_hit_absolute_error_p50_mm": 14.1488332748414,
+        "common_hit_absolute_error_p95_mm": 96.94686965942368
+      }
+    },
+    {
+      "frame_index": 11,
+      "valid_depth_rays": 42746,
+      "common_hit_rays": 38542,
+      "baseline": {
+        "hits": 38587,
+        "misses": 4159,
+        "hit_percent": 90.27043466055304,
+        "within_10mm": 17944,
+        "within_10mm_percent_of_valid": 41.978196790342956,
+        "within_20mm": 27028,
+        "within_20mm_percent_of_valid": 63.229308005427406,
+        "common_hit_absolute_error_p50_mm": 11.461901187896695,
+        "common_hit_absolute_error_p95_mm": 135.49929704666036
+      },
+      "candidate": {
+        "hits": 38898,
+        "misses": 3848,
+        "hit_percent": 90.9979881158471,
+        "within_10mm": 18280,
+        "within_10mm_percent_of_valid": 42.76423525008188,
+        "within_20mm": 27049,
+        "within_20mm_percent_of_valid": 63.27843540916109,
+        "common_hit_absolute_error_p50_mm": 11.252293586730966,
+        "common_hit_absolute_error_p95_mm": 135.8598484039305
+      }
+    },
+    {
+      "frame_index": 13,
+      "valid_depth_rays": 41805,
+      "common_hit_rays": 41722,
+      "baseline": {
+        "hits": 41788,
+        "misses": 17,
+        "hit_percent": 99.95933500777419,
+        "within_10mm": 23490,
+        "within_10mm_percent_of_valid": 56.18945102260495,
+        "within_20mm": 33235,
+        "within_20mm_percent_of_valid": 79.50005980145916,
+        "common_hit_absolute_error_p50_mm": 8.723080158233532,
+        "common_hit_absolute_error_p95_mm": 57.02166347503648
+      },
+      "candidate": {
+        "hits": 41736,
+        "misses": 69,
+        "hit_percent": 99.83494797273053,
+        "within_10mm": 24219,
+        "within_10mm_percent_of_valid": 57.93326157158235,
+        "within_20mm": 34148,
+        "within_20mm_percent_of_valid": 81.68400908982179,
+        "common_hit_absolute_error_p50_mm": 8.462232589721674,
+        "common_hit_absolute_error_p95_mm": 61.48319745063789
+      }
+    },
+    {
+      "frame_index": 15,
+      "valid_depth_rays": 40450,
+      "common_hit_rays": 39040,
+      "baseline": {
+        "hits": 39531,
+        "misses": 919,
+        "hit_percent": 97.72805933250928,
+        "within_10mm": 14906,
+        "within_10mm_percent_of_valid": 36.8504326328801,
+        "within_20mm": 26107,
+        "within_20mm_percent_of_valid": 64.54140914709518,
+        "common_hit_absolute_error_p50_mm": 12.566510200500481,
+        "common_hit_absolute_error_p95_mm": 75.41576991081202
+      },
+      "candidate": {
+        "hits": 39280,
+        "misses": 1170,
+        "hit_percent": 97.10754017305315,
+        "within_10mm": 15968,
+        "within_10mm_percent_of_valid": 39.475896168108775,
+        "within_20mm": 27612,
+        "within_20mm_percent_of_valid": 68.2620519159456,
+        "common_hit_absolute_error_p50_mm": 11.86516523361214,
+        "common_hit_absolute_error_p95_mm": 71.50765905380229
+      }
+    },
+    {
+      "frame_index": 17,
+      "valid_depth_rays": 43363,
+      "common_hit_rays": 42754,
+      "baseline": {
+        "hits": 43038,
+        "misses": 325,
+        "hit_percent": 99.25051311025528,
+        "within_10mm": 16943,
+        "within_10mm_percent_of_valid": 39.07248114752208,
+        "within_20mm": 32480,
+        "within_20mm_percent_of_valid": 74.90256670433318,
+        "common_hit_absolute_error_p50_mm": 13.048178672790511,
+        "common_hit_absolute_error_p95_mm": 50.91039276123045
+      },
+      "candidate": {
+        "hits": 42877,
+        "misses": 486,
+        "hit_percent": 98.87922883564329,
+        "within_10mm": 18242,
+        "within_10mm_percent_of_valid": 42.06812259299403,
+        "within_20mm": 33430,
+        "within_20mm_percent_of_valid": 77.09337453589465,
+        "common_hit_absolute_error_p50_mm": 12.510527610778865,
+        "common_hit_absolute_error_p95_mm": 43.49468910694115
+      }
+    },
+    {
+      "frame_index": 19,
+      "valid_depth_rays": 44324,
+      "common_hit_rays": 43554,
+      "baseline": {
+        "hits": 43989,
+        "misses": 335,
+        "hit_percent": 99.24420178684234,
+        "within_10mm": 17553,
+        "within_10mm_percent_of_valid": 39.60157025539211,
+        "within_20mm": 28735,
+        "within_20mm_percent_of_valid": 64.82943777637398,
+        "common_hit_absolute_error_p50_mm": 12.622821807861339,
+        "common_hit_absolute_error_p95_mm": 79.29956605434413
+      },
+      "candidate": {
+        "hits": 43770,
+        "misses": 554,
+        "hit_percent": 98.75011280570345,
+        "within_10mm": 19132,
+        "within_10mm_percent_of_valid": 43.163974370544175,
+        "within_20mm": 30149,
+        "within_20mm_percent_of_valid": 68.01958307012002,
+        "common_hit_absolute_error_p50_mm": 11.383600234985359,
+        "common_hit_absolute_error_p95_mm": 114.58145751953094
+      }
+    },
+    {
+      "frame_index": 21,
+      "valid_depth_rays": 41256,
+      "common_hit_rays": 40326,
+      "baseline": {
+        "hits": 40856,
+        "misses": 400,
+        "hit_percent": 99.03044405662207,
+        "within_10mm": 20136,
+        "within_10mm_percent_of_valid": 48.80744618964514,
+        "within_20mm": 28896,
+        "within_20mm_percent_of_valid": 70.04072134962188,
+        "common_hit_absolute_error_p50_mm": 10.043780326843276,
+        "common_hit_absolute_error_p95_mm": 71.660712480545
+      },
+      "candidate": {
+        "hits": 40525,
+        "misses": 731,
+        "hit_percent": 98.22813651347683,
+        "within_10mm": 21974,
+        "within_10mm_percent_of_valid": 53.26255574946674,
+        "within_20mm": 30555,
+        "within_20mm_percent_of_valid": 74.06195462478185,
+        "common_hit_absolute_error_p50_mm": 8.758260726928757,
+        "common_hit_absolute_error_p95_mm": 61.38847339153291
+      }
+    },
+    {
+      "frame_index": 23,
+      "valid_depth_rays": 43251,
+      "common_hit_rays": 20499,
+      "baseline": {
+        "hits": 20951,
+        "misses": 22300,
+        "hit_percent": 48.44049848558415,
+        "within_10mm": 15978,
+        "within_10mm_percent_of_valid": 36.942498439342444,
+        "within_20mm": 18732,
+        "within_20mm_percent_of_valid": 43.30998127210932,
+        "common_hit_absolute_error_p50_mm": 5.358570098876969,
+        "common_hit_absolute_error_p95_mm": 28.44037675857541
+      },
+      "candidate": {
+        "hits": 20914,
+        "misses": 22337,
+        "hit_percent": 48.354951330605076,
+        "within_10mm": 15890,
+        "within_10mm_percent_of_valid": 36.73903493560842,
+        "within_20mm": 18886,
+        "within_20mm_percent_of_valid": 43.66604240364385,
+        "common_hit_absolute_error_p50_mm": 5.499852180480991,
+        "common_hit_absolute_error_p95_mm": 29.956821489334086
+      }
+    },
+    {
+      "frame_index": 25,
+      "valid_depth_rays": 43994,
+      "common_hit_rays": 37301,
+      "baseline": {
+        "hits": 39341,
+        "misses": 4653,
+        "hit_percent": 89.42355775787607,
+        "within_10mm": 25956,
+        "within_10mm_percent_of_valid": 58.99895440287312,
+        "within_20mm": 33115,
+        "within_20mm_percent_of_valid": 75.2716279492658,
+        "common_hit_absolute_error_p50_mm": 6.229518890380925,
+        "common_hit_absolute_error_p95_mm": 33.908529758453376
+      },
+      "candidate": {
+        "hits": 38248,
+        "misses": 5746,
+        "hit_percent": 86.93912806291767,
+        "within_10mm": 25756,
+        "within_10mm_percent_of_valid": 58.544346956403146,
+        "within_20mm": 32184,
+        "within_20mm_percent_of_valid": 73.15543028594809,
+        "common_hit_absolute_error_p50_mm": 6.2593584060668395,
+        "common_hit_absolute_error_p95_mm": 38.6484203338624
+      }
+    },
+    {
+      "frame_index": 27,
+      "valid_depth_rays": 46196,
+      "common_hit_rays": 33491,
+      "baseline": {
+        "hits": 33691,
+        "misses": 12505,
+        "hit_percent": 72.93055675816088,
+        "within_10mm": 22510,
+        "within_10mm_percent_of_valid": 48.72716252489393,
+        "within_20mm": 29236,
+        "within_20mm_percent_of_valid": 63.28686466360724,
+        "common_hit_absolute_error_p50_mm": 6.331199645996044,
+        "common_hit_absolute_error_p95_mm": 35.683408260345495
+      },
+      "candidate": {
+        "hits": 34826,
+        "misses": 11370,
+        "hit_percent": 75.38747943544895,
+        "within_10mm": 23442,
+        "within_10mm_percent_of_valid": 50.74465321672872,
+        "within_20mm": 29622,
+        "within_20mm_percent_of_valid": 64.12243484284353,
+        "common_hit_absolute_error_p50_mm": 5.660523414611762,
+        "common_hit_absolute_error_p95_mm": 37.59631657600404
+      }
+    },
+    {
+      "frame_index": 29,
+      "valid_depth_rays": 42883,
+      "common_hit_rays": 35240,
+      "baseline": {
+        "hits": 36895,
+        "misses": 5988,
+        "hit_percent": 86.03642469043677,
+        "within_10mm": 10057,
+        "within_10mm_percent_of_valid": 23.452183849077723,
+        "within_20mm": 15888,
+        "within_20mm_percent_of_valid": 37.049646713149734,
+        "common_hit_absolute_error_p50_mm": 23.256997585296702,
+        "common_hit_absolute_error_p95_mm": 60.890351295471
+      },
+      "candidate": {
+        "hits": 36493,
+        "misses": 6390,
+        "hit_percent": 85.0989902758669,
+        "within_10mm": 9889,
+        "within_10mm_percent_of_valid": 23.060420213138073,
+        "within_20mm": 15748,
+        "within_20mm_percent_of_valid": 36.723177016533356,
+        "common_hit_absolute_error_p50_mm": 23.167808055877813,
+        "common_hit_absolute_error_p95_mm": 60.38229031562804
+      }
+    },
+    {
+      "frame_index": 31,
+      "valid_depth_rays": 36238,
+      "common_hit_rays": 33673,
+      "baseline": {
+        "hits": 34199,
+        "misses": 2039,
+        "hit_percent": 94.37330978530824,
+        "within_10mm": 19276,
+        "within_10mm_percent_of_valid": 53.192781058557316,
+        "within_20mm": 25797,
+        "within_20mm_percent_of_valid": 71.18770351564656,
+        "common_hit_absolute_error_p50_mm": 8.111069679260341,
+        "common_hit_absolute_error_p95_mm": 55.82887325286868
+      },
+      "candidate": {
+        "hits": 34264,
+        "misses": 1974,
+        "hit_percent": 94.5526795076991,
+        "within_10mm": 19774,
+        "within_10mm_percent_of_valid": 54.56702908549037,
+        "within_20mm": 26507,
+        "within_20mm_percent_of_valid": 73.14697279099288,
+        "common_hit_absolute_error_p50_mm": 7.874445915222239,
+        "common_hit_absolute_error_p95_mm": 56.00072994232174
+      }
+    },
+    {
+      "frame_index": 33,
+      "valid_depth_rays": 41865,
+      "common_hit_rays": 39930,
+      "baseline": {
+        "hits": 40792,
+        "misses": 1073,
+        "hit_percent": 97.4369998805685,
+        "within_10mm": 17827,
+        "within_10mm_percent_of_valid": 42.58210916039651,
+        "within_20mm": 27404,
+        "within_20mm_percent_of_valid": 65.45801982563,
+        "common_hit_absolute_error_p50_mm": 11.409361362457293,
+        "common_hit_absolute_error_p95_mm": 77.07180547714232
+      },
+      "candidate": {
+        "hits": 40216,
+        "misses": 1649,
+        "hit_percent": 96.06114893108803,
+        "within_10mm": 18183,
+        "within_10mm_percent_of_valid": 43.4324614833393,
+        "within_20mm": 28074,
+        "within_20mm_percent_of_valid": 67.0584020064493,
+        "common_hit_absolute_error_p50_mm": 11.223236083984345,
+        "common_hit_absolute_error_p95_mm": 88.97827243804919
+      }
+    },
+    {
+      "frame_index": 35,
+      "valid_depth_rays": 40061,
+      "common_hit_rays": 39772,
+      "baseline": {
+        "hits": 39875,
+        "misses": 186,
+        "hit_percent": 99.53570804523102,
+        "within_10mm": 27874,
+        "within_10mm_percent_of_valid": 69.57889218941115,
+        "within_20mm": 34540,
+        "within_20mm_percent_of_valid": 86.21851676193805,
+        "common_hit_absolute_error_p50_mm": 6.363243579864508,
+        "common_hit_absolute_error_p95_mm": 41.67540450096137
+      },
+      "candidate": {
+        "hits": 39923,
+        "misses": 138,
+        "hit_percent": 99.65552532388108,
+        "within_10mm": 28234,
+        "within_10mm_percent_of_valid": 70.47752177928659,
+        "within_20mm": 35351,
+        "within_20mm_percent_of_valid": 88.242929532463,
+        "common_hit_absolute_error_p50_mm": 6.216326236724856,
+        "common_hit_absolute_error_p95_mm": 35.156986474990916
+      }
+    },
+    {
+      "frame_index": 37,
+      "valid_depth_rays": 34046,
+      "common_hit_rays": 33260,
+      "baseline": {
+        "hits": 33558,
+        "misses": 488,
+        "hit_percent": 98.56664512718088,
+        "within_10mm": 18299,
+        "within_10mm_percent_of_valid": 53.747870528109026,
+        "within_20mm": 27950,
+        "within_20mm_percent_of_valid": 82.09481290019386,
+        "common_hit_absolute_error_p50_mm": 8.899312973022377,
+        "common_hit_absolute_error_p95_mm": 47.79693431854252
+      },
+      "candidate": {
+        "hits": 33487,
+        "misses": 559,
+        "hit_percent": 98.35810374199612,
+        "within_10mm": 18545,
+        "within_10mm_percent_of_valid": 54.47042236973506,
+        "within_20mm": 28541,
+        "within_20mm_percent_of_valid": 83.83069964166128,
+        "common_hit_absolute_error_p50_mm": 8.803067684173493,
+        "common_hit_absolute_error_p95_mm": 45.591489410400385
+      }
+    },
+    {
+      "frame_index": 39,
+      "valid_depth_rays": 38346,
+      "common_hit_rays": 38192,
+      "baseline": {
+        "hits": 38229,
+        "misses": 117,
+        "hit_percent": 99.6948834298232,
+        "within_10mm": 22317,
+        "within_10mm_percent_of_valid": 58.19902988577687,
+        "within_20mm": 32452,
+        "within_20mm_percent_of_valid": 84.62942679810149,
+        "common_hit_absolute_error_p50_mm": 8.029526710510272,
+        "common_hit_absolute_error_p95_mm": 38.48467826843252
+      },
+      "candidate": {
+        "hits": 38275,
+        "misses": 71,
+        "hit_percent": 99.8148437907474,
+        "within_10mm": 22368,
+        "within_10mm_percent_of_valid": 58.332029416366765,
+        "within_20mm": 33043,
+        "within_20mm_percent_of_valid": 86.17065665258437,
+        "common_hit_absolute_error_p50_mm": 8.092127323150567,
+        "common_hit_absolute_error_p95_mm": 34.13136148452755
+      }
+    },
+    {
+      "frame_index": 41,
+      "valid_depth_rays": 40259,
+      "common_hit_rays": 38380,
+      "baseline": {
+        "hits": 38882,
+        "misses": 1377,
+        "hit_percent": 96.57964678705383,
+        "within_10mm": 19573,
+        "within_10mm_percent_of_valid": 48.617700389974914,
+        "within_20mm": 27824,
+        "within_20mm_percent_of_valid": 69.11249658461462,
+        "common_hit_absolute_error_p50_mm": 9.699891090393153,
+        "common_hit_absolute_error_p95_mm": 68.98562908172588
+      },
+      "candidate": {
+        "hits": 38955,
+        "misses": 1304,
+        "hit_percent": 96.76097270175613,
+        "within_10mm": 20236,
+        "within_10mm_percent_of_valid": 50.26453712213418,
+        "within_20mm": 28421,
+        "within_20mm_percent_of_valid": 70.59539481854989,
+        "common_hit_absolute_error_p50_mm": 9.210524559020827,
+        "common_hit_absolute_error_p95_mm": 74.13363380432126
+      }
+    },
+    {
+      "frame_index": 43,
+      "valid_depth_rays": 40560,
+      "common_hit_rays": 39569,
+      "baseline": {
+        "hits": 39794,
+        "misses": 766,
+        "hit_percent": 98.11143984220907,
+        "within_10mm": 19008,
+        "within_10mm_percent_of_valid": 46.86390532544379,
+        "within_20mm": 30830,
+        "within_20mm_percent_of_valid": 76.01084812623274,
+        "common_hit_absolute_error_p50_mm": 10.475040435791172,
+        "common_hit_absolute_error_p95_mm": 42.737101364135725
+      },
+      "candidate": {
+        "hits": 39904,
+        "misses": 656,
+        "hit_percent": 98.38264299802762,
+        "within_10mm": 19267,
+        "within_10mm_percent_of_valid": 47.502465483234715,
+        "within_20mm": 31470,
+        "within_20mm_percent_of_valid": 77.58875739644971,
+        "common_hit_absolute_error_p50_mm": 10.385168075561335,
+        "common_hit_absolute_error_p95_mm": 43.11465873718262
+      }
+    },
+    {
+      "frame_index": 45,
+      "valid_depth_rays": 41266,
+      "common_hit_rays": 35662,
+      "baseline": {
+        "hits": 37263,
+        "misses": 4003,
+        "hit_percent": 90.29952018610963,
+        "within_10mm": 6307,
+        "within_10mm_percent_of_valid": 15.283768720011631,
+        "within_20mm": 13289,
+        "within_20mm_percent_of_valid": 32.20326661173848,
+        "common_hit_absolute_error_p50_mm": 26.527152538299624,
+        "common_hit_absolute_error_p95_mm": 107.24663429260272
+      },
+      "candidate": {
+        "hits": 36285,
+        "misses": 4981,
+        "hit_percent": 87.92953036398004,
+        "within_10mm": 6127,
+        "within_10mm_percent_of_valid": 14.847574274220909,
+        "within_20mm": 13031,
+        "within_20mm_percent_of_valid": 31.578054572771773,
+        "common_hit_absolute_error_p50_mm": 27.274600982666097,
+        "common_hit_absolute_error_p95_mm": 144.6355885505674
+      }
+    },
+    {
+      "frame_index": 47,
+      "valid_depth_rays": 42432,
+      "common_hit_rays": 41729,
+      "baseline": {
+        "hits": 42161,
+        "misses": 271,
+        "hit_percent": 99.36133107088989,
+        "within_10mm": 13685,
+        "within_10mm_percent_of_valid": 32.25160256410256,
+        "within_20mm": 28664,
+        "within_20mm_percent_of_valid": 67.552790346908,
+        "common_hit_absolute_error_p50_mm": 14.603264808654703,
+        "common_hit_absolute_error_p95_mm": 150.23110237121566
+      },
+      "candidate": {
+        "hits": 41858,
+        "misses": 574,
+        "hit_percent": 98.64724736048265,
+        "within_10mm": 12936,
+        "within_10mm_percent_of_valid": 30.486425339366516,
+        "within_20mm": 27345,
+        "within_20mm_percent_of_valid": 64.44428733031674,
+        "common_hit_absolute_error_p50_mm": 15.492418766021698,
+        "common_hit_absolute_error_p95_mm": 161.07657356262217
+      }
+    },
+    {
+      "frame_index": 49,
+      "valid_depth_rays": 41343,
+      "common_hit_rays": 41175,
+      "baseline": {
+        "hits": 41288,
+        "misses": 55,
+        "hit_percent": 99.86696659652178,
+        "within_10mm": 17766,
+        "within_10mm_percent_of_valid": 42.97220811261882,
+        "within_20mm": 31786,
+        "within_20mm_percent_of_valid": 76.88363205379387,
+        "common_hit_absolute_error_p50_mm": 11.346290588378993,
+        "common_hit_absolute_error_p95_mm": 80.98564653396598
+      },
+      "candidate": {
+        "hits": 41225,
+        "misses": 118,
+        "hit_percent": 99.71458287981037,
+        "within_10mm": 18741,
+        "within_10mm_percent_of_valid": 45.33052753791452,
+        "within_20mm": 32508,
+        "within_20mm_percent_of_valid": 78.62999782308977,
+        "common_hit_absolute_error_p50_mm": 10.953513145446792,
+        "common_hit_absolute_error_p95_mm": 97.9418965339656
+      }
+    },
+    {
+      "frame_index": 51,
+      "valid_depth_rays": 43787,
+      "common_hit_rays": 42700,
+      "baseline": {
+        "hits": 42804,
+        "misses": 983,
+        "hit_percent": 97.75504145065887,
+        "within_10mm": 17608,
+        "within_10mm_percent_of_valid": 40.212848562358694,
+        "within_20mm": 27952,
+        "within_20mm_percent_of_valid": 63.836298444743875,
+        "common_hit_absolute_error_p50_mm": 14.151698112487843,
+        "common_hit_absolute_error_p95_mm": 56.91220645904537
+      },
+      "candidate": {
+        "hits": 42935,
+        "misses": 852,
+        "hit_percent": 98.05421700504716,
+        "within_10mm": 18146,
+        "within_10mm_percent_of_valid": 41.44152373992281,
+        "within_20mm": 29818,
+        "within_20mm_percent_of_valid": 68.09783725763354,
+        "common_hit_absolute_error_p50_mm": 12.793811798095799,
+        "common_hit_absolute_error_p95_mm": 58.839543914794646
+      }
+    },
+    {
+      "frame_index": 53,
+      "valid_depth_rays": 43121,
+      "common_hit_rays": 42024,
+      "baseline": {
+        "hits": 42626,
+        "misses": 495,
+        "hit_percent": 98.85206743813919,
+        "within_10mm": 19221,
+        "within_10mm_percent_of_valid": 44.574569235407346,
+        "within_20mm": 28320,
+        "within_20mm_percent_of_valid": 65.67565687252151,
+        "common_hit_absolute_error_p50_mm": 11.653541564941472,
+        "common_hit_absolute_error_p95_mm": 53.311112737655556
+      },
+      "candidate": {
+        "hits": 42234,
+        "misses": 887,
+        "hit_percent": 97.94299761137265,
+        "within_10mm": 19258,
+        "within_10mm_percent_of_valid": 44.660374295586834,
+        "within_20mm": 29285,
+        "within_20mm_percent_of_valid": 67.91354560422995,
+        "common_hit_absolute_error_p50_mm": 11.467103958129886,
+        "common_hit_absolute_error_p95_mm": 52.39062461853019
+      }
+    },
+    {
+      "frame_index": 55,
+      "valid_depth_rays": 41154,
+      "common_hit_rays": 40381,
+      "baseline": {
+        "hits": 40606,
+        "misses": 548,
+        "hit_percent": 98.66841619283666,
+        "within_10mm": 14738,
+        "within_10mm_percent_of_valid": 35.81182874082714,
+        "within_20mm": 31572,
+        "within_20mm_percent_of_valid": 76.7167225543082,
+        "common_hit_absolute_error_p50_mm": 12.607595920562709,
+        "common_hit_absolute_error_p95_mm": 35.58354997634883
+      },
+      "candidate": {
+        "hits": 40704,
+        "misses": 450,
+        "hit_percent": 98.90654614375273,
+        "within_10mm": 15268,
+        "within_10mm_percent_of_valid": 37.099674393740585,
+        "within_20mm": 31845,
+        "within_20mm_percent_of_valid": 77.38008456043156,
+        "common_hit_absolute_error_p50_mm": 12.613957405090304,
+        "common_hit_absolute_error_p95_mm": 35.12429141998297
+      }
+    },
+    {
+      "frame_index": 57,
+      "valid_depth_rays": 37749,
+      "common_hit_rays": 35755,
+      "baseline": {
+        "hits": 36124,
+        "misses": 1625,
+        "hit_percent": 95.69525020530345,
+        "within_10mm": 7775,
+        "within_10mm_percent_of_valid": 20.596572094625024,
+        "within_20mm": 15585,
+        "within_20mm_percent_of_valid": 41.285861877135815,
+        "common_hit_absolute_error_p50_mm": 23.269128799438654,
+        "common_hit_absolute_error_p95_mm": 230.20484619140575
+      },
+      "candidate": {
+        "hits": 36151,
+        "misses": 1598,
+        "hit_percent": 95.76677527881533,
+        "within_10mm": 7720,
+        "within_10mm_percent_of_valid": 20.450872870804524,
+        "within_20mm": 15283,
+        "within_20mm_percent_of_valid": 40.48584068452144,
+        "common_hit_absolute_error_p50_mm": 23.806477546691962,
+        "common_hit_absolute_error_p95_mm": 259.1232809066767
+      }
+    },
+    {
+      "frame_index": 59,
+      "valid_depth_rays": 41685,
+      "common_hit_rays": 39793,
+      "baseline": {
+        "hits": 40695,
+        "misses": 990,
+        "hit_percent": 97.62504498020871,
+        "within_10mm": 5481,
+        "within_10mm_percent_of_valid": 13.148614609571789,
+        "within_20mm": 12944,
+        "within_20mm_percent_of_valid": 31.051937147655032,
+        "common_hit_absolute_error_p50_mm": 26.762352943420442,
+        "common_hit_absolute_error_p95_mm": 58.13508644104015
+      },
+      "candidate": {
+        "hits": 40389,
+        "misses": 1296,
+        "hit_percent": 96.8909679740914,
+        "within_10mm": 5247,
+        "within_10mm_percent_of_valid": 12.587261604893847,
+        "within_20mm": 12284,
+        "within_20mm_percent_of_valid": 29.468633801127503,
+        "common_hit_absolute_error_p50_mm": 26.89338111877437,
+        "common_hit_absolute_error_p95_mm": 59.108032989501986
+      }
+    },
+    {
+      "frame_index": 61,
+      "valid_depth_rays": 38151,
+      "common_hit_rays": 37506,
+      "baseline": {
+        "hits": 37826,
+        "misses": 325,
+        "hit_percent": 99.14812193651542,
+        "within_10mm": 8903,
+        "within_10mm_percent_of_valid": 23.33621661293282,
+        "within_20mm": 17695,
+        "within_20mm_percent_of_valid": 46.381484102644755,
+        "common_hit_absolute_error_p50_mm": 21.083437919616532,
+        "common_hit_absolute_error_p95_mm": 94.03744029998772
+      },
+      "candidate": {
+        "hits": 37682,
+        "misses": 469,
+        "hit_percent": 98.77067442530995,
+        "within_10mm": 9118,
+        "within_10mm_percent_of_valid": 23.89976671646877,
+        "within_20mm": 17897,
+        "within_20mm_percent_of_valid": 46.91095908364132,
+        "common_hit_absolute_error_p50_mm": 20.9297723770141,
+        "common_hit_absolute_error_p95_mm": 94.79983043670643
+      }
+    }
+  ],
+  "evaluation_elapsed_seconds": 3.1750155000045197
+}

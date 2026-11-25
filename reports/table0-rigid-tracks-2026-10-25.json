@@ -1,0 +1,88 @@
+{
+  "schema": "alvenx.rigid-track-feasibility.public-summary.v1",
+  "experiment_date": "2026-10-25",
+  "status": "INCONCLUSIVE",
+  "capture_frames": 8,
+  "proposed_tracks": 16,
+  "qualified_tracks": 4,
+  "modified_frames": [
+    {
+      "frame": 46,
+      "clear_A": 3,
+      "clear_B": 4,
+      "qualified_tracks": 0,
+      "occupied_grid_cells": 0,
+      "total_grid_cells": 12
+    },
+    {
+      "frame": 47,
+      "clear_A": 3,
+      "clear_B": 3,
+      "qualified_tracks": 1,
+      "occupied_grid_cells": 1,
+      "total_grid_cells": 12
+    },
+    {
+      "frame": 48,
+      "clear_A": 8,
+      "clear_B": 6,
+      "qualified_tracks": 4,
+      "occupied_grid_cells": 2,
+      "total_grid_cells": 12
+    },
+    {
+      "frame": 49,
+      "clear_A": 6,
+      "clear_B": 5,
+      "qualified_tracks": 3,
+      "occupied_grid_cells": 1,
+      "total_grid_cells": 12
+    }
+  ],
+  "support_gate": {
+    "minimum_tracks_per_modified_frame": 6,
+    "minimum_tracks_per_pair": 6,
+    "minimum_regions_per_pair": 2
+  },
+  "pair_counts": {
+    "primary": {
+      "pairs": 16,
+      "pairs_with_observations": 9,
+      "pairs_meeting_support_gate": 0,
+      "candidate_change_sign_reversals": {
+        "normal": 7,
+        "balanced": 6
+      }
+    },
+    "modified_context": {
+      "pairs": 6,
+      "pairs_with_observations": 3,
+      "pairs_meeting_support_gate": 0,
+      "candidate_change_sign_reversals": {
+        "normal": 3,
+        "balanced": 3
+      }
+    },
+    "anchor_control": {
+      "pairs": 6,
+      "pairs_with_observations": 3,
+      "pairs_meeting_support_gate": 0,
+      "candidate_change_sign_reversals": {
+        "normal": 0,
+        "balanced": 0
+      }
+    }
+  },
+  "stop_reasons": [
+    "modified_frame_anchor_connected_track_coverage",
+    "single_structure_or_missing_support_on_modified_frame",
+    "primary_pair_delta_sign_reversal"
+  ],
+  "joint_location_perturbation_draws": 256,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "private_evaluation_sha256": "d191715cb65f1b0edef4bcb0225f4b6022b925f23746933300eff9cee66dc710",
+  "geometry_acceptance": "rejected"
+}

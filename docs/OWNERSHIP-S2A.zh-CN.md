@@ -49,6 +49,11 @@ $Blender = 'C:\path\to\blender-5.1.2\blender.exe'
 
 ## 完成一次作者实际操作
 
+维护提示（2026-10-25）：当前源码修正了 Destination 动态枚举的字符串寿命和
+目标身份保持，见 [选择器维护与验收](DESTINATION_SELECTOR.zh-CN.md)。旧任务包
+仍保留原始面板与哈希。使用维护版打开旧 `.blend` 后须重新选择一次目标；
+这不改变冻结输入或此前的 agent GUI 验收，也不代表人工任务已经开始。
+
 可以直接解压[初始 B1 餐厅任务包](../examples/ownership-b1/dining-b1-author-task.zip)。
 内含 `before.blend`、`blender_edit.py`、完整表面包和逐文件哈希。
 人工任务只需 Blender 5.1.2；重建和独立来源核验才需要 Open3D。

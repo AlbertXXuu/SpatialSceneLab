@@ -17,11 +17,16 @@ class PublishedEditingTests(unittest.TestCase):
     def test_frozen_native_code_bytes_match_measured_versions(self):
         suite = json.loads((EVIDENCE / 'edit-suite-results.json').read_text())
         self.assertEqual((suite['status'], suite['completed_tasks'], suite['attempted_tasks']), ('pass', 6, 6))
+        # The measured panel remains in the immutable download. The maintained
+        # source is checked independently by verify_destination_blender.py.
+        with zipfile.ZipFile(ROOT / 'examples/edit-workflow/combined-study-editable.zip') as archive:
+            frozen_panel_sha = hashlib.sha256(archive.read('blender_edit.py')).hexdigest()
         for name, digest in suite['code_sha256'].items():
-            self.assertEqual(sha(ROOT / name), digest, name)
+            actual = frozen_panel_sha if name == 'blender_edit.py' else sha(ROOT / name)
+            self.assertEqual(actual, digest, name)
         controls = json.loads((EVIDENCE / 'controls.json').read_text())
         self.assertEqual((controls['status'], controls['passed'], controls['attempted']), ('pass', 15, 15))
-        self.assertEqual(sha(ROOT / 'blender_edit.py'), controls['addon_sha256'])
+        self.assertEqual(frozen_panel_sha, controls['addon_sha256'])
         self.assertEqual(sha(ROOT / 'blender_edit_controls.py'), controls['script_sha256'])
 
     def test_figure_and_table_are_bound_to_raw_record(self):
