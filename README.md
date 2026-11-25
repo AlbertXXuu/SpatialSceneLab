@@ -6,6 +6,13 @@
 
 # SpatialSceneLab
 
+**Real-room reconstruction acceptance / 真实房间重建验收 · 2026-11-25.** The target
+is automatic recovery of editable furniture with geometry and appearance supported
+by real captures. A held-out tea-room depth test used 31 fusion frames and 31 scoring
+frames. The finer TSDF preset improved 20 mm support slightly while increasing table
+and chair errors at P95. The overall reconstruction target remains unverified.
+[Measured report and literature review / 实测与论文评估](reports/REAL-TEAROOM-HELDOUT-2026-11-25.zh-CN.md).
+
 **Editable dining showcase / 可编辑餐厅示例 · 2026-11-25.** The showcase builder places
 three finished Poly Haven models at the dining scene's four furniture identities,
 packs their textures, and saves a native scene with four independently editable roots.
