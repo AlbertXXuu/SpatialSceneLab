@@ -18,11 +18,25 @@
 
 更细的预设使整景 20 mm 内支持率增加 **0.834 个百分点**，但命中率下降，桌和椅的误差长尾扩大。保留默认预设。候选同时改变体素和截断，本试验衡量的是两套参数组合。RoomPlan 框提供分组线索，采集相机和有效深度来自同一轮扫描。独立物理尺寸、遮挡后方和材质质量仍需要单独证据。 [历史 Table0 几何诊断](TABLE0-ERROR-2026-10-15.zh-CN.md)
 
+使用相同正交视角、比例和 RoomPlan 桌椅区域，在 Blender 5.1.2 并排检查实际网格。两套网格的桌面后侧都有开口，桌下的支撑和几把椅子的腿仍呈断片。20 mm 版显示更细的边缘，同时显出更多细小孔和碎片。裁切边缘受所选区域影响，目视结论限于裁切内部。渲染和原网格按输入数据条款保存在本机。
+
+## 自动实例掩膜实测
+
+用原始帧号模 4 为零的固定 **16 帧**，在本机 RTX 4060 Laptop 上跑 TorchVision Mask R-CNN ResNet-50-FPN COCO_V1。检测置信度和映射到深度像素后的掩膜阈值均为 0.5。把原 RGB 图上的预测掩膜映射到对齐深度，按唯一落入原始 RoomPlan 框的实测点统计一致性。整批有 667,469 个有效深度点。 [TorchVision 方法与权重](https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.detection.maskrcnn_resnet50_fpn.html) · [逐帧数值](real-tearoom-masks-2026-11-25.json)
+
+模型在 4 帧共报出 4 个逐帧椅子实例，覆盖 **5,367／21,507（24.95%）** 个落入唯一椅框的点。被椅子掩膜选中的 20,065 个点里，6,422 个落入其他单一物体框，89 个落入多个框，8,187 个在所有框外。餐桌在 7 帧有独占框样本，共 **14,061 个点**，模型在这 16 帧里没报出任何 `dining table` 实例。RoomPlan 框只是几何线索，比例描述与框的重合程度。该模型的自动输出不足以作为这批数据的桌椅融合入口。
+
+复跑使用本地 Python 3.11、PyTorch 2.5.1+cu118 与 TorchVision 0.20.1+cu118。首次会从 TorchVision 下载约 178 MB 官方权重。原始图像只在本机处理。
+
+```powershell
+python -B probe_furniture_masks.py --scan 'C:/path/to/tea_room' --cache '.local/torch-hub' --output '.local/tearoom-masks.json'
+```
+
 ## 论文与公开实现
 
 | 路线 | 对本项目的作用和实测约束 |
 | --- | --- |
-| FIRE3D | 使用带位姿 RGB-D 推理对象和姿态，输出可独立编辑的纹理网格，最接近整体验收目标。发布环境在 Linux、96 GB GPU 上验证，这是作者给出的验证配置；本机 RTX 4060 Laptop 只有约 8 GB 显存，本次未跑原模型。 [论文](https://arxiv.org/abs/2609.08848) · [官方代码](https://github.com/xiahongchi/Fire3D#installation) · [权重](https://huggingface.co/hongchi/Fire3D) |
+| FIRE3D | 使用带位姿 RGB-D 推理对象和姿态，输出可独立编辑的纹理网格，最接近整体验收目标。发布环境在 Linux、96 GB GPU 上验证，权重目录约 67 GB。96 GB 是作者给出的验证配置，最低显存未确认。本机 RTX 4060 Laptop 约 8 GB 显存，本次未跑原模型。 [论文](https://arxiv.org/abs/2609.08848) · [官方代码](https://github.com/xiahongchi/Fire3D#installation) · [权重](https://huggingface.co/hongchi/Fire3D) |
 | LiteReality-Agent | 支持本项目已有的 ScannerApp 数据格式并输出 Blender、GLB。公开流程包括确定性初始化与后续模型驱动的家具生成和修饰。官方本地 GPU 路线在 Linux、至少 24 GB GPU 上测试，完整流程还依赖图像服务和已登录代理。 [论文](https://arxiv.org/abs/2610.01863) · [官方代码及要求](https://github.com/LiteReality/LiteReality-Agent#requirements) |
 | ShapeR 与 Scan2CAD | ShapeR 使用已分出的物体、多视图及度量几何做形状补全。Scan2CAD 将库模型对齐到 RGB-D 观测。两者分别提供补全和资产对齐的对照，最终采用哪个候选应由留出视角和独立尺寸决定。 [ShapeR](https://github.com/facebookresearch/ShapeR) · [Scan2CAD 论文](https://arxiv.org/abs/1811.11187) |
 | Open3D 与轻量实例掩膜 | 本机已实跑 CPU TSDF；轻量掩膜可作为下一层输入，检测邻桌污染和漏掉的腿、靠背。融合产生的是可见的度量表面，资产或生成补全面再按相同的参考检验。 [Open3D 融合](https://www.open3d.org/docs/release/tutorial/t_reconstruction_system/integration.html) · [SAM 2](https://github.com/facebookresearch/sam2) |

@@ -82,7 +82,7 @@ def pack_images(images, source):
             continue
         if image.source != 'FILE':
             raise ValueError(f'{source.name}: unsupported external image source {image.name} ({image.source})')
-        relative = Path(image.filepath.removeprefix('//'))
+        relative = Path(image.filepath.removeprefix('//').replace('\\', '/'))
         candidates = (Path(bpy.path.abspath(image.filepath)), source.parent / relative,
                       source.parent / 'textures' / relative.name, source.parent / relative.name)
         path = next((candidate for candidate in candidates if candidate.is_file()), None)
